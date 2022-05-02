@@ -3,7 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --60-main: rgb(0 0 0/.8);
+    --30-seconday: red;
+    --10-hightlight:yellow;
+}
 html,body{
     height: 100%;
     width: 100%;
+}
+.navLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav__navList{
+    list-style: none;
+
+}
+.nav__navLink{
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.nav__navLink-section{
+    position: absolute;
+}
+.nav__navLink-sectionLinks{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -1000px;
+    background-color: red;
+    border-left: solid black 2px;
+    border-bottom: solid black 2px;
+}
+.nav__navLink-sectionLink{
+    text-decoration: none;
+}
+
+.nav__navList:hover .nav__navLink-sectionLinks{
+    left: 0px;
 }
