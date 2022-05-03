@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cheat Sheet</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web 2/css/all.min.css">
 </head>
 <body>
     <nav>
         <ul class="navLinks">
+            <li class="nav__navList">
+                <a class="logo" href="#">
+                    <i class="fa-solid fa-code"></i>  
+                </a>          
+            </li>
             <li class="nav__navList">
                 <a class="nav__navLink" href="#purpose">Purpose</a>
             </li>
@@ -26,7 +32,7 @@
             </li>
         </ul>    
     </nav>
-    <div id="purpose">
+    <div id="purpose" class="purpose">
         <h1>Purpose</h1>
         <p>During my study I found myself creatings lots of empty docs that I title "practice" or "test" and come to realize that I forget what these sections are and what I was testing. I figured making sections for these test sections will be better by creating a site that holds all my tests that will also hopefully help me remember tips to certain problems.</p>
     </div>
@@ -40,6 +46,10 @@
         </div>
         <div id="CSS">
             <h2>CSS</h2>
+            <section>
+                <h3>Relative and Absolute</h3>
+                <p>Position relative is based off its relative position but can be adjusted with left,top,right,and bottom. The power of Relative is that it make position absolute relative to position relative.</p>
+            </section>
         </div>
         <div id="JS">
             <h2>JS</h2>

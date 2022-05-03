@@ -4,44 +4,76 @@
     box-sizing: border-box;
 }
 :root{
-    --60-main: rgb(0 0 0/.8);
-    --30-seconday: red;
-    --10-hightlight:yellow;
+    --60-main: hsl(39, 77%, 83%);
+    --30-seconday: hsl(39, 77%, 63%);
+    --10-hightlight:hsl(180, 100%, 25%);
 }
 html,body{
     height: 100%;
     width: 100%;
 }
+nav{
+    height: 60px;
+    background-color: var(--30-seconday)
+}
 .navLinks{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
 }
 
 .nav__navList{
     list-style: none;
+    align-items: center;
 
 }
 .nav__navLink{
     font-size: 1.2em;
     text-decoration: none;
+   
 }
-.nav__navLink-section{
-    position: absolute;
+.nav__navLink-sections{
+    position: relative;
+ 
 }
 .nav__navLink-sectionLinks{
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: -1000px;
-    background-color: red;
-    border-left: solid black 2px;
-    border-bottom: solid black 2px;
+    position: absolute;
+    background-color: var(--60-main);
+    border-left: solid black 3px;
+    border-bottom: solid black 3px;
+    opacity: 0;
+    transition: all .2s linear;
+   
+ 
 }
 .nav__navLink-sectionLink{
     text-decoration: none;
+    margin: 20px;
+    transition: font-weight .2s linear;
+    width: 60px;
 }
 
 .nav__navList:hover .nav__navLink-sectionLinks{
-    left: 0px;
+   opacity: 1;
+}
+.nav__navLink-sectionLink:hover{
+    font-weight: bolder;
+}
+
+/* nav list color */
+.nav__navLink{
+    color:var(--10-hightlight);
+    font-size: 1.5em;
+}
+.nav__navLink-sectionLink{
+    color: var(--10-hightlight);
+    font-size: 1.1em;
+}
+
+.logo{
+    font-size: 1.2em;
 }
