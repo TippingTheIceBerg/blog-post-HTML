@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 :root{
-    --60-main: hsl(39, 77%, 83%);
-    --30-seconday: hsl(39, 77%, 63%);
-    --10-hightlight:hsl(180, 100%, 25%);
+    --60--mainBG: hsl(39, 77%, 63%);
+    --30--lightBG: hsl(39,77%,73%);
+    --5--hoverBG:hsl(39,77%,85%);
+    --5-hightLightText:hsl(180, 100%, 25%);
 }
 html,body{
     height: 100%;
@@ -14,7 +15,7 @@ html,body{
 }
 nav{
     height: 60px;
-    background-color: var(--30-seconday)
+    background-color: var(--60--mainBG)
 }
 .navLinks{
     display: flex;
@@ -42,7 +43,7 @@ nav{
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: var(--60-main);
+    background-color: var(--30--lightBG);
     border-left: solid black 3px;
     border-bottom: solid black 3px;
     opacity: 0;
@@ -53,24 +54,26 @@ nav{
 .nav__navLink-sectionLink{
     text-decoration: none;
     margin: 20px;
-    transition: font-weight .2s linear;
-    width: 60px;
+    transition: all .2s linear;
+    padding: 10px;
+    text-align: center;
+    
 }
 
 .nav__navList:hover .nav__navLink-sectionLinks{
    opacity: 1;
 }
 .nav__navLink-sectionLink:hover{
-    font-weight: bolder;
+   background-color: var(--5--hoverBG);
 }
 
 /* nav list color */
 .nav__navLink{
-    color:var(--10-hightlight);
+    color:var(--5-hightLightText) ;
     font-size: 1.5em;
 }
 .nav__navLink-sectionLink{
-    color: var(--10-hightlight);
+    color: var(--5-hightLightText);
     font-size: 1.1em;
 }
 
