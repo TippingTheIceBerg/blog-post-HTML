@@ -12,6 +12,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    line-height: 1.6;
 }
 
 /* Nav bar */
@@ -84,3 +85,17 @@ nav{
    background-color: var(--5--hoverBG);
 }
 
+/* purpose */
+
+.block__purpose{
+    text-align: center;
+ 
+    padding: 20px;
+    margin: 20px 50px;
+}
+.purpose__header{
+font-size: 2.2em;
+font-family: 'Roboto Slab', serif;
+
+
+}
