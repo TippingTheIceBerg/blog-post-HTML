@@ -13,10 +13,27 @@ html,body{
     height: 100%;
     width: 100%;
 }
+
+/* Nav bar */
 nav{
     height: 60px;
     background-color: var(--60--mainBG)
 }
+
+/* nav list color */
+.nav__navLink{
+    color:var(--5-hightLightText) ;
+    font-size: 1.5em;
+}
+.nav__navLink-sectionLink{
+    color: var(--5-hightLightText);
+    font-size: 1.1em;
+}
+
+.logo{
+    font-size: 1.2em;
+}
+
 .navLinks{
     display: flex;
     flex-direction: row;
@@ -31,7 +48,7 @@ nav{
 
 }
 .nav__navLink{
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-decoration: none;
    
 }
@@ -49,7 +66,7 @@ nav{
     opacity: 0;
     transition: all .2s linear;
    
- 
+
 }
 .nav__navLink-sectionLink{
     text-decoration: none;
@@ -67,16 +84,3 @@ nav{
    background-color: var(--5--hoverBG);
 }
 
-/* nav list color */
-.nav__navLink{
-    color:var(--5-hightLightText) ;
-    font-size: 1.5em;
-}
-.nav__navLink-sectionLink{
-    color: var(--5-hightLightText);
-    font-size: 1.1em;
-}
-
-.logo{
-    font-size: 1.2em;
-}
