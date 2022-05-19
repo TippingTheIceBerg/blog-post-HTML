@@ -99,3 +99,7 @@ font-size: 2.2em;
 font-family: 'Roboto Slab', serif;
 }
 
+/* sections */
+.section > h2{ 
+    text-align: center;
+}
