@@ -108,5 +108,5 @@ font-family: 'Roboto Slab', serif;
 }
 .colorChooser__baseAndAccentColor{
     height: 100px;
-    background: conic-gradient(#9aee9c,#FFA5A5);
+    background: conic-gradient( #9aee9c,#FFA5A5);
 }
