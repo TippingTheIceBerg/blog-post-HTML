@@ -42,29 +42,37 @@
     <main id="sections" class="sections">
         <section id="HTML" class="section__HTML section">
             <h2>HTML</h2>
-                <div>
-                    <h3>Removing lists bullet points</h3>
-                    <p>To remove the bullet points in lists, you will use list-style: none</p>
-                    <h3>Quickly open the terminal</h3>
-                    <p>To quickly open a terminal simply press fn + f12</p>
-                </div>
-                     <h3>Opening inspect tool</h3>
-                     <p>To avoid right clicking and hitting inspect every time, it's faster to just hit command + option + c
-                     </p>
-                     <h3>How to apply classes in devtools</h3>
-                     <p>First open dev tools, next click on what section you want to test a class on with the selector arrow. Next you want to click on .cls which is found right under the index.html but above where the styles are seen. After you click on it you just need to type the class name</p>
-                     <h3>How to quickly select with the pointer in dev tools</h3>
-                     <p><kbd>command + shift + c</kbd></p>
-                     <h3>How to test all hover effects</h3>
-                     <p>open dev tools, then click on :hov. This section in of itself does not apply the hover selection, it would need to be selected after. </p>
-                     <h3>Debugging and changing CSS animations</h3>
-                     <p>Open dev tools on Google Chrome, then select the three vertical dots, more tools, and then click on animations. To see the animations captured the page will need to be refreshed or the animation played.</p>
-                     <h3>Readability with contrast ratio check</h3>
-                     <p>First select the element you want to select. Then select the color used for that element. Then select contrast ratio. Anything within the lines is the min requirement for readability. Anything below is better.</p>
-                     <h3>How to find quick selections</h3>
-                     <p>To find areas of the dev tools, <kbd>command + shift + p</kbd> one example will be to perform a screenshot of the page, open the shortcut above, and then type screenshot.</p>
-                     <h3>What is the difference in kbd vs code?</h3>
-                     <p>KBD is for user input while code is for a fragment in computer code</p>
+            <div>
+                <h3>Removing lists bullet points</h3>
+                <p>To remove the bullet points in lists, you will use list-style: none</p>
+                <h3>Quickly open the terminal</h3>
+                <p>To quickly open a terminal simply press fn + f12</p>
+                <h3>Opening inspect tool</h3>
+                <p>To avoid right clicking and hitting inspect every time, it's faster to just hit command + option + c
+                </p>
+                <h3>How to apply classes in devtools</h3>
+                <p>First open dev tools, next click on what section you want to test a class on with the selector arrow. Next you want to click on .cls which is found right under the index.html but above where the styles are seen. After you click on it you just need to type the class name</p>
+                <h3>How to quickly select with the pointer in dev tools</h3>
+                <p><kbd>command + shift + c</kbd></p>
+                <h3>How to test all hover effects</h3>
+                <p>open dev tools, then click on :hov. This section in of itself does not apply the hover selection, it would need to be selected after. </p>
+                <h3>Debugging and changing CSS animations</h3>
+                <p>Open dev tools on Google Chrome, then select the three vertical dots, more tools, and then click on animations. To see the animations captured the page will need to be refreshed or the animation played.</p>
+                <h3>Readability with contrast ratio check</h3>
+                <p>First select the element you want to select. Then select the color used for that element. Then select contrast ratio. Anything within the lines is the min requirement for readability. Anything below is better.</p>
+                <h3>How to find quick selections</h3>
+                <p>To find areas of the dev tools, <kbd>command + shift + p</kbd> one example will be to perform a screenshot of the page, open the shortcut above, and then type screenshot.</p>
+                <h3>What is the difference in kbd vs code?</h3>
+                <p>KBD is for user input while code is for a fragment in computer code</p>
+                <h3>Ways to debug JS</h3>
+                <p>Four of the most common ways to debug JS
+                    <ol class="listMarginLeft__40px">
+                        <li><code>console.log(var)</code></li>
+                        <li><code>console.log({var})</code></li>
+                        <li><code>console.table(var)</code></li>
+                        <li><code>console.trace(var)</code></li>
+                    </ol>
+                </p>
             </div>
         </section>
         <section id="CSS" class="section__CSS section">
@@ -80,7 +88,7 @@
                 <p>Background-size has to do with how large the img should behave, this is where we see contain and cover. Contain being it showing the whole img, and if it doesn't cover the whole area the empty space will take up the background-color prop, but the img will never be cropped.cover is when the img filled the container fully, and does crop the img if the container isn't large enough.Background-position has to do with where you want the img to be viewed, this is the one where you use center,left,right,etc</p>
                 <h3>Color Scheme: How to choose your colors</h3>
                 <p>First go into the following site <a href="https://www.designspiration.com/search/saves/?q=colour" target="#">Color Picker</a>, and to help narrow the search on colors think of a couple things 
-                <ol class="colorChooser__list">
+                <ol class="listMarginLeft__40px">
                 <li>Target Audience, a funeral home vs fast food will use different colors.</li>
                 <li>Does the Logo offer any colors?</li>
                 <li>Play the word game, write down things that remind you of your site, and you should think of what color define these.</li>
@@ -89,9 +97,9 @@
                 <div class="colorChooser__baseAndAccentColor"></div>
                 The main color will be used for large areas and icons. The accent color for buttons and smaller areas, call to action areas.Dark gray for text and icon outlines, and the white and light gray are used for the background.
                 Another tip will be to set everything to gray scale and then add color later.
-            </p>
-            <h3>Adjusted img width</h3>
-            <p>To avoid changing the proportion of an image, we can focus instead on just changing the width of the image. This is done by setting the height:auto, width to whatever size you want it to be. It's best to add a width and height to images even if you don't plan on changing them. The reasoning is that by adding a width and height, the page will load the white space it plans to take up, and won't cause sudden slow down once the rest of the content loads in. </p>
+                </p>
+                <h3>Adjusted img width</h3>
+                <p>To avoid changing the proportion of an image, we can focus instead on just changing the width of the image. This is done by setting the height:auto, width to whatever size you want it to be. It's best to add a width and height to images even if you don't plan on changing them. The reasoning is that by adding a width and height, the page will load the white space it plans to take up, and won't cause sudden slow down once the rest of the content loads in. </p>
             </div>
         </section>
         <section id="JS" class="section__JS section">
