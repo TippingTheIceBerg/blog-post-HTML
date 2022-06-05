@@ -7,8 +7,8 @@
     --60--mainBG: hsl(39, 77%, 63%);
     --30--lightBG: hsl(39,77%,73%);
     --5--hoverBG:hsl(39,77%,85%);
-    --5-hightLightText:hsl(180, 100%, 25%);
-    --hightLightTextBorder:rgba(0, 128, 128, .3);
+    --5-hightLightText:hsl(180, 87%, 18%);
+    --hightLightTextBorder:hsla(180, 100%, 25%, 0.3);
 
 }
 html,body{
