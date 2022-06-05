@@ -108,6 +108,16 @@
                 </p>
                 <h3>Adjusted img width</h3>
                 <p>To avoid changing the proportion of an image, we can focus instead on just changing the width of the image. This is done by setting the height:auto, width to whatever size you want it to be. It's best to add a width and height to images even if you don't plan on changing them. The reasoning is that by adding a width and height, the page will load the white space it plans to take up, and won't cause sudden slow down once the rest of the content loads in. </p>
+                <h3>Low Cost Animations</h3>
+                <p>Most animations should fall within these four, if not,they will use up much more memory
+                    <ol class="listMarginLeft__40px">
+                        <li>Position - <code>transform: translate(npx,npx)</code></li>
+                        <li>Scale - <code>transform: scale(n)</code></li>
+                        <li>Rotation - <code>transform: rotate(ndeg)</code></li>
+                        <li>Opacity - <code>opacity: 0...1</code></li>
+                    </ol>
+                <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_">for a full list of known potential issues.</a>
+                </p>
             </div>
         </section>
         <section id="JS" class="section__JS section">
