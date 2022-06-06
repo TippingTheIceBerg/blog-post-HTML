@@ -119,6 +119,8 @@
                     </ol>
                 <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_">for a full list of known potential issues.</a>
                 </p>
+                <h3>box-sizing: border-box</h3>
+                <p>The purpose of border-box involves the box model, where the padding and border are included in the height of the element. With border-box, if you enter <code>width: 100px; height:100px;</code>the element will be exactly 100px by 100px. To showcase this, if you have <code>padding:10px; border:10px solid; height:100px; width:100px</code> .Without border box the total width and height will be 140px x 140px since we gave the content 100px x 100px but then the padding and border are added after, changing the height and width.  With border box, the height x width of the content will be 60px x 60px; with the padding and border taking up their 20px x 20px each.The height and width of the element of the whole will now be 100px x 100px as intended</p>
             </div>
         </section>
         <section id="JS" class="section__JS section">
