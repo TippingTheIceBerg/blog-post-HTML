@@ -147,13 +147,15 @@
                     <h4>Display: Flex</h4>
                     <p>With Display: Flex the outer display will be block,but the inner display will now be flexed.</p>
                 <h3>Margin Collapsing</h3>
-                <p>If two elements margin touch, they won't combine, they would just be the marin of the larger of the two. If one is negative, then they would subtract from the larger of the two. <em> "The top paragraph has a margin-bottom of 50 pixels. The second paragraph has a margin-top of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins." - <a href="http://127.0.0.1:5501/index.html#">Web Doc</a></em> </p>
+                <p>If two elements margin touch, they won't combine, they would just be the marin of the larger of the two. If one is negative, then they would subtract from the larger of the two. <em> "The top paragraph has a margin-bottom of 50 pixels. The second paragraph has a margin-top of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins." - <a href="http://127.0.0.1:5501/index.html#">Web Doc</a></em> <strong>This only applies for vertical margins.</strong> </p>
                 <h3>Border Styling</h3>
                 <p>While border shorthand is the fastest way to do it, the alternative will be to use border-style,border-color, and color-width. For more advanced styling each width,style, and color can be used with border-(top,right,bottom,left)-(width,style,color)</p>
                 <h3>Padding values</h3>
                 <p>Padding does not take negative values.</p>
                 <h3>Inline-block</h3>
                 <p>Since padding does not effect inline elements like <code>a</code> and <code>span</code>, using inline-block allows us to make sure these don't form on a new line, but allows us to apply padding,height,width, and does now all overlapping</p>
+                <h3>Margin Auto Horizontal Centering</h3>
+                <p>Auto will usually be 0, or whatever space is available on the side. For this to work, you need a defined width.Then set margin as <code>margin: 0 auto</code>.<strong>This only works for horizontal centering</strong></p>
             </div>
           
             
