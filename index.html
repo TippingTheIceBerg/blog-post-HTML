@@ -126,13 +126,26 @@
                 </p>
                 <h3>box-sizing: border-box</h3>
                 <p>The purpose of border-box involves the box model, where the padding and border are included in the height of the element. With border-box, if you enter <code>width: 100px; height:100px;</code>the element will be exactly 100px by 100px. To showcase this, if you have <code>padding:10px; border:10px solid; height:100px; width:100px</code> .Without border box the total width and height will be 140px x 140px since we gave the content 100px x 100px but then the padding and border are added after, changing the height and width.  With border box, the height x width of the content will be 60px x 60px; with the padding and border taking up their 20px x 20px each.The height and width of the element of the whole will now be 100px x 100px as intended</p>
+                <p>To further explore this, this is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">Web Docs</a>. <em>"In the standard box model, if you give a box a width and a height attribute, this defines the width and height of the content box. Any padding and border is then added to that width and height to get the total size taken up by the box. The actual space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5)."</em></p>
+                <p> 
+                    <code>.box {
+                    width: 350px;
+                    height: 150px;
+                    margin: 10px;
+                    padding: 25px;
+                    border: 5px solid black;}
+                    </code>
+                </p>
+                <img src="./Images/BoxModelLayers.png" alt="Box Model Layers">
+                <img src="./Images/standard-box-model.png" alt="Box Model without Border-Box">
                 <h3>Outer display</h3>
                     <h4>Display Block</h4>
                     <p>An outer display. A block will take up its own line, it will take up the full width of the container, and border,margin, and padding will push things away from it.</p>
                     <h4>Display inline</h4>
                     <p>An outer display.A new line won't be made, height and width won't apply, only horizontal padding,margins, and border will push things away.</p>
-                <h3></h3>
-                <p></p>
+                <h3>Inner Display</h3>
+                    <h4>Display: Flex</h4>
+                    <p>With Display: Flex the outer display will be block,but the inner display will now be flexed.</p>
             </div>
         </section>
         <section id="JS" class="section__JS section">
