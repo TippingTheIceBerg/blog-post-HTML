@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-<script src="./script.js"></script>
+
 </head>
 <body>
     <nav id="nav">
@@ -85,7 +85,7 @@
                 <p>Select the element (in google chrome only),right click on the dev tools, and then copy as a JS path.</p>
                 <h3>BEM naming conventions</h3>
                 <p>This area will be solely dedicated to naming conventions of popular styling </p>
-                <img src="./Images/BEM__listEx.png" alt="BEM list example">
+                <img class="images" src="./Images/BEM__listEx.png" alt="BEM list example">
                 <h3>How to take screenshots of code in VS</h3>
                 <p>Highlight the portion of the code you want to screenshot. Next, right click on SnapCode. Last, when the new window opens up, click on the logo and then save it where you want to find it.</p>
             </div>
@@ -137,8 +137,8 @@
                     border: 5px solid black;}
                     </code>
                 </p>
-                <img src="./Images/BoxModelLayers.png" alt="Box Model Layers">
-                <img src="./Images/standard-box-model.png" alt="Box Model without Border-Box">
+                <img class="images" src="./Images/BoxModelLayers.png" alt="Box Model Layers">
+                <img class="images" src="./Images/standard-box-model.png" alt="Box Model without Border-Box">
                 <h3>Outer display</h3>
                     <h4>Display Block</h4>
                     <p>An outer display. A block will take up its own line, it will take up the full width of the container, and border,margin, and padding will push things away from it.</p>
@@ -165,8 +165,23 @@
         <section id="JS" class="section__JS section">
             <h2>JS</h2>
             <div>
-                <h3>Intersection Observer</h3>
-                <p></p>
+                <h3>What is Intersection Observer</h3>
+                <p>Intersection Observer is a powerful tool that allows on scroll effects without the need for it to be called each time a scroll is done. </p>
+                <h3>How does Intersection work?</h3>
+                <p>Most times, intersection observer can be used with query selector to select all elements or class names, or single elements and a class name. Just note that if you do select multiple elements and classes, the steps are slightly differently.</p>
+                <img class="image" src="./Images/basicSkeletonIntObse.png" alt="">
+                <p>options hold three values; root, threshold, and margin
+                    <ul class="listMarginLeft__40px">
+                        <li>root - can be left out since most times root will be set to null, or just not written out at all. Both not writing anything for null and setting it to null will both set it to the viewport as seen in the skeleton example.</li>
+                        <li>threshold - a 0 to 1 scale. By default 0.</li>
+                        <li>rootMargin - works like margins in CSS. If wanted, it must be in parenthesis and must be in either percentage or px base. Dictates when it's fired.</li>
+                        <img src="./Images/basicSkeletonIntObseRootMargin.png" alt="">
+                    </ul>
+                </p>
+
+                <h3>TypeError...not an object</h3>
+                <p>If you are getting this error, this is most likely due to the JS running before the element even exists on the page. Move the JS to the bottom of the webpage.</p>
+               
             </div>
         </section>
         <section id="GIT" class="section__GIT section">
@@ -199,4 +214,5 @@
         
     </main>
 </body>
+<script src="./script.js"></script>
 </html>
