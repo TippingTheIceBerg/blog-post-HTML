@@ -113,3 +113,12 @@ font-family: 'Roboto Slab', serif;
     height: 100px;
     background: conic-gradient( #9aee9c,#FFA5A5);
 }
+.interOb__color{
+    font-size: 1.2em;
+    margin: 20px;
+    border:solid black;
+}
+.interOb__color-change{
+    color:red;
+
+}

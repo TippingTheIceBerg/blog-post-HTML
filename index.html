@@ -169,15 +169,23 @@
                 <p>Intersection Observer is a powerful tool that allows on scroll effects without the need for it to be called each time a scroll is done. </p>
                 <h3>How does Intersection work?</h3>
                 <p>Most times, intersection observer can be used with query selector to select all elements or class names, or single elements and a class name. Just note that if you do select multiple elements and classes, the steps are slightly differently.</p>
-                <img class="image" src="./Images/basicSkeletonIntObse.png" alt="">
+                <img class="images" src="./Images/basicSkeletonIntObse.png" alt="">
                 <p>options hold three values; root, threshold, and margin
                     <ul class="listMarginLeft__40px">
                         <li>root - can be left out since most times root will be set to null, or just not written out at all. Both not writing anything for null and setting it to null will both set it to the viewport as seen in the skeleton example.</li>
-                        <li>threshold - a 0 to 1 scale. By default 0.</li>
+                        <li>threshold - a 0 to 1 scale. By default 0. 0 is when any piece of the section is in view, while 1 is when 100% of the section is visible.</li>
                         <li>rootMargin - works like margins in CSS. If wanted, it must be in parenthesis and must be in either percentage or px base. Dictates when it's fired.</li>
-                        <img src="./Images/basicSkeletonIntObseRootMargin.png" alt="">
+                        <img class="images" src="./Images/basicSkeletonIntObseRootMargin.png" alt="">
                     </ul>
                 </p>
+                <h3>Intersection Observer with multiple classes</h3>
+                <p>For multiple classes or elements, the structure is the same as a single class or element selection. The biggest difference is that at the end when you call the observer, you need to set the variable used to hold the list with a forEach as seen on line 7 of the image.</p>
+                <img class="images" src="./Images/basicSkeletonIntObse.png" alt="">
+                <img src="./Images/intersectionObserverClasses.png" alt="">
+                <h3>Example Of Intersection Observer with selecting only one class,toggle,with a threshold of 50% (.5).</h3>
+                <p class="interOb__color-change interOb__color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sint repellat cumque laudantium deleniti reiciendis at veniam facilis animi ullam ducimus veritatis eaque excepturi, nostrum magnam perferendis delectus dolores. Laborum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae error dicta, eaque libero commodi corporis sint eum est. Quis non error tenetur repudiandae, facilis pariatur corrupti eos architecto commodi eligendi illo mollitia quasi porro ullam numquam labore a molestias, possimus sapiente soluta praesentium adipisci unde ut. Aliquam quos impedit nihil vel, dolor vero nam nisi vitae accusantium rem, ea quis iusto delectus officiis ducimus expedita sit beatae magnam eos sequi minima possimus sint? Debitis itaque omnis nulla molestiae at nostrum sequi minima? Magni, placeat beatae sit amet perspiciatis libero laboriosam aut facere adipisci commodi eum atque ipsa ipsam dicta modi.</p>
+                <img src="./Images/intersectionObserverColorChange.png" alt="">
+                <p>A key thing to note that since we set the variable as colorChangeObserver instead of just observer, we must call colorChangeObserver to observer colorChange.</p>
 
                 <h3>TypeError...not an object</h3>
                 <p>If you are getting this error, this is most likely due to the JS running before the element even exists on the page. Move the JS to the bottom of the webpage.</p>
