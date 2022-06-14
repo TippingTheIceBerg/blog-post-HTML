@@ -88,6 +88,9 @@
                 <img class="images" src="./Images/BEM__listEx.png" alt="BEM list example">
                 <h3>How to take screenshots of code in VS</h3>
                 <p>Highlight the portion of the code you want to screenshot. Next, right click on SnapCode. Last, when the new window opens up, click on the logo and then save it where you want to find it.</p>
+                <h3>Lazy Loading with HTML</h3>
+                <p>On images we can use a shorthand for lazy loading with the attribute loading. Some drawbacks are that not all browsers support it, but it can helpful on speeding up a page.</p>
+                <img loading="lazy" src="./Images/lazyLoading.png" alt="">
             </div>
         </section>
         <section id="CSS" class="section__CSS section">
@@ -190,7 +193,8 @@
                 <p>To prevent all selected elements from firing we will add an if statement to prevent this.What this also does is that when you leave the focus area, it won't fire again. Meaning that in our color change example, it would have stayed read as we passed by it. It would only fire again now when we re-enter the section, which in that case, will fire the toggle and remove the class, making it black again. The if statement is saying that if the area is <strong>NOT INTERSECTING</strong> then end the fire and don't remove the class.</p>
                 <img src="./Images/intersectionObserverPreventAllFiring.png" alt="">
                 <h3>To unobserve in intersection Observer</h3>
-                <p>To unobserve something means that if we enter the section it will fire, but once we try to renter nothing will change. In the example of the color change, we will see that the color red will stay red once we pass it, and once we renter it, will stay red now.</p>
+                <p>To unobserve something means that if we enter the section it will fire, but once we try to re-enter nothing will change. In the example of the color change, we will see that the color red will stay red once we pass it, and once we renter it, will stay red now.</p>
+                <img src="./Images/unobserve.png" alt="">
 
                 <h3>TypeError...not an object</h3>
                 <p>If you are getting this error, this is most likely due to the JS running before the element even exists on the page. Move the JS to the bottom of the webpage.</p>
