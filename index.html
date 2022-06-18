@@ -162,7 +162,16 @@
                 <h3>Margin Auto Horizontal Centering</h3>
                 <p>Auto will usually be 0, or whatever space is available on the side. For this to work, you need a defined width.Then set margin as <code>margin: 0 auto</code>.<strong>This only works for horizontal centering</strong></p>
                 <h3>Justify-content</h3>
-                <p>Justify-content works with placing flex items without having to change the width on the main axis.</p>
+                <p>Justify-content works with placing flex items without having to change the width on the main axis.</p><ul class="listMarginLeft__40px">
+                    <li>Space-between</li>
+                    <p>Space between makes sure that each space between them are laid out evenly, any after that is not between another item is not accounted for, which is why you have the first item and last item pushed all the way to the ends.</p>
+                    <li>Space-around</li>
+                    <p>Space around causes the spacing between items to be the same, but gives the last and first item equal space to the left and right of the ends.</p>
+                    <li>Space-evenly</li>
+                    <p>Space-evenly causes all spaces to be even, including the end points.</p>
+                </ul>
+                <img src="./Images/justifyContent.svg" alt="">
+
                 <h3>align-items</h3>
                 <p>align-items works by placing items on the cross axis, which is typically vertical.</p>
                 <h3>Main axis vs cross axis</h3>
@@ -173,7 +182,9 @@
                 <img src="./Images/crossAxisColumn.png" alt="">
                 <h3>Flex-Wrap</h3>
                 <p>Flex wrap allows us to negate the shrinking ability of flex to fit on a line that too small for the container.Instead it will force the object to form a new line.To properties of flex-wrap will be nowrap and wrap.</p>
+                
             </div>
+            
           
             
         </section>
