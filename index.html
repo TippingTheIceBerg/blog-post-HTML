@@ -183,16 +183,19 @@
                 <h3>Flex-Wrap</h3>
                 <p>Flex wrap allows us to negate the shrinking ability of flex to fit on a line that too small for the container.Instead it will force the object to form a new line.To properties of flex-wrap will be nowrap and wrap.</p>
                 <h3>align-items, align-self, and align-content</h3>
-                <p>Align items and self both control alignment but self only effects one item on the flex container while items effects all. Align content effect each new line of flex if it needs one.For it to work, we need more height than what is required to hold the items. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container" target="#">for a link to see how this works.</a></p>
-
-               
+                <p>Align items and self both control alignment but self only effects one item on the flex container while items effects all. Align content effect each new line of flex, as seen with <code>flex-wrap: wrap</code> if it needs one.For it to work, we need more height than what is required to hold the items. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container" target="#">for a link to see how this works.</a></p>
                 <h3>How to isolate justify-content</h3>
                 <p>Justify-content does not have self or items so aligning single items doesn't work as you would expect.If we want to separate things in a nar bar we would use <code>margin-left:auto;</code>. This forces the flex items to push all the way to the right if space is available. </p>
-
                 <h3>Justify-content flex-end</h3>
                 <p>While all the other justify-content choices  are interesting, don't forget the power of flex-end and start, very easy way to push things left or right.</p>
-                
-                
+                <h3>Flex Auto for longer text with shorter text</h3>
+                <p>Flex auto works as if we enter <code>flex: 1 1 auto;</code> all items will grow and shrink from a flex-basis of auto. This would mean the longer items would take more space.</p>
+                <h3>Having a flex item take most of the space</h3>
+                <p>In most instances,such in forms, we can have the text take most of the available space by setting <code>flex:1 1 auto;</code></p>
+                <h3>Flex nav quick Tips</h3>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox" target="#">For best layout for navigation bars.</a></p>
+                <h3>Flex cheat sheat</h3>
+                <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="#">CSS tricks offers this great cheat sheet for Flex.</a></p>
             </div>
             
           
