@@ -19,8 +19,12 @@ html,body{
 
 /* Nav bar */
 nav{
-    height: 60px;
-    background-color: var(--60--mainBG)
+    background-color: var(--60--mainBG);
+    
+}
+ul{
+    margin: 0;
+    padding: 0;
 }
 
 /* nav list color */
@@ -32,6 +36,7 @@ nav{
     color: var(--5-hightLightText);
     font-size: 1.1em;
 }
+
 
 .logo{
     font-size: 1.2em;
@@ -90,7 +95,6 @@ nav{
 
 .block__purpose{
     text-align: center;
- 
     padding: 20px;
     margin: 20px 50px;
 }
