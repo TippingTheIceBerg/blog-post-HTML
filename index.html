@@ -91,6 +91,8 @@
                 <h3>Lazy Loading with HTML</h3>
                 <p>On images we can use a shorthand for lazy loading with the attribute loading. Some drawbacks are that not all browsers support it, but it can helpful on speeding up a page.</p>
                 <img loading="lazy" src="./Images/lazyLoading.png" alt="">
+                <h3>How to open links in a seprate tab.</h3>
+                <p></p>
             </div>
         </section>
         <section id="CSS" class="section__CSS section">
@@ -105,13 +107,13 @@
                 <h3>Background-size vs Background-position</h3>
                 <p>Background-size has to do with how large the img should behave, this is where we see contain and cover. Contain being it showing the whole img, and if it doesn't cover the whole area the empty space will take up the background-color prop, but the img will never be cropped.cover is when the img filled the container fully, and does crop the img if the container isn't large enough.Background-position has to do with where you want the img to be viewed, this is the one where you use center,left,right,etc</p>
                 <h3>Color Scheme: How to choose your colors</h3>
-                <p>First go into the following site <a href="https://www.designspiration.com/search/saves/?q=colour" target="#">Color Picker</a>, and to help narrow the search on colors think of a couple things 
+                <p>First go into the following site <a href="https://www.designspiration.com/search/saves/?q=colour" target="_blank">Color Picker</a>, and to help narrow the search on colors think of a couple things 
                 <ol class="listMarginLeft__40px">
                 <li>Target Audience, a funeral home vs fast food will use different colors.</li>
                 <li>Does the Logo offer any colors?</li>
                 <li>Play the word game, write down things that remind you of your site, and you should think of what color define these.</li>
                 </ol>
-                some quick tips, a lighter shade works more for fresh energy brands, while darker ones are more for corporate serious brands. Next you want to keep in mind that most sites will use three base colors, white, gray, and a light gray. With this in mind, you will choose only a base color, the color you choose when you were thinking of a color at the list above,and an accent color. Once you have your color, go to <a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="#">accent color finder</a>.Enter your color into the wheel, and then click on add complimentary color near right of the selections. The color red below is #FFA5A5 and acts as the accent while the green below is #9AEE9C,and acts as the base color. After the accent, you will use two different grays, a darker and lighter one.The dark one is used for text. The gray needed can be find by entering your based color into the search bar of <a href="https://dribbble.com/" target="#">Dribble</a>  followed by the word website,and find a gray that matches your color choice.
+                some quick tips, a lighter shade works more for fresh energy brands, while darker ones are more for corporate serious brands. Next you want to keep in mind that most sites will use three base colors, white, gray, and a light gray. With this in mind, you will choose only a base color, the color you choose when you were thinking of a color at the list above,and an accent color. Once you have your color, go to <a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">accent color finder</a>.Enter your color into the wheel, and then click on add complimentary color near right of the selections. The color red below is #FFA5A5 and acts as the accent while the green below is #9AEE9C,and acts as the base color. After the accent, you will use two different grays, a darker and lighter one.The dark one is used for text. The gray needed can be find by entering your based color into the search bar of <a href="https://dribbble.com/" target="_blank">Dribble</a>  followed by the word website,and find a gray that matches your color choice.
                 <div class="colorChooser__baseAndAccentColor"></div>
                 The main color will be used for large areas and icons. The accent color for buttons and smaller areas, call to action areas.Dark gray for text and icon outlines, and the white and light gray are used for the background.
                 Another tip will be to set everything to gray scale and then add color later.
@@ -126,7 +128,7 @@
                         <li>Rotation - <code>transform: rotate(ndeg)</code></li>
                         <li>Opacity - <code>opacity: 0...1</code></li>
                     </ol>
-                <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_">for a full list of known potential issues.</a>
+                <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_blank">for a full list of known potential issues.</a>
                 </p>
                 <h3>box-sizing: border-box</h3>
                 <p>The purpose of border-box involves the box model, where the padding and border are included in the height of the element. With border-box, if you enter <code>width: 100px; height:100px;</code>the element will be exactly 100px by 100px. To showcase this, if you have <code>padding:10px; border:10px solid; height:100px; width:100px</code> .Without border box the total width and height will be 140px x 140px since we gave the content 100px x 100px but then the padding and border are added after, changing the height and width.  With border box, the height x width of the content will be 60px x 60px; with the padding and border taking up their 20px x 20px each.The height and width of the element of the whole will now be 100px x 100px as intended</p>
@@ -174,7 +176,7 @@
                 <h3>align-items</h3>
                 <p>align-items works by placing items on the cross axis, which is typically vertical.</p>
                 <h3>Main axis vs cross axis</h3>
-                <p>Taken from the  <a href="https://www.theodinproject.com/lessons/foundations-alignment" target="+">Odin Project</a>.<em> "Because justify-content and align-items are based on the main and cross axis of your container, their behavior changes when you change the flex-direction of a flex-container. For example, when you change flex-direction to column, justify-content aligns vertically and align-items aligns horizontally."</em></p>
+                <p>Taken from the  <a href="https://www.theodinproject.com/lessons/foundations-alignment" target="_blank">Odin Project</a>.<em> "Because justify-content and align-items are based on the main and cross axis of your container, their behavior changes when you change the flex-direction of a flex-container. For example, when you change flex-direction to column, justify-content aligns vertically and align-items aligns horizontally."</em></p>
                 <img src="./Images/mainAxisRow.png" alt="main axis row">
                 <img src="./Images/crossAxisRow.png" alt="cross axis row">
                 <img src="./Images/mainAxisColumn.png" alt="main axix column">
@@ -184,7 +186,7 @@
                 <h3>Flex-Wrap</h3>
                 <p>Flex wrap allows us to negate the shrinking ability of flex to fit on a line that too small for the container.Instead it will force the object to form a new line.Two properties of flex-wrap will be nowrap and wrap.</p>
                 <h3>align-items, align-self, and align-content</h3>
-                <p>Align items and self both control alignment but self only effects one item on the flex container while items effects all. Align content effect each new line of flex, as seen with <code>flex-wrap: wrap</code> if it needs one.For it to work, we need more height than what is required to hold the items. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container" target="#">for a link to see how this works.</a></p>
+                <p>Align items and self both control alignment but self only effects one item on the flex container while items effects all. Align content effect each new line of flex, as seen with <code>flex-wrap: wrap</code> if it needs one.For it to work, we need more height than what is required to hold the items. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container" target="_blank">for a link to see how this works.</a></p>
                 <h3>How to isolate justify-content</h3>
                 <p>Justify-content does not have self or items so aligning single items doesn't work as you would expect.If we want to separate things in a nar bar we would use <code>margin-left:auto;</code>. This forces the flex items to push all the way to the right if space is available. </p>
                 <h3>Justify-content flex-end</h3>
@@ -194,9 +196,9 @@
                 <h3>Having a flex item take most of the space</h3>
                 <p>In most instances,such in forms, we can have the text take most of the available space by setting <code>flex:1 1 auto;</code></p>
                 <h3>Flex nav quick Tips</h3>
-                <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox" target="#">For best layout for navigation bars.</a></p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox" target="_blank">For best layout for navigation bars.</a></p>
                 <h3>Flex cheat sheat</h3>
-                <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="#">CSS tricks offers this great cheat sheet for Flex.</a></p>
+                <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS tricks offers this great cheat sheet for Flex.</a></p>
                 <h3>Nav bar with controlled left and right spacing</h3>
                 <p>Remember that if using ul elements, there margins and paddings must be set to 0. Using <code>justify-content:space-between</code> will push things all to the way to the left and right, but if the main container flex has a padding on the left and right, they <strong>WON'T</strong> be pushed into the padding, making a space to the left and right. </p>
                 <img src="./Images/flexExercise2.png" alt="space between with space to the left and right.">
