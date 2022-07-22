@@ -19,3 +19,14 @@ let colorChangeObserver = new IntersectionObserver(function(entries,observer){
     });
 },options);
 colorChangeObserver.observe(colorChange);
+
+
+// Round Numbers
+let toBeFixedExample = document.querySelector('.toBeFixed');
+let fixedExample = document.querySelector('.fixed');
+
+let toBeFixed = 1.123321312321;
+let fixed = toBeFixed.toFixed(2);
+
+toBeFixedExample.append(toBeFixed);
+fixedExample.append(fixed);
