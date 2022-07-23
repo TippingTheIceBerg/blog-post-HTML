@@ -37,3 +37,5 @@ let stringNumber = "22";
 stringNumber += 8;
 let myNumber = Number(stringNumber) + 8
 stringNumberExample.append(stringNumber + " "+ myNumber)
+
+
