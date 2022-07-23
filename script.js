@@ -30,3 +30,10 @@ let fixed = toBeFixed.toFixed(2);
 
 toBeFixedExample.append(toBeFixed);
 fixedExample.append(fixed);
+
+// Numbers
+let stringNumberExample = document.querySelector('.stringNumber');
+let stringNumber = "22";
+stringNumber += 8;
+let myNumber = Number(stringNumber) + 8
+stringNumberExample.append(stringNumber + " "+ myNumber)
