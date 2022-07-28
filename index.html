@@ -247,10 +247,9 @@
 
                 <h3>Fade in and out Effect with Intersection</h3>
                 <p>For a simple fade in effect, use intersection observer and css transition, opacity, and transform.
-
-                    <img src="./Images/fadeInOutJS&CSS.png" alt="">
-                    <img src="./Images/fadeInOutJS&CSSInter.png" alt="">
                 </p>
+                <img src="./Images/fadeInOutJS&CSS.png" alt="">
+                <img src="./Images/fadeInOutJS&CSSInter.png" alt="">
 
                 <h3>TypeError...not an object</h3>
                 <p>If you are getting this error, this is most likely due to the JS running before the element even exists on the page. Move the JS to the bottom of the webpage.</p>
@@ -271,6 +270,8 @@
                 <h3>Rounding Numbers</h3>
                 <p>When wanting to round, you need to create another variable and set it  <kbd>.toFixed(2)</kbd> and example would be <span class="toBeFixed"></span> being fixed to <span class="fixed"></span></p>
                 <img src="./Images/fixedJS.png" alt="">
+                <h3>What is a string and how do we modify them?</h3>
+                <p>If you are having issues with changing strings remember that strings are <strong>IMMUTABLE</strong> meaning that any change to a string must be done with creating a new variable and setting some sort of method to the string we want to change.</p>
                 <h3>Turn a string into a number</h3>
                 <p>if you are having issues having number concat instead of add use <kbd>Number()</kbd> <span class="stringNumber"></span> the values should 30, but it's not since it's adding it on like a string.</p>
                 <img src="./Images/stringNumberJS.png" alt="">
@@ -291,6 +292,31 @@
                 <p>When we want the user to enter a value,such as a temporary username, we can use the prompt function as a means to contain the value the user inputs
                 </p>
                 <img src="./Images/promptUserVarJS.png" alt="">
+                <h3>More powers of backticks</h3>
+                <p>Backticks have two other unique powers, if used inside the ${}, it can also be used for calculating a value, and if written on two separate lines, it will add the values on separate lines, similar to using \n</p>
+                <img src="./Images/backTickMath.png" alt="">
+                <h3>Extracting String Parts</h3>
+                <p>There are three ways to extract a string, and assign it to another variable and the end is <strong>NEVER</strong> included.
+                    <ul class="listMarginLeft__40px">
+                        <li>Slice(start,end)</li>
+                        <li>Substring(start,end)</li>
+                        <li>substr(start,end)</li>
+                    </ul>
+                </p>
+                <h3>Slice (similar to substring)</h3>
+                <p> Like all the extractions you need to assign the rest of the part to another variable.In this example, banana. If no end in inputting, it will just slice out the rest.</p>
+                <img src="./Images/sliceJS.png" alt="">
+                <h3>Substr()</h3>
+                <p>Substr works at the start like slice, but the second value is a count from value, meaning using substr(7,6) means start at 7 and count up 6 spots instead of position based like in slice. Here we would get "BAN"</p>
+                <img src="./Images/subStrJS.png" alt="">
+                <h3>Replace text with Regex</h3>
+                <p>To replace words, we can use the replace method, note this returns a new string and only replaces one word unless we use regex.</p>
+                <img src="./Images/replaceJS.png" alt="">
+                <img src="./Images/replaceRegexJS.png" alt="">
+                <h3>Pad start and Pad end</h3>
+                <p>Used to add another string to current string, can add 0's or X's to the end of a current string, useful for hiding credit card numbers or social security number.This only works on strings, so if we have a number, we must first change it into a string as seen with the second image.</p>
+                <img src="./Images/PadEnd.png" alt="">
+                <img src="./Images/PadEndStringJS.png" alt="">
             </div>
         </section>
         <section id="GIT" class="section__GIT section">
