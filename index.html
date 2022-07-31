@@ -93,6 +93,19 @@
                 <img loading="lazy" src="./Images/lazyLoading.png" alt="">
                 <h3>How to open links in a separate tab.</h3>
                 <p>When using a link tag, use <code>target="_blank"</code>, this causes a new tab to be open while not overwriting other opened links.</p>
+                <h3>Use of Labels and select</h3>
+                <p>whenever we want a dropdown function, we will use select and the children will be options.
+                    <label for="weather">Select the weather type today: </label>
+                    <select id="weather">
+                    <option value="">--Make a choice--</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowing">Snowing</option>
+                    <option value="overcast">Overcast</option>
+                    </select>
+
+                </p>
+                <img src="./Images/labelAndSelect.png" alt="">
             </div>
         </section>
         <section id="CSS" class="section__CSS section">
@@ -326,7 +339,7 @@
                     <img src="./Images/StringMethodsPart2.png" alt="">
                     <img src="./Images/stringMethodPart3.png" alt="">
                 </p>
-                <h3>Power of ===</h3>
+                <h3>Power of === </h3>
                 <p>A strick equality sign will first test types, meaning that if a string and a number are compared, it won't change the string into a number as seen with ==, and will instead immediately return false</p>
                 <h3>Writing Else Statements</h3>
                 <p>Else statements should always come at the end, since they are always run when all other conditions have failed to be met.</p>
@@ -335,6 +348,35 @@
                 <p>The OR operator finds the first truthy value.Most of the time, OR || is used in an if statement to test if any of the given conditions is true.If all are false, then the last operand will be returned.This effect can also be used for a short circuit effect, meaning that a function can be called if all the operands to the left are false.</p>
                 <img src="./Images/ORJS.png" alt="">
                 <img src="./Images/ORAllFalseJS.png" alt="">
+                <h3>And && </h3>
+                <p>Returns the first falsy value.</p>
+                <img src="./Images/ANDJS.png" alt="">
+                <h3>Nesting vs using operators</h3>
+                <p>We can achieve some nested code by replace them with logical operators && and ||</p>
+                <img src="./Images/nestedJS.png" alt="">
+                <img src="./Images/replacingNestedJS.png" alt="">
+                <h3>Checking Var once</h3>
+                <p>A common issue when using && and || is when choosing a variable, it must be called upon each time.</p>
+                <img src="./Images/operatorsPitfall.png" alt="">
+                <h3>Switch Statement</h3>
+                <p>
+                    Switch statements can be used for checking one value at at time, but can also be used for many variables before a break, for an extensive list, follow this link <a target="_blank" href="https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript">Digital Ocean</a>
+                    <img src="./Images/switch.png" alt="">
+                </p>
+                <h3>How to pull a value of a changing value</h3>
+                <p>When we want a function to run with each change, we will add an event that looks for change</p>
+                <img src="./Images/selectValue.png" alt="">
+                <h3>Ternary Operators and HTML color theme</h3>
+                <p>When lots of if statements clog up the code, we can try to shorten it with ternary operators that tries to answer basic true of false statements.
+                    <label for="theme">Select the theme </label>
+                    <select id="theme" class="select__theme--change">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                    </select>
+                </p>
+                <img src="./Images/ternaryOper.png" alt="">
+                <img src="./Images/ternaryOperExa2.png" alt="">
+
             </div>
         </section>
         <section id="GIT" class="section__GIT section">
