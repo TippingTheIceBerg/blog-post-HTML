@@ -39,4 +39,12 @@ let myNumber = Number(stringNumber) + 8
 stringNumberExample.append(stringNumber + " "+ myNumber);
 
 
+// Join
+const myArrayToBeJoined = ['I', 'love', 'chocolate', 'frogs'];
 
+let notJoinedArray = document.querySelector(".arrayNotJoined");
+let arrayJoined = document.querySelector(".arrayJoined");
+
+notJoinedArray.textContent = myArrayToBeJoined;
+arrayNowJoined = myArrayToBeJoined.join("")
+arrayJoined.textContent = arrayNowJoined;
