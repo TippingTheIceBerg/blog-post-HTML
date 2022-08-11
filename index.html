@@ -416,7 +416,11 @@
                 <h3>Local Storage and Changing Document Title</h3>
                 <p>For local storage and retrieval, we use the window local storage of getItem and setItem.Once we have this, we can create an if statement to see if a stored item is present or not. It uses the first value as the key, like a variable, and the second variable will be the value of that variable, technically these are key objects pairs.Note, we didn't use the setItem of 'userName' variable since we didn't want to call the getItem local storage at this point.</p>
                 <img src="./Images/localStorangeOnClick.png" alt="">
+                <h3>Scroll Height vs offset Height vs Client Height</h3>
+                <p>When wanting on scroll effect outside of intersection observer, we will use both the scroll height: amount seen in window, clientHeight: the height of an element + the vertical padding. offsetHeight: the height of the element + the vertical padding + the top and bottom borders + the horizontal scrollbar (if it's available).</p>
+                <img src="./Images/differentHeightsJS.png" alt="">
             </div>
+
         </section>
         <section id="GIT" class="section__GIT section">
             <h2>GIT</h2>
