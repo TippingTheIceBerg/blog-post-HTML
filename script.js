@@ -48,3 +48,4 @@ let arrayJoined = document.querySelector(".arrayJoined");
 notJoinedArray.textContent = myArrayToBeJoined;
 arrayNowJoined = myArrayToBeJoined.join("")
 arrayJoined.textContent = arrayNowJoined;
+

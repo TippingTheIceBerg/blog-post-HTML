@@ -420,6 +420,22 @@
                 <p>When wanting on scroll effect outside of intersection observer, we will use both the scroll height: amount seen in window, clientHeight: the height of an element + the vertical padding. offsetHeight: the height of the element + the vertical padding + the top and bottom borders + the horizontal scrollbar (if it's available).</p>
                 <img src="./Images/differentHeightsJS.png" alt="">
                 <img src="./Images/scrollHeightExampleJS.png" alt="">
+                <h3>Rewriting variables with local scope</h3>
+                <p>Setting a variable with let will only allow change to the outside if we set the variable to another variable without the let phrase. If we do decide to give the variable a new value, but use let, it <strong>WON'T</strong> change the value of the global variable.
+                </p>
+                <img src="./Images/changingGloballVarJS.png" alt="">
+                <img src="/Images/failingToChangeGlobalJS.png" alt="">
+                <h3>Argument Vs parameter</h3>
+                <p>Parameters are the variables we put inside th parenthesis of functions.Arguments are the values we use for the functions. </p>
+                <h3>Function Naming conventions</h3>
+                <p>Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does. It is a widespread practice to start a function with a verbal prefix which vaguely describes the action. There must be an agreement within the team on the meaning of the prefixes. For instance, functions that start with "show" usually show something. Function starting with… "get…"- return a value, "calc…" - calculate something, "create…" - create something, "check…" - check something and return a boolean, etc. Examples of such names:</p>
+                <img src="./Images/examplesOfFunctionNames.png" alt="">
+                <h3>When to use declaration vs function expression?</h3>
+                <p>When to choose Function Declaration versus Function Expression?
+                    As a rule of thumb, when we need to declare a function, the first thing to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
+                    That's also better for readability, as it's easier to look up function f(…) {…} in the code than let f = function(…) {…};. Function Declarations are more “eye-catching”.
+                    …But if a Function Declaration does not suit us for some reason, or we need a conditional declaration. Another note, function expressions can only work if placed first, while declarations can work any time, but only within the scope of the function if it was made in one.</p>
+                    <img src="./Images/functionsTypesJS.png" alt="">
             </div>
 
         </section>
