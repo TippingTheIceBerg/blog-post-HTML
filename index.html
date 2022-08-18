@@ -232,6 +232,9 @@
                 <p>Sometimes we want to have the item be center page but want to avoid doing height math. This can be fixed by placing the whole area in a <code>display: flex</code> and then giving what you want to be center a <code>flex:1</code></p>
                 <h3>::before ::after</h3>
                 <p>In order to do before and after, we must selection <strong>CONTAINERS</strong>, examples of containers are <kbd>DIV,p,articles,sections,etc</kbd>. Examples of things that are <strong>NOT</strong> containers are <kbd>inputs,buttons,imgs,etc.</kbd>
+                <h3>Pointer Events</h3>
+                <p>In some designs you will have things overlap, in order to remove interference in clickable events, simply use pointer-events.</p>
+                <img src="./Images/pointerEventCS.png" alt="">
             </div>
             
           
@@ -471,8 +474,14 @@
                                 Otherwise print the current number</li>
                             <li> Decomposition:As we can see from the algorithm we developed, the first subproblem we can solve is getting input from the user. So let's start there and verify it works by printing the entered number. Next loop from 1 to the enter number. Next if it can be divided by 3 then print fizz. etc. For the rest of the explanation go to <a target="_blank" href="https://www.theodinproject.com/lessons/foundations-problem-solving"> The Odin Project</a></li>
                         </ol>
-    
                     </p>
+                    <h3>Cannot read property 'style' of Undefined in JS</h3>
+                    <p>This mostly occurs when using an array and you make the for loop go to far. The fix to this is simply make it so that it's just less not less than or equal to. So remove the = and it'll now work without errors.</p>
+                    <img src="./Images/causingStyleErrorCS.png" alt="">
+                    <h3>Selecting all classes</h3>
+                    <p>When working with multiple classes, you have to create a for loop when creating your changes after an event listener, otherwise JS will shoot an error.</p>
+                    <img src="./Images/exampleOfArraySelectorJS.png" alt="">
+                    
             </div>
 
         </section>
