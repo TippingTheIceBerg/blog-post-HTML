@@ -116,7 +116,18 @@
                 <p>For easy movement, go to google chrome see the Angle clock for any transform properties, and use the square layers to check for shadows with blurriness and X and Y offset.</p>
                 <h3>Easy Breakpoints for media queries</h3>
                 <p>To change Media Queries break points, first make it into mobile mode, then select the ... options., then select show media queries. Once selected, click on the top of the bars, the blue and orange bars to select the break points.</p>
+                <h3>Add pseudo to images and choosing images based on mobile vs desktop viewing</h3>
+                <p>When using images, it's best to set a width and height to the image themselves. Also, when wanting a change of images, images must be instead placed in source tags, and all of the sources placed inside a picture semantics, works similar to a div.Play around with the html height and see how it behaves. Also, see if you can see the difference from mobile design at 360px and below and those above, it's subtle but there!</p>
+                <picture>
+                    <source media="(max-width:360px)" srcset="./Images/pictureExampleHTML-m.png">
+                    <!-- typically you will include this other source and the img is actually the fall back -->
+                    <!-- <source media="(max-width:361px)" srcset="./Images/pictureExampleHTML.png"> -->
+                    <img loading="lazy" decoding="async" width="500px" height="500px" src="./Images/pictureExampleHTML.jpg" alt="htmlHeightWidth">
+                </picture>
+                <h3>Decoding async</h3>
+                <p>The decoding="async" attribute will tell the browser that it is OK for image decoding to be done at a later moment so that the browser can continue displaying content even if the images are not fully loaded</p>
             </div>
+
         </section>
         <section id="CSS" class="section__CSS section">
             <h2>CSS</h2>
@@ -204,7 +215,7 @@
                 <p>Taken from the  <a href="https://www.theodinproject.com/lessons/foundations-alignment" target="_blank">Odin Project</a>.<em> "Because justify-content and align-items are based on the main and cross axis of your container, their behavior changes when you change the flex-direction of a flex-container. For example, when you change flex-direction to column, justify-content aligns vertically and align-items aligns horizontally."</em></p>
                 <img src="./Images/mainAxisRow.png" alt="main axis row">
                 <img src="./Images/crossAxisRow.png" alt="cross axis row">
-                <img src="./Images/mainAxisColumn.png" alt="main axix column">
+                <img src="./Images/mainAxisColumn.png" alt="main axis column">
                 <img src="./Images/crossAxisColumn.png" alt="">
                 <h3>Flex-shrink</h3>
                 <p>When a flex items is not taken up as much space as you would like, try giving it a flex-shrink of 0, this causes the item to not grow smaller.</p>
