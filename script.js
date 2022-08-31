@@ -48,10 +48,3 @@ let arrayJoined = document.querySelector(".arrayJoined");
 notJoinedArray.textContent = myArrayToBeJoined;
 arrayNowJoined = myArrayToBeJoined.join("")
 arrayJoined.textContent = arrayNowJoined;
-
-quotes = [
-        "if your feel your code is too complex to understand without comments, your code is probably just bad." ,
-        "Code can only tell you how the program works; comments can tell you why it works.",
-    
-    
-]
