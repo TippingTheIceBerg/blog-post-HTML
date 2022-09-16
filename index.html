@@ -287,7 +287,7 @@
                 <img src="./Images/intersectionObserverColorChange.png" alt="">
                 <p>A key thing to note that since we set the variable as colorChangeObserver instead of just observer, we must call colorChangeObserver to observer colorChange.</p>
                 <h3>Prevent intersection Observer from firing all elements.</h3>
-                <p>To prevent all selected elements from firing we will add an if statement to prevent this.What this also does is that when you leave the focus area, it won't fire again. Meaning that in our color change example, it would have stayed read as we passed by it. It would only fire again now when we re-enter the section, which in that case, will fire the toggle and remove the class, making it black again. The if statement is saying that if the area is <strong>NOT INTERSECTING</strong> then end the fire and don't remove the class.</p>
+                <p>To prevent all selected elements from firing we will add an if statement to prevent this.What this also does is that when you leave the focus area, it won't fire again. Meaning that in our color change example, it would have stayed red as we passed by it. It would only fire again now when we re-enter the section, which in that case, will fire the toggle and remove the class, making it black again. The if statement is saying that if the area is <strong>NOT INTERSECTING</strong> then end the fire and don't remove the class.</p>
                 <img src="./Images/intersectionObserverPreventAllFiring.png" alt="">
                 <h3>To unobserve in intersection Observer</h3>
                 <p>To unobserve something means that if we enter the section it will fire, but once we try to re-enter nothing will change. In the example of the color change, we will see that the color red will stay red once we pass it, and once we renter it, will stay red now.</p>
@@ -329,11 +329,11 @@
                 <h3>What is a string and how do we modify them?</h3>
                 <p>If you are having issues with changing strings remember that strings are <strong>IMMUTABLE</strong> meaning that any change to a string must be done with creating a new variable and setting some sort of method to the string we want to change.</p>
                 <h3>Turn a string into a number</h3>
-                <p>if you are having issues having number concat instead of add use <kbd>Number()</kbd> <span class="stringNumber"></span> the values should 30, but it's not since it's adding it on like a string.</p>
+                <p>if you are having issues having numbers concat instead of add, use <kbd>Number()</kbd> <span class="stringNumber"></span> the values should be  30, but it's not since it's adding it on like a string.</p>
                 <img src="./Images/stringNumberJS.png" alt="">
                 <h3>Turning a Number to a string</h3>
                 <p>To turn a number into a string we will use the .toString method. </p>
-                <img src="./Images/" alt="">
+                <img src="./Images/NumberIntoStringJS.png" alt="">
 
                 <h3>Using + to make strings into Numbers</h3>
                 <p>Another option involves placing the + sign in front of string variables. Shorthand method of Numbers().</p>
@@ -591,6 +591,15 @@
                     <img src="./Images/TDDExample.png" alt="">
                     <img src="./Images/runningTestInTerminal.png" alt="">
                     <img src="/Images/functionToBeExported.png" alt="">
+                    <h3>Reverse A string</h3>
+                    <p>Reversing a string requires first to make the string into an array.</p>
+                    <img src="./Images/reverseString.png" alt="">
+                    <h3>Filter and includes</h3>
+                    <p>When considering arrays, always think of the big three, map,filter, and reduce if you want some sort of modification to an array.</p>
+                    <img src="./Images/filter&Includes.png" alt="">
+                    <h3>Spread Operator</h3>
+                    <p>Spread operator allows an iterable to expand in places where 0+ arguments are expected. Best when an unknown amount of arguments (multiple) are going to be included.</p>
+                    <img src="./Images/filter&Includes.png" alt="">
             </div>
 
         </section>
