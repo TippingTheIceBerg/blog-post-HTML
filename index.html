@@ -607,6 +607,41 @@
                     <h3>Round to Decimal</h3>
                     <p>When rounding to a desired decimal we can use toFixed, however this makes it into a string, to change into a number you can use Number or + before the variable.</p>
                     <img src="/Images/roundToDecimal.png" alt="">
+                    <h3>What is the DOM?</h3>
+                    <p>DOM stands for Document Object Model, which is a tree like representation of the contents of the page. This is how we classify elements as parents, children, or siblings.</p>
+                    <h3>How to use four basic CSS selectors</h3>
+                    <p>
+                        <ol class="listMarginLeft__40px">
+                            <li>div.display</li>
+                            <li>.display</li>
+                            <li>#container > .display</li>
+                            <li>div#container > div.display</li>
+                        </ol>
+                        <img src="./Images/HTMLForCSSSelectors.png" alt="">
+                    </p>
+                    <h3>What are some issues with querySelectorAll?</h3>
+                    <p>SelectAll looks like an array, but is actually a nodeList, meaning not all array methods work. One solution is it use the spread operator on the nodeList.</p>
+                    <h3>How do you create an Element?</h3>
+                    <p><code>const div = document.createElement('div');
+                    </code> <strong>NOTE: This does NOT put the element in the DOM, it stores it in memory so it can be manipulated first with styles,classes,etc.</strong></p>
+                    <h3>Editing Attributes</h3>
+                    <p>Most attributes can be found or edited with (desire)Attribute</p>
+                    <img src="./Images/attributesJS.png" alt="">
+                    <h3>Adding,remove, or toggle classes</h3>
+                    <p>While we can add classes with div.classList.add and remove them with div.classList.remove, it's almost always better to toggle it instead with div.classList.toggle.</p>
+                    <h3>textContent vs innerHTML</h3>
+                    <p>It's almost always better to add textContent rather than use innerHTML since this prevents accidental leakage of data.</p>
+                    <h3>How to append an element into another element</h3>
+                    <p>Appending an element first requires us to  create the element, and then create add the modifications we want before appending it to where we want.</p>
+                    <img src="./Images/appendContent.png" alt="">
+                    <h3>Adding Inline styles</h3>
+                    <p>Here are all the examples of how we can add CSS styles to an element.</p>
+                    <img src="./Images/cssStyles.png" alt="">
+                    <h3>Append vs AppendChild</h3>
+                    <p>In situations were we don't care for the return value, we can use append in most cases over appendChild. AppendChild does not work if we just want to append text.</p>
+                    <h3>Attach listeners to a group of Nodes</h3>
+                    <p>We learned above that we can get a nodelist of all of the items matching a specific selector with querySelectorAll('selector'). In order to add a listener to each of them we simply need to iterate through the whole list.</p>
+                    <img src="./Images/appendMusltipleEvents.png" alt="">
             </div>
 
         </section>

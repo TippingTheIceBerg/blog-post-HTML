@@ -49,3 +49,6 @@ notJoinedArray.textContent = myArrayToBeJoined;
 arrayNowJoined = myArrayToBeJoined.join("")
 arrayJoined.textContent = arrayNowJoined;
 
+
+
+                     
