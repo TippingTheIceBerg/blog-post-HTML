@@ -674,9 +674,24 @@
                <h3>How to make branches and git into them</h3>
                <p>To make a new branch use <kbd>git branch (branch name). You can get into the branch use git checkout (branch name).</kbd>To create a branch and get into it <kbd>git checkout -b (branch name)</kbd></p>
                <h3>To see all branches</h3>
-               <p>To see what branches you have created use git branch, similar to the effect of ls on the terminal.</p>
+               <p>To see what branches you have created use <kbd>git branch</kbd> which also tells you what branch you are in currently. Similar to the effect of ls on the terminal.</p>
                <h3>Finished a branch, time to merge and delete.</h3>
                <p>Once a branch is finished and all work is done, it's time to merge the branch onto the main. <kbd>git merge (branchName)</kbd> Next, once they are merged, you will want to delete the branch otherwise the branches will clutter the memory. Delete with <kbd>git branch -d (branch Name)</kbd> </p>
+               <h3>Creating a branch  and to see it on the repository</h3>
+               <p>To see the branch is working, use <kbd>git push origin (branch Name)</kbd>After which, on github you can select it with the dropdown.</p>
+               <h3>Pushing branches to the main</h3>
+               <p>When you you push changes you will now use <kbd>git push origin (branch name)</kbd></p>
+               <h3>How to add the branch onto the main branch</h3>
+               <p>
+                <ol class="listMarginLeft__40px">
+                   <li>Checkout the branch we want to merge INTO i.e. main with the command git checkout main.
+                </li>
+                   <li>Now let’s merge our rps-ui branch into main, our current branch, with git merge rps-ui.</li>
+                   <li>If everything goes fine, our rps-ui branch is now successfully merged with main! Use git log and you’ll see all the commits you’ve made to your feature branch on top of the commits you made to the main branch. Now for our final step!</li>
+                   <li>Let’s push our main branch into our remote repo by running git push origin main . Go to your GitHub repo and you’ll see that our main branch will have all the changes and commits you made to the rps-ui branch. Congratulations! You’ve successfully pushed your first feature into your production branch!</li>
+                   <li>Now that we have all our code in the main branch, we don’t really need our rps-ui branch anymore. Let’s do some cleanup, both locally and in the remote repo. Delete the branch from our local repo with git branch -d rps-ui and also delete it from the remote repo on GitHub with git push --delete origin rps-ui. Congrats, we’re all done with our cleanup!</li>
+                </ol>
+                </p>
             </div>
         </section>
         <section id="VSCode" class="section__VS section">
