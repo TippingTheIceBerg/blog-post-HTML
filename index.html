@@ -642,6 +642,9 @@
                     <h3>Attach listeners to a group of Nodes</h3>
                     <p>We learned above that we can get a nodelist of all of the items matching a specific selector with querySelectorAll('selector'). In order to add a listener to each of them we simply need to iterate through the whole list.</p>
                     <img src="./Images/appendMusltipleEvents.png" alt="">
+                    <h3>How to Clear content</h3>
+                    <p>The easiest way to clear content with  be to use <code>(container).innerHTML = ""</code>However using innerHTML cause cause leaks of data and hackers to ruin the site. A newer approach is to use <code>(container).replaceChildren();
+                    </code>This method allows us to clear the children and if wanted, replace it with new children. However if the goal is simply to clear the children,leave it blank.</p>
             </div>
 
         </section>
