@@ -345,9 +345,10 @@
                 <p>Backticks are a version of quotes,"Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}, for example</p>
                 <img src="./Images/backicksJS.png" alt="">
                 <h3>Using prompt for Variable Definitions</h3>
-                <p>When we want the user to enter a value,such as a temporary username, we can use the prompt function as a means to contain the value the user inputs
+                <p>When we want the user to enter a value,such as a temporary username, we can use the prompt function as a means to contain the value the user inputs. Also, by giving prompts a value after the statement we want responded to, we can create a default answer if the user ends up entering nothing.
                 </p>
                 <img src="./Images/promptUserVarJS.png" alt="">
+                <img src="./Images/bracketVariables.png" alt="">
                 <h3>More powers of backticks</h3>
                 <p>Backticks have two other unique powers, if used inside the ${}, it can also be used for calculating a value, and if written on two separate lines, it will add the values on separate lines, similar to using \n</p>
                 <img src="./Images/backTickMath.png" alt="">
@@ -645,6 +646,38 @@
                     <h3>How to Clear content</h3>
                     <p>The easiest way to clear content with  be to use <code>(container).innerHTML = ""</code>However using innerHTML cause cause leaks of data and hackers to ruin the site. A newer approach is to use <code>(container).replaceChildren();
                     </code>This method allows us to clear the children and if wanted, replace it with new children. However if the goal is simply to clear the children,leave it blank.</p>
+                    <h3>What are Objects?</h3>
+                    <p>Objects are used to store keyed collections of various data and more complex entities.An object can be created with figure brackets {…} with an optional list of properties. A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.(taken from <a href="https://javascript.info/object" target="_blank"> javascript.info</a> ) </p>
+                    <h3>What are the two ways we can created objects?</h3>
+                    <p>We can create objects with an object literal or an object constructor syntax</p>
+                    <img src="./Images/CreateObjectsJS.png" alt="">
+                    <h3>When you think of objects what should you think of first? </h3>
+                    <p>Key: value pairs, all objects follow this. And a key: value pair together are called properties. </p>
+                    <h3>How to delete properties</h3>
+                    <p> <code>delete object:key, ie delete user.age</code></p>
+                    <img src="./Images/objectWithKeyValue.png" alt="">
+                    <h3>Keeping objects consistent</h3>
+                    <p>When having two or more words values with a key, they must be in quotations. Also, when creating keys: value pairs, they are ended with a comma, including the last one. This is called a trailing comma.</p>
+                    <img src="/Images/consistentObjects.png" alt="">
+                    <h3>Square bracket notation</h3>
+                    <p>If wanting to access a value that's greater than one word, we <strong>MUST</strong>use square bracket notation. Remember that the bracket still needs quotation marks.</p>
+                    <img src="./Images/squareBracket.png" alt="">
+                    <h3>Bracket Notation Variables</h3>
+                    <p>Since dot notation cannot take variables, we must use bracket notation if we are defining a variable.</p>
+                    <img src="./Images/bracketVariables.png" alt="">
+                    <h3>Computer properties</h3>
+                    <p>When property names are simple we want to use dot notation, but if we need something more complex, we will use bracket notation.</p>
+                    <img src="/Images/computedProperties.png" alt="">
+                    <h3>Why do some key value pairs have the same name?</h3>
+                    <p> Properties have the same names as variables. The use-case of making a property from a variable is so common, that there's a special property value shorthand to make it shorter.</p>
+                    <img src="./Images/propertyVariablesShortHand.png" alt="">
+                    <img src="./Images/propertyVariablesShortHandExm.png" alt="">
+                    <h3>Does a property exist </h3>
+                    <p>There are two ways to test if a property exists. With undefined and in</p>
+                    <img src="./Images/testingPropInAndUndefined.png" alt="">
+                    <h3>For in Loop, checking all keys or values.</h3>
+                    <p>When we want to check all keys in objects, we can use a for in loop.</p>
+                    <img src="./Images/forInLoop.png" alt="">
             </div>
 
         </section>
