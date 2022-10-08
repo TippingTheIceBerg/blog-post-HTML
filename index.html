@@ -307,6 +307,9 @@
                 <p>A syntax error occurs when the code you are trying to run is not written correctly, i.e., in accordance with the grammatical rules of JavaScript.</p>
                 <h3>Type Error</h3>
                 <p>These errors are thrown for a few different reasons:Per MDN, a TypeError may be thrown when:an operand or argument passed to a function is incompatible with the type expected by that operator or function;or when attempting to modify a value that cannot be changed;or when attempting to use a value in an inappropriate way. Check to see if you are using the <strong>right type for the function</strong>  ie adding two strings with push can't be done since push only works with arrays, use concat instead.</p>
+                <h3>TyperError Map is not a function</h3>
+                <p>This could be Query Selector gets a nodeList not an array, to correct this use Array.from or spread, seen in map example.</p>
+                <img src="./Images/NodeListintoArr.png" alt="">
                 <h3>Type Error</h3>
                 <p>guessSubmit.addeventListener is not a function, this error is seen because we have failed to capitalize the E in event, thus check to see if you spelled all the things correctly first.</p>
                 <h3>How to Name Variables</h3>
@@ -715,6 +718,21 @@
                     <h3>Reduce</h3>
                     <p>Allows you to build over each one.</p>
                     <img src="./Images/reduceArr.png" alt="">
+                    <h3>Sort by oldest with variables</h3>
+                    <p>With sort we use A and B, but we can also use A and B to find the key of the items we are sorting.</p>
+                    <img src="/Images/sortByOldestVar.png" alt="">
+                    <h3>How to make a nodeList into an array?</h3>
+                    <p>We can use a spread operator or use Array.from.</p>
+                    <img src="./Images/NodeListintoArr.png" alt="">
+                    <h3>If on a site, what should we do to get all words that have x letters in it?</h3>
+                    <p>First we need to get the dev tools open and see what contains the word we want to look at, a special class or id. Next we want all the links.</p>
+                    <img src="./Images/allTheDe.png" alt="">
+                    <h3>Sorting by last name</h3>
+                    <p>Sometimes we need to create conversions to use the data as seen in this example.</p>
+                    <img src="./Images/sortByLastName.png" alt="">
+                    <h3>Creating objects if not present, and with keys we aren't sure exist.</h3>
+                    <p>Sometimes we have data with no clear properties. In this case, if we use methods we should create a blank object to start.</p>
+                    <img src="./Images/creatingObjectsAndCountingUp.png" alt="">
             </div>
 
         </section>
