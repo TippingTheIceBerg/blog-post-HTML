@@ -77,10 +77,12 @@ ul{
 }
 .nav__navLink-sectionLink{
     text-decoration: none;
-    margin: 15px;
+    margin: 20px;
     transition: all .2s linear;
     padding: 10px;
     text-align: center;
+   
+    
     
 }
 
@@ -103,6 +105,31 @@ font-size: 2.2em;
 font-family: 'Roboto Slab', serif;
 }
 
+/* Back To Top */
+
+.backToTop{
+    border: solid var(--30--lightBG) 20px;
+    background-color: var(--30--lightBG);
+    border-radius: 100%;
+    opacity: 0;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    transform: translateX(100px);
+    transition: linear .2s;
+}
+.backToTop--active{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.backToTop i {
+    color: var(--5-hightLightText);
+    font-size: 2em;
+}
+.backToTop:hover i{
+    cursor: pointer;
+}
 /* sections */
 .sections{
     margin: 10px;

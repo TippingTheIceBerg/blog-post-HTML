@@ -69,3 +69,18 @@ person.bio();
 person.introduceSelf();
 // Hi! I'm Bob.
 
+let backToTop = document.querySelector(".backToTop");
+let htmlSection = document.querySelector("nav");
+
+let backToTopInt = new IntersectionObserver((entries,backToTopInt)=>{
+entries.forEach(entry =>{
+   if(!entry.isIntersecting){
+    backToTop.classList.add("backToTop--active")
+
+   }
+ if(entry.isIntersecting){
+    backToTop.classList.remove("backToTop--active")
+ }
+})
+})
+backToTopInt.observe(nav)
