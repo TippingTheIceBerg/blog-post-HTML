@@ -821,6 +821,44 @@ g            </div>
             <h2>RegEx</h2>
             <h3>What is Regex?</h3>
             <p>A form of checking, check a string of character for matches that confirm to a predefined pattern that we want.</p>
+            <h3>How to Test RegEx</h3>
+            <p>Regex can be tested outside of your code at <a target="_blank" href="https://regex101.com/">Regex101</a></p>
+            <h3>How to give multiple choices for one space</h3>
+            <p>To give multiple options, we will use the [] with the letters we want for that spot. In this instance, both cat and bat will show up since we have the optional letter of c or b, as well as the global flag of g. </p>
+            <img src="./Images/multipleChoiceRegEx.png" alt="">
+            <h3>How to select ranges we DON'T want and to remove any non letters</h3>
+            <p>Selecting what we don't want is with the use of the carrot key ^. In this instance, we will get all words that have some letter, however, if there is a !,.? or any character, it will be removed.</p>
+            <img src="./Images/replaceWithRegex.png" alt="">
+            <h3>Selecting a range</h3>
+            <p>As with the remove example, if we want to select all letters, we can type abcde..., we can get them all eventually. However a better use will be to use the dash to show all letters in between.</p>
+            <h3>What are two ways we can have case insensitive letters</h3>
+            <p>We can either use the i flag for insensitive, or we can have two ranges in one bracket.</p>
+            <img src="./Images/caseIns.png" alt="">
+            <h3>How do repeat certain characters</h3>
+            <p>If we want a range of numbers like in a phone number, we can use [0-9] 10 times,  or we can use an exact amount with {}. And we can set a between value options of between 6 and 12 with the use of {} again. However, if we remove the 12, we can set it to min 6 and up to infinity. </p>
+            <img src="/Images/oneToUnlimRegEx.png" alt="">
+            <img src="./Images/exactAmountRegEx.png" alt="">
+            <img src="./Images/rangeOfAmount.png" alt="">
+            <h3>Metacharacters</h3>
+            <p> We need the back slash since it escapes the normal behavior, since just d will look for the literal character.
+                <ol class="listMarginLeft__40px">
+                    <li>Digit Character <code> \d - [0-9]</code></li>
+                    <li>Word character<code> \w - [a-zA-Z0-9_] - all letters,numbers, and underscores.</code></li>
+                    <li>Whitespace Characters<code> \s - spaces and tabs</code></li>
+                    <li>Tab Character<code>\t - tab</code></li>
+                </ol>
+            </p>
+            <h3>Other Special Characters</h3>
+            <p>
+                <ol class="listMarginLeft__40px">
+                    <li>Optional Character<code> ? - show 0 or 1 time.</code></li>
+                    <li>Wild Card<code> . - any character whatsoever</code></li>
+                    <li>None or more<code> * - 0 or more, similar to +</code></li>
+                </ol>
+            </p>
+            <h3>Start and end patterns</h3>
+            <p>^ and $. Note that the carrot is outside the brackets, meaning it will not negate it, instead it's saying that it must start with the defined characters. </p>
+            <img src="./Images/startAndEndRegEx.png" alt="">
         </section>
     </main>
     <div id="backToTop" class="backToTop backToTop--active">
