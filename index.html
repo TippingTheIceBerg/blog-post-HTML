@@ -259,6 +259,40 @@
                 <h3>Pointer Events</h3>
                 <p>In some designs you will have things overlap, in order to remove interference in clickable events, simply use pointer-events.</p>
                 <img src="./Images/pointerEventCS.png" alt="">
+                <h3>Display Grid</h3>
+                <p>Display grid is the other option to display flex and works when dealing with detailed placement of items</p>
+                <h3>Common Grid Container Properties</h3>
+                <p>
+                    <ul class="listMarginLeft__40px">
+                        <li>grid-template-columns or rows - gives the spacing of the grid tracks, similar to padding. Can be given names with brackets.</li>
+                        <img src="./Images/gridNamingGridTemplate.png" alt="">
+                        <li>grid-template-columns repeat - used if there are repeating parts. How many times do we want to call it. Ie, we want 3 items to each taken a fraction of the space.</li>
+                        <img src="./Images/gridTemplateRepeat.png" alt="">
+                        <li>grid-template-areas - when we define the items in the container grid with grid-area, we can give the main grid the property of grid-template area to do very complex of alignment of the items.Note, we do have to name every item to allow this to work, and we need each row needs the same number of cells/items per line if we don't add the dot notation, which means nothing.</li>
+                        <img src="./Images/gridTemplateAreas.png" alt="">
+                        <li>grid-gap - to create gaps, we will use column-gap or row-gap. Grid-column/row-gap will no longer be supported. For a shorthand, you can just use the word gap.</li>
+                        <img src="./Images/gridGap.png" alt="">
+                        <li>Align items left to right - with justify items, align items top to bottom with align items. Align self works the same but with the effect of only one items. Place items is the shorthand for both in order of align then justify, just think top first then left and right.</li>
+                        <li>In the event that your items don't fill your full container, like what happens when we use px, we will use justify-content and align content. For shorthand, use place-content.</li>
+                        <img src="./Images/gridContainerContent.svg" alt="">
+                        <li>Grid-auto-columns/rows - are used when we place an item that's not in our created grid layout. This essentially tell the grid to create these empty spaces with so it can fit in the right spot.</li>
+                    </ul>
+                </p>
+               <h3>Common Grid Items properties</h3>
+               <p>
+                <ul class="listMarginLeft__40px">
+                    <li>
+                        grid-column-start/end and grid-row-start/end - these can be a number, where they will start and end given the line, or you can use span and then a number and it will go expand over those grid tracks.
+                    </li>
+                    <li>justify-self and align self - similar to justify content and align items but with only one item. Place-self sets both.</li>
+                    <img src="./Images/gridItemStartPositions.png" alt="">
+                    <img src="/Images/gridItemShortHand.png" alt="">
+                    <li>
+                        min-max - allows rows and columns to only shrink so much. When using template repeat, we should be setting a min-max to avoid grid blowout.
+                    </li>
+                    <img src="./Images/minMaxRepeat.png" alt="">
+                </ul>
+               </p>
             </div>
         </section>
         <section id="JS" class="section__JS section">
