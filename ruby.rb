@@ -25,5 +25,5 @@ puts "sadda"
 
 "hello"[-1]     #=> "o"
 
-print "2".to_i + 2
+ hash = {:dog => 'barks', :cat => 'meows', :pig => 'oinks'}
 
