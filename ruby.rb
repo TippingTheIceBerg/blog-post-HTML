@@ -27,3 +27,29 @@ puts "sadda"
 
  hash = {:dog => 'barks', :cat => 'meows', :pig => 'oinks'}
 
+ "hello".capitalize #=> "Hello"
+
+ "hello".include?("lo")  #=> true
+
+ "hello".include?("z")   #=> false
+
+ "hello".upcase  #=> "HELLO"
+
+ "Hello".downcase  #=> "hello"
+
+ "hello".empty?  #=> false
+
+ "".empty?       #=> true
+
+ "hello".length  #=> 5
+
+ "hello".reverse  #=> "olleh"
+
+ "hello world".split  #=> ["hello", "world"]
+
+ "hello".split("")    #=> ["h", "e", "l", "l", "o"]
+
+ " hello, world   ".strip  #=> "hello, world"
+
+
+ string.gsub(" ","")
