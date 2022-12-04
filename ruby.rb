@@ -53,3 +53,17 @@ puts "sadda"
 
 
  string.gsub(" ","")
+
+# user input
+ name = gets.chomp
+ 
+# blocks
+ total = 0
+[1, 2, 3].each { |number| total += number }
+puts total # 6
+
+total = 0
+[1, 2, 3].each do |number|
+  total += number
+end
+puts total # 6
