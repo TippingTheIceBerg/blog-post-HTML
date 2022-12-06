@@ -952,7 +952,7 @@
             <h3>Terminal: Running Ruby Code</h3>
             <p>IRB allows us to quickly test ruby tests, but the terminal also allows us to test ruby code, simply type <code>ruby (nameOfFile).rb</code>In the event you want to stop the run, hit <kbd>control-c</kbd></p>
             <h3>Puts vs Print</h3>
-            <p>One some difference of the two is that puts adds the word and then makes a new line, while print does not, so using a print then a puts will make them all stay on the same line. While a puts then print will make two lines.</p>
+            <p>One some difference of the two is that puts adds the word and then makes a new line, while print does not, so using a print then a puts will make them all stay on the same line. While a puts then print will make two lines. A shorthand for puts will be to enter simply p and then your quotation marks.</p>
 
             <h3>Ruby laws</h3>
             <p>Indents must be 2 spaces. # means comment. if a method variable or file are called, they must be snake case , meaning all lowercase and each word has a _. IE <b>this_is_a_great_method</b>. If it can fit on one line, make it so. <img src="./Images/rubyOneLine.png" alt="">, and lastly, when naming classes we will capitalize every word. <img src="./Images/rubyClassName.png" alt=""> </p>
@@ -1014,6 +1014,19 @@
             <h3>Blocks</h3>
             <p>Blocks are like methods, done with do/end or {}. They can also effect the outer scopes, but they do not have any effect if created as an inner scope. Note that {} are typically only used for one liner code.</p>
             <img src="./Images/blockRuby.png" alt="">
+            <h3>Variable types</h3>
+            <p>There are only five variables types and are formatted uniquely. Constant ones are all capitalized, and they can in fact change, please don't however. Global ones override all scopes, must people avoid. Class variables effect classes and must be started outside of methods.Instance can be used throughout the parent class, avoid use until better understanding of OOP. Lastly local is the most common and obeys all forms of scopes.</p>
+            <img src="./Images/variableTypesRuby.png" alt="">
+            <h3>Times method</h3>
+            <p>When you want something done x times, we will call the times method which starts with the number we want to do an action for x times, followed by what we want to do those ten times.</p>
+            <img src="./Images/timesMethodRuby.png" alt="">
+            <h3>Creating files and options</h3>
+            <p>Files can be created with the File.new("fileName","mode"), mode has different options, but most times we will just use w, since this allows us to create a file and then write in it. While .close will close the file. File.open is similar to the new method, except we can have a block with File.open</p>
+            <img src="./Images/fileRuby.png" alt="">
+            <img src="/Images/fileOpenRuby.png" alt="">
+            <h3>Reading files</h3>
+            <p>To read files, we can use sysread to read the contents of a file.</p>
+            <img src="/Images/readFileRuby.png" alt="">
 
         </section>
     </main>

@@ -56,7 +56,7 @@ puts "sadda"
 
 # user input
  name = gets.chomp
- 
+
 # blocks
  total = 0
 [1, 2, 3].each { |number| total += number }
@@ -67,3 +67,38 @@ total = 0
   total += number
 end
 puts total # 6
+
+# variable types
+MY_CONSTANT = 'I am available throughout your app.'
+
+$global = 'I am also available throughout your app.'
+
+@@classes = 0
+
+@instance = 'I am available throughout the current instance of this class.'
+
+var = 'I must be passed around to cross scope boundaries.'
+
+
+10.times do
+  puts name
+end
+
+
+aFile = File.new("filename", "mode")
+   # ... process the file
+aFile.close
+
+
+File.open("filename", "mode") do |aFile|
+  # ... process the file
+end
+
+
+aFile = File.new("input.txt", "r")
+if aFile
+   content = aFile.sysread(20)
+   puts content
+else
+   puts "Unable to open file!"
+end
