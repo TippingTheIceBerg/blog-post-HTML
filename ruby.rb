@@ -102,3 +102,13 @@ if aFile
 else
    puts "Unable to open file!"
 end
+
+if 1 < 2
+  puts "Hot diggity, 1 is less than 2!"
+end
+
+puts "Hot diggity damn, 1 is less than 2" if 1 < 2
+# spaceship
+5 <=> 10    #=> -1
+10 <=> 10   #=> 0
+10 <=> 5    #=> 1
