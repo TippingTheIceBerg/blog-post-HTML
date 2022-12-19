@@ -182,3 +182,26 @@ when a == 6
 else
   puts "a is neither 5, nor 6"
 end
+
+# while loop
+i = 0
+while i < 10 do
+ puts "i is #{i}"
+ i += 1
+end
+
+# while without i
+while gets.chomp != "yes" do
+  puts "Will you go to prom with me?"
+end
+
+# until
+i = 0
+until i >= 10 do
+ puts "i is #{i}"
+ i += 1
+end
+
+until gets.chomp == "yes" do
+  puts "Will you go to prom with me?"
+end
