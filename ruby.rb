@@ -223,3 +223,127 @@ end
 5.upto(10) {|num| print "#{num} " }     #=> 5 6 7 8 9 10
 
 10.downto(5) {|num| print "#{num} " }   #=> 10 9 8 7 6 5
+
+i = 0
+loop do
+  i = i + 2
+  puts i
+  if i == 10
+    break       # this will cause execution to exit the loop
+  end
+end
+
+# next
+i = 0
+loop do
+  i = i + 2
+  if i == 4
+    next        # skip rest of the code in this iteration
+  end
+  puts i
+  if i == 10
+    break
+  end
+end
+
+# next in while loop
+x = 0
+
+while x <= 10
+  if x == 3
+    x += 1
+    next
+  elsif x.odd?
+    puts x
+  end
+  x += 1
+end
+
+# countdown with for loops
+x = gets.chomp.to_i
+
+for i in 1..x do
+  puts x - i
+end
+
+puts "Done!"
+
+x = [1, 2, 3, 4, 5]
+
+for i in x.reverse do
+  puts i
+end
+
+puts "Done!"
+
+# iterator basic
+names = ['Bob', 'Joe', 'Steve', 'Janice', 'Susan', 'Helen']
+
+names.each { |name| puts name }
+
+# recursion simple
+def doubler(start)
+  puts start
+  if start < 10
+    doubler(start * 2)
+  end
+end
+# recursion fibonacci
+def fibonacci(number)
+  if number < 2
+    number
+  else
+    fibonacci(number - 1) + fibonacci(number - 2)
+  end
+end
+
+puts fibonacci(6)
+# arrays
+num_array = [1, 2, 3, 4, 5]
+str_array = ["This", "is", "a", "small", "array"]
+str_array = ["This", "is", "a", "small", "array"]
+
+str_array.first         #=> "This"
+str_array.first(2)      #=> ["This", "is"]
+str_array.last(2)       #=> ["small", "array"]
+
+# removing adding to arrays
+num_array = [1, 2]
+
+num_array.push(3, 4)      #=> [1, 2, 3, 4]
+num_array << 5            #=> [1, 2, 3, 4, 5]
+num_array.pop             #=> 5
+num_array                 #=> [1, 2, 3, 4]
+
+num_array = [2, 3, 4]
+
+num_array.unshift(1)      #=> [1, 2, 3, 4]
+num_array.shift           #=> 1
+num_array                 #=> [2, 3, 4]
+
+num_array = [1, 2, 3, 4, 5, 6]
+
+num_array.pop(3)          #=> [4, 5, 6]
+num_array.shift(2)        #=> [1, 2]
+num_array                 #=> [3]
+
+# concating arrays and finding the difference between the two.
+
+a = [1, 2, 3]
+b = [3, 4, 5]
+
+a + b         #=> [1, 2, 3, 3, 4, 5]
+a.concat(b)   #=> [1, 2, 3, 3, 4, 5]
+
+[1, 1, 1, 2, 2, 3, 4] - [1, 4]  #=> [2, 2, 3]
+
+
+# map/collect (they do the same)
+irb :001 > a = [1, 2, 3, 4]
+=> [1, 2, 3, 4]
+irb :002 > a.map { |num| num**2 }
+=> [1, 4, 9, 16]
+irb :003 > a.collect { |num| num**2 }
+=> [1, 4, 9, 16]
+irb :004 > a
+=> [1, 2, 3, 4]
