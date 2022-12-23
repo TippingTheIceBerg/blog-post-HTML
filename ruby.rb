@@ -347,3 +347,60 @@ irb :003 > a.collect { |num| num**2 }
 => [1, 4, 9, 16]
 irb :004 > a
 => [1, 2, 3, 4]
+
+# deletes at index
+irb :005 > a.delete_at(1)
+=> 2
+irb :006 > a
+=> [1, 3, 4]
+# deletes at word
+irb :007 > my_pets = ["cat", "dog", "bird", "cat", "snake"]
+=> ["cat", "dog", "bird", "cat", "snake"]
+irb :008 > my_pets.delete("cat")
+=> "cat"
+irb :009 > my_pets
+=> ["dog", "bird", "snake"]
+# deletes duplcaites
+irb :010 > b = [1, 1, 2, 2, 3, 3, 4, 4]
+=> [1, 1, 2, 2, 3, 3, 4, 4]
+irb :011 > b.uniq
+=> [1, 2, 3, 4]
+irb :012 > b
+=> [1, 1, 2, 2, 3, 3, 4, 4]
+
+# select ruby
+irb :001 > numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+irb :002 > numbers.select { |number| number > 4 }
+=> [5, 6, 7, 8, 9, 10]
+irb :003 > numbers
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# map with do and end (format difference but same result as {})
+irb(main):028:1* array.map do |number| 
+  irb(main):029:1*   puts number + "2" 
+  irb(main):030:0> end
+
+# joining arrays and literal format
+letters = %w(a b c d)
+letters.join
+# "abcd"
+letters = %w(a b c d)
+letters.join(" ")
+# "a b c d"
+
+# deconstruct 2 dimensional arrays
+users = [
+  [1, 'Peter'],
+  [2, 'Steven']
+ ]
+users.flatten
+# [1, "Peter", 2, "Steven"]
+
+# choose a random number
+numbers.sample
+
+# remove nil values in arrays
+numbers << nil
+# [1, 3, 3, 5, 5, nil]
+numbers.compact
+# [1, 3, 3, 5, 5]
