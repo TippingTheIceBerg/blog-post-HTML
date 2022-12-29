@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web 2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"></head>
+<body>
+    <nav id="nav">
+        <ul class="navLinks">
+            <li class="nav__navList">
+                <a class="logo" href="#">
+                    <i class="fa-solid fa-code"></i>  
+                </a>          
+            </li>
+            <li class="nav__navList">
+                <a class="nav__navLink" href="./index.html">Purpose</a>
+            </li>
+            <li  class="nav__navList nav_navList-hover">
+                <a class="nav__navLink nav__navLink-sections"href="#sections">Sections</a>
+                    <div class="nav__navLink-sectionLinks"> 
+                        <a class="nav__navLink-sectionLink" href="index.html#HTML">HTML</a>
+                        <a class="nav__navLink-sectionLink" href="index.html#CSS">CSS</a>
+                        <a class="nav__navLink-sectionLink" href="index.html#JS">JS</a>
+                        <a class="nav__navLink-sectionLink" href="index.html#GIT">GIT</a>
+                        <a class="nav__navLink-sectionLink" href="index.html#RegEx">RegEx</a>
+                        <a class="nav__navLink-sectionLink" href="index.html#backEnd">Back End-Ruby</a>
+                    </div>
+            </li>
+            <li class="nav__navList">
+            <a class="nav__navLink" href="./quiz.html">Quiz</a>
+            </li>
+        </ul>    
+    </nav>
+    <main class="quiz__container">
+        <section class="quiz__card">
+            <p class="quiz__question"></p>
+            <p class="quiz__answer"></p>
+        </section>
+        <div id="backToTop" class="backToTop backToTop--active">
+            <a href="#nav">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </main>
+</body>
+<script type="module" src="./quiz_display.js"></script>
+</html>

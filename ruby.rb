@@ -404,3 +404,13 @@ numbers << nil
 # [1, 3, 3, 5, 5, nil]
 numbers.compact
 # [1, 3, 3, 5, 5]
+
+# more on joining arrays
+
+# Faster, because this changes the users array
+users.concat(new_users)  
+# Slower, because this creates a new array
+users += new_users  
+
+# Finally, you can get the elements that appear in two arrays at the same time:
+users & new_users

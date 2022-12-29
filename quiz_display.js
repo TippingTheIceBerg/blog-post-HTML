@@ -1,0 +1,1 @@
+import { headings } from "./quiz.js";

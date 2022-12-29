@@ -72,7 +72,7 @@ ul{
     border: var(--hightLightTextBorder) solid;
     opacity: 0;
     transition: all .2s linear;
-   
+    z-index: -2;
 
 }
 .nav__navLink-sectionLink{
@@ -86,8 +86,9 @@ ul{
     
 }
 
-.nav__navList:hover .nav__navLink-sectionLinks{
+.nav_navList-hover:hover .nav__navLink-sectionLinks{
    opacity: 1;
+   z-index: 2;
 }
 .nav__navLink-sectionLink:hover{
    background-color: var(--5--hoverBG);
@@ -159,3 +160,18 @@ img{
     
 }
 
+/* Quiz */
+.quiz__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:100%;
+    
+}
+.quiz__card{
+    border: solid black 10px;
+    height: 500px;
+    width: 1000px;
+    
+}

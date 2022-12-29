@@ -1,3 +1,5 @@
+let headings = document.qu
+
 let images = document.querySelectorAll(".images")
 let options = {threshold: .5};
 const observer = new IntersectionObserver(function(entries,observer){entries.forEach(entry => {
@@ -83,6 +85,8 @@ entries.forEach(entry =>{
  }
 })
 })
-backToTopInt.observe(nav)
+backToTopInt.observe(nav);
+
+
 
 
