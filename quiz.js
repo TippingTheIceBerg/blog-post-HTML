@@ -1,3 +1,4 @@
-let headings = document.getElementsByTagName("h3")
+let headings = document.querySelector(".sections");
 
-export {headings} from "./quiz.js"
+window.localStorage.setItem('headings',`${headings}`);
+    

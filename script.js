@@ -1,4 +1,3 @@
-let headings = document.qu
 
 let images = document.querySelectorAll(".images")
 let options = {threshold: .5};
@@ -86,6 +85,7 @@ entries.forEach(entry =>{
 })
 })
 backToTopInt.observe(nav);
+
 
 
 
