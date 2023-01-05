@@ -414,3 +414,8 @@ users += new_users
 
 # Finally, you can get the elements that appear in two arrays at the same time:
 users & new_users
+
+
+hash = {:one => 1, :two => 2}
+
+print hash[:one]

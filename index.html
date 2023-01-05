@@ -957,7 +957,7 @@
             <h3>Running files on the terminal</h3>
             <p>One method I found is to create a folder with whatever name you want, and in that folder create a .rb file. Now write your ruby, and when you are ready to run it, simply type ruby (fileName).rb and it should run.</p>
             <h3>Puts vs Print</h3>
-            <p>One some difference of the two is that puts adds the word and then makes a new line, while print does not, so using a print then a puts will make them all stay on the same line. While a puts then print will make two lines. A shorthand for puts will be to enter simply p and then your quotation marks.Note that the p mark is mostly for debugging, gives the raw version of the object.</p>
+            <p>One some difference of the two is that puts adds the word and then makes a new line, while print does not, so using a print then a puts will make them all stay on the same line. While a puts then print will make two lines. A shorthand for puts will be to enter simply p and then your quotation marks.Note that the p mark is mostly for debugging, gives the raw version of the object. P also makes it so that the quotation marks are seen.</p>
 
             <h3>Ruby laws</h3>
             <p>Indents must be 2 spaces. # means comment. if a method variable or file are called, they must be snake case , meaning all lowercase and each word has a _. IE <b>this_is_a_great_method</b>. If it can fit on one line, make it so. <img src="./Images/rubyOneLine.png" alt="">, and lastly, when naming classes we will capitalize every word. <img src="./Images/rubyClassName.png" alt=""> </p>
@@ -979,12 +979,12 @@
             <p>We can test ruby with the terminal IRB or we can use the website <a href="https://replit.com/languages/ruby" target="_blank">replit</a></p>
             <h3>Ruby Numbers</h3>
             <p>There are only two kinds of numbers in ruby, integers and floats. Floats have decimals while integers are whole numbers. If the numbers used in a ,math problem are all integers, if the solution is a decimal, it will convert to an integer. Simply add the .0 if you want a float. Another way is to use a simple conversion, note, when making the integer the value is not rounded.</p>
-            <img src="/Images/converationRuby.png" alt="">
+            <img src="./Images/converationRuby.png" alt="">
             <h3>Even or odd</h3>
-            <p>Testing for even or odd is easy, simple add the number.odd? or number.even? with the question mark included.</p>
+            <p>Testing for even or odd is easy, simple add the number.odd? or number.even? with the question mark included. However, these do not work for floats.</p>
             <h3>Strings</h3>
             <p>Using strings in ruby we can add them with either the concat (long) shovel (new way) or with the used to way of +.</p>
-            <img src="/Images/stringAddRuby.png" alt="">
+            <img src="./Images/stringAddRuby.png" alt="">
             <h3>Substrings</h3>
             <p>Much easier to get the last letter of a word with the use of [-1]. Note, the [0..1] is not the same as [0,1], the .. method has one more letter, meaning the , version is up to but not including.</p>
             <img src="./Images/subStringRuby.png" alt="">
@@ -1009,8 +1009,9 @@
             <img src="./Images/makeIntRuby.png" alt="">
             <img src="/Images/convertFloatRuby.png" alt="">
             <h3>Array and hashes</h3>
-            <p>Arrays are similar to javascript, set them to brackets[num1,num2] separated with commas. Hashes re more interesting, where we will now use the ruby symbols with making key values pairs.</p>
+            <p>Arrays are similar to javascript, set them to brackets[num1,num2] separated with commas. Hashes are more interesting, where we will now use the ruby symbols with making key values pairs.</p>
             <img src="./Images/hashValRuby.png" alt="">
+            <img src="./Images/usingHashValuesRuby.png" alt="">
             <h3>User Input</h3>
             <p>User input can easily be done with assigning a variable to the method gets, which waits for the user to enter a string and then hit string. We include the method chomps at the end of gets to remove the carriage\n that comes when we hit the enter key.</p>
             <img src="./Images/getsRuby.png" alt="">
@@ -1028,10 +1029,10 @@
             <h3>Creating files and options</h3>
             <p>Files can be created with the File.new("fileName","mode"), mode has different options, but most times we will just use w, since this allows us to create a file and then write in it. While .close will close the file. File.open is similar to the new method, except we can have a block with File.open</p>
             <img src="./Images/fileRuby.png" alt="">
-            <img src="/Images/fileOpenRuby.png" alt="">
+            <img src="./Images/fileOpenRuby.png" alt="">
             <h3>Reading files</h3>
             <p>To read files, we can use sysread to read the contents of a file.</p>
-            <img src="/Images/readFileRuby.png" alt="">
+            <img src="./Images/readFileRuby.png" alt="">
             <h3>If statement</h3>
             <p>If statements are similar to JS, except we need a defined end if the line of code is greater than one line. If the code is one line, then we can create a one line piece of code, this one line does not need an end statement and the "DO" portion is before the if statement.</p>
             <img src="./Images/ifStatementRuby.png" alt="">
@@ -1052,10 +1053,10 @@
             <h3>Ternary Operator</h3>
             <p>Similar to JS. Ternary should only be done when selecting between two 2 values. And the result of it should be assigned to a variable , a return result, or as an argument.</p>
             <img src="./Images/ternaryRuby.png" alt="">
-            <img src="/Images/ternaryExampleRuby.pngs" alt="">
+            <img src="./Images/ternaryExampleRuby.pngs" alt="">
             <h3>One line if and unless</h3>
             <p>If we are writing a conditional statement that is only one line, we can use the if and unless statement at the end. Unless works similar is not !.</p>
-            <img src="/Images/oneLineConditionalRuby.png" alt="">
+            <img src="./Images/oneLineConditionalRuby.png" alt="">
             <h3>Comparing strings</h3>
             <p>Unlike in numbers, the statement <code> 42 is greater than 415</code>will be false since it goes by one character at a time, since 4 is the same, it goes to 2, since 2 is greater than the 1 in 415, it return s false. If the value was 425 or 435, then it would return true.f</p>
             <h3>While Loop</h3>
