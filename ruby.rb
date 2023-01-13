@@ -415,7 +415,20 @@ users += new_users
 # Finally, you can get the elements that appear in two arrays at the same time:
 users & new_users
 
-
+# hash key pairs
 hash = {:one => 1, :two => 2}
 
 print hash[:one]
+
+# method format
+def myMethod(param1)
+  puts param1
+end
+
+myMethod("Hi")
+
+# alt to for in loops of arrays/collects
+friends.each do |friend|
+  puts friend
+end
+
