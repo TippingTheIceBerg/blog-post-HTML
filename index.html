@@ -181,6 +181,8 @@
                     </ol>
                 <a href="https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_blank">for a full list of known potential issues.</a>
                 </p>
+                <h3>For cool animations</h3>
+                <p>We can find some popular animation at <a href="https://animista.net/play/basic">animista.</a></p>
                 <h3>box-sizing: border-box</h3>
                 <p>The purpose of border-box involves the box model, where the padding and border are included in the height of the element. With border-box, if you enter <code>width: 100px; height:100px;</code>the element will be exactly 100px by 100px. To showcase this, if you have <code>padding:10px; border:10px solid; height:100px; width:100px</code> .Without border box the total width and height will be 140px x 140px since we gave the content 100px x 100px but then the padding and border are added after, changing the height and width.  With border box, the height x width of the content will be 60px x 60px; with the padding and border taking up their 20px x 20px each.The height and width of the element of the whole will now be 100px x 100px as intended</p>
                 <p>To further explore this, this is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">Web Docs</a>. <em>"In the standard box model, if you give a box a width and a height attribute, this defines the width and height of the content box. Any padding and border is then added to that width and height to get the total size taken up by the box. The actual space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5)."</em></p>
@@ -1036,6 +1038,9 @@
             <h3>Reading files</h3>
             <p>To read files, we can use sysread to read the contents of a file.</p>
             <img src="./Images/readFileRuby.png" alt="">
+            <h3>Opening files</h3>
+            <p>Opening files is a neat way to interact with other documents in your folder.</p>
+            <img src="./Images/openAndReadFileRuby.png" alt="">
             <h3>If statement</h3>
             <p>If statements are similar to JS, except we need a defined end if the line of code is greater than one line. If the code is one line, then we can create a one line piece of code, this one line does not need an end statement and the "DO" portion is before the if statement.Another note, if you add an if inside a method, you will technically have two ends, one end for the if, elsif else portion, and another one to end the method itself.</p>
             <img src="./Images/ifStatementRuby.png" alt="">
@@ -1148,6 +1153,30 @@
             <h3>Remove NIl from arrays</h3>
             <p>If you end up having a nil in your array you can remove them with compact.</p>
             <img src="./Images/removeNIlRuby.png" alt="">
+            <h3>File appending</h3>
+            <p>Appending words onto files is a fast way to add things, but be careful, if the program is called multiple times, it will keep on appending the items.</p>
+            <img src="./Images/appendFilesRuby.png" alt="">
+            <h3>Catching Errors</h3>
+            <p>Sometimes code is written with the hunch that it may break the whole system. If that ever comes up we can try to catch the error with begin and rescue. We can also catch specific errors that we get, like TypeError on the rescue, and each rescue we can also store the error into a variable and print it on the screen.</p>
+            <img src="./Images/catchingErrorsRuby.png" alt="">
+            <h3>Class and objects</h3>
+            <p>A class is a costume data type. Gives the blueprint that all things in question will follow. IE a class of Book will have pages, a title, and an author. All classes start with a capital letter. Now that we have created the blueprint, we can create many books with this blueprint, and these created things are called objects.</p>
+            <img src="./Images/basicClassRuby.png" alt="">
+            <img src="./Images/classesMadeEasierRuby.png" alt="">
+            <h3>Initialize objects</h3>
+            <p>Instead of calling each book1 = title,author, and pages, we can save on lines by creating a function inside the new Object function.Note that the name MUST be Initialize otherwise it will not work.</p>
+            <h3>Instance Methods</h3>
+            <p>Creating methods inside the class we made.</p>
+            <img src="./Images/classMehodIfRuby.png" alt="">
+            <img src="./Images/QuizWithRuby.png" alt="">
+            <h3>Inheritance of Super Classes</h3>
+            <p>Sometimes we create classes and then subclasses which can do most of what the super class can do, plus something different or extra</p>
+            <img src="./Images/InheritanceRuby.png" alt="">
+            <h3>Modules</h3>
+            <p>With modules, we are capitalizing the word, and include the word module. To call the module we will always call <code>Include (moduleName)</code>Then to use it call the module name with the class you want ot use. If the module is on another folder, we can call it with the require_relative phrase, then do the same as before.</p>
+            <img src="./Images/moduleSameFolderRuby.png" alt="">
+            <img src="./Images/moduleOutSideFolderRuby.png" alt="">
+        
 
         </section>
     </main>

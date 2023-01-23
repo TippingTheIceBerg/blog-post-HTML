@@ -432,3 +432,128 @@ friends.each do |friend|
   puts friend
 end
 
+# readlines is nice because it reads the file as an array
+File.open("folder_you_want_open","r") do |file|
+  puts file.readlines()
+end
+
+# without the \n the appended items will show on the same line
+File.open("people.js","a") do |append|
+  append.write("\nOscar, Friend")
+end  
+
+# handled the error, it didn't stop the execution itself
+lucky_nums = [1,2,3,4,5,6]
+begin
+  lucky_nums["Dog"]
+  num = 10 / 0
+  
+rescue ZeroDivisionError
+ "Divided by zero"  
+rescue TypeError => e
+  puts e
+end
+
+class Book
+  attr_accessor :title, :author, :pages
+  def initialize(title,author,pages)
+# @ refers to the title attribute, meaning it's the .Word you want to look up, whether it be pages or author, while what it is equal to is just the arguments we set
+    @title = title
+    @author = author
+    @pages = pages
+  end
+end
+
+book1 = Book.new("bill","Author author",200)
+
+puts book1.author
+
+class Student
+  attr_accessor :name,:major,:gpa
+    def initialize(name,major,gpa)
+      @name = name
+      @major = major
+      @gpa = gpa
+    end
+    def has_honors
+      if @gpa >= 3.5
+        return true
+      end
+      return false
+    end
+  end
+  
+  jim = Student.new("Jim","Business",2.7)
+  pam = Student.new("Pam","Art",3.5)
+  
+  puts pam.has_honors
+#  Quiz with Ruby
+  p1 = "What color is an Apple? \n A) Red \n B) Purple \n C) Yellow"
+ p2 = "What color is a Bannana? \n A) Red \n B) Purple \n C) Yellow"
+
+
+class Question
+attr_accessor :prompt,:answer
+  def initialize(prompt,answer)
+    @prompt = prompt
+    @answer = answer
+  end
+end
+
+questions = [
+    Question.new(p1,"a"),
+    Question.new(p2,"c")
+]
+
+def run_test(questions)
+  answer = ""
+  score = 0
+  for question in questions
+    puts question.prompt
+    answer = gets.chomp()
+    if answer == question.answer
+      score += 1
+    end
+  end
+  puts "You got #{score.to_s} out of #{questions.length().to_s}"
+end
+
+run_test(questions)
+
+# inheritance and overide, chef is a super class, while italian is a sub class
+class Chef 
+  def make_chicken
+    puts "Will Make Chicken"
+  end
+  def make_special
+    puts "made sausage"
+  end
+
+end
+
+class ItalianChef < Chef
+    
+    def make_special
+      puts "made meatball"
+    end
+
+end
+
+
+mike = ItalianChef.new()
+mike.make_chicken
+
+# module
+module Tools
+  def say_hi
+      puts "Hi"
+  end
+  end
+   
+  include Tools
+  Tools.say_hi
+
+# module on separate file
+require_relative "usefulTools.rb"
+include Tools
+Tools.say_hi
