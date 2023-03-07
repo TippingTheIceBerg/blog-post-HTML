@@ -47,7 +47,7 @@
     <main id="sections" class="sections">
         <section id="HTML" class="section__HTML section">
             <h2>HTML</h2>
-            <div>
+            <div class="html__container">
                 <h3>Removing lists bullet points</h3>
                 <p>To remove the bullet points in lists, you will use list-style: none</p>
                 <h3>Quickly open the terminal</h3>
@@ -135,7 +135,7 @@
         </section>
         <section id="CSS" class="section__CSS section">
             <h2>CSS</h2>
-            <div>
+            <div class="css__container">
                 <h3>Screen sizes</h3>
                 <p>Common screen sizes <code>@media only screen and (min-width:0em)</code> Mobile
                 <br>
@@ -303,7 +303,7 @@
         </section>
         <section id="JS" class="section__JS section">
             <h2>JS</h2>
-            <div>
+            <div class="js__container">
                 <h3>What is Intersection Observer</h3>
                 <p>Intersection Observer is a powerful tool that allows on scroll effects without the need for it to be called each time a scroll is done. </p>
                 <h3>How does Intersection work?</h3>
@@ -805,7 +805,7 @@
         </section>
         <section id="GIT" class="section__GIT section">
             <h2>GIT</h2>
-            <div>
+            <div class="git__container">
                 <h3>How to exit git log</h3>
                 <p>Once you enter git log, you can exit with " q" or "z".</p>
                 <h3>Exit quotes</h3>
@@ -857,7 +857,7 @@
         </section>
         <section id="VSCode" class="section__VS section">
             <h2>VS Code</h2>
-            <div>
+            <div class="vs__container">
                 <h3>How to move code up or down</h3>
                 <p><kbd>option + up or down arrow keys</kbd></p>
                 <h3>How to copy code and paste below</h3>
@@ -870,314 +870,325 @@
         </section>
         <section id="RegEx" class="section__RegEx section">
             <h2>RegEx</h2>
-            <h3>What is Regex?</h3>
-            <p>A form of checking, check a string of character for matches that confirm to a predefined pattern that we want.</p>
-            <h3>How to Test RegEx</h3>
-            <p>Regex can be tested outside of your code at <a target="_blank" href="https://regex101.com/">Regex101</a></p>
-            <h3>How to give multiple choices for one space</h3>
-            <p>To give multiple options, we will use the [] with the letters we want for that spot. In this instance, both cat and bat will show up since we have the optional letter of c or b, as well as the global flag of g. </p>
-            <img src="./Images/multipleChoiceRegEx.png" alt="">
-            <h3>How to select ranges we DON'T want and to remove any non letters</h3>
-            <p>Selecting what we don't want is with the use of the carrot key ^. In this instance, we will get all words that have some letter, however, if there is a !,.? or any character, it will be removed.</p>
-            <img src="./Images/replaceWithRegex.png" alt="">
-            <h3>Selecting a range</h3>
-            <p>As with the remove example, if we want to select all letters, we can type abcde..., we can get them all eventually. However a better use will be to use the dash to show all letters in between.</p>
-            <h3>What are two ways we can have case insensitive letters</h3>
-            <p>We can either use the i flag for insensitive, or we can have two ranges in one bracket.</p>
-            <img src="./Images/caseIns.png" alt="">
-            <h3>How do repeat certain characters</h3>
-            <p>If we want a range of numbers like in a phone number, we can use [0-9] 10 times,  or we can use an exact amount with {}. And we can set a between value options of between 6 and 12 with the use of {} again. However, if we remove the 12, we can set it to min 6 and up to infinity. </p>
-            <img src="/Images/oneToUnlimRegEx.png" alt="">
-            <img src="./Images/exactAmountRegEx.png" alt="">
-            <img src="./Images/rangeOfAmount.png" alt="">
-            <h3>Metacharacters</h3>
-            <p> We need the back slash since it escapes the normal behavior, since just d will look for the literal character.
-                <ol class="listMarginLeft__40px">
-                    <li>Digit Character <code> \d - [0-9]</code></li>
-                    <li>Word character<code> \w - [a-zA-Z0-9_] - all letters,numbers, and underscores.</code></li>
-                    <li>Whitespace Characters<code> \s - spaces and tabs</code></li>
-                    <li>Tab Character<code>\t - tab</code></li>
-                </ol>
-            </p>
-            <h3>Other Special Characters</h3>
-            <p>
-                <ol class="listMarginLeft__40px">
-                    <li>Optional Character<code> ? - show 0 or 1 time.</code></li>
-                    <li>Wild Card<code> . - any character whatsoever</code></li>
-                    <li>None or more<code> * - 0 or more, similar to +</code></li>
-                </ol>
-            </p>
-            <h3>Start and end patterns</h3>
-            <p>^ and $. Note that the carrot is outside the brackets, meaning it will not negate it, instead it's saying that it must start with the defined characters. </p>
-            <img src="./Images/startAndEndRegEx.png" alt="">
-            <h3>Or Options</h3>
-            <p>When we want to use or, remember that the pipe must be in parenthesis, otherwise you can accidentally be calling a singer letter or the rest of the word.In this example without the parenthesis, we are saying replace the letter p or the word tire. </p>
-            <img src="./Images/orRegEx.png" alt="">
-            <h3>Writing RegEx in javascript</h3>
-            <p>To begin to write it, we need the forward slashes, and then what we want in between.</p>
-            <img src="Images/regExOnJS.png" alt="">
-            <h3>Linking RegEx to forms</h3>
-            <p>Regex uses the test method found in JS to test whether the value fits the value of the regex. The return values are true and false. In this example we use the name attribute on the HTML to work for both the regex and JS, so it's important to name the similar so the words can be utilized in both ways.</p>
-            <img src="./Images/regexTest.png" alt="">
-            <h3>Email Layout</h3>
-            <p>All emails are made of four parts, with one additional optional part.
-                This consists of the   
-                <ol class="listMarginLeft__40px">
-                    <li>Your Name</li>
-                    <li>Domain</li>
-                    <li>dot</li>
-                    <li>Extension</li>
-                    <li>optional extension</li>
-                </ol>
-            </p>
-            <h3>Full Form example</h3>
-            <p>An example for a complete regEx of a form</p>
-            <img src="./Images/regexFullFormEx.png" alt="">
-
+                <div class="regex__container">
+                    <h3>What is Regex?</h3>
+                    <p>A form of checking, check a string of character for matches that confirm to a predefined pattern that we want.</p>
+                    <h3>How to Test RegEx</h3>
+                    <p>Regex can be tested outside of your code at <a target="_blank" href="https://regex101.com/">Regex101</a></p>
+                    <h3>How to give multiple choices for one space</h3>
+                    <p>To give multiple options, we will use the [] with the letters we want for that spot. In this instance, both cat and bat will show up since we have the optional letter of c or b, as well as the global flag of g. </p>
+                    <img src="./Images/multipleChoiceRegEx.png" alt="">
+                    <h3>How to select ranges we DON'T want and to remove any non letters</h3>
+                    <p>Selecting what we don't want is with the use of the carrot key ^. In this instance, we will get all words that have some letter, however, if there is a !,.? or any character, it will be removed.</p>
+                    <img src="./Images/replaceWithRegex.png" alt="">
+                    <h3>Selecting a range</h3>
+                    <p>As with the remove example, if we want to select all letters, we can type abcde..., we can get them all eventually. However a better use will be to use the dash to show all letters in between.</p>
+                    <h3>What are two ways we can have case insensitive letters</h3>
+                    <p>We can either use the i flag for insensitive, or we can have two ranges in one bracket.</p>
+                    <img src="./Images/caseIns.png" alt="">
+                    <h3>How do repeat certain characters</h3>
+                    <p>If we want a range of numbers like in a phone number, we can use [0-9] 10 times,  or we can use an exact amount with {}. And we can set a between value options of between 6 and 12 with the use of {} again. However, if we remove the 12, we can set it to min 6 and up to infinity. </p>
+                    <img src="/Images/oneToUnlimRegEx.png" alt="">
+                    <img src="./Images/exactAmountRegEx.png" alt="">
+                    <img src="./Images/rangeOfAmount.png" alt="">
+                    <h3>Metacharacters</h3>
+                    <p> We need the back slash since it escapes the normal behavior, since just d will look for the literal character.
+                        <ol class="listMarginLeft__40px">
+                            <li>Digit Character <code> \d - [0-9]</code></li>
+                            <li>Word character<code> \w - [a-zA-Z0-9_] - all letters,numbers, and underscores.</code></li>
+                            <li>Whitespace Characters<code> \s - spaces and tabs</code></li>
+                            <li>Tab Character<code>\t - tab</code></li>
+                        </ol>
+                    </p>
+                    <h3>Other Special Characters</h3>
+                    <p>
+                        <ol class="listMarginLeft__40px">
+                            <li>Optional Character<code> ? - show 0 or 1 time.</code></li>
+                            <li>Wild Card<code> . - any character whatsoever</code></li>
+                            <li>None or more<code> * - 0 or more, similar to +</code></li>
+                        </ol>
+                    </p>
+                    <h3>Start and end patterns</h3>
+                    <p>^ and $. Note that the carrot is outside the brackets, meaning it will not negate it, instead it's saying that it must start with the defined characters. </p>
+                    <img src="./Images/startAndEndRegEx.png" alt="">
+                    <h3>Or Options</h3>
+                    <p>When we want to use or, remember that the pipe must be in parenthesis, otherwise you can accidentally be calling a singer letter or the rest of the word.In this example without the parenthesis, we are saying replace the letter p or the word tire. </p>
+                    <img src="./Images/orRegEx.png" alt="">
+                    <h3>Writing RegEx in javascript</h3>
+                    <p>To begin to write it, we need the forward slashes, and then what we want in between.</p>
+                    <img src="Images/regExOnJS.png" alt="">
+                    <h3>Linking RegEx to forms</h3>
+                    <p>Regex uses the test method found in JS to test whether the value fits the value of the regex. The return values are true and false. In this example we use the name attribute on the HTML to work for both the regex and JS, so it's important to name the similar so the words can be utilized in both ways.</p>
+                    <img src="./Images/regexTest.png" alt="">
+                    <h3>Email Layout</h3>
+                    <p>All emails are made of four parts, with one additional optional part.
+                        This consists of the   
+                        <ol class="listMarginLeft__40px">
+                            <li>Your Name</li>
+                            <li>Domain</li>
+                            <li>dot</li>
+                            <li>Extension</li>
+                            <li>optional extension</li>
+                        </ol>
+                    </p>
+                    <h3>Full Form example</h3>
+                    <p>An example for a complete regEx of a form</p>
+                    <img src="./Images/regexFullFormEx.png" alt="">
+                </div>
         </section>
         <section id="backEnd" class="section__backEnd section">
             <h2>Back End</h2>
-            <h3>What is backend?</h3>
-            <p>While front end focuses more on client side, this focuses more on server side. When we check to see if the username and password match, we will use backend.
-                <a href="https://www.codecademy.com/article/back-end-architecture" target="_blank"></a>
-            </p>
-            <h3>Backend composed of three parts.</h3>
-            <p><ul>
-                <li>Server - computer that gets the request. Most common being apache Nginx.</li>
-                <li>The App - the app that listens for the request.</li>
-                <li>Database - organize the data. With the most common being MongoDB, mySQl, and PostgreSQL</li>
-            </ul></p>
-            <h3>What are Frameworks?</h3>
-            <p>Code that is typically very common that also gives structure to code.
-                <a href="https://dev.to/aspittel/what-is-a-web-framework-and-why-should-i-use-one-38c0" target="_blank"></a>
-            Some popular front end frameworks include react and angular, while popular backend ones are django and ruby.
-            </p>
-            <h3>Ruby</h3>
-            <p> A quick use of ruby on the terminal is to type IRB, this allows the RUBY shell to be interactive. You can exit by typing exit or hitting ctrl + d</p>
-            <h3>Terminal: Running Ruby Code</h3>
-            <p>IRB allows us to quickly test ruby tests, but the terminal also allows us to test ruby code, simply type <code>ruby (nameOfFile).rb</code>In the event you want to stop the run, hit <kbd>control-c</kbd></p>
-            <h3>Running files on the terminal</h3>
-            <p>One method I found is to create a folder with whatever name you want, and in that folder create a .rb file. Now write your ruby, and when you are ready to run it, simply type ruby (fileName).rb and it should run.</p>
-            <h3>Puts vs Print</h3>
-            <p>One some difference of the two is that puts adds the word and then makes a new line, while print does not, so using a print then a puts will make them all stay on the same line. While a puts then print will make two lines. A shorthand for puts will be to enter simply p and then your quotation marks.Note that the p mark is mostly for debugging, gives the raw version of the object. P also makes it so that the quotation marks are seen.</p>
+            <div class="backEnd__container">
+                <h3>What is backend?</h3>
+                <p>While front end focuses more on client side, this focuses more on server side. When we check to see if the username and password match, we will use backend.
+                    <a href="https://www.codecademy.com/article/back-end-architecture" target="_blank"></a>
+                </p>
+                <h3>Backend composed of three parts.</h3>
+                <p>The backend is SAD<ul>
+                    <li>Server - computer that gets the request. Most common being apache Nginx.</li>
+                    <li>The App - the app that listens for the request.</li>
+                    <li>Database - organize the data. With the most common being MongoDB, mySQl, and PostgreSQL</li>
+                </ul></p>
+                <h3>What are Frameworks?</h3>
+                <p>Code that is typically very common that also gives structure to code.
+                    <a href="https://dev.to/aspittel/what-is-a-web-framework-and-why-should-i-use-one-38c0" target="_blank"></a>
+                Some popular front end frameworks include react and angular, while popular backend ones are django and ruby.
+                </p>
+                <h3>Ruby</h3>
+                <p> A quick use of ruby on the terminal is to type IRB, this allows the RUBY shell to be interactive. You can exit by typing exit or hitting ctrl + d</p>
+                <h3>Terminal: Running Ruby Code</h3>
+                <p>IRB allows us to quickly test ruby tests, but the terminal also allows us to test ruby code, simply type <code>ruby (nameOfFile).rb</code>In the event you want to stop the run, hit <kbd>control-c</kbd></p>
+                <h3>Running files on the terminal</h3>
+                <p>One method I found is to create a folder with whatever name you want, and in that folder create a .rb file. Now write your ruby, and when you are ready to run it, simply type ruby (fileName).rb and it should run.</p>
+                <h3>Puts vs Print</h3>
+                <p>One some difference of the two is that puts adds the word and then makes a new line, while print does not, so using a print then a puts will make them all stay on the same line. While a puts then print will make two lines. A shorthand for puts will be to enter simply p and then your quotation marks.Note that the p mark is mostly for debugging, gives the raw version of the object. P also makes it so that the quotation marks are seen.</p>
 
-            <h3>Ruby laws</h3>
-            <p>Indents must be 2 spaces. # means comment. if a method variable or file are called, they must be snake case , meaning all lowercase and each word has a _. IE <b>this_is_a_great_method</b>. If it can fit on one line, make it so. <img src="./Images/rubyOneLine.png" alt="">, and lastly, when naming classes we will capitalize every word. <img src="./Images/rubyClassName.png" alt=""> </p>
-            <h3>What is an API?</h3>
-            <p>It means application programming interface. Which can either mean documentation or how the application interact with one another.</p>
-            <h3>Is it a class or a module?</h3>
-            <p>When looking at RUBY api, if we see something like word1::word2, then anything before the :: is the module, word1, while word2 is the class in the module of word1. </p>
-            <h3>Method types</h3>
-            <p>Methods are organized by two types, either class as we seen above with ::, or instances, where we will see it in the format of #. However this only applies when looking at the API, in the actual code, :: and # have different meanings. The biggest difference is that instance methods can be used immediately.</p>
-            <h3>RubyGems</h3>
-            <p>They are a collection of code that solves a common problem.</p>
-            <h3>Installing Gems</h3>
-            <p>Installing gems are easy, just run gem install (gem name)</p>
-            <h3>Debugging Ruby</h3>
-            <p> <a href="https://launchschool.com/books/ruby/read/preparations#usingacodeeditor" target="_blank">Save for when after we install ruby.</a></p>
-            <h3>What does it mean when we say Ruby is very strongly OOP?</h3>
-            <p>It means everything in ruby is an object.</p>
-            <h3>Some way to test ruby</h3>
-            <p>We can test ruby with the terminal IRB or we can use the website <a href="https://replit.com/languages/ruby" target="_blank">replit</a></p>
-            <h3>Ruby Numbers</h3>
-            <p>There are only two kinds of numbers in ruby, integers and floats. Floats have decimals while integers are whole numbers. If the numbers used in a ,math problem are all integers, if the solution is a decimal, it will convert to an integer. Simply add the .0 if you want a float. Another way is to use a simple conversion, note, when making the integer the value is not rounded.</p>
-            <img src="./Images/converationRuby.png" alt="">
-            <h3>Even or odd</h3>
-            <p>Testing for even or odd is easy, simple add the number.odd? or number.even? with the question mark included. However, these do not work for floats.</p>
-            <h3>Strings</h3>
-            <p>Using strings in ruby we can add them with either the concat (long) shovel (new way) or with the used to way of +.</p>
-            <img src="./Images/stringAddRuby.png" alt="">
-            <h3>Substrings</h3>
-            <p>Much easier to get the last letter of a word with the use of [-1]. Note, the [0..1] is not the same as [0,1], the .. method has one more letter, meaning the , version is up to but not including.</p>
-            <img src="./Images/subStringRuby.png" alt="">
-            <h3>Remove white space</h3>
-            <p>Two ways to remove white space, one will be the strip method, the other is the gsub method. The strip method doesn't need anything user input, the gsub (global substitute) does.</p>
-            <img src="./Images/gsubRuby.png" alt="">
-            <h3>Escape characters</h3>
-            <p>These only work in double quotation marks.</p>
-            <img src="./Images/escapeCharRuby.png" alt="">
-            <h3>String Interpolation</h3>
-            <p>Similar to using a template lateral in practice, except it is done in double quotes and does not use the dollar sign.</p>
-            <img src="./Images/interpolatRuby.png" alt="">
-            <h3>String Methods</h3>
-            <p>These can be found in the <a href="https://ruby-doc.org/core-3.1.2/String.html" target="_blank">docs</a>, or seeing some common ones back at  <a href="https://www.theodinproject.com/lessons/ruby-basic-data-types" target="_blank">The Odin Project</a></p>
-            <img src="./Images/commonMethodsRuby.png" alt="">
-            <img src="./Images/gsubRuby.png" alt="">
-            <h3>Convert anything to a string</h3>
-            <p>to convert most things to a string, </p>
-            <img src="./Images/makeAString.png" alt="">
-            <h3>Make Anything into a number</h3>
-            <p>to convert an string into a number, use to_i. To convert into a float number, use to_f</p>
-            <img src="./Images/makeIntRuby.png" alt="">
-            <img src="/Images/convertFloatRuby.png" alt="">
-            <h3>Array and hashes</h3>
-            <p>Arrays are similar to javascript, set them to brackets[num1,num2] separated with commas. Hashes are more interesting, where we will now use the ruby symbols with making key values pairs.</p>
-            <img src="./Images/hashValRuby.png" alt="">
-            <img src="./Images/usingHashValuesRuby.png" alt="">
-            <h3>User Input</h3>
-            <p>User input can easily be done with assigning a variable to the method gets, which waits for the user to enter a string and then hit string. We include the method chomps at the end of gets to remove the carriage\n that comes when we hit the enter key.</p>
-            <img src="./Images/getsRuby.png" alt="">
-            <h3>Methods</h3>
-            <p>Methods are like functions, essentially reusable code.</p>
-            <img src="./Images/method:functionRuby.png" alt="">
-            <h3>Return statements</h3>
-            <p>Ruby has implicit returns, however this can make code harder to understand, which is why we can manually call a return instead, and might be preferred unless made obvious otherwise.</p>
-            <h3>Blocks</h3>
-            <p>Blocks are like methods, done with do/end or {}. They can also effect the outer scopes, but they do not have any effect if created as an inner scope. Note that {} are typically only used for one liner code.</p>
-            <img src="./Images/blockRuby.png" alt="">
-            <h3>Variable types</h3>
-            <p>There are only five variables types and are formatted uniquely. Constant ones are all capitalized, and they can in fact change, please don't however. Global ones override all scopes, must people avoid. Class variables effect classes and must be started outside of methods.Instance can be used throughout the parent class, avoid use until better understanding of OOP. Lastly local is the most common and obeys all forms of scopes.</p>
-            <img src="./Images/variableTypesRuby.png" alt="">
-            <h3>Times method</h3>
-            <p>When you want something done x times, we will call the times method which starts with the number we want to do an action for x times, followed by what we want to do those ten times.</p>
-            <img src="./Images/timesMethodRuby.png" alt="">
-            <h3>Creating files and options</h3>
-            <p>Files can be created with the File.new("fileName","mode"), mode has different options, but most times we will just use w, since this allows us to create a file and then write in it. While .close will close the file. File.open is similar to the new method, except we can have a block with File.open</p>
-            <img src="./Images/fileRuby.png" alt="">
-            <img src="./Images/fileOpenRuby.png" alt="">
-            <h3>Reading files</h3>
-            <p>To read files, we can use sysread to read the contents of a file.</p>
-            <img src="./Images/readFileRuby.png" alt="">
-            <h3>Opening files</h3>
-            <p>Opening files is a neat way to interact with other documents in your folder.</p>
-            <img src="./Images/openAndReadFileRuby.png" alt="">
-            <h3>If statement</h3>
-            <p>If statements are similar to JS, except we need a defined end if the line of code is greater than one line. If the code is one line, then we can create a one line piece of code, this one line does not need an end statement and the "DO" portion is before the if statement.Another note, if you add an if inside a method, you will technically have two ends, one end for the if, elsif else portion, and another one to end the method itself.</p>
-            <img src="./Images/ifStatementRuby.png" alt="">
-            <h3>If Else Statements</h3>
-            <p>Also similar to JS, just don't include the {} and else if is shortened to elsif</p>
-            <h3>Space ship operator</h3>
-            <p>A fancy way to tell us which value is larger. Returns a value, if -1, the left is larger, is 0 they are the same, if 1 the right is larger.</p>
-            <img src="./Images/spaceShipRuby.png" alt="">
-            <h3>Case Statements</h3>
-            <p>Case statements are used when we don't want a messy else if statements and want to assign a variable. As soon as a match is found, the rest are not run. For more complex control, ie we want to do more if true, we can omit the then keyword, this instance we get the same put, but then we also get another variable assignment of FML. Remember that when using case, we don't have to recall the variable, and instead just use the when method to reference back to the variable in question if we added it as an argument.</p>
-            <img src="/Images/caseRuby.png" alt="">
-            <img src="./Images/caseNoThen.png" alt="">
-            <img src="./Images/caseOnePutsRuby.png" alt="">
-            <img src="./Images/caseNoArgsRuby.png" alt="">
-            <h3>Unless statements</h3>
-            <p>Works the same as the inverse !, except can look cleaner.You should use an unless statement when you want to not do something if a condition is true</p>
-            <img src="./Images/unlessRuby.png" alt="">
-            <h3>Ternary Operator</h3>
-            <p>Similar to JS. Ternary should only be done when selecting between two 2 values. And the result of it should be assigned to a variable , a return result, or as an argument.</p>
-            <img src="./Images/ternaryRuby.png" alt="">
-            <img src="./Images/ternaryExampleRuby.pngs" alt="">
-            <h3>One line if and unless</h3>
-            <p>If we are writing a conditional statement that is only one line, we can use the if and unless statement at the end. Unless works similar is not !.</p>
-            <img src="./Images/oneLineConditionalRuby.png" alt="">
-            <h3>Comparing strings</h3>
-            <p>Unlike in numbers, the statement <code> 42 is greater than 415</code>will be false since it goes by one character at a time, since 4 is the same, it goes to 2, since 2 is greater than the 1 in 415, it return s false. If the value was 425 or 435, then it would return true.f</p>
-            <h3>While Loop</h3>
-            <p>You declare what breaks the loop out front. Very human readable. While your value is this, do this. And then end.</p>
-            <img src="./Images/whileRuby.png" alt="">
-            <img src="./Images/whileUntilYesRuby.png" alt="">
-            <h3>Until loop</h3>
-            <p>While loops are good, but in the event we see ourselves using the not !, it would be better to use an until loop.</p>
-            <img src="./Images/untilRuby.png" alt="">
-            <h3>Ranges</h3>
-            <p>When we know how many times we want something to run we can use ranges. </p>
-            <img src="./Images/rangesRuby.png" alt="">
-            <h3>For loops</h3>
-            <p>For loops iterates through an array or range a given number of times. Note that i and friend can be labeled as anything.</p>
-            <img src="./Images/forLoopRuby.png" alt="">
-            <img src="./Images/loopThroughArrayWithEach.png" alt="">
-            <h3>Times Loop</h3>
-            <p>When we want to go through a loop a certain number of times we can use a times loops. Note that the || are required for this to work.
-            </p>
-            <img src="./Images/timesLoopsRuby.png" alt="">
-            <h3>Upto Downto</h3>
-            <p>When we want to iterate from a number up or down.</p>
-            <img src="./Images/upTodownToRuby.png" alt="">
-            <h3>Running blocks of code</h3>
-            <p>When we run loops or functions, we are seeing the do end method, however, in one example we did see the {} method, which is also fine. Just be consistent. Though, the do end method seems more "code" like.</p>
-            <h3>How to stop an infinite loop</h3>
-            <p>If you accidentally create an infinite loop, you can always exit with ctrl + c.</p>
-            <h3>If statement in loop</h3>
-            <p>When we declare an if statement inside a loop, we will have one break and two ends.</p>
-            <img src="./Images/ifInLoopRuby.png" alt="">
-            <h3>Skipping one iteration of code</h3>
-            <p>If we want to skip one run of the code, we can use next.</p>
-            <img src="./Images/nextRuby.png" alt="">
-            <img src="./Images/nextInWhileRuby.png" alt="">
-            <h3>Structure of a for loop</h3>
-            <p>All for loops have a definite end. Starts with for, then a variable, then the in reserved word, and finally a collection of elements.</p>
-            <img src="./Images/twoForLoopsRuby.png" alt="">
-            <h3>Iterators</h3>
-            <p>Most prefer this over loops. "We have called the each method using the dot operator (.) on our array. What this method does is loop through each element in our array, in order, starting from 'Bob'. Then it begins executing the code within the block. The block's starting and ending points are defined by the curly braces {}. Each time we iterate over the array, we need to assign the value of the element to a variable. In this example we have named the variable name and placed it in between two pipes |. After that, we write the logic that we want to use to operate on the variable, which represents the current array element. In this case it is simply printing to the screen using puts."</p>
-            <img src="./Images/iteractorBasicRuby.png" alt="">
-            <h3>Ruby Blocks</h3>
-            <p>A block is just some lines of code ready to be executed. When working with blocks there are two styles you need to be aware of. By convention, we use the curly braces ({}) when everything can be contained in one line. We use the words do and end when we are performing multi-line operations. Let's add some functionality to our previous program to try out this do/end stu</p>
-            <img src="./Images/mutiLineBlock.png" alt="">
-            <h3>Recursion</h3>
-            <p>Recursion allows us to save manually calling functions.</p>
-            <img src="/Images/recursionRuby.png" alt="">
-            <img src="./Images/recursionFibRuby.png" alt="">
-            <h3>Arrays</h3>
-            <p>Arrays are created similar to JS, and are referenced by the same index system.</p>
-            <img src="./Images/arraysRuby.png" alt="">
-            <h3>Getting the first or last array</h3>
-            <p>Unlike JS where we have to get the length-1, we can just use first or last.</p>
-            <img src="./Images/firstOrLastRuby.png" alt="">
-            <h3>How to change arrays</h3>
-            <p>Changing arrays in Ruby is the same as JS except they add the shovel method and they also allowed the pop and shift method to be given a value if desired.</p>
-            <img src="./Images/addingToArraysRuby.png" alt="">
-            <h3>Joining Arrays and finding differences</h3>
-            <p>It may seem bizarre, but adding and subtracting arrays cause some advance stuff, like joining and finding the difference between two arrays.</p>
-            <img src="./Images/joiningArraysRuby.png" alt="">
-            <img src="./Images/moreOnJoiningTwoArrays.png" alt="">
-            <h3>Arrays Methods</h3>
-            <p>There are over 150 methods, calling num_array.methods will yield lots of methods in the IRB, but also look at <a href="https://ruby-doc.org/">the ruby docs under "Core API" and then on "Arrays"</a>
-            </p>
-            <h3>Map/collect Ruby</h3>
-            <p>When we want to modify an array and want each value to be modified, we can use map/collect</p>
-            <img src="./Images/mapRuby.png" alt="">
-            <img src="/Images/mapWithDoEnd.png" alt="">
-            <h3>Deleting things in Arrays</h3>
-            <p>arrays can be deletes in a couple ways, either by index, by word, or deleting all duplicates.</p>
-            <img src="./Images/deleteRuby.png" alt="">
-            <h3>Select similar to JS filter</h3>
-            <p>we can go over an array and if true to our expression, will only return the true values.</p>
-            <img src="./Images/selectRuby.png" alt="">
-            <h3>Array avoiding the "" and commas</h3>
-            <p>If we have an array thats all strings, we can use the literal %w (looks like regex) that allows us to just write the names without having to do the "" or ,.</p>
-            <img src="./Images/arraysFormat.png" alt="">
-            <h3>Making a string into an array with split</h3>
-            <p>I think JS does a similar process when we want to make a string into an array.</p>
-            <img src="./Images/stringIntoArrayRuby.png" alt="">
-            <h3>Multi-dimensional arrays</h3>
-            <p>Arrays in arrays, when we want to deconstruct this, we can use flatten</p>
-            <img src="./Images/deconstruct2DArraysRuby.png" alt="">
-            <h3>Sample random number in array</h3>
-            <p>Random numbers are gained with .sample over the array.</p>
-            <img src="./Images/randomRuby.png" alt="">
-            <h3>Remove NIl from arrays</h3>
-            <p>If you end up having a nil in your array you can remove them with compact.</p>
-            <img src="./Images/removeNIlRuby.png" alt="">
-            <h3>File appending</h3>
-            <p>Appending words onto files is a fast way to add things, but be careful, if the program is called multiple times, it will keep on appending the items.</p>
-            <img src="./Images/appendFilesRuby.png" alt="">
-            <h3>Catching Errors</h3>
-            <p>Sometimes code is written with the hunch that it may break the whole system. If that ever comes up we can try to catch the error with begin and rescue. We can also catch specific errors that we get, like TypeError on the rescue, and each rescue we can also store the error into a variable and print it on the screen.</p>
-            <img src="./Images/catchingErrorsRuby.png" alt="">
-            <h3>Class and objects</h3>
-            <p>A class is a costume data type. Gives the blueprint that all things in question will follow. IE a class of Book will have pages, a title, and an author. All classes start with a capital letter. Now that we have created the blueprint, we can create many books with this blueprint, and these created things are called objects.</p>
-            <img src="./Images/basicClassRuby.png" alt="">
-            <img src="./Images/classesMadeEasierRuby.png" alt="">
-            <h3>Initialize objects</h3>
-            <p>Instead of calling each book1 = title,author, and pages, we can save on lines by creating a function inside the new Object function.Note that the name MUST be Initialize otherwise it will not work.</p>
-            <h3>Instance Methods</h3>
-            <p>Creating methods inside the class we made.</p>
-            <img src="./Images/classMehodIfRuby.png" alt="">
-            <img src="./Images/QuizWithRuby.png" alt="">
-            <h3>Inheritance of Super Classes</h3>
-            <p>Sometimes we create classes and then subclasses which can do most of what the super class can do, plus something different or extra</p>
-            <img src="./Images/InheritanceRuby.png" alt="">
-            <h3>Modules</h3>
-            <p>With modules, we are capitalizing the word, and include the word module. To call the module we will always call <code>Include (moduleName)</code>Then to use it call the module name with the class you want ot use. If the module is on another folder, we can call it with the require_relative phrase, then do the same as before.</p>
-            <img src="./Images/moduleSameFolderRuby.png" alt="">
-            <img src="./Images/moduleOutSideFolderRuby.png" alt="">
-        
+                <h3>Ruby laws</h3>
+                <p>Indents must be 2 spaces. # means comment. if a method variable or file are called, they must be snake case , meaning all lowercase and each word has a _. IE <b>this_is_a_great_method</b>. If it can fit on one line, make it so. <img src="./Images/rubyOneLine.png" alt="">, and lastly, when naming classes we will capitalize every word. <img src="./Images/rubyClassName.png" alt=""> </p>
+                <h3>What is an API?</h3>
+                <p>It means application programming interface. Which can either mean documentation or how the application interact with one another.</p>
+                <h3>Is it a class or a module?</h3>
+                <p>When looking at RUBY api, if we see something like word1::word2, then anything before the :: is the module, word1, while word2 is the class in the module of word1. </p>
+                <h3>Method types</h3>
+                <p>Methods are organized by two types, either class as we seen above with ::, or instances, where we will see it in the format of #. However this only applies when looking at the API, in the actual code, :: and # have different meanings. The biggest difference is that instance methods can be used immediately.</p>
+                <h3>RubyGems</h3>
+                <p>They are a collection of code that solves a common problem.</p>
+                <h3>Installing Gems</h3>
+                <p>Installing gems are easy, just run gem install (gem name)</p>
+                <h3>Debugging Ruby</h3>
+                <p> <a href="https://launchschool.com/books/ruby/read/preparations#usingacodeeditor" target="_blank">Save for when after we install ruby.</a></p>
+                <h3>What does it mean when we say Ruby is very strongly OOP?</h3>
+                <p>It means everything in ruby is an object. <b>A RUBY IS AN OBJECT</b></p>
+                <h3>Some way to test ruby</h3>
+                <p>We can test ruby with the terminal IRB or we can use the website <a href="https://replit.com/languages/ruby" target="_blank">replit</a></p>
+                <h3>Ruby Numbers</h3>
+                <p>There are only two kinds of numbers in ruby, integers and floats. Floats have decimals while integers are whole numbers. If the numbers used in a ,math problem are all integers, if the solution is a decimal, it will convert to an integer. Simply add the .0 if you want a float. Another way is to use a simple conversion, note, when making the integer the value is not rounded. <b>float in numbers </b></p>
+                <img src="./Images/converationRuby.png" alt="">
+                <h3>Even or odd</h3>
+                <p>Testing for even or odd is easy, simple add the number.odd? or number.even? with the question mark included. However, these do not work for floats.</p>
+                <h3>Strings</h3>
+                <p>Using strings in ruby we can add them with either the concat (long) shovel (new way) or with the used to way of +.</p>
+                <img src="./Images/stringAddRuby.png" alt="">
+                <h3>Substrings</h3>
+                <p>Much easier to get the last letter of a word with the use of [-1]. Note, the [0..1] is not the same as [0,1], the .. method has one more letter, meaning the , version is up to but not including.</p>
+                <img src="./Images/subStringRuby.png" alt="">
+                <h3>Remove white space</h3>
+                <p>Two ways to remove white space, one will be the strip method, the other is the gsub method. The strip method doesn't need anything user input, the gsub (global substitute) does. <b> strip the paint off</b></p>
+                <img src="./Images/gsubRuby.png" alt="">
+                <h3>Escape characters</h3>
+                <p>These only work in double quotation marks.</p>
+                <img src="./Images/escapeCharRuby.png" alt="">
+                <h3>String Interpolation</h3>
+                <p>Similar to using a template lateral in practice, except it is done in double quotes and does not use the dollar sign.</p>
+                <img src="./Images/interpolatRuby.png" alt="">
+                <h3>String Methods</h3>
+                <p>These can be found in the <a href="https://ruby-doc.org/core-3.1.2/String.html" target="_blank">docs</a>, or seeing some common ones back at  <b>splitting air</b> <a href="https://www.theodinproject.com/lessons/ruby-basic-data-types" target="_blank">The Odin Project</a></p>
+                <img src="./Images/commonMethodsRuby.png" alt="">
+                <img src="./Images/gsubRuby.png" alt="">
+                <h3>Convert anything to a string</h3>
+                <p>to convert most things to a string, </p>
+                <img src="./Images/makeAString.png" alt="">
+                <h3>Make Anything into a number</h3>
+                <p>to convert an string into a number, use to_i. To convert into a float number, use to_f</p>
+                <img src="./Images/makeIntRuby.png" alt="">
+                <img src="/Images/convertFloatRuby.png" alt="">
+                <h3>Array and hashes</h3>
+                <p>Arrays are similar to javascript, set them to brackets[num1,num2] separated with commas. Hashes are more interesting, where we will now use the ruby symbols with making key values pairs.</p>
+                <img src="./Images/hashValRuby.png" alt="">
+                <img src="./Images/usingHashValuesRuby.png" alt="">
+                <h3>User Input</h3>
+                <p>User input can easily be done with assigning a variable to the method gets, which waits for the user to enter a string and then hit string. We include the method chomps at the end of gets to remove the carriage\n that comes when we hit the enter key. <b>gets gets the user, chomp bites off the end.</b></p>
+                <img src="./Images/getsRuby.png" alt="">
+                <h3>Methods</h3>
+                <p>Methods are like functions, essentially reusable code.</p>
+                <img src="./Images/method:functionRuby.png" alt="">
+                <h3>Return statements</h3>
+                <p>Ruby has implicit returns, however this can make code harder to understand, which is why we can manually call a return instead, and might be preferred unless made obvious otherwise.</p>
+                <h3>Blocks</h3>
+                <p>Blocks are like methods, done with do/end or {}. They can also effect the outer scopes, but they do not have any effect if created as an inner scope. Note that {} are typically only used for one liner code.</p>
+                <img src="./Images/blockRuby.png" alt="">
+                <h3>Variable types</h3>
+                <p>There are only five variables types and are formatted uniquely. Constant ones are all capitalized, and they can in fact change, please don't however. Global ones override all scopes, must people avoid. Class variables effect classes and must be started outside of methods.Instance can be used throughout the parent class, avoid use until better understanding of OOP. Lastly local is the most common and obeys all forms of scopes.</p>
+                <img src="./Images/variableTypesRuby.png" alt="">
+                <h3>Times method</h3>
+                <p>When you want something done x times, we will call the times method which starts with the number we want to do an action for x times, followed by what we want to do those ten times.</p>
+                <img src="./Images/timesMethodRuby.png" alt="">
+                <h3>Creating files and options</h3>
+                <p>Files can be created with the File.new("fileName","mode"), mode has different options, but most times we will just use w, since this allows us to create a file and then write in it. While .close will close the file. File.open is similar to the new method, except we can have a block with File.open</p>
+                <img src="./Images/fileRuby.png" alt="">
+                <img src="./Images/fileOpenRuby.png" alt="">
+                <h3>Reading files</h3>
+                <p>To read files, we can use sysread to read the contents of a file.</p>
+                <img src="./Images/readFileRuby.png" alt="">
+                <h3>Opening files</h3>
+                <p>Opening files is a neat way to interact with other documents in your folder.</p>
+                <img src="./Images/openAndReadFileRuby.png" alt="">
+                <h3>If statement</h3>
+                <p>If statements are similar to JS, except we need a defined end if the line of code is greater than one line. If the code is one line, then we can create a one line piece of code, this one line does not need an end statement and the "DO" portion is before the if statement.Another note, if you add an if inside a method, you will technically have two ends, one end for the if, elsif else portion, and another one to end the method itself.</p>
+                <img src="./Images/ifStatementRuby.png" alt="">
+                <h3>If Else Statements</h3>
+                <p>Also similar to JS, just don't include the {} and else if is shortened to elsif</p>
+                <h3>Space ship operator</h3>
+                <p>A fancy way to tell us which value is larger. Returns a value, if -1, the left is larger, is 0 they are the same, if 1 the right is larger.</p>
+                <img src="./Images/spaceShipRuby.png" alt="">
+                <h3>Case Statements</h3>
+                <p>Case statements are used when we don't want a messy else if statements and want to assign a variable. As soon as a match is found, the rest are not run. For more complex control, ie we want to do more if true, we can omit the then keyword, this instance we get the same put, but then we also get another variable assignment of FML. Remember that when using case, we don't have to recall the variable, and instead just use the when method to reference back to the variable in question if we added it as an argument.</p>
+                <img src="/Images/caseRuby.png" alt="">
+                <img src="./Images/caseNoThen.png" alt="">
+                <img src="./Images/caseOnePutsRuby.png" alt="">
+                <img src="./Images/caseNoArgsRuby.png" alt="">
+                <h3>Unless statements</h3>
+                <p>Works the same as the inverse !, except can look cleaner.You should use an unless statement when you want to not do something if a condition is true</p>
+                <img src="./Images/unlessRuby.png" alt="">
+                <h3>Ternary Operator</h3>
+                <p>Similar to JS. Ternary should only be done when selecting between two 2 values. And the result of it should be assigned to a variable , a return result, or as an argument.</p>
+                <img src="./Images/ternaryRuby.png" alt="">
+                <img src="./Images/ternaryExampleRuby.pngs" alt="">
+                <h3>One line if and unless</h3>
+                <p>If we are writing a conditional statement that is only one line, we can use the if and unless statement at the end. Unless works similar is not !.</p>
+                <img src="./Images/oneLineConditionalRuby.png" alt="">
+                <h3>Comparing strings</h3>
+                <p>Unlike in numbers, the statement <code> 42 is greater than 415</code>will be false since it goes by one character at a time, since 4 is the same, it goes to 2, since 2 is greater than the 1 in 415, it return s false. If the value was 425 or 435, then it would return true.f</p>
+                <h3>While Loop</h3>
+                <p>You declare what breaks the loop out front. Very human readable. While your value is this, do this. And then end.</p>
+                <img src="./Images/whileRuby.png" alt="">
+                <img src="./Images/whileUntilYesRuby.png" alt="">
+                <h3>Until loop</h3>
+                <p>While loops are good, but in the event we see ourselves using the not !, it would be better to use an until loop.</p>
+                <img src="./Images/untilRuby.png" alt="">
+                <h3>Ranges</h3>
+                <p>When we know how many times we want something to run we can use ranges. </p>
+                <img src="./Images/rangesRuby.png" alt="">
+                <h3>For loops</h3>
+                <p>For loops iterates through an array or range a given number of times. Note that i and friend can be labeled as anything.</p>
+                <img src="./Images/forLoopRuby.png" alt="">
+                <img src="./Images/loopThroughArrayWithEach.png" alt="">
+                <h3>Times Loop</h3>
+                <p>When we want to go through a loop a certain number of times we can use a times loops. Note that the || are required for this to work.
+                </p>
+                <img src="./Images/timesLoopsRuby.png" alt="">
+                <h3>Upto Downto</h3>
+                <p>When we want to iterate from a number up or down.</p>
+                <img src="./Images/upTodownToRuby.png" alt="">
+                <h3>Running blocks of code</h3>
+                <p>When we run loops or functions, we are seeing the do end method, however, in one example we did see the {} method, which is also fine. Just be consistent. Though, the do end method seems more "code" like.</p>
+                <h3>How to stop an infinite loop</h3>
+                <p>If you accidentally create an infinite loop, you can always exit with ctrl + c.</p>
+                <h3>If statement in loop</h3>
+                <p>When we declare an if statement inside a loop, we will have one break and two ends.</p>
+                <img src="./Images/ifInLoopRuby.png" alt="">
+                <h3>Skipping one iteration of code</h3>
+                <p>If we want to skip one run of the code, we can use next.</p>
+                <img src="./Images/nextRuby.png" alt="">
+                <img src="./Images/nextInWhileRuby.png" alt="">
+                <h3>Structure of a for loop</h3>
+                <p>All for loops have a definite end. Starts with for, then a variable, then the in reserved word, and finally a collection of elements.</p>
+                <img src="./Images/twoForLoopsRuby.png" alt="">
+                <h3>Iterators</h3>
+                <p>Most prefer this over loops. "We have called the each method using the dot operator (.) on our array. What this method does is loop through each element in our array, in order, starting from 'Bob'. Then it begins executing the code within the block. The block's starting and ending points are defined by the curly braces {}. Each time we iterate over the array, we need to assign the value of the element to a variable. In this example we have named the variable name and placed it in between two pipes |. After that, we write the logic that we want to use to operate on the variable, which represents the current array element. In this case it is simply printing to the screen using puts."</p>
+                <img src="./Images/iteractorBasicRuby.png" alt="">
+                <h3>Ruby Blocks</h3>
+                <p>A block is just some lines of code ready to be executed. When working with blocks there are two styles you need to be aware of. By convention, we use the curly braces ({}) when everything can be contained in one line. We use the words do and end when we are performing multi-line operations. Let's add some functionality to our previous program to try out this do/end stu</p>
+                <img src="./Images/mutiLineBlock.png" alt="">
+                <h3>Recursion</h3>
+                <p>Recursion allows us to save manually calling functions.</p>
+                <img src="/Images/recursionRuby.png" alt="">
+                <img src="./Images/recursionFibRuby.png" alt="">
+                <h3>Arrays</h3>
+                <p>Arrays are created similar to JS, and are referenced by the same index system.</p>
+                <img src="./Images/arraysRuby.png" alt="">
+                <h3>Getting the first or last array</h3>
+                <p>Unlike JS where we have to get the length-1, we can just use first or last.</p>
+                <img src="./Images/firstOrLastRuby.png" alt="">
+                <h3>How to change arrays</h3>
+                <p>Changing arrays in Ruby is the same as JS except they add the shovel method and they also allowed the pop and shift method to be given a value if desired.</p>
+                <img src="./Images/addingToArraysRuby.png" alt="">
+                <h3>Joining Arrays and finding differences</h3>
+                <p>It may seem bizarre, but adding and subtracting arrays cause some advance stuff, like joining and finding the difference between two arrays.</p>
+                <img src="./Images/joiningArraysRuby.png" alt="">
+                <img src="./Images/moreOnJoiningTwoArrays.png" alt="">
+                <h3>Arrays Methods</h3>
+                <p>There are over 150 methods, calling num_array.methods will yield lots of methods in the IRB, but also look at <a href="https://ruby-doc.org/">the ruby docs under "Core API" and then on "Arrays"</a>
+                </p>
+                <h3>Map/collect Ruby</h3>
+                <p>When we want to modify an array and want each value to be modified, we can use map/collect</p>
+                <img src="./Images/mapRuby.png" alt="">
+                <img src="/Images/mapWithDoEnd.png" alt="">
+                <h3>Deleting things in Arrays</h3>
+                <p>arrays can be deletes in a couple ways, either by index, by word, or deleting all duplicates.</p>
+                <img src="./Images/deleteRuby.png" alt="">
+                <h3>Select similar to JS filter</h3>
+                <p>we can go over an array and if true to our expression, will only return the true values.</p>
+                <img src="./Images/selectRuby.png" alt="">
+                <h3>Array avoiding the "" and commas</h3>
+                <p>If we have an array thats all strings, we can use the literal %w (looks like regex) that allows us to just write the names without having to do the "" or ,.</p>
+                <img src="./Images/arraysFormat.png" alt="">
+                <h3>Making a string into an array with split</h3>
+                <p>I think JS does a similar process when we want to make a string into an array.</p>
+                <img src="./Images/stringIntoArrayRuby.png" alt="">
+                <h3>Multi-dimensional arrays</h3>
+                <p>Arrays in arrays, when we want to deconstruct this, we can use flatten</p>
+                <img src="./Images/deconstruct2DArraysRuby.png" alt="">
+                <h3>Sample random number in array</h3>
+                <p>Random numbers are gained with .sample over the array.</p>
+                <img src="./Images/randomRuby.png" alt="">
+                <h3>Remove NIl from arrays</h3>
+                <p>If you end up having a nil in your array you can remove them with compact.</p>
+                <img src="./Images/removeNIlRuby.png" alt="">
+                <h3>File appending</h3>
+                <p>Appending words onto files is a fast way to add things, but be careful, if the program is called multiple times, it will keep on appending the items.</p>
+                <img src="./Images/appendFilesRuby.png" alt="">
+                <h3>Catching Errors</h3>
+                <p>Sometimes code is written with the hunch that it may break the whole system. If that ever comes up we can try to catch the error with begin and rescue. We can also catch specific errors that we get, like TypeError on the rescue, and each rescue we can also store the error into a variable and print it on the screen.</p>
+                <img src="./Images/catchingErrorsRuby.png" alt="">
+                <h3>Class and objects</h3>
+                <p>A class is a costume data type. Gives the blueprint that all things in question will follow. IE a class of Book will have pages, a title, and an author. All classes start with a capital letter. Now that we have created the blueprint, we can create many books with this blueprint, and these created things are called objects.</p>
+                <img src="./Images/basicClassRuby.png" alt="">
+                <img src="./Images/classesMadeEasierRuby.png" alt="">
+                <h3>Initialize objects</h3>
+                <p>Instead of calling each book1 = title,author, and pages, we can save on lines by creating a function inside the new Object function.Note that the name MUST be Initialize otherwise it will not work.</p>
+                <h3>Instance Methods</h3>
+                <p>Creating methods inside the class we made.</p>
+                <img src="./Images/classMehodIfRuby.png" alt="">
+                <img src="./Images/QuizWithRuby.png" alt="">
+                <h3>Inheritance of Super Classes</h3>
+                <p>Sometimes we create classes and then subclasses which can do most of what the super class can do, plus something different or extra</p>
+                <img src="./Images/InheritanceRuby.png" alt="">
+                <h3>Modules</h3>
+                <p>With modules, we are capitalizing the word, and include the word module. To call the module we will always call <code>Include (moduleName)</code>Then to use it call the module name with the class you want ot use. If the module is on another folder, we can call it with the require_relative phrase, then do the same as before.</p>
+                <img src="./Images/moduleSameFolderRuby.png" alt="">
+                <img src="./Images/moduleOutSideFolderRuby.png" alt="">
+                <h3>SetInterval</h3>
+                <p>When we want to fire something after x seconds we can set a time interval, remember for these, we need to have the time outside the curly brackets. Exit with control + c</p>
+                <img src="./Images/setIntervalNode.png" alt="">
+                <h3>What is nodeJS</h3>
+                <p>Node JS uses common JS and every file in node is a module. Furthermore, node JS cannot use DOM.</p>
+                <h3>Exporting modules</h3>
+                <p>Modules are always done is separate files, and when exporting we will use module.export. And once we export it, we <b>HAVE</b>to use the require global as well as ./ for the pathing.</p>
 
+
+            
+            </div>
         </section>
     </main>
     <div id="backToTop" class="backToTop backToTop--active">
