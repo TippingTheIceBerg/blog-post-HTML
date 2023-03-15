@@ -1216,8 +1216,20 @@
                 <a href="https://www.npmjs.com">Are some examples to find these</a>
                 <a href="./Images/npmInstalNodeJs.png"></a>
                 <a href="./Images/usedNPMpackageNodeJS.png"></a>
+                <a href="./Images/addNPM.png"></a>
+                <h3>JSON file</h3>
+                <p>In order for NPMS to be usable when we clone the file on GIT, we will need a JSON folder. To get a JSON folder simply type npm init for step for step, or npm init -y. Remember to make it in the root.</p>
                 <h3>Git ignore</h3>
-                <p>When we create our files, we want to use gitignore so that we aren't sending over our modules to git since this is not needed. Insode that file we want to /nameOfFileToIgnore so that it is ingored when we git it over. File will be called gitignore. Then Git Init on the terminal. Git add . . Git Commit -m. Then paste the code you got from gitHub</p>
+                <p>When we create our files, we want to use gitignore so that we aren't sending over our modules to git since this is not needed. Insode that file we want to /nameOfFileToIgnore so that it is ingored when we git it over. File will be called gitignore. Then Git Init on the terminal. Git add . . Git Commit -m. Then paste the code you got from gitHub. How does this work if we want to open the file again without the modules? Clone the file, and then run NPM install. Since we have the Json file, this will give us the right modules.</p>
+                <h3>Dev dependency</h3>
+                <p>When we use node, we will instal it as NPM i nodemon -D. This will save it was a dev dependency on the JSON since in production they won't need node, we use it to make quiality of life better only for us. After that we go to the script under the JSON. After the script we can just do NPM start now to run the code instead of the previous node fileName.js method. However, for nodemon, we can use "dev": "nodemon app.js" under the script section, and then run "npm run dev", which causes nodemon to watch ourfiles, similar to liveserver. To stop nodemon, use command C</p>
+                <img src="/Images/jsonScriptNodeJS.png" alt="">
+                <img src="./Images/nodemonNodeJs.png" alt="">
+                <h3>What does it mean when we say JS is synchonrous and single threaded</h3>
+                <p>This means it read it line by line, an interesting way to test time is to use console.log.time() and then console.timeEnd() and this will tell you how fast it reached the first time, to the end time.</p>
+                <h3>Example of offloading</h3>
+                <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed.</p>
+                <img src="./Images/offloadingNodeJS.png" alt="">
             </div>
         </section>
     </main>
