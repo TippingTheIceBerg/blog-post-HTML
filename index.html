@@ -1211,6 +1211,8 @@
                 <p>HTTP is what allows us to set up the web server.</p>
                 <h3>HTTP set up</h3>
                 <p>Basic set up is creating a server, needs a callback that be anything, but convention is to use req and res, (request and response). Res.write is used to write, but at the time being, we learned that res.end which usually ends the program can also be used to write.</p>
+                <img src="./Images/httpNodeJS.png" alt="">
+                <img src="./Images/serverNodeJS.png" alt="">
                 <h3>Naming NodeJS</h3>
                 <p>A folder of JS code can be called either a module, depenecy or package. They all mean the same thing.</p>
                 <a href="https://www.npmjs.com">Are some examples to find these</a>
@@ -1228,8 +1230,12 @@
                 <h3>What does it mean when we say JS is synchonrous and single threaded</h3>
                 <p>This means it read it line by line, an interesting way to test time is to use console.log.time() and then console.timeEnd() and this will tell you how fast it reached the first time, to the end time.</p>
                 <h3>Example of offloading</h3>
-                <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed.</p>
+                <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed, and this is because timeout and setinterval and others are asynchronous.</p>
                 <img src="./Images/offloadingNodeJS.png" alt="">
+                <h3>How to make asynch look better </h3>
+                <p>One way we can make asycnh look better is with promises and asycnh await. </p>
+                <img src="./Images/messyasynch.png" alt="">
+                <img src="./Images/promiseAsycnheNodeJS.png" alt="">
             </div>
         </section>
     </main>
