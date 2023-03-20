@@ -1210,7 +1210,7 @@
                 <h3>HTTP purpose</h3>
                 <p>HTTP is what allows us to set up the web server.</p>
                 <h3>HTTP set up</h3>
-                <p>Basic set up is creating a server, needs a callback that be anything, but convention is to use req and res, (request and response). Res.write is used to write, but at the time being, we learned that res.end which usually ends the program can also be used to write.</p>
+                <p>Basic set up is creating a server, needs a callback that be anything, but convention is to use req and res, (request and response). Res.write is used to write, but at the time being, we learned that res.end which usually ends the program can also be used to write. We always need to include .end, since without it, the server gets a ping, all response and headers have been sent, it can be, server should consider this complete.</p>
                 <img src="./Images/httpNodeJS.png" alt="">
                 <img src="./Images/serverNodeJS.png" alt="">
                 <h3>Naming NodeJS</h3>
@@ -1246,11 +1246,15 @@
                 <h3>Streams</h3>
                 <p>Large sources or continuing data. four main types, read, write, duplex (read and write) and transform where data can be modified while reading or writing.</p>
                 <h3>Read File</h3>
-                <p>One power of read file is that we can store the data and paste it onto the local server. readFileSynch vs readFile is that readFile needs a callback.</p>
+                <p>One power https://github.com/john-smilga/node-express-course.gitof read file is that we can store the data and paste it onto the local server. readFileSynch vs readFile is that readFile needs a callback.</p>
                 <img src="/Images/pastingInfoOnFIleToServer.png" alt="">
                 <h3>Stream Chunks</h3>
                 <p>Instead of sending large txt files that send data at once, we can send it as chunks. This can be done with streams. Pipe method is what let's us change the readable stream into a writeable stream.</p>
                 <img src="./Images/sendingChunksNodeJs.png" alt="">
+                <h3>What is express?</h3>
+                <p>Express is built upon http module, and makes creating servers much more easier.</p>
+                <h3>Meta data about the server response</h3>
+                <p>A new method will be res.writeHead, which uses a status code (200 being successful) within the create server. Next is contact type,tells the browser, we are sending back html, css, imge, how to render that contact.This is done using key value pairs.</p>
             </div>
         </section>
     </main>
