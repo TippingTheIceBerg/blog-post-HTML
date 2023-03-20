@@ -1220,7 +1220,7 @@
                 <a href="./Images/usedNPMpackageNodeJS.png"></a>
                 <a href="./Images/addNPM.png"></a>
                 <h3>JSON file</h3>
-                <p>In order for NPMS to be usable when we clone the file on GIT, we will need a JSON folder. To get a JSON folder simply type npm init for step for step, or npm init -y. Remember to make it in the root.</p>
+                <p>In order for NPMS to be usable when we clone the file on GIT, we will need a JSON folder. To get a JSON folder simply type npm init for step for step, or npm init -y. Remember to make it in the root. Once we push onto git and we don't push the modules, we can clone the repository, and in the terminal, if there is a json, we can type "npm instll" and this will let us now to use all the modules that are in the JSON file.</p>
                 <h3>Git ignore</h3>
                 <p>When we create our files, we want to use gitignore so that we aren't sending over our modules to git since this is not needed. Insode that file we want to /nameOfFileToIgnore so that it is ingored when we git it over. File will be called gitignore. Then Git Init on the terminal. Git add . . Git Commit -m. Then paste the code you got from gitHub. How does this work if we want to open the file again without the modules? Clone the file, and then run NPM install. Since we have the Json file, this will give us the right modules.</p>
                 <h3>Dev dependency</h3>
@@ -1233,9 +1233,24 @@
                 <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed, and this is because timeout and setinterval and others are asynchronous.</p>
                 <img src="./Images/offloadingNodeJS.png" alt="">
                 <h3>How to make asynch look better </h3>
-                <p>One way we can make asycnh look better is with promises and asycnh await. </p>
+                <p>One way we can make asycnh look better is with promises and asycnh await. We moved the messy asycnh inside the promise. Note in this example, we used the path as a variable. But this isn't that imporatant, asycnh await is much more better and explained later. </p>
                 <img src="./Images/messyasynch.png" alt="">
                 <img src="./Images/promiseAsycnheNodeJS.png" alt="">
+                <h3>Promisfy with Asycnh Wait</h3>
+                <p>Promisfy is inside the node module and must be required. We can either add the dot promises at the end of the files, or we can create new variables and use util.promisfy. Remember for write file if not data is there, it will create the file and add it.</p>
+                <img src="./Images/nodePromisfyLongNodeJS.png" alt="">
+                <img src="./Images/nodePromisfyshorterNodeJS.png" alt="">
+                <h3>Event Emitters</h3>
+                <p>A lot of built in modules use event emitters. Used heavily in node JS. Users hovering over links or buttons. The flow of the program depends on the events that happen.</p>
+                <img src="./Images/eventEmitterNodeJS.png" alt="">
+                <h3>Streams</h3>
+                <p>Large sources or continuing data. four main types, read, write, duplex (read and write) and transform where data can be modified while reading or writing.</p>
+                <h3>Read File</h3>
+                <p>One power of read file is that we can store the data and paste it onto the local server. readFileSynch vs readFile is that readFile needs a callback.</p>
+                <img src="/Images/pastingInfoOnFIleToServer.png" alt="">
+                <h3>Stream Chunks</h3>
+                <p>Instead of sending large txt files that send data at once, we can send it as chunks. This can be done with streams. Pipe method is what let's us change the readable stream into a writeable stream.</p>
+                <img src="./Images/sendingChunksNodeJs.png" alt="">
             </div>
         </section>
     </main>
