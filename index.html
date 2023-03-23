@@ -1257,13 +1257,31 @@
                 <p>A new method will be res.writeHead, which uses a status code (200 being successful) within the create server. Next is contact type,tells the browser, we are sending back html, css, imge, how to render that contact.This is done using key value pairs.</p>
                 <img src="./Images/mimeTypesNodeJs.png" alt="">
                 <h3>Simple server check</h3>
-                <p>As before, we can check the url and test to see if the data is there, if not, we can now give  404 error code with text error. We can also use styles and JS but we would need to check for the url of each one if we are just using http for checks, express will fix this issue.</p>
+                <p>As before, we can check the url and test to see if the data is there, if not, we can now give  404 error code with text error. We can also use styles and JS but we would need to check for  the url of each one if we are just using http for checks, express will fix this issue.</p>
                 <img src="/Images/simpleServerSetUpNodeJS.png" alt="">
                 <img src="./Images/serverWithSimpleIndexHTMLNodeJS.png" alt="">
                 <img src="./Images/serverSetUptoCSS:JSwithJustHTTPNodeJS.png" alt="">
                 <h3>Installing Express</h3>
-                <p>To install express we have to run npm instal express, and to instal a previous updated one, we can run npm install expess@4.17.1</p>
+                <p>To install express we have to run npm instal express, and to instal a previous updated one, we can run npm install expess@4.17.1. Note that express is a function, so we declare it as a function but also assign it.</p>
                 <img src="./Images/basicExpress.png" alt="">
+                <h3>How express starts to make things easier with using css/js/svg</h3>
+                <p> How to get all the css/js/svg to work, common practice is making a folder named public all files will be moved there. We don't need to make any status or content types, express takes care of it all. Use and express explained later. Statics are files the server doesn't need to change, like images or servers. However, what's better is that we don't even really need to add the sendFile module with the weird __dirname things, we can just drop the index.html into the public folder and it will work the same.</p>
+                <img src="./Images/gettingFilesWithExpress.png" alt="">
+                <img src="./Images/notNeedForSendFileExpress.png" alt="">
+                <h3>API vs SSR</h3>
+                <p>API in express setting up http interfance to interact with interface. SSR we will send templates and we will send entire html, js, and css. However, if you understand API, ssr should be easy to grasp. API server provides the data. Somestimes we don't want to use all the data in the api, so we can use map to create a new array with only the info we want.</p>
+                <img src="./Images/basicAPIExpress.png" alt="">
+                <img src="./Images/apiWithDataInVSCode.png" alt="">
+                <img src="./Images/usePartofAnAPIExpress.png" alt="">
+                <h3>Hard Parameters</h3>
+                <p>If we wanted to find one product, we can hard code each item like in the first image. But this is a nuclear approach since this can work with 1-4 products, but if we have over 100, this can get messy.</p>
+                <img src="./Images/oneProductNuclear.png" alt="">
+                <h3>Route Parameters</h3>
+                <p>Where we set up the route, we do /:placeHolder name. We have to use Number since they are a string and won't work.</p>
+                <img src="./Images/routeParameterExpress.png" alt="">
+                <img src="./Images/ifRouteDoesNotExist.png" alt="">
+                <h3>Query String Parameter/URL parameters</h3>
+                <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.</p>
             </div>
         </section>
     </main>
