@@ -1270,20 +1270,21 @@
                 <img src="./Images/gettingFilesWithExpress.png" alt="">
                 <img src="./Images/notNeedForSendFileExpress.png" alt="">
                 <h3>API vs SSR</h3>
-                <p>API in express setting up http interfance to interact with interface. SSR we will send templates and we will send entire html, js, and css. However, if you understand API, ssr should be easy to grasp. API server provides the data. Somestimes we don't want to use all the data in the api, so we can use map to create a new array with only the info we want.</p>
+                <p>API in express setting up http interfance to interact with interface. SSR we will send templates and we will send entire html, js, and css. However, if you understand API, ssr should be easy to grasp. API server provides the data. Somestimes we don't want to use all the data in the api, so we can use map to create a new array with only the info we want. The first image is an example of a very simple API. The second image we exported the data with {} in the data file. Then destructure. Third image is only when we want a miniaml response instead of sending all data, like review or descriptions.</p>
                 <img src="./Images/basicAPIExpress.png" alt="">
                 <img src="./Images/apiWithDataInVSCode.png" alt="">
                 <img src="./Images/usePartofAnAPIExpress.png" alt="">
                 <h3>Hard Parameters</h3>
-                <p>If we wanted to find one product, we can hard code each item like in the first image. But this is a nuclear approach since this can work with 1-4 products, but if we have over 100, this can get messy.</p>
+                <p>If we wanted to find one product, we can hard code each item like in the first image. But this is a nuclear approach since this can work with 1-4 products, but if we have over 100, this can get messy. This is more theory, the next section on route parameters is much better.</p>
                 <img src="./Images/oneProductNuclear.png" alt="">
                 <h3>Route Parameters</h3>
-                <p>Where we set up the route, we do /:placeHolder name.In this instance we had to use Number since the data had the ID as a number, otherwise we could have just passed in the string. Used when there a lot of other options, and in situations where items have unique characteristics.</p>
+                <p>Where we set up the route, we do /:whateverNameWeWant.In this instance we had to use Number since the data had the ID as a number, otherwise we could have just passed in the string. Used when there a lot of other options, and in situations where items have unique characteristics. Using req.params and console.log it we can get a lot of useful properties and methods. Number(ProductId) replace the number 1 of the hard code method, but in this case will find each number and not just 1.</p>
                 <img src="./Images/routeParameterExpress.png" alt="">
                 <img src="./Images/ifRouteDoesNotExist.png" alt="">
                 <h3>Query String Parameter/URL parameters</h3>
-                <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.Here we use limit, but search works too, and search=a&limit=2</p>
+                <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.Here we use limit, but search works too, and search=a&limit=2. Filter query data, etc, that's on us to decide. In this example, the URL uses search which just brings up anything that starts with a.This example is specific for if we decide to use search or limit query. The other image is for when the code works, but no product was found to match the search.</p>
                 <img src="./Images/querySelectorWithLimitExpress.png" alt="">
+                <img src="./Images/workingURLParaNOProductFound.png" alt="">
             </div>
         </section>
     </main>
