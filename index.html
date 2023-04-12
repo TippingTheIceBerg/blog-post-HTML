@@ -299,6 +299,8 @@
                     <img src="./Images/minMaxRepeat.png" alt="">
                 </ul>
                </p>
+               <h3>How to select all names in CS code</h3>
+               <p>Use command + d</p>
             </div>
         </section>
         <section id="JS" class="section__JS section">
@@ -1285,6 +1287,42 @@
                 <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.Here we use limit, but search works too, and search=a&limit=2. Filter query data, etc, that's on us to decide. In this example, the URL uses search which just brings up anything that starts with a.This example is specific for if we decide to use search or limit query. The other image is for when the code works, but no product was found to match the search.</p>
                 <img src="./Images/querySelectorWithLimitExpress.png" alt="">
                 <img src="./Images/workingURLParaNOProductFound.png" alt="">
+                <h3>Cannot set headers after they are sent</h3>
+                <p>If we get this error, look at your returns, what happens is if we use res.status more than once in a block of code, it causes express to freak out, correct it by using returns.</p>
+                <h3>MiddleWare in Express</h3>
+                <p>Functions that execute during the request to the server. Before we simply did a reqeust and then a response. Now we will have a middle poriton between the two. One issue we can come accross is that for the first image, this can work, but for this to work for the about URL, we would need to copy and paste the same four lines of code, this is not needed. When we work with middleware, we must pass it on onto another middleware or terminating it. The next image is a simple middle ware example, req, res, and next are handled with express, and we must always use a next to pass it on, or a res.send. The middleware is placed in between each path, note we missed the logger in the about URL. What better though would be to create a new file called logger and then export it like normal. An even better approach is to create a new file, nd then use app.use which acts as a special method just for middleware. We just need to define all URL parameters we want to match. We can create routes, if we used app.use("/api",logger) this works for all routes, generic route.</p>
+                <img src="./Images/pitFallOfRoutes.png" alt="">
+                <img src="./Images/simpleMiddleWare.png" alt="">
+                <img src="./Images/appUse.png" alt="">
+                <h3>More complex middleware</h3>
+                <p>To use more than one middleware, we must use bracket notation inside the app.use method. The second image shows it's importance, here, now any URL parameter we have that has ?user=john, we get specifc things related to John only. Any of the routes we can access to that user. </p>
+                <img src="./Images/doubleMiddleWare.png" alt="">
+                <img src="./Images/whyIsItImportant.png" alt="">
+                <h3>Middleware options</h3>
+                <p>Are main options for middleware is our own, express, and third party middleware. One of the most popular one is morgan NPM. Remember that third party ones would need an install.</p>
+                <h3>Maniuplating data</h3>
+                <p>The first image is the use of express built in middleware on a folder that we have created before. For Post, we can't just do a post action, we need to use a tool called postman or insomia, or we can set up a working app. For this example, this will be seen in working HTML. Method is post, action is where it's going to be sent. Marks the URL on the server. In the second image, the issue we have is that there is not route. First fix is to make one, with the use of post method, not get. Next issue, we have no way to get this data, to get the data, we have to use a middleware, seen with urlextended with extended false flag. And lastly with this way, we can also check to see if a name was given, note though, this could have been done with front end.</p>
+                <img src="./Images/middleWareOnPage.png" alt="">
+                <img src="./Images/postHTMLExpress.png" alt="">
+                <img src="./Images/pathForPost.png" alt="">
+                <img src="./Images/parseMiddleWareData.png" alt="">
+                <img src="./Images/optionToCheckNameGivenMiddlware.png" alt="">
+                <h3>Post with Javascript</h3>
+                <p>This first example has the post method done with javascript and uses the help of axios.Though major problem in set up, if we need to create  frontend for every route, the production is going to take very long. Better option will be to use Postman, which tests for APIs.</p>
+                <img src="./Images/JSPostExpress.png" alt="">
+                <img src="./Images/middleWareJSPostExample.png" alt="">
+                <h3>Postman Use</h3>
+                <p>Postman is a neat tool that tests for URLs. To create  check, we click on the + found where the mouse is over, and then enter the localhost url and path we want to check. Intead of building a full front end to test, we can just use postman. For post, we can text by going under the body, then raw, then JSON text.</p>
+                <img src="./Images/postmanBasicCheck.png" alt="">
+                <img src="./Images/postManPostTest.png" alt="">
+                <h3>Put/delete Method</h3>
+                <p>Made for modyfying the data. When we send a put, if the body exists, something to update. Two things we want, the value of the params, IE the value we added on. Update we need to send something to the body. Note the console log of 1 peter. Where 1 is the ID and the value is peter. Both delete and put are very similar and typically copy and paste most of it. Big difference is that at the end we will use a filter not a map. </p>
+                <img src="./Images/putAndPostMan.png" alt="">
+                <h3>Express</h3>
+                <p>Express lets us group many routes ti help break up the code from being too long with all these routes. Common convention is to create a new folder under the correct CD main, and naming it routes. The first require is for the route of the files you created. The app.use is the middleware, which creates the path. </p>
+                <img src="./Images/expressRouters.png" alt="">
+                <img src="./Images/controllersExpress.png" alt="">
+                <img src="./Images/filesForControllExpress.png" alt="">
             </div>
         </section>
     </main>
