@@ -136,6 +136,9 @@ font-family: 'Roboto Slab', serif;
 .sections{
     margin: 10px;
 }
+.node__heading{
+    text-align: center;
+}
 .section > h2{ 
     text-align: center;
 }

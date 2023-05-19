@@ -31,8 +31,9 @@
                         <a class="nav__navLink-sectionLink" href="#CSS">CSS</a>
                         <a class="nav__navLink-sectionLink" href="#JS">JS</a>
                         <a class="nav__navLink-sectionLink" href="#GIT">GIT</a>
+                        <a class="nav__navLink-sectionLink" href="#VSCode">VS Code</a>
                         <a class="nav__navLink-sectionLink" href="#RegEx">RegEx</a>
-                        <a class="nav__navLink-sectionLink" href="#backEnd">Back End-Ruby</a>
+                        <a class="nav__navLink-sectionLink" href="#backEnd">Back End Node</a>
                     </div>
             </li>
             <li class="nav__navList">
@@ -48,6 +49,8 @@
         <section id="HTML" class="section__HTML section">
             <h2>HTML</h2>
             <div class="html__container">
+                <h3>When to use articles?</h3>
+                <p>Articles are stand alone sections. Think of blog posts, newspaper article,a comment or independent gadget. </p>
                 <h3>Removing lists bullet points</h3>
                 <p>To remove the bullet points in lists, you will use list-style: none</p>
                 <h3>Quickly open the terminal</h3>
@@ -134,8 +137,10 @@
 
         </section>
         <section id="CSS" class="section__CSS section">
-            <h2>CSS</h2>
+            <h2^>CSS</h2>
             <div class="css__container">
+                <h3>CSS cheat Sheet</h3>
+                <p>Cool site with lots of hands on changes. <a href="https://htmlcheatsheet.com/css/">Cheat Sheet.</a></p>
                 <h3>Screen sizes</h3>
                 <p>Common screen sizes <code>@media only screen and (min-width:0em)</code> Mobile
                 <br>
@@ -864,10 +869,16 @@
                 <p><kbd>option + up or down arrow keys</kbd></p>
                 <h3>How to copy code and paste below</h3>
                 <p><kbd>option + shift</kbd> on highlighted code</p>
+                <h3>How to wrap things</h3>
+                <p>Wrapping things can be done with command + a, we can see the preview of what it will be one once we select the area we want to wrap then hitting the keyboard keys.</p>
+                <h3>removing tags</h3>
+                <p>If we want to remove tags we can hit command + k`</p>
                 <h3>Stop using var</h3>
                 <p>When we crete a var in CSS we don't have to manually type <code>var()</code> each time. Instead we can do a quick hand of just <code>--</code> and all custom variables will show up.</p>
                 <h3>How to select multiple areas so you can type it at the same time</h3>
                 <p>Hold option and click, or you can <kbd>option + command</kbd></p>
+                <h3>How to find keyboard short cuts</h3>
+                <p>Enter command + k followed by command + s</p>
             </div>
         </section>
         <section id="RegEx" class="section__RegEx section">
@@ -950,7 +961,7 @@
                     </p>
                 </div>
         </section>
-        <section id="backEnd" class="section__backEnd section">
+        <section  class="section__backEnd section">
             <h2>Back End</h2>
             <div class="backEnd__container">
                 <h3>What is backend?</h3>
@@ -1195,137 +1206,187 @@
                 <h3>SetInterval</h3>
                 <p>When we want to fire something after x seconds we can set a time interval, remember for these, we need to have the time outside the curly brackets. Exit with control + c</p>
                 <img src="./Images/setIntervalNode.png" alt="">
-                <h3>What is nodeJS</h3>
-                <p>Node JS uses common JS and every file in node is a module. Furthermore, node JS cannot use DOM.</p>
-                <h3>Exporting modules</h3>
-                <p>Modules are always done is separate files, and when exporting we will use module.export. And once we export it, we <b>HAVE</b>to use the require global as well as ./ for the pathing. Some notes, it's <b>EXPORTS are usuall done in bulk and equal profit.When we import we REQUIRE a license</b></p>
-                <img src="./Images/importFunctionNodeJS.png" alt="">
-                <img src="./Images/exportFunctionNodeJS.png" alt="">
-                <img src="./Images/nodeJSEXportsObjectNodeJS.png" alt="">
-                <h3>Built in modules</h3>
-                <p>Some modules are built into Node, such as the OS. For these, we <b>DON'T</b>use the ./ as the previous ones.Also for these exmaples, we methods are not the important part, since we can look these up, the important part is just how to call these.</p>
-                <img src="./Images/builtInModulesNodeJS.png" alt="">
-                <h3>Path Module</h3>
-                <p>Path module allows us to interact with file paths. Important since others peoples computers will use different paths since people have different computers. <b>asynch needs call backs and made it seem very long. Callback hell.</b> However, this task is better since the task is offloaded and allows users to keep running the code. To fix this callback hell,we can use promosies or asynch await</p>
-                <img src="./Images/synchFSNodeJS.png" alt="">
-                <img src="./Images/asynchNodeJSFS.png" alt="">
-                <h3>HTTP purpose</h3>
-                <p>HTTP is what allows us to set up the web server.</p>
-                <h3>HTTP set up</h3>
-                <p>Basic set up is creating a server, needs a callback that be anything, but convention is to use req and res, (request and response). Res.write is used to write, but at the time being, we learned that res.end which usually ends the program can also be used to write. We always need to include .end, since without it, the server gets a ping, all response and headers have been sent, it can be, server should consider this complete.</p>
-                <img src="./Images/httpNodeJS.png" alt="">
-                <img src="./Images/serverNodeJS.png" alt="">
-                <h3>Naming NodeJS</h3>
-                <p>A folder of JS code can be called either a module, depenecy or package. They all mean the same thing.</p>
-                <a href="https://www.npmjs.com">Are some examples to find these</a>
-                <a href="./Images/npmInstalNodeJs.png"></a>
-                <a href="./Images/usedNPMpackageNodeJS.png"></a>
-                <a href="./Images/addNPM.png"></a>
-                <h3>JSON file</h3>
-                <p>In order for NPMS to be usable when we clone the file on GIT, we will need a JSON folder. To get a JSON folder simply type npm init for step for step, or npm init -y. Remember to make it in the root. Once we push onto git and we don't push the modules, we can clone the repository, and in the terminal, if there is a json, we can type "npm instll" and this will let us now to use all the modules that are in the JSON file.</p>
-                <h3>Git ignore</h3>
-                <p>When we create our files, we want to use gitignore so that we aren't sending over our modules to git since this is not needed. Insode that file we want to /nameOfFileToIgnore so that it is ingored when we git it over. File will be called gitignore. Then Git Init on the terminal. Git add . . Git Commit -m. Then paste the code you got from gitHub. How does this work if we want to open the file again without the modules? Clone the file, and then run NPM install. Since we have the Json file, this will give us the right modules.</p>
-                <h3>Dev dependency</h3>
-                <p>When we use node, we will instal it as NPM i nodemon -D. This will save it was a dev dependency on the JSON since in production they won't need node, we use it to make quiality of life better only for us. After that we go to the script under the JSON. After the script we can just do NPM start now to run the code instead of the previous node fileName.js method. However, for nodemon, we can use "dev": "nodemon app.js" under the script section, and then run "npm run dev", which causes nodemon to watch ourfiles, similar to liveserver. To stop nodemon, use command C</p>
-                <img src="/Images/jsonScriptNodeJS.png" alt="">
-                <img src="./Images/nodemonNodeJs.png" alt="">
-                <h3>What does it mean when we say JS is synchonrous and single threaded</h3>
-                <p>This means it read it line by line, an interesting way to test time is to use console.log.time() and then console.timeEnd() and this will tell you how fast it reached the first time, to the end time.</p>
-                <h3>Example of offloading</h3>
-                <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed, and this is because timeout and setinterval and others are asynchronous.</p>
-                <img src="./Images/offloadingNodeJS.png" alt="">
-                <h3>How to make asynch look better </h3>
-                <p>One way we can make asycnh look better is with promises and asycnh await. We moved the messy asycnh inside the promise. Note in this example, we used the path as a variable. But this isn't that imporatant, asycnh await is much more better and explained later. </p>
-                <img src="./Images/messyasynch.png" alt="">
-                <img src="./Images/promiseAsycnheNodeJS.png" alt="">
-                <h3>Promisfy with Asycnh Wait</h3>
-                <p>Promisfy is inside the node module and must be required. We can either add the dot promises at the end of the files, or we can create new variables and use util.promisfy. Remember for write file if not data is there, it will create the file and add it. Try catch needed to log if an error occurs. Asynch is a special keyword that lets the use of await.</p>
-                <img src="./Images/nodePromisfyLongNodeJS.png" alt="">
-                <img src="./Images/nodePromisfyshorterNodeJS.png" alt="">
-                <img src="./Images/practicalUseOfAPIandAsyncWait.png" alt="">
-                <h3>Event Emitters</h3>
-                <p>A lot of built in modules use event emitters. Used heavily in node JS. Users hovering over links or buttons. The flow of the program depends on the events that happen.</p>
-                <img src="./Images/eventEmitterNodeJS.png" alt="">
-                <h3>Streams</h3>
-                <p>Large sources or continuing data. four main types, read, write, duplex (read and write) and transform where data can be modified while reading or writing.</p>
-                <h3>Read File</h3>
-                <p>One power https://github.com/john-smilga/node-express-course.gitof read file is that we can store the data and paste it onto the local server. readFileSynch vs readFile is that readFile needs a callback.</p>
-                <img src="/Images/pastingInfoOnFIleToServer.png" alt="">
-                <h3>Stream Chunks</h3>
-                <p>Instead of sending large txt files that send data at once, we can send it as chunks. This can be done with streams. Pipe method is what let's us change the readable stream into a writeable stream.</p>
-                <img src="./Images/sendingChunksNodeJs.png" alt="">
-                <h3>What is express?</h3>
-                <p>Express is built upon http module, and makes creating servers much more easier.</p>
-                <h3>Meta data about the server response</h3>
-                <p>A new method will be res.writeHead, which uses a status code (200 being successful) within the create server. Next is contact type,tells the browser, we are sending back html, css, imge, how to render that contact.This is done using key value pairs.</p>
-                <img src="./Images/mimeTypesNodeJs.png" alt="">
-                <h3>Simple server check</h3>
-                <p>As before, we can check the url and test to see if the data is there, if not, we can now give  404 error code with text error. We can also use styles and JS but we would need to check for  the url of each one if we are just using http for checks, express will fix this issue.</p>
-                <img src="/Images/simpleServerSetUpNodeJS.png" alt="">
-                <img src="./Images/serverWithSimpleIndexHTMLNodeJS.png" alt="">
-                <img src="./Images/serverSetUptoCSS:JSwithJustHTTPNodeJS.png" alt="">
-                <h3>Installing Express</h3>
-                <p>To install express we have to run npm instal express, and to instal a previous updated one, we can run npm install expess@4.17.1. Note that express is a function, so we declare it as a function but also assign it.</p>
-                <img src="./Images/basicExpress.png" alt="">
-                <h3>How express starts to make things easier with using css/js/svg</h3>
-                <p> How to get all the css/js/svg to work, common practice is making a folder named public all files will be moved there. We don't need to make any status or content types, express takes care of it all. Use and express explained later. Statics are files the server doesn't need to change, like images or servers. However, what's better is that we don't even really need to add the sendFile module with the weird __dirname things, we can just drop the index.html into the public folder and it will work the same.</p>
-                <img src="./Images/gettingFilesWithExpress.png" alt="">
-                <img src="./Images/notNeedForSendFileExpress.png" alt="">
-                <h3>API vs SSR</h3>
-                <p>API in express setting up http interfance to interact with interface. SSR we will send templates and we will send entire html, js, and css. However, if you understand API, ssr should be easy to grasp. API server provides the data. Somestimes we don't want to use all the data in the api, so we can use map to create a new array with only the info we want. The first image is an example of a very simple API. The second image we exported the data with {} in the data file. Then destructure. Third image is only when we want a miniaml response instead of sending all data, like review or descriptions.</p>
-                <img src="./Images/basicAPIExpress.png" alt="">
-                <img src="./Images/apiWithDataInVSCode.png" alt="">
-                <img src="./Images/usePartofAnAPIExpress.png" alt="">
-                <h3>Hard Parameters</h3>
-                <p>If we wanted to find one product, we can hard code each item like in the first image. But this is a nuclear approach since this can work with 1-4 products, but if we have over 100, this can get messy. This is more theory, the next section on route parameters is much better.</p>
-                <img src="./Images/oneProductNuclear.png" alt="">
-                <h3>Route Parameters</h3>
-                <p>Where we set up the route, we do /:whateverNameWeWant.In this instance we had to use Number since the data had the ID as a number, otherwise we could have just passed in the string. Used when there a lot of other options, and in situations where items have unique characteristics. Using req.params and console.log it we can get a lot of useful properties and methods. Number(ProductId) replace the number 1 of the hard code method, but in this case will find each number and not just 1.</p>
-                <img src="./Images/routeParameterExpress.png" alt="">
-                <img src="./Images/ifRouteDoesNotExist.png" alt="">
-                <h3>Query String Parameter/URL parameters</h3>
-                <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.Here we use limit, but search works too, and search=a&limit=2. Filter query data, etc, that's on us to decide. In this example, the URL uses search which just brings up anything that starts with a.This example is specific for if we decide to use search or limit query. The other image is for when the code works, but no product was found to match the search.</p>
-                <img src="./Images/querySelectorWithLimitExpress.png" alt="">
-                <img src="./Images/workingURLParaNOProductFound.png" alt="">
-                <h3>Cannot set headers after they are sent</h3>
-                <p>If we get this error, look at your returns, what happens is if we use res.status more than once in a block of code, it causes express to freak out, correct it by using returns.</p>
-                <h3>MiddleWare in Express</h3>
-                <p>Functions that execute during the request to the server. Before we simply did a reqeust and then a response. Now we will have a middle poriton between the two. One issue we can come accross is that for the first image, this can work, but for this to work for the about URL, we would need to copy and paste the same four lines of code, this is not needed. When we work with middleware, we must pass it on onto another middleware or terminating it. The next image is a simple middle ware example, req, res, and next are handled with express, and we must always use a next to pass it on, or a res.send. The middleware is placed in between each path, note we missed the logger in the about URL. What better though would be to create a new file called logger and then export it like normal. An even better approach is to create a new file, nd then use app.use which acts as a special method just for middleware. We just need to define all URL parameters we want to match. We can create routes, if we used app.use("/api",logger) this works for all routes, generic route.</p>
-                <img src="./Images/pitFallOfRoutes.png" alt="">
-                <img src="./Images/simpleMiddleWare.png" alt="">
-                <img src="./Images/appUse.png" alt="">
-                <h3>More complex middleware</h3>
-                <p>To use more than one middleware, we must use bracket notation inside the app.use method. The second image shows it's importance, here, now any URL parameter we have that has ?user=john, we get specifc things related to John only. Any of the routes we can access to that user. </p>
-                <img src="./Images/doubleMiddleWare.png" alt="">
-                <img src="./Images/whyIsItImportant.png" alt="">
-                <h3>Middleware options</h3>
-                <p>Are main options for middleware is our own, express, and third party middleware. One of the most popular one is morgan NPM. Remember that third party ones would need an install.</p>
-                <h3>Maniuplating data</h3>
-                <p>The first image is the use of express built in middleware on a folder that we have created before. For Post, we can't just do a post action, we need to use a tool called postman or insomia, or we can set up a working app. For this example, this will be seen in working HTML. Method is post, action is where it's going to be sent. Marks the URL on the server. In the second image, the issue we have is that there is not route. First fix is to make one, with the use of post method, not get. Next issue, we have no way to get this data, to get the data, we have to use a middleware, seen with urlextended with extended false flag. And lastly with this way, we can also check to see if a name was given, note though, this could have been done with front end.</p>
-                <img src="./Images/middleWareOnPage.png" alt="">
-                <img src="./Images/postHTMLExpress.png" alt="">
-                <img src="./Images/pathForPost.png" alt="">
-                <img src="./Images/parseMiddleWareData.png" alt="">
-                <img src="./Images/optionToCheckNameGivenMiddlware.png" alt="">
-                <h3>Post with Javascript</h3>
-                <p>This first example has the post method done with javascript and uses the help of axios.Though major problem in set up, if we need to create  frontend for every route, the production is going to take very long. Better option will be to use Postman, which tests for APIs.</p>
-                <img src="./Images/JSPostExpress.png" alt="">
-                <img src="./Images/middleWareJSPostExample.png" alt="">
-                <h3>Postman Use</h3>
-                <p>Postman is a neat tool that tests for URLs. To create  check, we click on the + found where the mouse is over, and then enter the localhost url and path we want to check. Intead of building a full front end to test, we can just use postman. For post, we can text by going under the body, then raw, then JSON text.</p>
-                <img src="./Images/postmanBasicCheck.png" alt="">
-                <img src="./Images/postManPostTest.png" alt="">
-                <h3>Put/delete Method</h3>
-                <p>Made for modyfying the data. When we send a put, if the body exists, something to update. Two things we want, the value of the params, IE the value we added on. Update we need to send something to the body. Note the console log of 1 peter. Where 1 is the ID and the value is peter. Both delete and put are very similar and typically copy and paste most of it. Big difference is that at the end we will use a filter not a map. </p>
-                <img src="./Images/putAndPostMan.png" alt="">
-                <h3>Express</h3>
-                <p>Express lets us group many routes ti help break up the code from being too long with all these routes. Common convention is to create a new folder under the correct CD main, and naming it routes. The first require is for the route of the files you created. The app.use is the middleware, which creates the path. </p>
-                <img src="./Images/expressRouters.png" alt="">
-                <img src="./Images/controllersExpress.png" alt="">
-                <img src="./Images/filesForControllExpress.png" alt="">
-                <h3>Task Manager API</h3>
-                <p>Goals here are to set up and connect to cloud database. A use CRUD on our data, cread read update and delete.</p>
-            </div>
+                <section id="backEnd">
+                    <h2 class="node__heading">Node JS/Express</h2>
+                    <h3>What is nodeJS</h3>
+                    <p>Node JS uses common JS and every file in node is a module. Furthermore, node JS cannot use DOM.</p>
+                    <h3>Exporting modules</h3>
+                    <p>Modules are always done is separate files, and when exporting we will use module.export. And once we export it, we <b>HAVE</b>to use the require global as well as ./ for the pathing. Some notes, it's <b>EXPORTS are usuall done in bulk and equal profit.When we import we REQUIRE a license</b></p>
+                    <img src="./Images/importFunctionNodeJS.png" alt="">
+                    <img src="./Images/exportFunctionNodeJS.png" alt="">
+                    <img src="./Images/nodeJSEXportsObjectNodeJS.png" alt="">
+                    <h3>Built in modules</h3>
+                    <p>Some modules are built into Node, such as the OS. For these, we <b>DON'T</b>use the ./ as the previous ones.Also for these exmaples, we methods are not the important part, since we can look these up, the important part is just how to call these.</p>
+                    <img src="./Images/builtInModulesNodeJS.png" alt="">
+                    <h3>Path Module</h3>
+                    <p>Path module allows us to interact with file paths. Important since others peoples computers will use different paths since people have different computers. <b>asynch needs call backs and made it seem very long. Callback hell.</b> However, this task is better since the task is offloaded and allows users to keep running the code. To fix this callback hell,we can use promosies or asynch await</p>
+                    <img src="./Images/synchFSNodeJS.png" alt="">
+                    <img src="./Images/asynchNodeJSFS.png" alt="">
+                    <h3>HTTP purpose</h3>
+                    <p>HTTP is what allows us to set up the web server.</p>
+                    <h3>HTTP set up</h3>
+                    <p>Basic set up is creating a server, needs a callback that be anything, but convention is to use req and res, (request and response). Res.write is used to write, but at the time being, we learned that res.end which usually ends the program can also be used to write. We always need to include .end, since without it, the server gets a ping, all response and headers have been sent, it can be, server should consider this complete.</p>
+                    <img src="./Images/httpNodeJS.png" alt="">
+                    <img src="./Images/serverNodeJS.png" alt="">
+                    <h3>Naming NodeJS</h3>
+                    <p>A folder of JS code can be called either a module, depenecy or package. They all mean the same thing.</p>
+                    <a href="https://www.npmjs.com">Are some examples to find these</a>
+                    <a href="./Images/npmInstalNodeJs.png"></a>
+                    <a href="./Images/usedNPMpackageNodeJS.png"></a>
+                    <a href="./Images/addNPM.png"></a>
+                    <h3>JSON file</h3>
+                    <p>In order for NPMS to be usable when we clone the file on GIT, we will need a JSON folder. To get a JSON folder simply type npm init for step for step, or npm init -y. Remember to make it in the root. Once we push onto git and we don't push the modules, we can clone the repository, and in the terminal, if there is a json, we can type "npm instll" and this will let us now to use all the modules that are in the JSON file.</p>
+                    <h3>Git ignore</h3>
+                    <p>When we create our files, we want to use gitignore so that we aren't sending over our modules to git since this is not needed. Insode that file we want to /nameOfFileToIgnore so that it is ingored when we git it over. File will be called gitignore. Then Git Init on the terminal. Git add . . Git Commit -m. Then paste the code you got from gitHub. How does this work if we want to open the file again without the modules? Clone the file, and then run NPM install. Since we have the Json file, this will give us the right modules.</p>
+                    <h3>Dev dependency</h3>
+                    <p>When we use node, we will instal it as NPM i nodemon -D. This will save it was a dev dependency on the JSON since in production they won't need node, we use it to make quiality of life better only for us. After that we go to the script under the JSON. After the script we can just do NPM start now to run the code instead of the previous node fileName.js method. However, for nodemon, we can use "dev": "nodemon app.js" under the script section, and then run "npm run dev", which causes nodemon to watch ourfiles, similar to liveserver. To stop nodemon, use command C</p>
+                    <img src="/Images/jsonScriptNodeJS.png" alt="">
+                    <img src="./Images/nodemonNodeJs.png" alt="">
+                    <h3>What does it mean when we say JS is synchonrous and single threaded</h3>
+                    <p>This means it read it line by line, an interesting way to test time is to use console.log.time() and then console.timeEnd() and this will tell you how fast it reached the first time, to the end time.</p>
+                    <h3>Example of offloading</h3>
+                    <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed, and this is because timeout and setinterval and others are asynchronous.</p>
+                    <img src="./Images/offloadingNodeJS.png" alt="">
+                    <h3>How to make asynch look better </h3>
+                    <p>One way we can make asycnh look better is with promises and asycnh await. We moved the messy asycnh inside the promise. Note in this example, we used the path as a variable. But this isn't that imporatant, asycnh await is much more better and explained later. </p>
+                    <img src="./Images/messyasynch.png" alt="">
+                    <img src="./Images/promiseAsycnheNodeJS.png" alt="">
+                    <h3>Promisfy with Asycnh Wait</h3>
+                    <p>Promisfy is inside the node module and must be required. We can either add the dot promises at the end of the files, or we can create new variables and use util.promisfy. Remember for write file if not data is there, it will create the file and add it. Try catch needed to log if an error occurs. Asynch is a special keyword that lets the use of await.</p>
+                    <img src="./Images/nodePromisfyLongNodeJS.png" alt="">
+                    <img src="./Images/nodePromisfyshorterNodeJS.png" alt="">
+                    <img src="./Images/practicalUseOfAPIandAsyncWait.png" alt="">
+                    <h3>Event Emitters</h3>
+                    <p>A lot of built in modules use event emitters. Used heavily in node JS. Users hovering over links or buttons. The flow of the program depends on the events that happen.</p>
+                    <img src="./Images/eventEmitterNodeJS.png" alt="">
+                    <h3>Streams</h3>
+                    <p>Large sources or continuing data. four main types, read, write, duplex (read and write) and transform where data can be modified while reading or writing.</p>
+                    <h3>Read File</h3>
+                    <p>One power https://github.com/john-smilga/node-express-course.gitof read file is that we can store the data and paste it onto the local server. readFileSynch vs readFile is that readFile needs a callback.</p>
+                    <img src="/Images/pastingInfoOnFIleToServer.png" alt="">
+                    <h3>Stream Chunks</h3>
+                    <p>Instead of sending large txt files that send data at once, we can send it as chunks. This can be done with streams. Pipe method is what let's us change the readable stream into a writeable stream.</p>
+                    <img src="./Images/sendingChunksNodeJs.png" alt="">
+                    <h3>What is express?</h3>
+                    <p>Express is built upon http module, and makes creating servers much more easier.</p>
+                    <h3>Meta data about the server response</h3>
+                    <p>A new method will be res.writeHead, which uses a status code (200 being successful) within the create server. Next is contact type,tells the browser, we are sending back html, css, imge, how to render that contact.This is done using key value pairs.</p>
+                    <img src="./Images/mimeTypesNodeJs.png" alt="">
+                    <h3>Simple server check</h3>
+                    <p>As before, we can check the url and test to see if the data is there, if not, we can now give  404 error code with text error. We can also use styles and JS but we would need to check for  the url of each one if we are just using http for checks, express will fix this issue.</p>
+                    <img src="/Images/simpleServerSetUpNodeJS.png" alt="">
+                    <img src="./Images/serverWithSimpleIndexHTMLNodeJS.png" alt="">
+                    <img src="./Images/serverSetUptoCSS:JSwithJustHTTPNodeJS.png" alt="">
+                    <h3>Installing Express</h3>
+                    <p>To install express we have to run npm instal express, and to instal a previous updated one, we can run npm install expess@4.17.1. Note that express is a function, so we declare it as a function but also assign it.</p>
+                    <img src="./Images/basicExpress.png" alt="">
+                    <h3>How express starts to make things easier with using css/js/svg</h3>
+                    <p> How to get all the css/js/svg to work, common practice is making a folder named public all files will be moved there. We don't need to make any status or content types, express takes care of it all. Use and express explained later. Statics are files the server doesn't need to change, like images or servers. However, what's better is that we don't even really need to add the sendFile module with the weird __dirname things, we can just drop the index.html into the public folder and it will work the same.</p>
+                    <img src="./Images/gettingFilesWithExpress.png" alt="">
+                    <img src="./Images/notNeedForSendFileExpress.png" alt="">
+                    <h3>API vs SSR</h3>
+                    <p>API in express setting up http interfance to interact with interface. SSR we will send templates and we will send entire html, js, and css. However, if you understand API, ssr should be easy to grasp. API server provides the data. Somestimes we don't want to use all the data in the api, so we can use map to create a new array with only the info we want. The first image is an example of a very simple API. The second image we exported the data with {} in the data file. Then destructure. Third image is only when we want a miniaml response instead of sending all data, like review or descriptions. Note in the images we do .json and .send, they functionally do about the same.</p>
+                    <img src="./Images/basicAPIExpress.png" alt="">
+                    <img src="./Images/apiWithDataInVSCode.png" alt="">
+                    <img src="./Images/usePartofAnAPIExpress.png" alt="">
+                    <h3>Hard Parameters</h3>
+                    <p>If we wanted to find one product, we can hard code each item like in the first image. But this is a nuclear approach since this can work with 1-4 products, but if we have over 100, this can get messy. This is more theory, the next section on route parameters is much better.</p>
+                    <img src="./Images/oneProductNuclear.png" alt="">
+                    <h3>Route Parameters</h3>
+                    <p>Where we set up the route, we do /:whateverNameWeWant.In this instance we had to use Number since the data had the ID as a number, otherwise we could have just passed in the string. Used when there a lot of other options, and in situations where items have unique characteristics. Using req.params and console.log it we can get a lot of useful properties and methods. Number(ProductId) replace the number 1 of the hard code method, but in this case will find each number and not just 1. Req.params is always use for the route paramters.</p>
+                    <img src="./Images/routeParameterExpress.png" alt="">
+                    <img src="./Images/ifRouteDoesNotExist.png" alt="">
+                    <h3>Query String Parameter/URL parameters</h3>
+                    <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.Here we use limit, but search works too, and search=a&limit=2. Filter query data, etc, that's on us to decide. In this example, the URL uses search which just brings up anything that starts with a.This example is specific for if we decide to use search or limit query. The other image is for when the code works, but no product was found to match the search.</p>
+                    <img src="./Images/querySelectorWithLimitExpress.png" alt="">
+                    <img src="./Images/workingURLParaNOProductFound.png" alt="">
+                    <h3>Cannot set headers after they are sent</h3>
+                    <p>If we get this error, look at your returns, what happens is if we use res.status more than once in a block of code, it causes express to freak out, correct it by using returns.</p>
+                    <h3>MiddleWare in Express</h3>
+                    <p>Functions that execute during the request to the server. Before we simply did a reqeust and then a response. Now we will have a middle poriton between the two. One issue we can come accross is that for the first image, this can work, but for this to work for the about URL, we would need to copy and paste the same four lines of code, this is not needed. When we work with middleware, we must pass it on onto another middleware or terminating it. The next image is a simple middle ware example, req, res, and next are handled with express, and we must always use a next to pass it on, or a res.send. The middleware is placed in between each path, note we missed the logger in the about URL. What better though would be to create a new file called logger and then export it like normal. An even better approach is to create a new file, nd then use app.use which acts as a special method just for middleware. We just need to define all URL parameters we want to match. We can create routes, if we used app.use("/api",logger) this works for all routes, generic route.</p>
+                    <img src="./Images/pitFallOfRoutes.png" alt="">
+                    <img src="./Images/simpleMiddleWare.png" alt="">
+                    <img src="./Images/appUse.png" alt="">
+                    <h3>More complex middleware</h3>
+                    <p>To use more than one middleware, we must use bracket notation inside the app.use method. The second image shows it's importance, here, now any URL parameter we have that has ?user=john, we get specifc things related to John only. Any of the routes we can access to that user. </p>
+                    <img src="./Images/doubleMiddleWare.png" alt="">
+                    <img src="./Images/whyIsItImportant.png" alt="">
+                    <h3>Middleware options</h3>
+                    <p>Are main options for middleware is our own, express, and third party middleware. One of the most popular one is morgan NPM. Remember that third party ones would need an install.</p>
+                    <h3>Maniuplating data</h3>
+                    <p>The first image is the use of express built in middleware on a folder that we have created before. For Post, we can't just do a post action, we need to use a tool called postman or insomia, or we can set up a working app. For this example, this will be seen in working HTML. Method is post, action is where it's going to be sent. Marks the URL on the server. In the second image, the issue we have is that there is not route. First fix is to make one, with the use of post method, not get. Next issue, we have no way to get this data, to get the data, we have to use a middleware, seen with urlextended with extended false flag. And lastly with this way, we can also check to see if a name was given, note though, this could have been done with front end.</p>
+                    <img src="./Images/middleWareOnPage.png" alt="">
+                    <img src="./Images/postHTMLExpress.png" alt="">
+                    <img src="./Images/pathForPost.png" alt="">
+                    <img src="./Images/parseMiddleWareData.png" alt="">
+                    <img src="./Images/optionToCheckNameGivenMiddlware.png" alt="">
+                    <h3>Post with Javascript</h3>
+                    <p>This first example has the post method done with javascript and uses the help of axios.Though major problem in set up, if we need to create  frontend for every route, the production is going to take very long. Better option will be to use Postman, which tests for APIs.</p>
+                    <img src="./Images/JSPostExpress.png" alt="">
+                    <img src="./Images/middleWareJSPostExample.png" alt="">
+                    <h3>Postman Use</h3>
+                    <p>Postman is a neat tool that tests for URLs. To create  check, we click on the + found where the mouse is over, and then enter the localhost url and path we want to check. Intead of building a full front end to test, we can just use postman. For post, we can text by going under the body, then raw, then JSON text.</p>
+                    <img src="./Images/postmanBasicCheck.png" alt="">
+                    <img src="./Images/postManPostTest.png" alt="">
+                    <h3>Put/delete Method</h3>
+                    <p>Made for modyfying the data. When we send a put, if the body exists, something to update. Two things we want, the value of the params, IE the value we added on. Update we need to send something to the body. Note the console log of 1 peter. Where 1 is the ID and the value is peter. Both delete and put are very similar and typically copy and paste most of it. Big difference is that at the end we will use a filter not a map. </p>
+                    <img src="./Images/putAndPostMan.png" alt="">
+                    <h3>Express</h3>
+                    <p>Express lets us group many routes ti help break up the code from being too long with all these routes. Common convention is to create a new folder under the correct CD main, and naming it routes. The first require is for the route of the files you created. The app.use is the middleware, which creates the path. </p>
+                    <img src="./Images/expressRouters.png" alt="">
+                    <img src="./Images/controllersExpress.png" alt="">
+                    <img src="./Images/filesForControllExpress.png" alt="">
+                    <h3>Task Manager API</h3>
+                    <p>Goals here are to set up and connect to cloud database. A use CRUD on our data, cread read update and delete. We use patch instead of out this time for updates. The Router.route think of that as we are going to use the "variable" defined in the main JS with app.use("/api/v1/...") </p>
+                    <img src="./Images/taskManagerStart.png" alt="">
+                    <p>We then follow up with </p>
+                    <img src="./Images/chainingRequests.png" alt="">
+                    <h3>Create files for controllers and routes</h3>
+                    <p>Typically, large files can be organized with the use of controllers and routes folders. Routes are folders that pretty much will always have the controllers and get.post.delete routes. Controllers with typically have the function names, controllers holds all the logic, we can in theory have the logic all in the routes, but it will get messy. We are simply writing the req and res of the route section again, remember to export it and require it in the route folder.</p>
+                    <img src="./Images/ControllersPurpose.png" alt="">
+                    <h3>Reminder on what request does what</h3>
+                    <p>Get can get all tasks or one. Post can create a new one, delete deletes, patch updtaes tasks. For upate, delete, and single task get we will use a route paramter</p>
+                    <h3>What is REST API?</h3>
+                    <p>HTTP interface so other apps can interact with our data. Representation state transfer, most popular API desing pattern. Determines what the API looks like, a pattern, no strictly enforced.</p>
+                    <img src="./Images/CommonRestAPI.png" alt="">
+                    <h3>MongoDB</h3>
+                    <p>
+                        <img src="./Images/connectoMongo.png" alt="">
+                        <img src="./Images/ConnectToDriver.png" alt="">
+                        <img src="./Images/copyMango.png" alt="">
+                        <img src="./Images/addingMangoToVS.png" alt="">
+                        <img src="./Images/getToCollectionMongo.png" alt="">
+                        <img src="./Images/SelectCollection.png" alt="">
+                        <img src="./Images/insertData.png" alt="">
+                    </p>
+                    <h3>Connect database from the server</h3>
+                    <p>Object Data modeling library, a way to ger this done with Mongoose. It comes with a lot of things that make Development faster. Install with npm install mongoose. Second step is to set up a connection. Add it onto the man made DS folder, above the connection string we pasted earlier. We named it 3-task manager in this instance. One issue I notice was that the cluster password is different from your user password you made to create the account, this password is important since without it you won't be able to connect to your database when you pass the string along. After you copy and pasted the link, we need to require mongoose on the DB, using the right password and projectName. Afterwards, we can use the method of connect to crete the two, with the variable of the link string, and a then catch since this is a promise. Lastly, on the main app, we can require it without a variable and it will be automatically called. <code>require('./DB/ConnectJS');
+                    </code></p>
+                    <img src="./Images/mongooseWithOutPassRemoval.png" alt="">
+                    <img src="./Images/MongooseNameAdd.png" alt="">
+                    <img src="./Images/finalMongooseConnetion.png" alt="">
+                    <img src="./Images/ConnectingWorks.png" alt="">
+                    <h3>Running DB before server</h3>
+                    <p>One issue is that we should really check if the server is up first, if it is then run the server. The first image has the code rewritten as a function, which now be exported and imported. Once imported, we create a new function called start, and we set it up as asynch wait since it is a promise. Lastly, we move the server after the try of the DB variable, and if that's ok, then it will run the server listen. Lastly the function is called.</p>
+                    <img src="./Images/connectFirstPart1.png" alt="">
+                    <img src="./Images/connectFirstPart2png.png" alt="">
+                    <img src="./Images/connectFirstPart3.png" alt="">
+                    <h3>Holding our secrets before push</h3>
+                    <p>All projects hve the potential to have our secrets, to prevent this we need to create a .env file and use a package called dotenv, also make sure gitingnore is ignoring .env. Here we take that secret snippet and have it as just code, not quatation marks in the ENV under some variable name. After which, under the DB we want to remove the secret code as well as the connect variable and use URL.</p>
+                    <img src="./Images/envVariable.png" alt="">
+                    <img src="./Images/removeOldScript.png" alt="">
+                    <img src="./Images/replaceWithURL.png" alt="">
+                    <h3>Require ENV</h3>
+                    <p>To require ENV we need to simply call the require, no need with variable with a .config method. Next in the are where we simply called the DB in the require, we add the paramater of the ENV by first doing process.env.(Varibale Name) that we defined in the ENV file</p>
+                    <h3>What does Schema do?</h3>
+                    <p>Schema does the structure of our data. It does not make sense to be able to add an array of colors in a book data, this prevents that. We will create a new folder and file called models. Then we will create this simple set up.</p>
+                    <img src="./Images/basicSchema.png" alt="">
+                    <h3>What a model?</h3>
+                    <p>Representation for the collection. A model is a wrapper for the schema. The model gives the interface to the data. The model looks for two things, the name and then the schema.After this, we can use it in our controllers.</p>
+                    <img src="./Images/exportModel.png" alt="">
+                </div>
+
+                </section>
         </section>
     </main>
     <div id="backToTop" class="backToTop backToTop--active">
