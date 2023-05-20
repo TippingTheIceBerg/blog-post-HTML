@@ -58,6 +58,8 @@
                 <h3>Opening inspect tool</h3>
                 <p>To avoid right clicking and hitting inspect every time, it's faster to just hit command + option + c
                 </p>
+                <h3>How to add or change HTML</h3>
+                <p>To add HTML onto a page with inspect, simply right click and hit the EDIT with HTML option and now we can.</p>
                 <h3>How to apply classes in devtools</h3>
                 <p>First open dev tools, next click on what section you want to test a class on with the selector arrow. Next you want to click on .cls which is found right under the index.html but above where the styles are seen. After you click on it you just need to type the class name</p>
                 <h3>How to quickly select with the pointer in dev tools</h3>
@@ -134,13 +136,43 @@
                 <h3>Decoding async</h3>
                 <p>The decoding="async" attribute will tell the browser that it is OK for image decoding to be done at a later moment so that the browser can continue displaying content even if the images are not fully loaded</p>
             </div>
-
         </section>
         <section id="CSS" class="section__CSS section">
             <h2^>CSS</h2>
             <div class="css__container">
+                <h3>Example frameworks</h3>
+                <p>Some frameworks are tailwind and bootstrap. Just bundles of CSS to cuts down on common issues.</p>
+                <h3>Examples of preprocessor</h3>
+                <p>LESS,SASS and stylus fall under these, these are pretty much adding extra functionality that can be helpful.</p>
+                <h3>Advance CSS selectors.</h3>
+                <p> > - the child combinator article > p {...}
+                    + - the adjacent sibling combinator.h2 + p {...}
+                    ~ - the general sibling combinator All Siblings. h2 ~ p {...}
+                </p>
+                    <h3>Pseudo classes vs pseudo elements</h3>
+                    <p>Classes have colons and act as a class and is a selector, like first child, or hover. <code>article p:first-child</code> is a class that select the first p element child in the parent article. An element acts as if we added HTML onto the markup, like before and after. If we wanted to look for types, like images, or paragraphs we can use :first-of-type, :last-of-type, & :only-of-type <code>p:first-of-type {...}
+                        p:last-of-type {...}
+                        img:only-of-type {...}</code></p>
+                        <h3>Structural pseudo-classes</h3>
+                        <p>:nth-child(n), :nth-last-child(n), :nth-of-type(n), and :nth-last-of-type(n)where n is the number of expressions. To add complexity, li:nth-child(3n) will be every increment of 3, 2n+1  is every odd, 2n is every even,li:nth-child(4n+7) is every 4 but starting at 7.</p>
+                <h3>Example of Calc</h3>
+                <p>:root {
+                    --header: 3rem;
+                    --footer: 40px;
+                    --main: calc(100vh - calc(var(--header) + var(--footer))); 
+                    } here we are styling the top and bottom, and knowing this, we can calc the correct height needed to the main content.</p>
+                    <h3>Max vs Min</h3>
+                    <p>Both seem similar but think of it like this, if you make the page larger, max will grow it, and when moved smaller it will eventually lock. If using min, when grown will lock eventually, but when shrinking, will change.</p>
+                    <h3>Most ideal width for text</h3>
+                    <p><code>p {
+                        width: clamp(45ch, 50%, 75ch);
+                      }</code></p>
                 <h3>CSS cheat Sheet</h3>
                 <p>Cool site with lots of hands on changes. <a href="https://htmlcheatsheet.com/css/">Cheat Sheet.</a></p>
+                <h3>The Meyer Reset</h3>
+                <p>One of the most common resets that exists. Found here <a href="https://meyerweb.com/eric/tools/css/reset/">resets</a></p>
+                <h3>EM and REM</h3>
+                <p>Both are typically used for font sizers, but we will almost always prefer to use REM since em is based on the <b>PARENT</b> font size and get lead to issues if that changes. So, use REM.</p>
                 <h3>Screen sizes</h3>
                 <p>Common screen sizes <code>@media only screen and (min-width:0em)</code> Mobile
                 <br>
@@ -289,8 +321,8 @@
                         <li>Grid-auto-columns/rows - are used when we place an item that's not in our created grid layout. This essentially tell the grid to create these empty spaces with so it can fit in the right spot.</li>
                     </ul>
                 </p>
-               <h3>Common Grid Items properties</h3>
-               <p>
+                <h3>Common Grid Items properties</h3>
+                <p>
                 <ul class="listMarginLeft__40px">
                     <li>
                         grid-column-start/end and grid-row-start/end - these can be a number, where they will start and end given the line, or you can use span and then a number and it will go expand over those grid tracks.
@@ -303,9 +335,11 @@
                     </li>
                     <img src="./Images/minMaxRepeat.png" alt="">
                 </ul>
-               </p>
-               <h3>How to select all names in CS code</h3>
-               <p>Use command + d</p>
+                </p>
+                <h3>How to select all names in CS code</h3>
+                <p>Use command + d</p>
+                <h3>SVGs</h3>
+                <p>Scalable vectors graphs. These are highly scalable and don't lost quality with size changes.They can do this since they are defined by math, not any grids or pixels. Also, since it's math based, we can change the images with high precision with both HTML and CSS.</p>
             </div>
         </section>
         <section id="JS" class="section__JS section">
@@ -873,6 +907,14 @@
                 <p>Wrapping things can be done with command + a, we can see the preview of what it will be one once we select the area we want to wrap then hitting the keyboard keys.</p>
                 <h3>removing tags</h3>
                 <p>If we want to remove tags we can hit command + k`</p>
+                <h3>Grouping them outside of siblings and children</h3>
+                <p>using (main>ul) + p+h3 this will make sure the p and h3 are siblings and not children of main.</p>
+                <h3>Auto generate numbers in a list for example</h3>
+                <p>When creating a list like system we can create the emmet like ul>li*3{list number $}.This will create the three li and inside will auto increment the numbers for us.</p>
+                <h3>Adding attributes</h3>
+                <p>Adding attributes are done with the p[] this brackets is reserved for attributes </p>
+                <h3>Add content</h3>
+                <p>{} is reserved for content, p{content} will have the word content onto the html to be seen.</p>
                 <h3>Stop using var</h3>
                 <p>When we crete a var in CSS we don't have to manually type <code>var()</code> each time. Instead we can do a quick hand of just <code>--</code> and all custom variables will show up.</p>
                 <h3>How to select multiple areas so you can type it at the same time</h3>
@@ -961,7 +1003,7 @@
                     </p>
                 </div>
         </section>
-        <section  class="section__backEnd section">
+        <section id="backEndIcon"  class="section__backEnd section">
             <h2>Back End</h2>
             <div class="backEnd__container">
                 <h3>What is backend?</h3>
@@ -1386,7 +1428,7 @@
                     <img src="./Images/exportModel.png" alt="">
                 </div>
 
-                </section>
+        </section>
         </section>
     </main>
     <div id="backToTop" class="backToTop backToTop--active">
