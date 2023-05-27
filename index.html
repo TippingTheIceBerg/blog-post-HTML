@@ -33,7 +33,6 @@
                         <a class="nav__navLink-sectionLink" href="#GIT">GIT</a>
                         <a class="nav__navLink-sectionLink" href="#VSCode">VS Code</a>
                         <a class="nav__navLink-sectionLink" href="#RegEx">RegEx</a>
-                        <a class="nav__navLink-sectionLink" href="#backEnd">Back End Node</a>
                     </div>
             </li>
             <li class="nav__navList">
@@ -1003,430 +1002,185 @@
                     </p>
                 </div>
         </section>
-        <section id="backEndIcon"  class="section__backEnd section">
-            <h2>Back End</h2>
-            <div class="backEnd__container">
-                <h3>What is backend?</h3>
-                <p>While front end focuses more on client side, this focuses more on server side. When we check to see if the username and password match, we will use backend.
-                    <a href="https://www.codecademy.com/article/back-end-architecture" target="_blank"></a>
-                </p>
-                <h3>Backend composed of three parts.</h3>
-                <p>The backend is SAD<ul>
-                    <li>Server - computer that gets the request. Most common being apache Nginx.</li>
-                    <li>The App - the app that listens for the request.</li>
-                    <li>Database - organize the data. With the most common being MongoDB, mySQl, and PostgreSQL</li>
-                </ul></p>
-                <h3>What are Frameworks?</h3>
-                <p>Code that is typically very common that also gives structure to code.
-                    <a href="https://dev.to/aspittel/what-is-a-web-framework-and-why-should-i-use-one-38c0" target="_blank"></a>
-                Some popular front end frameworks include react and angular, while popular backend ones are django and ruby.
-                </p>
-                <h3>Ruby</h3>
-                <p> A quick use of ruby on the terminal is to type IRB, this allows the RUBY shell to be interactive. You can exit by typing exit or hitting ctrl + d</p>
-                <h3>Terminal: Running Ruby Code</h3>
-                <p>IRB allows us to quickly test ruby tests, but the terminal also allows us to test ruby code, simply type <code>ruby (nameOfFile).rb</code>In the event you want to stop the run, hit <kbd>control-c</kbd></p>
-                <h3>Running files on the terminal</h3>
-                <p>One method I found is to create a folder with whatever name you want, and in that folder create a .rb file. Now write your ruby, and when you are ready to run it, simply type ruby (fileName).rb and it should run.</p>
-                <h3>Puts vs Print</h3>
-                <p>One some difference of the two is that puts adds the word and then makes a new line, while print does not, so using a print then a puts will make them all stay on the same line. While a puts then print will make two lines. A shorthand for puts will be to enter simply p and then your quotation marks.Note that the p mark is mostly for debugging, gives the raw version of the object. P also makes it so that the quotation marks are seen.</p>
-
-                <h3>Ruby laws</h3>
-                <p>Indents must be 2 spaces. # means comment. if a method variable or file are called, they must be snake case , meaning all lowercase and each word has a _. IE <b>this_is_a_great_method</b>. If it can fit on one line, make it so. <img src="./Images/rubyOneLine.png" alt="">, and lastly, when naming classes we will capitalize every word. <img src="./Images/rubyClassName.png" alt=""> </p>
-                <h3>What is an API?</h3>
-                <p>It means application programming interface. Which can either mean documentation or how the application interact with one another.</p>
-                <h3>Is it a class or a module?</h3>
-                <p>When looking at RUBY api, if we see something like word1::word2, then anything before the :: is the module, word1, while word2 is the class in the module of word1. </p>
-                <h3>Method types</h3>
-                <p>Methods are organized by two types, either class as we seen above with ::, or instances, where we will see it in the format of #. However this only applies when looking at the API, in the actual code, :: and # have different meanings. The biggest difference is that instance methods can be used immediately.</p>
-                <h3>RubyGems</h3>
-                <p>They are a collection of code that solves a common problem.</p>
-                <h3>Installing Gems</h3>
-                <p>Installing gems are easy, just run gem install (gem name)</p>
-                <h3>Debugging Ruby</h3>
-                <p> <a href="https://launchschool.com/books/ruby/read/preparations#usingacodeeditor" target="_blank">Save for when after we install ruby.</a></p>
-                <h3>What does it mean when we say Ruby is very strongly OOP?</h3>
-                <p>It means everything in ruby is an object. <b>A RUBY IS AN OBJECT</b></p>
-                <h3>Some way to test ruby</h3>
-                <p>We can test ruby with the terminal IRB or we can use the website <a href="https://replit.com/languages/ruby" target="_blank">replit</a></p>
-                <h3>Ruby Numbers</h3>
-                <p>There are only two kinds of numbers in ruby, integers and floats. Floats have decimals while integers are whole numbers. If the numbers used in a ,math problem are all integers, if the solution is a decimal, it will convert to an integer. Simply add the .0 if you want a float. Another way is to use a simple conversion, note, when making the integer the value is not rounded. <b>float in numbers </b></p>
-                <img src="./Images/converationRuby.png" alt="">
-                <h3>Even or odd</h3>
-                <p>Testing for even or odd is easy, simple add the number.odd? or number.even? with the question mark included. However, these do not work for floats.</p>
-                <h3>Strings</h3>
-                <p>Using strings in ruby we can add them with either the concat (long) shovel (new way) or with the used to way of +.</p>
-                <img src="./Images/stringAddRuby.png" alt="">
-                <h3>Substrings</h3>
-                <p>Much easier to get the last letter of a word with the use of [-1]. Note, the [0..1] is not the same as [0,1], the .. method has one more letter, meaning the , version is up to but not including.</p>
-                <img src="./Images/subStringRuby.png" alt="">
-                <h3>Remove white space</h3>
-                <p>Two ways to remove white space, one will be the strip method, the other is the gsub method. The strip method doesn't need anything user input, the gsub (global substitute) does. <b> strip the paint off</b></p>
-                <img src="./Images/gsubRuby.png" alt="">
-                <h3>Escape characters</h3>
-                <p>These only work in double quotation marks.</p>
-                <img src="./Images/escapeCharRuby.png" alt="">
-                <h3>String Interpolation</h3>
-                <p>Similar to using a template lateral in practice, except it is done in double quotes and does not use the dollar sign.</p>
-                <img src="./Images/interpolatRuby.png" alt="">
-                <h3>String Methods</h3>
-                <p>These can be found in the <a href="https://ruby-doc.org/core-3.1.2/String.html" target="_blank">docs</a>, or seeing some common ones back at  <b>splitting air</b> <a href="https://www.theodinproject.com/lessons/ruby-basic-data-types" target="_blank">The Odin Project</a></p>
-                <img src="./Images/commonMethodsRuby.png" alt="">
-                <img src="./Images/gsubRuby.png" alt="">
-                <h3>Convert anything to a string</h3>
-                <p>to convert most things to a string, </p>
-                <img src="./Images/makeAString.png" alt="">
-                <h3>Make Anything into a number</h3>
-                <p>to convert an string into a number, use to_i. To convert into a float number, use to_f</p>
-                <img src="./Images/makeIntRuby.png" alt="">
-                <img src="/Images/convertFloatRuby.png" alt="">
-                <h3>Array and hashes</h3>
-                <p>Arrays are similar to javascript, set them to brackets[num1,num2] separated with commas. Hashes are more interesting, where we will now use the ruby symbols with making key values pairs.</p>
-                <img src="./Images/hashValRuby.png" alt="">
-                <img src="./Images/usingHashValuesRuby.png" alt="">
-                <h3>User Input</h3>
-                <p>User input can easily be done with assigning a variable to the method gets, which waits for the user to enter a string and then hit string. We include the method chomps at the end of gets to remove the carriage\n that comes when we hit the enter key. <b>gets gets the user, chomp bites off the end.</b></p>
-                <img src="./Images/getsRuby.png" alt="">
-                <h3>Methods</h3>
-                <p>Methods are like functions, essentially reusable code.</p>
-                <img src="./Images/method:functionRuby.png" alt="">
-                <h3>Return statements</h3>
-                <p>Ruby has implicit returns, however this can make code harder to understand, which is why we can manually call a return instead, and might be preferred unless made obvious otherwise.</p>
-                <h3>Blocks</h3>
-                <p>Blocks are like methods, done with do/end or {}. They can also effect the outer scopes, but they do not have any effect if created as an inner scope. Note that {} are typically only used for one liner code.</p>
-                <img src="./Images/blockRuby.png" alt="">
-                <h3>Variable types</h3>
-                <p>There are only five variables types and are formatted uniquely. Constant ones are all capitalized, and they can in fact change, please don't however. Global ones override all scopes, must people avoid. Class variables effect classes and must be started outside of methods.Instance can be used throughout the parent class, avoid use until better understanding of OOP. Lastly local is the most common and obeys all forms of scopes.</p>
-                <img src="./Images/variableTypesRuby.png" alt="">
-                <h3>Times method</h3>
-                <p>When you want something done x times, we will call the times method which starts with the number we want to do an action for x times, followed by what we want to do those ten times.</p>
-                <img src="./Images/timesMethodRuby.png" alt="">
-                <h3>Creating files and options</h3>
-                <p>Files can be created with the File.new("fileName","mode"), mode has different options, but most times we will just use w, since this allows us to create a file and then write in it. While .close will close the file. File.open is similar to the new method, except we can have a block with File.open</p>
-                <img src="./Images/fileRuby.png" alt="">
-                <img src="./Images/fileOpenRuby.png" alt="">
-                <h3>Reading files</h3>
-                <p>To read files, we can use sysread to read the contents of a file.</p>
-                <img src="./Images/readFileRuby.png" alt="">
-                <h3>Opening files</h3>
-                <p>Opening files is a neat way to interact with other documents in your folder.</p>
-                <img src="./Images/openAndReadFileRuby.png" alt="">
-                <h3>If statement</h3>
-                <p>If statements are similar to JS, except we need a defined end if the line of code is greater than one line. If the code is one line, then we can create a one line piece of code, this one line does not need an end statement and the "DO" portion is before the if statement.Another note, if you add an if inside a method, you will technically have two ends, one end for the if, elsif else portion, and another one to end the method itself.</p>
-                <img src="./Images/ifStatementRuby.png" alt="">
-                <h3>If Else Statements</h3>
-                <p>Also similar to JS, just don't include the {} and else if is shortened to elsif</p>
-                <h3>Space ship operator</h3>
-                <p>A fancy way to tell us which value is larger. Returns a value, if -1, the left is larger, is 0 they are the same, if 1 the right is larger.</p>
-                <img src="./Images/spaceShipRuby.png" alt="">
-                <h3>Case Statements</h3>
-                <p>Case statements are used when we don't want a messy else if statements and want to assign a variable. As soon as a match is found, the rest are not run. For more complex control, ie we want to do more if true, we can omit the then keyword, this instance we get the same put, but then we also get another variable assignment of FML. Remember that when using case, we don't have to recall the variable, and instead just use the when method to reference back to the variable in question if we added it as an argument.</p>
-                <img src="/Images/caseRuby.png" alt="">
-                <img src="./Images/caseNoThen.png" alt="">
-                <img src="./Images/caseOnePutsRuby.png" alt="">
-                <img src="./Images/caseNoArgsRuby.png" alt="">
-                <h3>Unless statements</h3>
-                <p>Works the same as the inverse !, except can look cleaner.You should use an unless statement when you want to not do something if a condition is true</p>
-                <img src="./Images/unlessRuby.png" alt="">
-                <h3>Ternary Operator</h3>
-                <p>Similar to JS. Ternary should only be done when selecting between two 2 values. And the result of it should be assigned to a variable , a return result, or as an argument.</p>
-                <img src="./Images/ternaryRuby.png" alt="">
-                <img src="./Images/ternaryExampleRuby.pngs" alt="">
-                <h3>One line if and unless</h3>
-                <p>If we are writing a conditional statement that is only one line, we can use the if and unless statement at the end. Unless works similar is not !.</p>
-                <img src="./Images/oneLineConditionalRuby.png" alt="">
-                <h3>Comparing strings</h3>
-                <p>Unlike in numbers, the statement <code> 42 is greater than 415</code>will be false since it goes by one character at a time, since 4 is the same, it goes to 2, since 2 is greater than the 1 in 415, it return s false. If the value was 425 or 435, then it would return true.f</p>
-                <h3>While Loop</h3>
-                <p>You declare what breaks the loop out front. Very human readable. While your value is this, do this. And then end.</p>
-                <img src="./Images/whileRuby.png" alt="">
-                <img src="./Images/whileUntilYesRuby.png" alt="">
-                <h3>Until loop</h3>
-                <p>While loops are good, but in the event we see ourselves using the not !, it would be better to use an until loop.</p>
-                <img src="./Images/untilRuby.png" alt="">
-                <h3>Ranges</h3>
-                <p>When we know how many times we want something to run we can use ranges. </p>
-                <img src="./Images/rangesRuby.png" alt="">
-                <h3>For loops</h3>
-                <p>For loops iterates through an array or range a given number of times. Note that i and friend can be labeled as anything.</p>
-                <img src="./Images/forLoopRuby.png" alt="">
-                <img src="./Images/loopThroughArrayWithEach.png" alt="">
-                <h3>Times Loop</h3>
-                <p>When we want to go through a loop a certain number of times we can use a times loops. Note that the || are required for this to work.
-                </p>
-                <img src="./Images/timesLoopsRuby.png" alt="">
-                <h3>Upto Downto</h3>
-                <p>When we want to iterate from a number up or down.</p>
-                <img src="./Images/upTodownToRuby.png" alt="">
-                <h3>Running blocks of code</h3>
-                <p>When we run loops or functions, we are seeing the do end method, however, in one example we did see the {} method, which is also fine. Just be consistent. Though, the do end method seems more "code" like.</p>
-                <h3>How to stop an infinite loop</h3>
-                <p>If you accidentally create an infinite loop, you can always exit with ctrl + c.</p>
-                <h3>If statement in loop</h3>
-                <p>When we declare an if statement inside a loop, we will have one break and two ends.</p>
-                <img src="./Images/ifInLoopRuby.png" alt="">
-                <h3>Skipping one iteration of code</h3>
-                <p>If we want to skip one run of the code, we can use next.</p>
-                <img src="./Images/nextRuby.png" alt="">
-                <img src="./Images/nextInWhileRuby.png" alt="">
-                <h3>Structure of a for loop</h3>
-                <p>All for loops have a definite end. Starts with for, then a variable, then the in reserved word, and finally a collection of elements.</p>
-                <img src="./Images/twoForLoopsRuby.png" alt="">
-                <h3>Iterators</h3>
-                <p>Most prefer this over loops. "We have called the each method using the dot operator (.) on our array. What this method does is loop through each element in our array, in order, starting from 'Bob'. Then it begins executing the code within the block. The block's starting and ending points are defined by the curly braces {}. Each time we iterate over the array, we need to assign the value of the element to a variable. In this example we have named the variable name and placed it in between two pipes |. After that, we write the logic that we want to use to operate on the variable, which represents the current array element. In this case it is simply printing to the screen using puts."</p>
-                <img src="./Images/iteractorBasicRuby.png" alt="">
-                <h3>Ruby Blocks</h3>
-                <p>A block is just some lines of code ready to be executed. When working with blocks there are two styles you need to be aware of. By convention, we use the curly braces ({}) when everything can be contained in one line. We use the words do and end when we are performing multi-line operations. Let's add some functionality to our previous program to try out this do/end stu</p>
-                <img src="./Images/mutiLineBlock.png" alt="">
-                <h3>Recursion</h3>
-                <p>Recursion allows us to save manually calling functions.</p>
-                <img src="/Images/recursionRuby.png" alt="">
-                <img src="./Images/recursionFibRuby.png" alt="">
-                <h3>Arrays</h3>
-                <p>Arrays are created similar to JS, and are referenced by the same index system.</p>
-                <img src="./Images/arraysRuby.png" alt="">
-                <h3>Getting the first or last array</h3>
-                <p>Unlike JS where we have to get the length-1, we can just use first or last.</p>
-                <img src="./Images/firstOrLastRuby.png" alt="">
-                <h3>How to change arrays</h3>
-                <p>Changing arrays in Ruby is the same as JS except they add the shovel method and they also allowed the pop and shift method to be given a value if desired.</p>
-                <img src="./Images/addingToArraysRuby.png" alt="">
-                <h3>Joining Arrays and finding differences</h3>
-                <p>It may seem bizarre, but adding and subtracting arrays cause some advance stuff, like joining and finding the difference between two arrays.</p>
-                <img src="./Images/joiningArraysRuby.png" alt="">
-                <img src="./Images/moreOnJoiningTwoArrays.png" alt="">
-                <h3>Arrays Methods</h3>
-                <p>There are over 150 methods, calling num_array.methods will yield lots of methods in the IRB, but also look at <a href="https://ruby-doc.org/">the ruby docs under "Core API" and then on "Arrays"</a>
-                </p>
-                <h3>Map/collect Ruby</h3>
-                <p>When we want to modify an array and want each value to be modified, we can use map/collect</p>
-                <img src="./Images/mapRuby.png" alt="">
-                <img src="/Images/mapWithDoEnd.png" alt="">
-                <h3>Deleting things in Arrays</h3>
-                <p>arrays can be deletes in a couple ways, either by index, by word, or deleting all duplicates.</p>
-                <img src="./Images/deleteRuby.png" alt="">
-                <h3>Select similar to JS filter</h3>
-                <p>we can go over an array and if true to our expression, will only return the true values.</p>
-                <img src="./Images/selectRuby.png" alt="">
-                <h3>Array avoiding the "" and commas</h3>
-                <p>If we have an array thats all strings, we can use the literal %w (looks like regex) that allows us to just write the names without having to do the "" or ,.</p>
-                <img src="./Images/arraysFormat.png" alt="">
-                <h3>Making a string into an array with split</h3>
-                <p>I think JS does a similar process when we want to make a string into an array.</p>
-                <img src="./Images/stringIntoArrayRuby.png" alt="">
-                <h3>Multi-dimensional arrays</h3>
-                <p>Arrays in arrays, when we want to deconstruct this, we can use flatten</p>
-                <img src="./Images/deconstruct2DArraysRuby.png" alt="">
-                <h3>Sample random number in array</h3>
-                <p>Random numbers are gained with .sample over the array.</p>
-                <img src="./Images/randomRuby.png" alt="">
-                <h3>Remove NIl from arrays</h3>
-                <p>If you end up having a nil in your array you can remove them with compact.</p>
-                <img src="./Images/removeNIlRuby.png" alt="">
-                <h3>File appending</h3>
-                <p>Appending words onto files is a fast way to add things, but be careful, if the program is called multiple times, it will keep on appending the items.</p>
-                <img src="./Images/appendFilesRuby.png" alt="">
-                <h3>Catching Errors</h3>
-                <p>Sometimes code is written with the hunch that it may break the whole system. If that ever comes up we can try to catch the error with begin and rescue. We can also catch specific errors that we get, like TypeError on the rescue, and each rescue we can also store the error into a variable and print it on the screen.</p>
-                <img src="./Images/catchingErrorsRuby.png" alt="">
-                <h3>Class and objects</h3>
-                <p>A class is a costume data type. Gives the blueprint that all things in question will follow. IE a class of Book will have pages, a title, and an author. All classes start with a capital letter. Now that we have created the blueprint, we can create many books with this blueprint, and these created things are called objects.</p>
-                <img src="./Images/basicClassRuby.png" alt="">
-                <img src="./Images/classesMadeEasierRuby.png" alt="">
-                <h3>Initialize objects</h3>
-                <p>Instead of calling each book1 = title,author, and pages, we can save on lines by creating a function inside the new Object function.Note that the name MUST be Initialize otherwise it will not work.</p>
-                <h3>Instance Methods</h3>
-                <p>Creating methods inside the class we made.</p>
-                <img src="./Images/classMehodIfRuby.png" alt="">
-                <img src="./Images/QuizWithRuby.png" alt="">
-                <h3>Inheritance of Super Classes</h3>
-                <p>Sometimes we create classes and then subclasses which can do most of what the super class can do, plus something different or extra</p>
-                <img src="./Images/InheritanceRuby.png" alt="">
-                <h3>Modules</h3>
-                <p>With modules, we are capitalizing the word, and include the word module. To call the module we will always call <code>Include (moduleName)</code>Then to use it call the module name with the class you want ot use. If the module is on another folder, we can call it with the require_relative phrase, then do the same as before.</p>
-                <img src="./Images/moduleSameFolderRuby.png" alt="">
-                <img src="./Images/moduleOutSideFolderRuby.png" alt="">
-                <h3>SetInterval</h3>
-                <p>When we want to fire something after x seconds we can set a time interval, remember for these, we need to have the time outside the curly brackets. Exit with control + c</p>
-                <img src="./Images/setIntervalNode.png" alt="">
-                <section id="backEnd">
-                    <h2 class="node__heading">Node JS/Express</h2>
-                    <h3>What is nodeJS</h3>
-                    <p>Node JS uses common JS and every file in node is a module. Furthermore, node JS cannot use DOM.</p>
-                    <h3>Exporting modules</h3>
-                    <p>Modules are always done is separate files, and when exporting we will use module.export. And once we export it, we <b>HAVE</b>to use the require global as well as ./ for the pathing. Some notes, it's <b>EXPORTS are usuall done in bulk and equal profit.When we import we REQUIRE a license</b></p>
-                    <img src="./Images/importFunctionNodeJS.png" alt="">
-                    <img src="./Images/exportFunctionNodeJS.png" alt="">
-                    <img src="./Images/nodeJSEXportsObjectNodeJS.png" alt="">
-                    <h3>Built in modules</h3>
-                    <p>Some modules are built into Node, such as the OS. For these, we <b>DON'T</b>use the ./ as the previous ones.Also for these exmaples, we methods are not the important part, since we can look these up, the important part is just how to call these.</p>
-                    <img src="./Images/builtInModulesNodeJS.png" alt="">
-                    <h3>Path Module</h3>
-                    <p>Path module allows us to interact with file paths. Important since others peoples computers will use different paths since people have different computers. <b>asynch needs call backs and made it seem very long. Callback hell.</b> However, this task is better since the task is offloaded and allows users to keep running the code. To fix this callback hell,we can use promosies or asynch await</p>
-                    <img src="./Images/synchFSNodeJS.png" alt="">
-                    <img src="./Images/asynchNodeJSFS.png" alt="">
-                    <h3>HTTP purpose</h3>
-                    <p>HTTP is what allows us to set up the web server.</p>
-                    <h3>HTTP set up</h3>
-                    <p>Basic set up is creating a server, needs a callback that be anything, but convention is to use req and res, (request and response). Res.write is used to write, but at the time being, we learned that res.end which usually ends the program can also be used to write. We always need to include .end, since without it, the server gets a ping, all response and headers have been sent, it can be, server should consider this complete.</p>
-                    <img src="./Images/httpNodeJS.png" alt="">
-                    <img src="./Images/serverNodeJS.png" alt="">
-                    <h3>Naming NodeJS</h3>
-                    <p>A folder of JS code can be called either a module, depenecy or package. They all mean the same thing.</p>
-                    <a href="https://www.npmjs.com">Are some examples to find these</a>
-                    <a href="./Images/npmInstalNodeJs.png"></a>
-                    <a href="./Images/usedNPMpackageNodeJS.png"></a>
-                    <a href="./Images/addNPM.png"></a>
-                    <h3>JSON file</h3>
-                    <p>In order for NPMS to be usable when we clone the file on GIT, we will need a JSON folder. To get a JSON folder simply type npm init for step for step, or npm init -y. Remember to make it in the root. Once we push onto git and we don't push the modules, we can clone the repository, and in the terminal, if there is a json, we can type "npm instll" and this will let us now to use all the modules that are in the JSON file.</p>
-                    <h3>Git ignore</h3>
-                    <p>When we create our files, we want to use gitignore so that we aren't sending over our modules to git since this is not needed. Insode that file we want to /nameOfFileToIgnore so that it is ingored when we git it over. File will be called gitignore. Then Git Init on the terminal. Git add . . Git Commit -m. Then paste the code you got from gitHub. How does this work if we want to open the file again without the modules? Clone the file, and then run NPM install. Since we have the Json file, this will give us the right modules.</p>
-                    <h3>Dev dependency</h3>
-                    <p>When we use node, we will instal it as NPM i nodemon -D. This will save it was a dev dependency on the JSON since in production they won't need node, we use it to make quiality of life better only for us. After that we go to the script under the JSON. After the script we can just do NPM start now to run the code instead of the previous node fileName.js method. However, for nodemon, we can use "dev": "nodemon app.js" under the script section, and then run "npm run dev", which causes nodemon to watch ourfiles, similar to liveserver. To stop nodemon, use command C</p>
-                    <img src="/Images/jsonScriptNodeJS.png" alt="">
-                    <img src="./Images/nodemonNodeJs.png" alt="">
-                    <h3>What does it mean when we say JS is synchonrous and single threaded</h3>
-                    <p>This means it read it line by line, an interesting way to test time is to use console.log.time() and then console.timeEnd() and this will tell you how fast it reached the first time, to the end time.</p>
-                    <h3>Example of offloading</h3>
-                    <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed, and this is because timeout and setinterval and others are asynchronous.</p>
-                    <img src="./Images/offloadingNodeJS.png" alt="">
-                    <h3>How to make asynch look better </h3>
-                    <p>One way we can make asycnh look better is with promises and asycnh await. We moved the messy asycnh inside the promise. Note in this example, we used the path as a variable. But this isn't that imporatant, asycnh await is much more better and explained later. </p>
-                    <img src="./Images/messyasynch.png" alt="">
-                    <img src="./Images/promiseAsycnheNodeJS.png" alt="">
-                    <h3>Promisfy with Asycnh Wait</h3>
-                    <p>Promisfy is inside the node module and must be required. We can either add the dot promises at the end of the files, or we can create new variables and use util.promisfy. Remember for write file if not data is there, it will create the file and add it. Try catch needed to log if an error occurs. Asynch is a special keyword that lets the use of await.</p>
-                    <img src="./Images/nodePromisfyLongNodeJS.png" alt="">
-                    <img src="./Images/nodePromisfyshorterNodeJS.png" alt="">
-                    <img src="./Images/practicalUseOfAPIandAsyncWait.png" alt="">
-                    <h3>Event Emitters</h3>
-                    <p>A lot of built in modules use event emitters. Used heavily in node JS. Users hovering over links or buttons. The flow of the program depends on the events that happen.</p>
-                    <img src="./Images/eventEmitterNodeJS.png" alt="">
-                    <h3>Streams</h3>
-                    <p>Large sources or continuing data. four main types, read, write, duplex (read and write) and transform where data can be modified while reading or writing.</p>
-                    <h3>Read File</h3>
-                    <p>One power https://github.com/john-smilga/node-express-course.gitof read file is that we can store the data and paste it onto the local server. readFileSynch vs readFile is that readFile needs a callback.</p>
-                    <img src="/Images/pastingInfoOnFIleToServer.png" alt="">
-                    <h3>Stream Chunks</h3>
-                    <p>Instead of sending large txt files that send data at once, we can send it as chunks. This can be done with streams. Pipe method is what let's us change the readable stream into a writeable stream.</p>
-                    <img src="./Images/sendingChunksNodeJs.png" alt="">
-                    <h3>What is express?</h3>
-                    <p>Express is built upon http module, and makes creating servers much more easier.</p>
-                    <h3>Meta data about the server response</h3>
-                    <p>A new method will be res.writeHead, which uses a status code (200 being successful) within the create server. Next is contact type,tells the browser, we are sending back html, css, imge, how to render that contact.This is done using key value pairs.</p>
-                    <img src="./Images/mimeTypesNodeJs.png" alt="">
-                    <h3>Simple server check</h3>
-                    <p>As before, we can check the url and test to see if the data is there, if not, we can now give  404 error code with text error. We can also use styles and JS but we would need to check for  the url of each one if we are just using http for checks, express will fix this issue.</p>
-                    <img src="/Images/simpleServerSetUpNodeJS.png" alt="">
-                    <img src="./Images/serverWithSimpleIndexHTMLNodeJS.png" alt="">
-                    <img src="./Images/serverSetUptoCSS:JSwithJustHTTPNodeJS.png" alt="">
-                    <h3>Installing Express</h3>
-                    <p>To install express we have to run npm instal express, and to instal a previous updated one, we can run npm install expess@4.17.1. Note that express is a function, so we declare it as a function but also assign it.</p>
-                    <img src="./Images/basicExpress.png" alt="">
-                    <h3>How express starts to make things easier with using css/js/svg</h3>
-                    <p> How to get all the css/js/svg to work, common practice is making a folder named public all files will be moved there. We don't need to make any status or content types, express takes care of it all. Use and express explained later. Statics are files the server doesn't need to change, like images or servers. However, what's better is that we don't even really need to add the sendFile module with the weird __dirname things, we can just drop the index.html into the public folder and it will work the same.</p>
-                    <img src="./Images/gettingFilesWithExpress.png" alt="">
-                    <img src="./Images/notNeedForSendFileExpress.png" alt="">
-                    <h3>API vs SSR</h3>
-                    <p>API in express setting up http interfance to interact with interface. SSR we will send templates and we will send entire html, js, and css. However, if you understand API, ssr should be easy to grasp. API server provides the data. Somestimes we don't want to use all the data in the api, so we can use map to create a new array with only the info we want. The first image is an example of a very simple API. The second image we exported the data with {} in the data file. Then destructure. Third image is only when we want a miniaml response instead of sending all data, like review or descriptions. Note in the images we do .json and .send, they functionally do about the same.</p>
-                    <img src="./Images/basicAPIExpress.png" alt="">
-                    <img src="./Images/apiWithDataInVSCode.png" alt="">
-                    <img src="./Images/usePartofAnAPIExpress.png" alt="">
-                    <h3>Hard Parameters</h3>
-                    <p>If we wanted to find one product, we can hard code each item like in the first image. But this is a nuclear approach since this can work with 1-4 products, but if we have over 100, this can get messy. This is more theory, the next section on route parameters is much better.</p>
-                    <img src="./Images/oneProductNuclear.png" alt="">
-                    <h3>Route Parameters</h3>
-                    <p>Where we set up the route, we do /:whateverNameWeWant.In this instance we had to use Number since the data had the ID as a number, otherwise we could have just passed in the string. Used when there a lot of other options, and in situations where items have unique characteristics. Using req.params and console.log it we can get a lot of useful properties and methods. Number(ProductId) replace the number 1 of the hard code method, but in this case will find each number and not just 1. Req.params is always use for the route paramters.</p>
-                    <img src="./Images/routeParameterExpress.png" alt="">
-                    <img src="./Images/ifRouteDoesNotExist.png" alt="">
-                    <h3>Query String Parameter/URL parameters</h3>
-                    <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.Here we use limit, but search works too, and search=a&limit=2. Filter query data, etc, that's on us to decide. In this example, the URL uses search which just brings up anything that starts with a.This example is specific for if we decide to use search or limit query. The other image is for when the code works, but no product was found to match the search.</p>
-                    <img src="./Images/querySelectorWithLimitExpress.png" alt="">
-                    <img src="./Images/workingURLParaNOProductFound.png" alt="">
-                    <h3>Cannot set headers after they are sent</h3>
-                    <p>If we get this error, look at your returns, what happens is if we use res.status more than once in a block of code, it causes express to freak out, correct it by using returns.</p>
-                    <h3>MiddleWare in Express</h3>
-                    <p>Functions that execute during the request to the server. Before we simply did a reqeust and then a response. Now we will have a middle poriton between the two. One issue we can come accross is that for the first image, this can work, but for this to work for the about URL, we would need to copy and paste the same four lines of code, this is not needed. When we work with middleware, we must pass it on onto another middleware or terminating it. The next image is a simple middle ware example, req, res, and next are handled with express, and we must always use a next to pass it on, or a res.send. The middleware is placed in between each path, note we missed the logger in the about URL. What better though would be to create a new file called logger and then export it like normal. An even better approach is to create a new file, nd then use app.use which acts as a special method just for middleware. We just need to define all URL parameters we want to match. We can create routes, if we used app.use("/api",logger) this works for all routes, generic route.</p>
-                    <img src="./Images/pitFallOfRoutes.png" alt="">
-                    <img src="./Images/simpleMiddleWare.png" alt="">
-                    <img src="./Images/appUse.png" alt="">
-                    <h3>More complex middleware</h3>
-                    <p>To use more than one middleware, we must use bracket notation inside the app.use method. The second image shows it's importance, here, now any URL parameter we have that has ?user=john, we get specifc things related to John only. Any of the routes we can access to that user. </p>
-                    <img src="./Images/doubleMiddleWare.png" alt="">
-                    <img src="./Images/whyIsItImportant.png" alt="">
-                    <h3>Middleware options</h3>
-                    <p>Are main options for middleware is our own, express, and third party middleware. One of the most popular one is morgan NPM. Remember that third party ones would need an install.</p>
-                    <h3>Maniuplating data</h3>
-                    <p>The first image is the use of express built in middleware on a folder that we have created before. For Post, we can't just do a post action, we need to use a tool called postman or insomia, or we can set up a working app. For this example, this will be seen in working HTML. Method is post, action is where it's going to be sent. Marks the URL on the server. In the second image, the issue we have is that there is not route. First fix is to make one, with the use of post method, not get. Next issue, we have no way to get this data, to get the data, we have to use a middleware, seen with urlextended with extended false flag. And lastly with this way, we can also check to see if a name was given, note though, this could have been done with front end.</p>
-                    <img src="./Images/middleWareOnPage.png" alt="">
-                    <img src="./Images/postHTMLExpress.png" alt="">
-                    <img src="./Images/pathForPost.png" alt="">
-                    <img src="./Images/parseMiddleWareData.png" alt="">
-                    <img src="./Images/optionToCheckNameGivenMiddlware.png" alt="">
-                    <h3>Post with Javascript</h3>
-                    <p>This first example has the post method done with javascript and uses the help of axios.Though major problem in set up, if we need to create  frontend for every route, the production is going to take very long. Better option will be to use Postman, which tests for APIs.</p>
-                    <img src="./Images/JSPostExpress.png" alt="">
-                    <img src="./Images/middleWareJSPostExample.png" alt="">
-                    <h3>Postman Use</h3>
-                    <p>Postman is a neat tool that tests for URLs. To create  check, we click on the + found where the mouse is over, and then enter the localhost url and path we want to check. Intead of building a full front end to test, we can just use postman. For post, we can text by going under the body, then raw, then JSON text.</p>
-                    <img src="./Images/postmanBasicCheck.png" alt="">
-                    <img src="./Images/postManPostTest.png" alt="">
-                    <h3>Put/delete Method</h3>
-                    <p>Made for modyfying the data. When we send a put, if the body exists, something to update. Two things we want, the value of the params, IE the value we added on. Update we need to send something to the body. Note the console log of 1 peter. Where 1 is the ID and the value is peter. Both delete and put are very similar and typically copy and paste most of it. Big difference is that at the end we will use a filter not a map. </p>
-                    <img src="./Images/putAndPostMan.png" alt="">
-                    <h3>Express</h3>
-                    <p>Express lets us group many routes ti help break up the code from being too long with all these routes. Common convention is to create a new folder under the correct CD main, and naming it routes. The first require is for the route of the files you created. The app.use is the middleware, which creates the path. </p>
-                    <img src="./Images/expressRouters.png" alt="">
-                    <img src="./Images/controllersExpress.png" alt="">
-                    <img src="./Images/filesForControllExpress.png" alt="">
-                    <h3>Task Manager API</h3>
-                    <p>Goals here are to set up and connect to cloud database. A use CRUD on our data, cread read update and delete. We use patch instead of out this time for updates. The Router.route think of that as we are going to use the "variable" defined in the main JS with app.use("/api/v1/...") </p>
-                    <img src="./Images/taskManagerStart.png" alt="">
-                    <p>We then follow up with </p>
-                    <img src="./Images/chainingRequests.png" alt="">
-                    <h3>Create files for controllers and routes</h3>
-                    <p>Typically, large files can be organized with the use of controllers and routes folders. Routes are folders that pretty much will always have the controllers and get.post.delete routes. Controllers with typically have the function names, controllers holds all the logic, we can in theory have the logic all in the routes, but it will get messy. We are simply writing the req and res of the route section again, remember to export it and require it in the route folder.</p>
-                    <img src="./Images/ControllersPurpose.png" alt="">
-                    <h3>Reminder on what request does what</h3>
-                    <p>Get can get all tasks or one. Post can create a new one, delete deletes, patch updtaes tasks. For upate, delete, and single task get we will use a route paramter</p>
-                    <h3>What is REST API?</h3>
-                    <p>HTTP interface so other apps can interact with our data. Representation state transfer, most popular API desing pattern. Determines what the API looks like, a pattern, no strictly enforced.</p>
-                    <img src="./Images/CommonRestAPI.png" alt="">
-                    <h3>MongoDB</h3>
-                    <p>
-                        <img src="./Images/connectoMongo.png" alt="">
-                        <img src="./Images/ConnectToDriver.png" alt="">
-                        <img src="./Images/copyMango.png" alt="">
-                        <img src="./Images/addingMangoToVS.png" alt="">
-                        <img src="./Images/getToCollectionMongo.png" alt="">
-                        <img src="./Images/SelectCollection.png" alt="">
-                        <img src="./Images/insertData.png" alt="">
-                    </p>
-                    <h3>Connect database from the server</h3>
-                    <p>Object Data modeling library, a way to ger this done with Mongoose. It comes with a lot of things that make Development faster. Install with npm install mongoose. Second step is to set up a connection. Add it onto the man made DS folder, above the connection string we pasted earlier. We named it 3-task manager in this instance. One issue I notice was that the cluster password is different from your user password you made to create the account, this password is important since without it you won't be able to connect to your database when you pass the string along. After you copy and pasted the link, we need to require mongoose on the DB, using the right password and projectName. Afterwards, we can use the method of connect to crete the two, with the variable of the link string, and a then catch since this is a promise. Lastly, on the main app, we can require it without a variable and it will be automatically called. <code>require('./DB/ConnectJS');
-                    </code></p>
-                    <img src="./Images/mongooseWithOutPassRemoval.png" alt="">
-                    <img src="./Images/MongooseNameAdd.png" alt="">
-                    <img src="./Images/finalMongooseConnetion.png" alt="">
-                    <img src="./Images/ConnectingWorks.png" alt="">
-                    <h3>Running DB before server</h3>
-                    <p>One issue is that we should really check if the server is up first, if it is then run the server. The first image has the code rewritten as a function, which now be exported and imported. Once imported, we create a new function called start, and we set it up as asynch wait since it is a promise. Lastly, we move the server after the try of the DB variable, and if that's ok, then it will run the server listen. Lastly the function is called.</p>
-                    <img src="./Images/connectFirstPart1.png" alt="">
-                    <img src="./Images/connectFirstPart2png.png" alt="">
-                    <img src="./Images/connectFirstPart3.png" alt="">
-                    <h3>Holding our secrets before push</h3>
-                    <p>All projects hve the potential to have our secrets, to prevent this we need to create a .env file and use a package called dotenv, also make sure gitingnore is ignoring .env. Here we take that secret snippet and have it as just code, not quatation marks in the ENV under some variable name. After which, under the DB we want to remove the secret code as well as the connect variable and use URL.</p>
-                    <img src="./Images/envVariable.png" alt="">
-                    <img src="./Images/removeOldScript.png" alt="">
-                    <img src="./Images/replaceWithURL.png" alt="">
-                    <h3>Require ENV</h3>
-                    <p>To require ENV we need to simply call the require, no need with variable with a .config method. Next in the are where we simply called the DB in the require, we add the paramater of the ENV by first doing process.env.(Varibale Name) that we defined in the ENV file</p>
-                    <h3>What does Schema do?</h3>
-                    <p>Schema does the structure of our data. It does not make sense to be able to add an array of colors in a book data, this prevents that. We will create a new folder and file called models. Then we will create this simple set up.</p>
-                    <img src="./Images/basicSchema.png" alt="">
-                    <h3>What a model?</h3>
-                    <p>Representation for the collection. A model is a wrapper for the schema. The model gives the interface to the data. The model looks for two things, the name and then the schema.After this, we can use it in our controllers.</p>
-                    <img src="./Images/exportModel.png" alt="">
-                </div>
+        <section id="backEnd"  class="section__backEnd section">
+        <h2 class="node__heading">Node JS/Express</h2>
+            <h3>What is nodeJS</h3>
+            <p>Node JS uses common JS and every file in node is a module. Furthermore, node JS cannot use DOM.</p>
+            <h3>Exporting modules</h3>
+            <p>Modules are always done is separate files, and when exporting we will use module.export. And once we export it, we <b>HAVE</b>to use the require global as well as ./ for the pathing. Some notes, it's <b>EXPORTS are usuall done in bulk and equal profit.When we import we REQUIRE a license</b></p>
+            <img src="./Images/importFunctionNodeJS.png" alt="">
+            <img src="./Images/exportFunctionNodeJS.png" alt="">
+            <img src="./Images/nodeJSEXportsObjectNodeJS.png" alt="">
+            <h3>Built in modules</h3>
+            <p>Some modules are built into Node, such as the OS. For these, we <b>DON'T</b>use the ./ as the previous ones.Also for these exmaples, we methods are not the important part, since we can look these up, the important part is just how to call these.</p>
+            <img src="./Images/builtInModulesNodeJS.png" alt="">
+            <h3>Path Module</h3>
+            <p>Path module allows us to interact with file paths. Important since others peoples computers will use different paths since people have different computers. <b>asynch needs call backs and made it seem very long. Callback hell.</b> However, this task is better since the task is offloaded and allows users to keep running the code. To fix this callback hell,we can use promosies or asynch await</p>
+            <img src="./Images/synchFSNodeJS.png" alt="">
+            <img src="./Images/asynchNodeJSFS.png" alt="">
+            <h3>HTTP purpose</h3>
+            <p>HTTP is what allows us to set up the web server.</p>
+            <h3>HTTP set up</h3>
+            <p>Basic set up is creating a server, needs a callback that be anything, but convention is to use req and res, (request and response). Res.write is used to write, but at the time being, we learned that res.end which usually ends the program can also be used to write. We always need to include .end, since without it, the server gets a ping, all response and headers have been sent, it can be, server should consider this complete.</p>
+            <img src="./Images/httpNodeJS.png" alt="">
+            <img src="./Images/serverNodeJS.png" alt="">
+            <h3>Naming NodeJS</h3>
+            <p>A folder of JS code can be called either a module, depenecy or package. They all mean the same thing.</p>
+            <a href="https://www.npmjs.com">Are some examples to find these</a>
+            <a href="./Images/npmInstalNodeJs.png"></a>
+            <a href="./Images/usedNPMpackageNodeJS.png"></a>
+            <a href="./Images/addNPM.png"></a>
+            <h3>JSON file</h3>
+            <p>In order for NPMS to be usable when we clone the file on GIT, we will need a JSON folder. To get a JSON folder simply type npm init for step for step, or npm init -y. Remember to make it in the root. Once we push onto git and we don't push the modules, we can clone the repository, and in the terminal, if there is a json, we can type "npm instll" and this will let us now to use all the modules that are in the JSON file.</p>
+            <h3>Git ignore</h3>
+            <p>When we create our files, we want to use gitignore so that we aren't sending over our modules to git since this is not needed. Insode that file we want to /nameOfFileToIgnore so that it is ingored when we git it over. File will be called gitignore. Then Git Init on the terminal. Git add . . Git Commit -m. Then paste the code you got from gitHub. How does this work if we want to open the file again without the modules? Clone the file, and then run NPM install. Since we have the Json file, this will give us the right modules.</p>
+            <h3>Dev dependency</h3>
+            <p>When we use node, we will instal it as NPM i nodemon -D. This will save it was a dev dependency on the JSON since in production they won't need node, we use it to make quiality of life better only for us. After that we go to the script under the JSON. After the script we can just do NPM start now to run the code instead of the previous node fileName.js method. However, for nodemon, we can use "dev": "nodemon app.js" under the script section, and then run "npm run dev", which causes nodemon to watch ourfiles, similar to liveserver. To stop nodemon, use command C</p>
+            <img src="/Images/jsonScriptNodeJS.png" alt="">
+            <img src="./Images/nodemonNodeJs.png" alt="">
+            <h3>What does it mean when we say JS is synchonrous and single threaded</h3>
+            <p>This means it read it line by line, an interesting way to test time is to use console.log.time() and then console.timeEnd() and this will tell you how fast it reached the first time, to the end time.</p>
+            <h3>Example of offloading</h3>
+            <p>Set timeout is a great example of offloading content, the program makes the timeout wait until the immediate tasks are completed, and this is because timeout and setinterval and others are asynchronous.</p>
+            <img src="./Images/offloadingNodeJS.png" alt="">
+            <h3>How to make asynch look better </h3>
+            <p>One way we can make asycnh look better is with promises and asycnh await. We moved the messy asycnh inside the promise. Note in this example, we used the path as a variable. But this isn't that imporatant, asycnh await is much more better and explained later. </p>
+            <img src="./Images/messyasynch.png" alt="">
+            <img src="./Images/promiseAsycnheNodeJS.png" alt="">
+            <h3>Promisfy with Asycnh Wait</h3>
+            <p>Promisfy is inside the node module and must be required. We can either add the dot promises at the end of the files, or we can create new variables and use util.promisfy. Remember for write file if not data is there, it will create the file and add it. Try catch needed to log if an error occurs. Asynch is a special keyword that lets the use of await.</p>
+            <img src="./Images/nodePromisfyLongNodeJS.png" alt="">
+            <img src="./Images/nodePromisfyshorterNodeJS.png" alt="">
+            <img src="./Images/practicalUseOfAPIandAsyncWait.png" alt="">
+            <h3>Event Emitters</h3>
+            <p>A lot of built in modules use event emitters. Used heavily in node JS. Users hovering over links or buttons. The flow of the program depends on the events that happen.</p>
+            <img src="./Images/eventEmitterNodeJS.png" alt="">
+            <h3>Streams</h3>
+            <p>Large sources or continuing data. four main types, read, write, duplex (read and write) and transform where data can be modified while reading or writing.</p>
+            <h3>Read File</h3>
+            <p>One power https://github.com/john-smilga/node-express-course.gitof read file is that we can store the data and paste it onto the local server. readFileSynch vs readFile is that readFile needs a callback.</p>
+            <img src="/Images/pastingInfoOnFIleToServer.png" alt="">
+            <h3>Stream Chunks</h3>
+            <p>Instead of sending large txt files that send data at once, we can send it as chunks. This can be done with streams. Pipe method is what let's us change the readable stream into a writeable stream.</p>
+            <img src="./Images/sendingChunksNodeJs.png" alt="">
+            <h3>What is express?</h3>
+            <p>Express is built upon http module, and makes creating servers much more easier.</p>
+            <h3>Meta data about the server response</h3>
+            <p>A new method will be res.writeHead, which uses a status code (200 being successful) within the create server. Next is contact type,tells the browser, we are sending back html, css, imge, how to render that contact.This is done using key value pairs.</p>
+            <img src="./Images/mimeTypesNodeJs.png" alt="">
+            <h3>Simple server check</h3>
+            <p>As before, we can check the url and test to see if the data is there, if not, we can now give  404 error code with text error. We can also use styles and JS but we would need to check for  the url of each one if we are just using http for checks, express will fix this issue.</p>
+            <img src="/Images/simpleServerSetUpNodeJS.png" alt="">
+            <img src="./Images/serverWithSimpleIndexHTMLNodeJS.png" alt="">
+            <img src="./Images/serverSetUptoCSS:JSwithJustHTTPNodeJS.png" alt="">
+            <h3>Installing Express</h3>
+            <p>To install express we have to run npm instal express, and to instal a previous updated one, we can run npm install expess@4.17.1. Note that express is a function, so we declare it as a function but also assign it.</p>
+            <img src="./Images/basicExpress.png" alt="">
+            <h3>How express starts to make things easier with using css/js/svg</h3>
+            <p> How to get all the css/js/svg to work, common practice is making a folder named public all files will be moved there. We don't need to make any status or content types, express takes care of it all. Use and express explained later. Statics are files the server doesn't need to change, like images or servers. However, what's better is that we don't even really need to add the sendFile module with the weird __dirname things, we can just drop the index.html into the public folder and it will work the same.</p>
+            <img src="./Images/gettingFilesWithExpress.png" alt="">
+            <img src="./Images/notNeedForSendFileExpress.png" alt="">
+            <h3>API vs SSR</h3>
+            <p>API in express setting up http interfance to interact with interface. SSR we will send templates and we will send entire html, js, and css. However, if you understand API, ssr should be easy to grasp. API server provides the data. Somestimes we don't want to use all the data in the api, so we can use map to create a new array with only the info we want. The first image is an example of a very simple API. The second image we exported the data with {} in the data file. Then destructure. Third image is only when we want a miniaml response instead of sending all data, like review or descriptions. Note in the images we do .json and .send, they functionally do about the same.</p>
+            <img src="./Images/basicAPIExpress.png" alt="">
+            <img src="./Images/apiWithDataInVSCode.png" alt="">
+            <img src="./Images/usePartofAnAPIExpress.png" alt="">
+            <h3>Hard Parameters</h3>
+            <p>If we wanted to find one product, we can hard code each item like in the first image. But this is a nuclear approach since this can work with 1-4 products, but if we have over 100, this can get messy. This is more theory, the next section on route parameters is much better.</p>
+            <img src="./Images/oneProductNuclear.png" alt="">
+            <h3>Route Parameters</h3>
+            <p>Where we set up the route, we do /:whateverNameWeWant.In this instance we had to use Number since the data had the ID as a number, otherwise we could have just passed in the string. Used when there a lot of other options, and in situations where items have unique characteristics. Using req.params and console.log it we can get a lot of useful properties and methods. Number(ProductId) replace the number 1 of the hard code method, but in this case will find each number and not just 1. Req.params is always use for the route paramters.</p>
+            <img src="./Images/routeParameterExpress.png" alt="">
+            <img src="./Images/ifRouteDoesNotExist.png" alt="">
+            <h3>Query String Parameter/URL parameters</h3>
+            <p>Small amount of info to the server using the URL. Look at the URL, anything after the ? specific info on the data requested.Here we use limit, but search works too, and search=a&limit=2. Filter query data, etc, that's on us to decide. In this example, the URL uses search which just brings up anything that starts with a.This example is specific for if we decide to use search or limit query. The other image is for when the code works, but no product was found to match the search.</p>
+            <img src="./Images/querySelectorWithLimitExpress.png" alt="">
+            <img src="./Images/workingURLParaNOProductFound.png" alt="">
+            <h3>Cannot set headers after they are sent</h3>
+            <p>If we get this error, look at your returns, what happens is if we use res.status more than once in a block of code, it causes express to freak out, correct it by using returns.</p>
+            <h3>MiddleWare in Express</h3>
+            <p>Functions that execute during the request to the server. Before we simply did a reqeust and then a response. Now we will have a middle poriton between the two. One issue we can come accross is that for the first image, this can work, but for this to work for the about URL, we would need to copy and paste the same four lines of code, this is not needed. When we work with middleware, we must pass it on onto another middleware or terminating it. The next image is a simple middle ware example, req, res, and next are handled with express, and we must always use a next to pass it on, or a res.send. The middleware is placed in between each path, note we missed the logger in the about URL. What better though would be to create a new file called logger and then export it like normal. An even better approach is to create a new file, nd then use app.use which acts as a special method just for middleware. We just need to define all URL parameters we want to match. We can create routes, if we used app.use("/api",logger) this works for all routes, generic route.</p>
+            <img src="./Images/pitFallOfRoutes.png" alt="">
+            <img src="./Images/simpleMiddleWare.png" alt="">
+            <img src="./Images/appUse.png" alt="">
+            <h3>More complex middleware</h3>
+            <p>To use more than one middleware, we must use bracket notation inside the app.use method. The second image shows it's importance, here, now any URL parameter we have that has ?user=john, we get specifc things related to John only. Any of the routes we can access to that user. </p>
+            <img src="./Images/doubleMiddleWare.png" alt="">
+            <img src="./Images/whyIsItImportant.png" alt="">
+            <h3>Middleware options</h3>
+            <p>Are main options for middleware is our own, express, and third party middleware. One of the most popular one is morgan NPM. Remember that third party ones would need an install.</p>
+            <h3>Maniuplating data</h3>
+            <p>The first image is the use of express built in middleware on a folder that we have created before. For Post, we can't just do a post action, we need to use a tool called postman or insomia, or we can set up a working app. For this example, this will be seen in working HTML. Method is post, action is where it's going to be sent. Marks the URL on the server. In the second image, the issue we have is that there is not route. First fix is to make one, with the use of post method, not get. Next issue, we have no way to get this data, to get the data, we have to use a middleware, seen with urlextended with extended false flag. And lastly with this way, we can also check to see if a name was given, note though, this could have been done with front end.</p>
+            <img src="./Images/middleWareOnPage.png" alt="">
+            <img src="./Images/postHTMLExpress.png" alt="">
+            <img src="./Images/pathForPost.png" alt="">
+            <img src="./Images/parseMiddleWareData.png" alt="">
+            <img src="./Images/optionToCheckNameGivenMiddlware.png" alt="">
+            <h3>Post with Javascript</h3>
+            <p>This first example has the post method done with javascript and uses the help of axios.Though major problem in set up, if we need to create  frontend for every route, the production is going to take very long. Better option will be to use Postman, which tests for APIs.</p>
+            <img src="./Images/JSPostExpress.png" alt="">
+            <img src="./Images/middleWareJSPostExample.png" alt="">
+            <h3>Postman Use</h3>
+            <p>Postman is a neat tool that tests for URLs. To create  check, we click on the + found where the mouse is over, and then enter the localhost url and path we want to check. Intead of building a full front end to test, we can just use postman. For post, we can text by going under the body, then raw, then JSON text.</p>
+            <img src="./Images/postmanBasicCheck.png" alt="">
+            <img src="./Images/postManPostTest.png" alt="">
+            <h3>Put/delete Method</h3>
+            <p>Made for modyfying the data. When we send a put, if the body exists, something to update. Two things we want, the value of the params, IE the value we added on. Update we need to send something to the body. Note the console log of 1 peter. Where 1 is the ID and the value is peter. Both delete and put are very similar and typically copy and paste most of it. Big difference is that at the end we will use a filter not a map. </p>
+            <img src="./Images/putAndPostMan.png" alt="">
+            <h3>Express</h3>
+            <p>Express lets us group many routes ti help break up the code from being too long with all these routes. Common convention is to create a new folder under the correct CD main, and naming it routes. The first require is for the route of the files you created. The app.use is the middleware, which creates the path. </p>
+            <img src="./Images/expressRouters.png" alt="">
+            <img src="./Images/controllersExpress.png" alt="">
+            <img src="./Images/filesForControllExpress.png" alt="">
+            <h3>Task Manager API</h3>
+            <p>Goals here are to set up and connect to cloud database. A use CRUD on our data, cread read update and delete. We use patch instead of out this time for updates. The Router.route think of that as we are going to use the "variable" defined in the main JS with app.use("/api/v1/...") </p>
+            <img src="./Images/taskManagerStart.png" alt="">
+            <p>We then follow up with </p>
+            <img src="./Images/chainingRequests.png" alt="">
+            <h3>Create files for controllers and routes</h3>
+            <p>Typically, large files can be organized with the use of controllers and routes folders. Routes are folders that pretty much will always have the controllers and get.post.delete routes. Controllers with typically have the function names, controllers holds all the logic, we can in theory have the logic all in the routes, but it will get messy. We are simply writing the req and res of the route section again, remember to export it and require it in the route folder.</p>
+            <img src="./Images/ControllersPurpose.png" alt="">
+            <h3>Reminder on what request does what</h3>
+            <p>Get can get all tasks or one. Post can create a new one, delete deletes, patch updtaes tasks. For upate, delete, and single task get we will use a route paramter</p>
+            <h3>What is REST API?</h3>
+            <p>HTTP interface so other apps can interact with our data. Representation state transfer, most popular API desing pattern. Determines what the API looks like, a pattern, no strictly enforced.</p>
+            <img src="./Images/CommonRestAPI.png" alt="">
+            <h3>MongoDB</h3>
+            <p>
+                <img src="./Images/connectoMongo.png" alt="">
+                <img src="./Images/ConnectToDriver.png" alt="">
+                <img src="./Images/copyMango.png" alt="">
+                <img src="./Images/addingMangoToVS.png" alt="">
+                <img src="./Images/getToCollectionMongo.png" alt="">
+                <img src="./Images/SelectCollection.png" alt="">
+                <img src="./Images/insertData.png" alt="">
+            </p>
+            <h3>Connect database from the server</h3>
+            <p>Object Data modeling library, a way to ger this done with Mongoose. It comes with a lot of things that make Development faster. Install with npm install mongoose. Second step is to set up a connection. Add it onto the man made DS folder, above the connection string we pasted earlier. We named it 3-task manager in this instance. One issue I notice was that the cluster password is different from your user password you made to create the account, this password is important since without it you won't be able to connect to your database when you pass the string along. After you copy and pasted the link, we need to require mongoose on the DB, using the right password and projectName. Afterwards, we can use the method of connect to crete the two, with the variable of the link string, and a then catch since this is a promise. Lastly, on the main app, we can require it without a variable and it will be automatically called. <code>require('./DB/ConnectJS');
+            </code></p>
+            <img src="./Images/mongooseWithOutPassRemoval.png" alt="">
+            <img src="./Images/MongooseNameAdd.png" alt="">
+            <img src="./Images/finalMongooseConnetion.png" alt="">
+            <img src="./Images/ConnectingWorks.png" alt="">
+            <h3>Running DB before server</h3>
+            <p>One issue is that we should really check if the server is up first, if it is then run the server. The first image has the code rewritten as a function, which now be exported and imported. Once imported, we create a new function called start, and we set it up as asynch wait since it is a promise. Lastly, we move the server after the try of the DB variable, and if that's ok, then it will run the server listen. Lastly the function is called.</p>
+            <img src="./Images/connectFirstPart1.png" alt="">
+            <img src="./Images/connectFirstPart2png.png" alt="">
+            <img src="./Images/connectFirstPart3.png" alt="">
+            <h3>Holding our secrets before push</h3>
+            <p>All projects hve the potential to have our secrets, to prevent this we need to create a .env file and use a package called dotenv, also make sure gitingnore is ignoring .env. Here we take that secret snippet and have it as just code, not quatation marks in the ENV under some variable name. After which, under the DB we want to remove the secret code as well as the connect variable and use URL.</p>
+            <img src="./Images/envVariable.png" alt="">
+            <img src="./Images/removeOldScript.png" alt="">
+            <img src="./Images/replaceWithURL.png" alt="">
+            <h3>Require ENV</h3>
+            <p>To require ENV we need to simply call the require, no need with variable with a .config method. Next in the are where we simply called the DB in the require, we add the paramater of the ENV by first doing process.env.(Varibale Name) that we defined in the ENV file</p>
+            <h3>What does Schema do?</h3>
+            <p>Schema does the structure of our data. It does not make sense to be able to add an array of colors in a book data, this prevents that. We will create a new folder and file called models. Then we will create this simple set up.</p>
+            <img src="./Images/basicSchema.png" alt="">
+            <h3>What a model?</h3>
+            <p>Representation for the collection. A model is a wrapper for the schema. The model gives the interface to the data. The model looks for two things, the name and then the schema.After this, we can use it in our controllers.</p>
+            <img src="./Images/exportModel.png" alt="">
+    </div>
 
         </section>
         </section>
