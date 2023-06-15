@@ -48,6 +48,43 @@
         <section id="HTML" class="section__HTML section">
             <h2>HTML</h2>
             <div class="html__container">
+                <h3>Forms</h3>
+                <p>Creating forms we will start with the first image.The action tells us the URL for where to send the data, eventually the backend will be added here. The method tells us which HTTP request we want, POST or GET</p>
+                <img src="./Images/basicFormStart.png" alt="">
+                <p>Next we want to add our form controls. One of the most popular and versatile being input. Input we can add all types of info, but all inputs should have a label. Eventually, under the input we will also add a name attribute. The name attribute tells the backend what each data represents.</p>
+                <img src="./Images/formLabel.png" alt="">
+                <p>Lastly, we can create special buttons that all make user experience with forms easier. With the types being submit, reset, and button(generic button used anywhere else on the site).</p>
+                <h3>Grouping Forms</h3>
+                <p>Sometimes we want to group similar things to make the UI and code look readable. We can use fieldsets for that. However, ss you can see in the examples, it's common practice to wrap a label and its widget with a li element within a ul or ol list, or even with a div or p. The second image just shows how we can use divs to separate, but ps could have been fine too.</p>
+                <img src="./Images/fieldSet.png" alt="">
+                <img src="./Images/formpDIV.png" alt="">
+                <p>Another important text grouping will be legends, which allows the code to look more together.The fieldset element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a fieldset by including a legend element just below the opening fieldset tag. The text content of the legend formally describes the purpose of the fieldset it is included inside.</p>
+                <img src="./Images/formLegend.png" alt="">
+                <h3>Form styles</h3>
+                <p>Styling forms can be hard and tricky. First we need to make sure they are inheriting the parent styling, <code>button,
+                    input,
+                    select,
+                    textarea {
+                    font-family: inherit;
+                    font-size: 100%;
+                    }</code> However, some people argue the default looks better, but the choice is yours to make.</p>
+                    <p>Another important "reset" will be to make sure all widgets occupy the same space. <code>input,
+                        textarea,
+                        select,
+                        button {
+                        width: 150px;
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        }</code> this should have all widgets take the same amount of width.</p>
+                    <p>styling the legend uses the positions to move it around. Since a legend will always be included in a fieldset we can set that to relative, and the legend to absolute, and move like that. Also, focus is important, when one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility): </p>
+                <h3>The hard Styles, radios and checkboxes</h3>
+                <p>For these, we want to use appearance none in the css to remove the default look. <code>input[type="checkbox"] {
+                    appearance: none;
+                  }</code></p>
+                  <img src="./Images/checkBoxStyle.png" alt="">
+                  <img src="./Images/hardFormStyle.png" alt="">
+                  <img src="./Images/labelStyleInsteadOfFileINput.png" alt="">
                 <h3>When to use articles?</h3>
                 <p>Articles are stand alone sections. Think of blog posts, newspaper article,a comment or independent gadget. </p>
                 <h3>Removing lists bullet points</h3>
@@ -902,6 +939,8 @@
         <section id="VSCode" class="section__VS section">
             <h2>VS Code</h2>
             <div class="vs__container">
+                <h3>Select same words for edit</h3>
+                <p>We hotkey this to command + d, should select each same word once selected.</p>
                 <h3>How to move code up or down</h3>
                 <p><kbd>option + up or down arrow keys</kbd></p>
                 <h3>How to copy code and paste below</h3>
