@@ -179,3 +179,89 @@ img{
     width: 1000px;
     
 }
+/* grid example */
+
+
+.containerG {
+    display: inline-grid;
+    grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+    background-color: lightblue; 
+  }
+  
+  .room {
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+  }
+  
+  #living-room {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  #kitchen {
+    grid-column: 4 / 6;
+    grid-row: 3 / 6;
+  }
+  
+  #bedroom {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  
+  #bathroom {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  }
+  
+  #closet {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+/* Grid area With name */
+  
+  .containerGT {
+    display: inline-grid;
+    grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+    background-color: lightblue; 
+    grid-template-areas:
+      "living-room living-room living-room living-room living-room"
+      "living-room living-room living-room living-room living-room"
+      "bedroom bedroom bathroom kitchen kitchen"
+      "bedroom bedroom bathroom kitchen kitchen"
+      "closet closet . . ."    
+  }
+  
+  .roomG {
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+  }
+  
+  #living-roomG {
+     grid-area:  living-room;
+  }
+  
+  #kitchenG {
+    grid-area: kitchen;
+  }
+  
+  #bedroomG {
+    grid-area: bedroom;
+  }
+  
+  #bathroomG {
+    grid-area: bathroom;
+  }
+  
+  #closetG {
+    grid-area: closet;
+  }
