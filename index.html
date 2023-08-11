@@ -394,7 +394,13 @@
                     <img src="./Images/gridItemStartPositions.png" alt="">
                     <img src="/Images/gridItemShortHand.png" alt="">
                     <li>
-                        min-max - allows rows and columns to only shrink so much. When using template repeat, we should be setting a min-max to avoid grid blowout.
+                        Max and Min -
+                        Both of these functions will return a value based on the arguments you supply them. min() will return the smallest of all the values passed in, and max() will return the largest. For example, min(100px, 200px) will return a value of 100px every time, while max(100px, 200px) will return a value of 200px every time.
+                    </li>
+                    <li>
+                        min-max - It is a relatively straightforward function that only takes in two arguments:
+                        The minimum size the grid track can be
+                        The maximum size the grid track can be. It allows rows and columns to only shrink so much. When using template repeat, we should be setting a min-max to avoid grid blowout. Unlike min() and max(), it can make sense to use static values for both arguments. Here is an example of the grid we’ve been using written with minmax() and some static values:
                     </li>
                     <img src="./Images/minMaxRepeat.png" alt="">
                 </ul>
@@ -455,6 +461,58 @@
                     In practice if an item only spans one track you can omit the grid-column-end or grid-row-end value. Grid defaults to spanning one track.</p>
                     <img src="./Images/gridShortDefault.png" alt="">
                     <img src="./Images/gridOutcome.png" alt="">
+                    <h3>Responsive Grids</h3>
+                    <p>The most basic way to make our grid items dynamic is by using fractional units, also known as fr. We can also create disproportionate grids by setting different fr repeats. </p>
+                <img src="./Images/dispotFRGrid.png" alt="">
+                <h3>Clamp</h3>
+                <p>Clamp is not limited to grid, but is seen with it. Clamp is saying what is our ideal size, if it reaches that size, keep it that way unless it reaches the min or max values.</p>
+                <img src="./Images/clampExample.png" alt="">
+                <h3>Auto Fit and Auto Fill</h3>
+                <p> You want to give your grid a number of columns that is flexible based on the size of the grid. For example, if our grid is only 200px wide, we may only want one column. If it’s 400px wide, we may want two, and so on. Solving this problem with media queries would be a lot of typing. Thankfully, auto-fit and auto-fill are here to save the day! It will prevent the items in the grid from overflowing. With minmax(), we can tell our grid that we want to have as many columns as possible, using the constraints of our minmax() function to determine each column’s size, without it overflowing our grid. Notice when we resize it, the items will change. </p>
+                <div class="grid-container">
+                    <div class="grid-item">
+                      <p>Odin 1</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 2</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 3</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 4</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 5</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 6</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 7</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 8</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 9</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                    <div class="grid-item">
+                      <p>Odin 10</p>
+                      <img src="https://i.imgur.com/jkwFqfX.png" alt="top logo" />
+                    </div>
+                </div>
+                <h3>Explanation of Auto Fit</h3>
+                <p>Auto fit will return the highest value. First it must know the width, either one we made or the width of the window. Next it sees how many columns can fit into that width, and this is done with the min value of the minmax, lets say it was 150px. If the width was 500px, it will create 3 columns. Once it decides how many to be done, the max value of min max, if it was 1fr, will make sure each one of the columns takes up 1fr of space.</p>
                 <h3>How to select all names in CS code</h3>
                 <p>Use command + d</p>
                 <h3>SVGs</h3>
