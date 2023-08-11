@@ -375,10 +375,12 @@
                         <img src="./Images/gridTemplateAreas.png" alt="">
                         <li>grid-gap - to create gaps, we will use column-gap or row-gap. Grid-column/row-gap will no longer be supported. For a shorthand, you can just use the word gap.</li>
                         <img src="./Images/gridGap.png" alt="">
-                        <li>Align items left to right - with justify items, align items top to bottom with align items. Align self works the same but with the effect of only one items. Place items is the shorthand for both in order of align then justify, just think top first then left and right.</li>
-                        <li>In the event that your items don't fill your full container, like what happens when we use px, we will use justify-content and align content. For shorthand, use place-content.</li>
+                        <li>Left to right movement use justify items, align items top to bottom with align items, for both, use place-items. Align self works the same but with the effect of only one items. Place items is the shorthand for both in order of align then justify, just think top first then left and right.</li>
+                        <img src="./Images/gridStat.png" alt="">
+                        <img src="./Images/gEnd.png" alt="">
+                        <li>In the event that your items don't fill your full container, like what happens when we use px, we will use justify-content and align content. Sometimes the total size of your grid might be less than the size of its grid container. This could happen if all of your grid items are sized with non-flexible units like px. For shorthand, use place-content.</li>
                         <img src="./Images/gridContainerContent.svg" alt="">
-                        <li>Grid-auto-columns/rows - are used when we place an item that's not in our created grid layout. This essentially tell the grid to create these empty spaces with so it can fit in the right spot. Simply put, if we defined only 2 card in a row, and we add another card in the html, it will follow this rule.</li>
+                        <li>Grid-auto-columns/rows - are used when we place an item that's not in our created grid layout. This essentially tell the grid to create these empty spaces with so it can fit in the right spot. Simply put, if we defined only 2 card in a row, and we add another card in the html, it will follow this rule. As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. </li>
                     </ul>
                 </p>
                 <h3>Common Grid Items properties</h3>
@@ -387,6 +389,7 @@
                     <li>
                         grid-column-start/end and grid-row-start/end - these can be a number, where they will start and end given the line, or you can use span and then a number and it will go expand over those grid tracks.
                     </li>
+                    <img src="./Images/spanGrid.png" alt="">
                     <li>justify-self and align self - similar to justify content and align items but with only one item. Place-self sets both.</li>
                     <img src="./Images/gridItemStartPositions.png" alt="">
                     <img src="/Images/gridItemShortHand.png" alt="">
@@ -436,8 +439,7 @@
                     <div class="room" id="closet">Closet</div>
                 </div>
                 <h3>How to position a display Grid with Grid Area.</h3>
-                <p>Grid area can be done in two ways. If we know the start and end for both rows and columns, we can treat grid area as a shorthand for all these. The other way will be to create grid template areas with names, and set the grid-area of the content as the name. We also have the option to use a dot to cover a space for an area we haven't named yet, the example below showcases grid-area with naming.</p>
-                <div></div>
+                <p>Grid area can be done in two ways. If we know the start and end for both rows and columns, we can treat grid area as a shorthand for all these. The other way will be to create grid template areas with names, and set the grid-area of the content as the name. We also have the option to use a dot to cover a space for an area we haven't named yet, the example below showcases grid-area with naming. grid-row-start grid-column-start grid-row-end grid-column-end</p>
                 <img src="./Images/gridAreaShot.png" alt="">
                 <div class="containerGT">
                     <div class="room" id="living-roomG">Living Room</div>
@@ -446,6 +448,13 @@
                     <div class="room" id="bathroomG">Bathroom</div>
                     <div class="room" id="closetG">Closet</div>
                 </div>
+                <h3>Stretching an item across the grid</h3>
+                <p>Setting a grid-column of 1/-1 will set the grid item across the grid.</p>
+                <h3>Default Spans, when we don't have to include ends.</h3>
+                <p>Default spans
+                    In practice if an item only spans one track you can omit the grid-column-end or grid-row-end value. Grid defaults to spanning one track.</p>
+                    <img src="./Images/gridShortDefault.png" alt="">
+                    <img src="./Images/gridOutcome.png" alt="">
                 <h3>How to select all names in CS code</h3>
                 <p>Use command + d</p>
                 <h3>SVGs</h3>
