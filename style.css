@@ -59,11 +59,11 @@ ul{
 .nav__navLink{
     font-size: 1.5em;
     text-decoration: none;
-   
+    
 }
 .nav__navLink-sections{
     position: relative;
- 
+  
 }
 .nav__navLink-sectionLinks{
     display: flex;
