@@ -59,11 +59,9 @@ ul{
 .nav__navLink{
     font-size: 1.5em;
     text-decoration: none;
-   
 }
 .nav__navLink-sections{
     position: relative;
- 
 }
 .nav__navLink-sectionLinks{
     display: flex;
@@ -81,18 +79,16 @@ ul{
     margin: 20px;
     transition: all .2s linear;
     padding: 10px;
-    text-align: center;
-   
-    
+    text-align: center; 
     
 }
 
 .nav_navList-hover:hover .nav__navLink-sectionLinks{
-   opacity: 1;
-   z-index: 2;
+    opacity: 1;
+    z-index: 2;
 }
 .nav__navLink-sectionLink:hover{
-   background-color: var(--5--hoverBG);
+    background-color: var(--5--hoverBG);
 }
 
 
@@ -101,8 +97,7 @@ ul{
     position: static;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width:100%;
+    margin: 50px 0;
     
 }
 .quiz__card{
@@ -169,4 +164,32 @@ ul{
     align-items: center;
     justify-content: center;
     cursor: pointer; 
+}
+
+.quiz__selection{
+    
+
+}
+
+.quiz__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.quiz__item{
+    list-style-type: none;
+    background-color: var(--30--lightBG);
+    color: var(--5-hightLightText);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: linear .2s all;
+}
+
+.quiz__item:hover{
+    background-color: var(--5-hightLightText);
+    color: var(--30--lightBG);
 }
