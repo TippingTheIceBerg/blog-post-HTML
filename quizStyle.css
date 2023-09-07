@@ -166,16 +166,16 @@ ul{
     cursor: pointer; 
 }
 
-.quiz__selection{
+/* .quiz__selection{
     
 
-}
+} */
 
 .quiz__list{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    column-gap: 20px;
 }
 
 .quiz__item{
@@ -185,6 +185,7 @@ ul{
     padding: 20px;
     width: 200px;
     text-align: center;
+
     cursor: pointer;
     transition: linear .2s all;
 }

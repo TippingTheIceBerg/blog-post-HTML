@@ -1,6 +1,6 @@
 {
   "liveServer.settings.port": 5501,
-  "cSpell.words": ["Pseudocode"],
+  "cSpell.words": ["divs", "Pseudocode"],
 
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.formatOnPaste": false, // required
