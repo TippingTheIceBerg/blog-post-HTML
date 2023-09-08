@@ -166,10 +166,7 @@ ul{
     cursor: pointer; 
 }
 
-/* .quiz__selection{
-    
 
-} */
 
 .quiz__list{
     display: flex;
@@ -192,5 +189,9 @@ ul{
 
 .quiz__item:hover{
     background-color: var(--5-hightLightText);
+    color: var(--30--lightBG);
+}
+.quiz__selection--active{
+    background-color:  var(--5-hightLightText); 
     color: var(--30--lightBG);
 }

@@ -59,17 +59,19 @@ let questionText = document.querySelector(".quiz__question");
 let answerText = document.querySelector(".quiz__answer");
 
 // takes the question from the array and displays it
-
+// always starts with the first question of the selected deck
 function showFirstQuestion() {
   questionText.textContent = question[i];
 }
 
 showFirstQuestion();
+// this find the active deck and removes it once another deck is selected.
+let findActiveDeck;
+function removeActiveDeck() {
+  findActiveDeck = document.querySelector(".quiz__selection--active");
+  findActiveDeck.classList.remove("quiz__selection--active");
+}
 
-// click on the flip item to show the answer
-//      1. the content of the question displays first
-//      2. when flipped the questioned must be cleared and the answer shown
-//      3. When clicked again the answer must be cleared and the question shows
 flip.addEventListener("click", () => {
   if (questionText.textContent != "") {
     questionText.textContent = "";
@@ -79,6 +81,7 @@ flip.addEventListener("click", () => {
     questionText.textContent = question[i];
   }
 });
+
 // logic that allows it to go forward, if i is larger than the array, i is subtracted by one, which holds it's place in the array.
 forward.addEventListener("click", () => {
   i++;
@@ -99,35 +102,40 @@ backwards.addEventListener("click", () => {
   questionText.textContent = question[i];
   answerText.textContent = "";
 });
-
+// controls which 'stack' of cards is being active
+// also controls the toggle of active for css style
 selectHTML.addEventListener("click", () => {
   question = htmlQuestions;
   answer = htmlAnswers;
   showFirstQuestion();
+  this.classList.toggle("quiz__selection--active");
+  removeActiveDeck();
 });
 selectCSS.addEventListener("click", () => {
   question = cssQuestions;
   answer = cssAnswers;
   showFirstQuestion();
+  selectCSS.classList.toggle("quiz__selection--active");
+  removeActiveDeck();
 });
 
-selectJS.addEventListener("click", () => {
-  question = jsQuestions;
-  answer = jsAnswers;
-  showFirstQuestion();
-});
-selectVS.addEventListener("click", () => {
-  question = vsQuestions;
-  answer = vsAnswers;
-  showFirstQuestion();
-});
-selectGIT.addEventListener("click", () => {
-  question = gitQuestions;
-  answer = gitAnswers;
-  showFirstQuestion();
-});
-selectRegex.addEventListener("click", () => {
-  question = regexQuestions;
-  answer = regexAnswers;
-  showFirstQuestion();
-});
+// selectJS.addEventListener("click", () => {
+//   question = jsQuestions;
+//   answer = jsAnswers;
+//   showFirstQuestion();
+// });
+// selectVS.addEventListener("click", () => {
+//   question = vsQuestions;
+//   answer = vsAnswers;
+//   showFirstQuestion();
+// });
+// selectGIT.addEventListener("click", () => {
+//   question = gitQuestions;
+//   answer = gitAnswers;
+//   showFirstQuestion();
+// });
+// selectRegex.addEventListener("click", () => {
+//   question = regexQuestions;
+//   answer = regexAnswers;
+//   showFirstQuestion();
+// });
