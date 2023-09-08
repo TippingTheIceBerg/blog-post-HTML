@@ -58,20 +58,6 @@ let backwards = document.querySelector(".quiz__backQuestions-toggle");
 let questionText = document.querySelector(".quiz__question");
 let answerText = document.querySelector(".quiz__answer");
 
-// takes the question from the array and displays it
-// always starts with the first question of the selected deck
-function showFirstQuestion() {
-  questionText.textContent = question[i];
-}
-
-showFirstQuestion();
-// this find the active deck and removes it once another deck is selected.
-let findActiveDeck;
-function removeActiveDeck() {
-  findActiveDeck = document.querySelector(".quiz__selection--active");
-  findActiveDeck.classList.remove("quiz__selection--active");
-}
-
 flip.addEventListener("click", () => {
   if (questionText.textContent != "") {
     questionText.textContent = "";
@@ -102,21 +88,40 @@ backwards.addEventListener("click", () => {
   questionText.textContent = question[i];
   answerText.textContent = "";
 });
+
+// takes the question from the array and displays it
+// always starts with the first question of the selected deck
+function showFirstQuestion() {
+  questionText.textContent = question[i];
+}
+
+showFirstQuestion();
+// this find the active deck and removes it once another deck is selected.
+let findActiveDeck;
+function removeActiveDeck() {
+  findActiveDeck = document.querySelector(".quiz__selection--active");
+  if (findActiveDeck == null) {
+    return;
+  } else {
+    findActiveDeck.classList.remove("quiz__selection--active");
+  }
+}
+
 // controls which 'stack' of cards is being active
 // also controls the toggle of active for css style
 selectHTML.addEventListener("click", () => {
+  removeActiveDeck();
   question = htmlQuestions;
   answer = htmlAnswers;
+  selectHTML.classList.toggle("quiz__selection--active");
   showFirstQuestion();
-  this.classList.toggle("quiz__selection--active");
-  removeActiveDeck();
 });
 selectCSS.addEventListener("click", () => {
+  removeActiveDeck();
   question = cssQuestions;
   answer = cssAnswers;
-  showFirstQuestion();
   selectCSS.classList.toggle("quiz__selection--active");
-  removeActiveDeck();
+  showFirstQuestion();
 });
 
 // selectJS.addEventListener("click", () => {
