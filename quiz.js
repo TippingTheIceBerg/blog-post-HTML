@@ -1,3 +1,8 @@
+// some issues to work on
+// 1. looks weird on safari
+// 2. Questions are not resetting to 1 when each deck click change
+// 3. if you spam a deck, you get overlapping texts sometimes.
+
 let selectHTML = document.querySelector(".quiz__html");
 let selectCSS = document.querySelector(".quiz__css");
 let selectJS = document.querySelector(".quiz__js");
@@ -16,6 +21,7 @@ let htmlQuestions = [
   "What do we need to do to connect a label and input/button together?",
   "If we are grouping sections of a form, what are the best ways to get this done?",
   "In what way can we label a fieldset with a 'title' to group like minded things",
+  "when are articles used in html semantics?",
 ];
 
 let htmlAnswers = [
@@ -25,6 +31,7 @@ let htmlAnswers = [
   "to connect, the label needs a for attribute and the input needs an ID that matches the for of the label.",
   "To group forms, we can separate the form areas with either fieldset, divs, or even p's",
   "We can add a legend, if a legend tagname is included inside a fieldset, the section will be labeled with a heading and be given a border to separate it from other areas.",
+  "Articles are stand alone sections. Think of blog posts, newspaper article,a comment or independent gadget",
 ];
 
 let cssQuestions = [
@@ -33,6 +40,8 @@ let cssQuestions = [
   "What are three original psuedocodes for forms?",
   "how can we style forms so that optional vs required inputs can be styled differently from each other",
   "when styling radios, what way would we select in the css to even select it? ",
+  "If we wanted to target invalid and valid forms, how do we select these?",
+  "What is the way to remove bullet from a list?",
 ];
 
 let cssAnswers = [
@@ -41,6 +50,8 @@ let cssAnswers = [
   "three original pseudo codes for forms will be hover, focus, and active.",
   "setting the pseudocode input:required and input:optional will allow you to style the different requirements differently if needed.",
   "selecting the proper css, we need to select as input[type='radio']::before, remember to set a content otherwise it won't work.",
+  "we will use pseudocode input:valid or input:invalid",
+  "remember to select either the class that aligns with li or select li directly and then style it as list-style:none.",
 ];
 
 question = htmlQuestions;

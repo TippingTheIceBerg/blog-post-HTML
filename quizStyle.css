@@ -107,6 +107,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
 }
 
@@ -114,14 +115,18 @@ ul{
     text-align: center;
     font-size: 2em;
     line-height:1.2;
-    padding: 4px;
     position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
 }
 .quiz__answer{
     position: absolute;
     text-align: center;
     font-size: 2em;
     line-height:1.2;
+    justify-content: center;
+    align-items: center;
     padding: 4px;
 }
 
