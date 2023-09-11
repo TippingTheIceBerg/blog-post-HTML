@@ -1,7 +1,5 @@
 // some issues to work on
 // 1. looks weird on safari
-// 2. Questions are not resetting to 1 when each deck click change
-// 3. if you spam a deck, you get overlapping texts sometimes.
 
 let selectHTML = document.querySelector(".quiz__html");
 let selectCSS = document.querySelector(".quiz__css");
@@ -42,6 +40,7 @@ let cssQuestions = [
   "when styling radios, what way would we select in the css to even select it? ",
   "If we wanted to target invalid and valid forms, how do we select these?",
   "What is the way to remove bullet from a list?",
+  "If we wanted to animate an 'idle' state of a list, how will we select this?",
 ];
 
 let cssAnswers = [
@@ -52,6 +51,7 @@ let cssAnswers = [
   "selecting the proper css, we need to select as input[type='radio']::before, remember to set a content otherwise it won't work.",
   "we will use pseudocode input:valid or input:invalid",
   "remember to select either the class that aligns with li or select li directly and then style it as list-style:none.",
+  "an idle state animation will require us to select input[type='radio']:indeterminate then add an animation to it, remember to set the keyframes for the animation as well.",
 ];
 
 question = htmlQuestions;
@@ -102,11 +102,13 @@ backwards.addEventListener("click", () => {
 
 // takes the question from the array and displays it
 // always starts with the first question of the selected deck
-function showFirstQuestion() {
+function showFirstQuestion(question) {
+  i = 0;
   questionText.textContent = question[i];
+  answerText.textContent = "";
 }
 
-showFirstQuestion();
+showFirstQuestion(htmlQuestions);
 // this find the active deck and removes it once another deck is selected.
 let findActiveDeck;
 function removeActiveDeck() {
@@ -125,14 +127,14 @@ selectHTML.addEventListener("click", () => {
   question = htmlQuestions;
   answer = htmlAnswers;
   selectHTML.classList.toggle("quiz__selection--active");
-  showFirstQuestion();
+  showFirstQuestion(htmlQuestions);
 });
 selectCSS.addEventListener("click", () => {
   removeActiveDeck();
   question = cssQuestions;
   answer = cssAnswers;
   selectCSS.classList.toggle("quiz__selection--active");
-  showFirstQuestion();
+  showFirstQuestion(cssQuestions);
 });
 
 // selectJS.addEventListener("click", () => {
