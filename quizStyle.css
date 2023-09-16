@@ -200,3 +200,16 @@ ul{
     background-color:  var(--5-hightLightText); 
     color: var(--30--lightBG);
 }
+.cardNumber__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+}
+input[type="number"]{
+    width: 100px;
+    text-align: center;
+}
