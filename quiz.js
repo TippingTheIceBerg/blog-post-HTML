@@ -29,6 +29,9 @@ let htmlQuestions = [
   "What can you do to allow links to open a new link when clicking on links?",
   "How can we create a dropdown select?",
   "What attribute will allow images to load later if the page is running slow? Hint, not lazy loading",
+  "What is the purpose of a framework",
+  "What is the purpose of a preprocessor and examples",
+  "What are pseudo classes?",
 ];
 
 let htmlAnswers = [
@@ -48,6 +51,10 @@ let htmlAnswers = [
   "add a target='_blank' to the link and a new tab will open ",
   "We can create a dropdown with select and inside with option <select> <option> --Make a choice--</option> <option value='someValue'> </option> </select>",
   "decoding:'async' will allow images to load later if the page is slow.",
+  "a framework is made to cut down on common issues, common ones are tailwind and bootstrap",
+  "LESS,SASS and stylus fall under these, these are pretty much adding extra functionality that can be helpful",
+  "Classes have colons and act as a class and is a selector, like first child, or hover. ",
+  ,
 ];
 
 let cssQuestions = [
@@ -62,6 +69,13 @@ let cssQuestions = [
   "What's the best way to control and mess around with transforms and box-shadows?",
   "For interesting shapes, what site can we use?",
   "How do we center with position absolute ",
+  "If a background image is not in the position you want, what can you do?",
+  "if we want to set a turn away from user effect, what can we do?",
+  "Structural pseudo-classes are a way to add complexity of selection,li:nth-child(__) will be every increment of 3, ___ is every odd, __ is every even,li:nth-child(___) is every 4 but starting at 7. ",
+  "How do we think of min and max in css?",
+  "Whats the difference between rem and bem?",
+  "What's the common mobile and small desktop screen sizes?",
+  "How do we decide on border colors?",
 ];
 
 let cssAnswers = [
@@ -75,6 +89,14 @@ let cssAnswers = [
   "an idle state animation will require us to select input[type='radio']:indeterminate then add an animation to it, remember to set the keyframes for the animation as well.",
   "transforms and box-shadows can be manipulated under the css elements under chrome. ",
   "funky shapes can be made 'haikei' a site that can allow us to make lots of things.",
+  "you can center with left :50%, top: 50%; translate: transform(-50%,-50%) OR we can do inset:0; margin: auto.",
+  "you can add a px based + center,cover,left etc to mess around ie -150px center.",
+  "select the parent element of whatever you want tilted away and set a perspective: 1000px, this will tilt the image away with a rotate: x 35deg",
+  "3n, 2n+1, 2n, 4n+7",
+  "Both seem similar but think of it like this, if you make the page larger, max will grow it, and when moved smaller it will eventually lock. If using min, when grown will lock eventually, but when shrinking, will change.",
+  "We will almost always prefer to use REM, REM is based off the root. Em is based on the PARENT font size.",
+  "Common screen sizes @media only screen and (min-width:0em) Mobile @media only screen and (min-width:64em) Small Desktop",
+  "Choosing a border the color of the main text seems best, choose your color and lower the opacity until you get the desire color.",
 ];
 
 question = htmlQuestions;
@@ -177,6 +199,30 @@ function getDeckLength(num) {
 function getDeckPosition(position) {
   positionInDeck.value = position + 1;
 }
+// ability to jump the deck based on the user input of number.
+// when the user enters a number, it should correspond to the card in the deck
+// numbers can't be smaller than 1 or larger than the deck length, will change red to show some error
+positionInDeck.addEventListener("change", () => {
+  if (Number(positionInDeck.value) <= 0) {
+    i = 0;
+    positionInDeck.value = 1;
+    questionText.textContent = question[0];
+    answerText.textContent = "";
+    console.log(i, "less or 0");
+  }
+  if (Number(positionInDeck.value) >= question.length) {
+    positionInDeck.value = question.length;
+    questionText.textContent = question[question.length - 1];
+    answerText.textContent = "";
+    i = question.length - 1;
+    console.log(i, "more than length");
+  } else {
+    i = Number(positionInDeck.value) - 1;
+    questionText.textContent = question[i];
+    answerText.textContent = "";
+    console.log(i, "other");
+  }
+});
 
 // selectJS.addEventListener("click", () => {
 //   question = jsQuestions;
