@@ -32,6 +32,9 @@ let htmlQuestions = [
   "What is the purpose of a framework",
   "What is the purpose of a preprocessor and examples",
   "What are pseudo classes?",
+  "What is a way we can add responsive images with html only?",
+  "If we highlight a word, how do we select all those mentions of the highlighted word?",
+  "What are SVGs?",
 ];
 
 let htmlAnswers = [
@@ -54,7 +57,9 @@ let htmlAnswers = [
   "a framework is made to cut down on common issues, common ones are tailwind and bootstrap",
   "LESS,SASS and stylus fall under these, these are pretty much adding extra functionality that can be helpful",
   "Classes have colons and act as a class and is a selector, like first child, or hover. ",
-  ,
+  " By using picture with a source with a fall back img we can create a responsive design. To see this, look at the CSS heading 'Add pseudo to images and choosing images based on mobile vs desktop viewing'",
+  "Command + d",
+  "Scalable vectors graphs. These are highly scalable and don't lost quality with size changes.since they are defined by math, not any grids or pixels.",
 ];
 
 let cssQuestions = [
@@ -76,6 +81,41 @@ let cssQuestions = [
   "Whats the difference between rem and bem?",
   "What's the common mobile and small desktop screen sizes?",
   "How do we decide on border colors?",
+  "What's the difference in background size vs background position?",
+  "How do you choose a sites colors?",
+  "What's a good default img setting?",
+  "What are four low cost animations?",
+  "What is a site that has pre-created css styles animations",
+  "What is the importance of border-box?",
+  "If a box has a height and width of 100px, tell me what the height and width will be with and without border box if we add 10px of padding.",
+  "What is the difference in outer displays and inner displays?",
+  "How many outer display types are there?",
+  "  ____ will take up its own line, it will take up the full width of the container, and border,margin, and padding will push things away from it.  ___ .A new line won't be made, height and width won't apply, only horizontal padding,margins, and border will push things away.",
+  "Does padding take negative or positive values?",
+  "Since ____ does not effect inline elements like __ and ___, using ___ allows us to make sure these don't form on a new line, but allows us to apply padding,height,width, and does now all overlapping",
+  "How do we apply horizontal centering, and what are the requirements?",
+  "What's the difference in space-around and space-evenly and space-between?",
+  "What axis does align-items operates in?",
+  "When a flex items is not taken up as much space as you would like, try giving it a __, this causes the item to not grow smaller.",
+  "What does Flex-Wrap do?",
+  "If we want to align individual items in a flex, like the children of a flex parent, how will we move things on their own?",
+  "What's the best line-height for reading?",
+  "What are some examples where the pseudocode of before and after won't work?",
+  "In some designs you will have things overlap, in order to remove interference in clickable events, simply use __.  ",
+  "For display grid, how would we repeat columns/rows if we want 3 that take up 1fr each?",
+  "How goes grid areas work?",
+  "Where is justify items used, and what does it do?",
+  "Grid-auto-columns/rows purpose is what?",
+  "What are other ways we can define row and grid placement?",
+  "How do we control item placement, children inside a parent grid?",
+  "When using repeat in grid, what is a good practice for sizes?",
+  "We can create a shorthand for both the rows and columns with simply calling ___. Give us 2 rows and 3 columns.",
+  "If we know the start and end for both rows and columns, we can treat ___ as a shorthand for all these. ",
+  "If we are performing a grid-column-start, and omit an end, what happens?",
+  "Is this valid code? grid-template-columns: repeat(2,2fr) repeat(2,1fr)",
+  " ___ is saying what is our ideal size, if it reaches that size, keep it that way unless it reaches the min or max values.",
+  "with ___, we can tell our grid that we want to have as many columns as possible, using the constraints of our ___ to determine each column's size, without it overflowing our grid.  ",
+  "How does auto-fit work in grids?",
 ];
 
 let cssAnswers = [
@@ -97,6 +137,54 @@ let cssAnswers = [
   "We will almost always prefer to use REM, REM is based off the root. Em is based on the PARENT font size.",
   "Common screen sizes @media only screen and (min-width:0em) Mobile @media only screen and (min-width:64em) Small Desktop",
   "Choosing a border the color of the main text seems best, choose your color and lower the opacity until you get the desire color.",
+  "Background size controls how large you want it, with contain being the actual size without a crop while cover will try to cover everything.Background-position has to do with where you want the img to be viewed, this is the one where you use center,left,right,etc",
+  "a lighter shade works more for fresh energy brands, while darker ones are more for corporate serious brands. Most sites use three colors, gray, light gray, and white. The gray is a darker gray used for texts.The main color, or the color you decide as your site color, will be for icons and large areas.  The accent color for buttons and smaller areas, call to action areas.",
+  "Setting a height and width on the HTML is a good start to take up white space. Next set the height to auto, and if not decided, max-width: 100%;",
+  "Position - transform: translate(npx,npx), Scale - transform: scale(n), Rotation - transform: rotate(ndeg), Opacity - opacity: 0...1",
+  "We can find some popular animation at animista.",
+  "The purpose of border-box involves the box model, where the padding and border are included in the height of the element.",
+  "Without border box the box will now have 120px of height and width. With border box the height and width stays at 100px",
+  "inner display type determines how the boxes inside the element behave while the outer display type dictates how the box will display alongside other elements ",
+  "There are only two outer displays, inline and block. ",
+  "block and inline",
+  "Padding does not take negative values",
+  "padding, a, span, inline-block",
+  "For this to work, you need a defined width.Then set margin as margin: 0 auto.",
+  "space around causes the space on the left and right the same, Space-evenly causes all spaces to be even, including the end points,Space between makes sure that each space between them are laid out evenly, but end points are pushed to the edge.",
+  "align-items works by placing items on the cross axis, which is typically vertical. ",
+  "flex-shrink of 0",
+  "Flex wrap allows us to negate the shrinking ability of flex to fit on a line that too small for the container.Instead it will force the object to form a new line.Two properties of flex-wrap will be nowrap and wrap. If wrap a new line will be formed, by default it is set to no wrap, if space isn't available, it will scale down and not form a new line",
+  "align effects one item on the flex container, justify-content does not have a similar method, we simply need to margin-left:auto;. This forces the flex items to push all the way to the right if space is available for example.",
+  "1.5 without any units",
+  "Things that are NOT containers such as inputs,buttons,imgs,etc",
+  "pointer-events",
+  "grid-template-rows: repeat(3,1fr)",
+  "Grid-template-areas is given to main container, and we set the names of the grid-area as the name we want to have the main container take. If a name is not present/wanted, we can use a dot.",
+  "justify items is used on display grid of the container,",
+  "if we defined only 2 card in a row, and we add another card in the html, it will follow this rule. As you position some items, other items on the grid will continue to be laid out using the auto-placement rules.",
+  "grid-column-start/end and grid-row-start/end - these can be a number, where they will start and end given the line, or you can use span and then a number and it will go expand over those grid tracks. Done as grid-column: 1 or grid-row: 1/ span 2;",
+  "self: justify-self, align-self, and place-self(both align and justify)",
+  "When we use repeat, we set the size as minxmax(10px, 1fr)",
+  "grid-template: 50px 50px/ 50px 50px 50px",
+  "grid area: 1 / 1 / 3 /6",
+  "In practice if an item only spans one track you can omit the grid-column-end or grid-row-end value. Grid defaults to spanning one track. ",
+  "Yes, the most basic way to make our grid items dynamic is by using fractional units, also known as fr. We can also create disproportionate grids by setting different fr repeats.",
+  "Clamp",
+  "grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)), and we should set an overflow: auto to allow the adjustable size",
+  "Auto fit will return the highest value. First it must know the width, either one we made or the width of the window. Next it sees how many columns can fit into that width, and this is done with the min value of the minmax, lets say it was 150px. If the width was 500px, it will create 3 columns. Once it decides how many to be done, the max value of min max, if it was 1fr, will make sure each one of the columns takes up 1fr of space.",
+];
+
+let jsQuestions = [
+  "How many ways can JS code be organized?",
+  "Create a simple intersection observer with options.",
+  "if we create an option for intersection observer, what options do we have?",
+  "Define what does threshold and rootMargin do in intersection observer",
+];
+let jsAnswers = [
+  "Plain Old JavaScript Objects and Object Constructors, Factory Functions and the Module Pattern ,Classes,and ES6 Modules",
+  " let options = {}; let observer = new IntersectionObserver function(entries) {entries.forEach(entry => {console.log('test')})})",
+  "Root, threshold, and rootMargin",
+  "threshold - is a  0 to 1 scale.  0 is when any piece of the section is in view, while 1 is when 100% of the section is visible. rootMargin - works like margins in CSS. If wanted, it must be in parenthesis and must be in either percentage or px base. Dictates when it's fired.",
 ];
 
 question = htmlQuestions;
@@ -192,6 +280,15 @@ selectCSS.addEventListener("click", () => {
   getDeckPosition(0);
 });
 
+selectJS.addEventListener("click", () => {
+  removeActiveDeck();
+  question = jsQuestions;
+  answer = jsAnswers;
+  selectJS.classList.toggle("quiz__selection--active");
+  showFirstQuestion(jsQuestions);
+  getDeckPosition(0);
+});
+
 function getDeckLength(num) {
   totalLengthOfDeck.value = num + 1;
 }
@@ -208,27 +305,19 @@ positionInDeck.addEventListener("change", () => {
     positionInDeck.value = 1;
     questionText.textContent = question[0];
     answerText.textContent = "";
-    console.log(i, "less or 0");
   }
   if (Number(positionInDeck.value) >= question.length) {
     positionInDeck.value = question.length;
     questionText.textContent = question[question.length - 1];
     answerText.textContent = "";
     i = question.length - 1;
-    console.log(i, "more than length");
   } else {
     i = Number(positionInDeck.value) - 1;
     questionText.textContent = question[i];
     answerText.textContent = "";
-    console.log(i, "other");
   }
 });
 
-// selectJS.addEventListener("click", () => {
-//   question = jsQuestions;
-//   answer = jsAnswers;
-//   showFirstQuestion();
-// });
 // selectVS.addEventListener("click", () => {
 //   question = vsQuestions;
 //   answer = vsAnswers;

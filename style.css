@@ -107,6 +107,16 @@ font-size: 2.2em;
 font-family: 'Roboto Slab', serif;
 }
 
+.purpose__quotes{
+  font-style: italic;
+  font-weight: bold;
+  border-top: var(--60--mainBG) 10px solid;
+  border-bottom: var(--60--mainBG) 10px solid;
+  border-left: var(--5-hightLightText) 7px solid;
+  border-right: var(--5-hightLightText) 7px solid;
+
+}
+
 /* Back To Top */
 
 .backToTop{

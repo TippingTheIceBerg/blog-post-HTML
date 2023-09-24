@@ -1,3 +1,7 @@
+let getQuotesText = document.querySelector(".purpose__quotes");
+let setQuoteTimer = setInterval(change, 10000);
+let i = 0;
+
 let quotes = [
   "Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.",
   "Is this entertaining?",
@@ -6,3 +10,15 @@ let quotes = [
   "1rem is the font-size of the root element (either :root or html). The math works the same with rem as it did with em, but without the added complexity of keeping track of the parent's font size. ",
   "anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size.",
 ];
+
+getQuotesText.textContent = quotes[0];
+
+function change() {
+  console.log(i);
+  i++;
+  getQuotesText.textContent = quotes[i];
+  if (i > quotes.length - 1) {
+    i = 0;
+    getQuotesText.textContent = quotes[i];
+  }
+}
