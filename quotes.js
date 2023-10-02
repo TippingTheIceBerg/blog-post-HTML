@@ -14,7 +14,6 @@ let quotes = [
 getQuotesText.textContent = quotes[0];
 
 function change() {
-  console.log(i);
   i++;
   getQuotesText.textContent = quotes[i];
   if (i > quotes.length - 1) {

@@ -49,7 +49,7 @@ let notJoinedArray = document.querySelector(".arrayNotJoined");
 let arrayJoined = document.querySelector(".arrayJoined");
 
 notJoinedArray.textContent = myArrayToBeJoined;
-arrayNowJoined = myArrayToBeJoined.join("");
+let arrayNowJoined = myArrayToBeJoined.join("");
 arrayJoined.textContent = arrayNowJoined;
 
 // objects with more than one value, values as functions

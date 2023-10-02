@@ -12,7 +12,7 @@ let question;
 let answer;
 
 // holds question and answer based off of i value;
-let htmlQuestions = [
+const htmlQuestions = [
   "In forms, what is the purpose of the action attribute?",
   "In forms, what is the purpose of the method?",
   "For labeling buttons, what is the best HTML tagname?",
@@ -37,7 +37,7 @@ let htmlQuestions = [
   "What are SVGs?",
 ];
 
-let htmlAnswers = [
+const htmlAnswers = [
   "The action attribute tells us which URL we want to send our data, typically this will be where we add the backend.",
   "the method tells us which HTTP request we want, POST or GET to do",
   "We can use label to define our buttons",
@@ -62,7 +62,7 @@ let htmlAnswers = [
   "Scalable vectors graphs. These are highly scalable and don't lost quality with size changes.since they are defined by math, not any grids or pixels.",
 ];
 
-let cssQuestions = [
+const cssQuestions = [
   "The hardest styling of inputs are which two?",
   "If we want to reset just a radio or a checkbox, how is this done in css?",
   "What are three original psuedocodes for forms?",
@@ -118,7 +118,7 @@ let cssQuestions = [
   "How does auto-fit work in grids?",
 ];
 
-let cssAnswers = [
+const cssAnswers = [
   "The hardest input styles are radios and checkboxes",
   "resetting styles we have to set the appearance to none and selecting the style with input[type = 'checkbox'] if we want to style the checkbox input. For a more in depth style please look into the 'The hard Styles, radios and checkboxes' section under HTML for examples.  ",
   "three original pseudo codes for forms will be hover, focus, and active.",
@@ -174,7 +174,7 @@ let cssAnswers = [
   "Auto fit will return the highest value. First it must know the width, either one we made or the width of the window. Next it sees how many columns can fit into that width, and this is done with the min value of the minmax, lets say it was 150px. If the width was 500px, it will create 3 columns. Once it decides how many to be done, the max value of min max, if it was 1fr, will make sure each one of the columns takes up 1fr of space.",
 ];
 
-let jsQuestions = [
+const jsQuestions = [
   "How many ways can JS code be organized?",
   "Create a simple intersection observer with options.",
   "if we create an option for intersection observer, what options do we have?",
@@ -197,8 +197,35 @@ let jsQuestions = [
   "What is the difference from slice and substr?",
   "if we wanted to join an array, what can we do, and what are some consequences of doing it?",
   "If we use the replace method, how would we replace all of one word?",
+  "The strength of ___ is that it now allows us to manipulate a string like array.",
+  "A common issue when using && and || is when choosing a variable, it must ___. ",
+  "if creating a switch, what must a switch have after each choice?",
+  "what does default to in a switch?",
+  "Create a simple ternary function",
+  "How to edit CSS with JS",
+  "When wanting to cause things to vanish from the site, it's better to look into transform:_____ where _ is most likely going to be 0px, and then applying a transition on the main class.",
+  "What are the two most important things needed for local storage?",
+  "How does setItem work?",
+  "How does getItem work and create a way that if the variable exists, the title of the page will change?",
+  "What is the difference in Scroll Height vs offset Height vs Client Height",
+  "If we want the max height of a document, what can we do?",
+  "How do we find the scroll position from the top of the page?",
+  "If we set a variable to let outside a function, if we assign that variable inside a function, tell me the difference of using let and not using let if assigned inside the function.",
+  "Correct this code, let navItem = document.querySelectorAll('.nav__item'); navItem.classList.toggle('nav__move')",
+  "Create a random number between 0 - 2",
+  "How do we declare an array?",
+  "What is the difference? When to use [] vs {}?  ",
+  "Whats a for loop for arrays?",
+  "How do we add an element to the end of an array?",
+  "How do we convert an array into a string?",
+  "___ Works at the start of array, removes the first element and shifts all elements to the lower index.The ___ method of Array instances adds the specified elements to the beginning of an array and returns the new length of the array.",
+  "If we want to merge two arrays, what can we do?",
+  "The ___ method adds new items to an array. The first parameter defines the position where new elements should be added. The second parameter defines how many elements should be removed.The rest of the parameters define the new elements to be added.",
+  "Slice method does not ____.If the other value is added it will go up to but not count that value. If no value is added for the second one, then it will slice the whole thing.",
+  "Create a for of loop for an array about cats.",
+  "What's the difference from a forEach and forOf loop?",
 ];
-let jsAnswers = [
+const jsAnswers = [
   "Plain Old JavaScript Objects and Object Constructors, Factory Functions and the Module Pattern ,Classes,and ES6 Modules",
   " let options = {}; let observer = new IntersectionObserver function(entries) {entries.forEach(entry => {console.log('test')})})",
   "Root, threshold, and rootMargin",
@@ -211,7 +238,7 @@ let jsAnswers = [
   "A ReferenceError is thrown when one refers to a variable that is not declared and/or initialized within the current scope.",
   " a TypeError may be thrown when:an operand or argument passed to a function is incompatible with the type expected by that operator or function;or when attempting to modify a value that cannot be changed;or when attempting to use a value in an inappropriate way",
   "querySelector create a nodeList which can use array methods. Convert to an array with a spread operator. let songs = [...document.querySelector(mySongs)]",
-  "be verbose if you want to and explain what it is doing with a verb if possible",
+  "Be verbose if you want to and explain what it is doing with a verb if possible. Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does. It is a widespread practice to start a function with a verbal prefix which vaguely describes the action.",
   "strings are IMMUTABLE meaning that any change to a string must be done with creating a new variable and setting some sort of method to the string we want to change.",
   "having the string surrounded by Number() will convert a string into a number",
   ".toString causes a number variable to change.",
@@ -221,6 +248,33 @@ let jsAnswers = [
   "Substr works at the start like slice, but the second value is a count from value, meaning using substr(7,6) means start at 7 and count up 6 spots instead of position based like in slice.",
   "We can join an array with .join(''), this however causes the array to become a string.",
   "we will use regex, let newText = text.replace(/word/ig, 'newWord')",
+  "split",
+  "be called upon each time",
+  "a switch is typically placed inside a function, switch(var) {case 'option' break;} where we have one variable be used as the value to decide what is going to happen, follow by a break phrase to end the option.",
+  "A default is a catch all if the comparison hasn't been made",
+  " a >= b?true:false",
+  "There are two ways to edit but both require the style phrase. 1. style.color/opacity/etc...  '' 2 style.cssText",
+  "translate3d(xpx,ypx,zpx), x is a negative value, while y,z, and opacity are set to 0",
+  "setItem and getItem",
+  "window.localStorage.setItem('varNameWeCreate',itemWeWantStored) the item we want stored will now be stored as the varNameWeCreate",
+  "window.localStorage.getItem('username') != ''? document.title = a: document.title = b",
+  "scrollHeight value is equal to the minimum height the element would require in order to fit all the content in the viewport without using a vertical scrollbar,ClientHeight: it includes the element’s padding, but not its border, margin or horizontal scrollbar (if present).offsetHeight: is a measurement in pixels of the element’s CSS height, including border, padding and the element’s horizontal scrollbar",
+  "docElem = document.documentElement; let userDocHeight = Math.max(docElement.scrollHeight, docElement.clientHeight, docElement.offSetHeight)",
+  "the scrollTop property sets or returns the number of pixels an element's content is scrolled vertically. document.documentElement.scrollTop",
+  "Setting a variable with let will only allow change to the outside if we set the variable to another variable WITHOUT the let phrase. If we do decide to give the variable a new value, but use let, it WON'T change the value of the global variable. So let does not effect global",
+  "When selecting multiple classes, we must use a for loop,let navItem = document.querySelectorAll('.nav__item');for(let i = 0; i < navItem.length; i++) navItem[i].classList.toggle('nav__move')",
+  "let randomNumber = Math.floor(Math.random()*2)",
+  "Most arrays are declared with const instead of let or var",
+  "[] are array, {} are objects , {},when you want the element names to be strings (text).You should use arrays, [],when you want the element names to be numbers.",
+  "Arrays have the extra benefit of using forEach. called by ArrName.forEach()",
+  "Use array.push()",
+  "we must assign the about to be converted string into a var, then do arrName.toString();",
+  "shift and unshift",
+  "let newArr = arrA.concat(arrB)",
+  "splice",
+  "modify an old array, it creates a new one.",
+  "for(const cat of cats){console.log(cat)}",
+  "Only use the for-each loop when you want to loop through all the values in an array or list. If you only want to loop through part of an array or list use a for loop instead.",
 ];
 
 question = htmlQuestions;
