@@ -3,6 +3,8 @@ let setQuoteTimer = setInterval(change, 5500);
 let i = 0;
 
 let quotes = [
+  "Filter, map, sort, and reduce are the gateway drug to functional programming.",
+  "arguments are best settled outside, so they occur outside a function",
   "Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.",
   "Is this entertaining?",
   "Links and anchors defined by the A element must not be nested; an A element must not contain any other A elements.",
