@@ -123,8 +123,6 @@ ul{
 
 
 
-
-
 .quiz__answer{
     position: absolute;
     text-align: center;
@@ -218,3 +216,62 @@ input[type="number"]{
     width: 100px;
     text-align: center;
 }
+
+.shakeLeft{
+    animation: shakeLeft 0.8s both;
+}
+
+@keyframes shakeLeft {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0);
+      transform-origin: 50% 50%;
+    }
+    15% {
+      transform: translateY(-20px) rotate(-6deg);
+    }
+    30% {
+      transform: translateY(15px) rotate(6deg);
+    }
+    45% {
+      transform: translateY(-15px) rotate(-3.6deg);
+    }
+    60% {
+      transform: translateY(9px) rotate(2.4deg);
+    }
+    75% {
+      transform: translateY(-6px) rotate(-1.2deg);
+    }
+  }
+  
+
+
+
+
+.shakeRight{
+	animation: shakeRight 0.8s both;
+}
+
+@keyframes shakeRight {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0);
+      transform-origin: 50% 50%;
+    }
+    15% {
+      transform: translateY(-20px) rotate(6deg);
+    }
+    30% {
+      transform: translateY(15px) rotate(-6deg);
+    }
+    45% {
+      transform: translateY(-15px) rotate(3.6deg);
+    }
+    60% {
+      transform: translateY(9px) rotate(-2.4deg);
+    }
+    75% {
+      transform: translateY(-6px) rotate(1.2deg);
+    }
+  }
+  

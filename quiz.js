@@ -1,5 +1,7 @@
 // some issues to work on
 // 1. looks weird on safari
+// 2. For ones correct we can continue as is, if we want to review, we should be able to move it to a new card set called wrong ones to review
+// 3. I want to be able to move through cards with the arrow keys, left is back, right forward, up/down/ and space should flip the cards
 
 let selectHTML = document.querySelector(".quiz__html");
 let selectCSS = document.querySelector(".quiz__css");
@@ -7,6 +9,8 @@ let selectJS = document.querySelector(".quiz__js");
 let selectGIT = document.querySelector(".quiz__git");
 let selectVS = document.querySelector(".quiz__vs");
 let selectRegex = document.querySelector(".quiz__regex");
+
+let textArea = document.createElement("textarea");
 
 let question;
 let answer;
@@ -197,7 +201,7 @@ const jsQuestions = [
   "What is the difference from slice and substr?",
   "if we wanted to join an array, what can we do, and what are some consequences of doing it?",
   "If we use the replace method, how would we replace all of one word?",
-  "The strength of ___ is that it now allows us to manipulate a string like array.",
+  "The strength of ___ is that it now allows us to manipulate a string like an array.",
   "A common issue when using && and || is when choosing a variable, it must ___. ",
   "if creating a switch, what must a switch have after each choice?",
   "what does default to in a switch?",
@@ -282,10 +286,23 @@ const jsQuestions = [
   "After find index, how do we delete it from the array?",
   "Similar to reduce,whenever we have a value we want to manipulate with a previous value, we can use this instead",
   "Create a simple recursion where we take 9 and multiply it with the next number down",
+  "Why should we use object constructors?",
+  "Create a simple object constructor with a name and marker as parameters",
+  "create a new object with this constructor 'function Player(name, marker) { this.name = name; this.marker = marker}'",
+  "What do all objects have?",
+  "What is a prototype?",
+  "What does having a prototype mean?",
+  "How do you check the properties of an object?",
+  "How do we define prototypes on an object?",
+  "What is .__proto__?",
+  "What is the advantage of using prototypes?",
+  "What are the three known facts of prototypes?",
+  "If we have two different constructors, how do we allow the key:value pairs of one also go to the other without writing more code?",
+  "How does set property work?",
 ];
 const jsAnswers = [
   "Plain Old JavaScript Objects and Object Constructors, Factory Functions and the Module Pattern ,Classes,and ES6 Modules",
-  " let options = {}; let observer = new IntersectionObserver function(entries) {entries.forEach(entry => {console.log('test')})})",
+  " let options = {}; let observer = new IntersectionObserver (function(entries,observer) {entries.forEach(entry => {console.log('test')})},options)",
   "Root, threshold, and rootMargin",
   "threshold - is a  0 to 1 scale.  0 is when any piece of the section is in view, while 1 is when 100% of the section is visible. rootMargin - works like margins in CSS. If wanted, it must be in parenthesis and must be in either percentage or px base. Dictates when it's fired.",
   "1. We will use querySelectorAll, 2. When we call the observer, we need to perform a forEach before calling the observer to make sure they each get it. IE images.forEach(image => {observer.observe(image)})",
@@ -295,27 +312,27 @@ const jsAnswers = [
   "Most likely due to JS running before the element even exists on the page. Move the JS to the bottom of the webpage.",
   "A ReferenceError is thrown when one refers to a variable that is not declared and/or initialized within the current scope.",
   " a TypeError may be thrown when:an operand or argument passed to a function is incompatible with the type expected by that operator or function;or when attempting to modify a value that cannot be changed;or when attempting to use a value in an inappropriate way",
-  "querySelector create a nodeList which can use array methods. Convert to an array with a spread operator. let songs = [...document.querySelector(mySongs)]. Or we can use Array.from(document.querySelector(mySongs))",
+  "querySelector creates a nodeList which can't use array methods. Convert to an array with a spread operator. let songs = [...document.querySelector(mySongs)]. Or we can use Array.from(document.querySelector(mySongs))",
   "Be verbose if you want to and explain what it is doing with a verb if possible. Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does. It is a widespread practice to start a function with a verbal prefix which vaguely describes the action.",
   "strings are IMMUTABLE meaning that any change to a string must be done with creating a new variable and setting some sort of method to the string we want to change.",
   "having the string surrounded by Number() will convert a string into a number",
   ".toString causes a number variable to change.",
   "simply adding a + in front of the string will convert it",
-  "slice, substring, and substr",
+  "slice, substring, and substr (Deprecated do not use substr)",
   "They all must be assigned to a variable and they all take a start and an end",
   "Substr works at the start like slice, but the second value is a count from value, meaning using substr(7,6) means start at 7 and count up 6 spots instead of position based like in slice.",
   "We can join an array with .join(''), this however causes the array to become a string.",
   "we will use regex, let newText = text.replace(/word/ig, 'newWord')",
   "split",
   "be called upon each time",
-  "a switch is typically placed inside a function, switch(var) {case 'option' break;} where we have one variable be used as the value to decide what is going to happen, follow by a break phrase to end the option.",
+  "a switch is typically placed inside a function, switch(var) {case 'option': break;} where we have one variable be used as the value to decide what is going to happen, follow by a break phrase to end the option.",
   "A default is a catch all if the comparison hasn't been made",
   " a >= b?true:false",
   "There are three ways to edit two ways require the style phrase. 1. style.color/opacity/etc...  '' 2 style.cssText, the last way is div.setAttribute('style','color:blue;background:white;')",
   "translate3d(xpx,ypx,zpx), x is a negative value, while y,z, and opacity are set to 0",
   "setItem and getItem",
   "window.localStorage.setItem('varNameWeCreate',itemWeWantStored) the item we want stored will now be stored as the varNameWeCreate",
-  "window.localStorage.getItem('username') != ''? document.title = a: document.title = b",
+  "window.localStorage.getItem(('username') != ''? document.title = a: document.title = b)",
   "scrollHeight value is equal to the minimum height the element would require in order to fit all the content in the viewport without using a vertical scrollbar,ClientHeight: it includes the element’s padding, but not its border, margin or horizontal scrollbar (if present).offsetHeight: is a measurement in pixels of the element’s CSS height, including border, padding and the element’s horizontal scrollbar",
   "docElem = document.documentElement; let userDocHeight = Math.max(docElement.scrollHeight, docElement.clientHeight, docElement.offSetHeight)",
   "the scrollTop property sets or returns the number of pixels an element's content is scrolled vertically. document.documentElement.scrollTop",
@@ -391,6 +408,24 @@ const jsAnswers = [
   "arr.splice(indexOfFoundIndex,1)",
   "recursion",
   "let factorial = function(num){if(num == 0){return 1;}return num*factorial(num-1)}",
+  "we should use them when you have a specific type of object that you need to duplicate like our player or inventory items",
+  "function Player(name, marker) { this.name = name; this.marker = marker}",
+  "const player = new Player('steve', 'X') console.log(player.name) // 'steve'",
+  "all objects have prototypes.",
+  "Stated simply, the prototype is another object that the original object inherits from, which is to say, the original object has access to all of its prototype’s methods and properties. The prototype is just another object - again, like the player1 and the player2 objects. The prototype object can have properties and functions, just as these Player objects have properties like .name, .marker, and functions like .sayName() attached to them",
+  "It means that any object made from another object, like in a case of being made from a constructor, these objects are said to “inherit”, or simply said, these objects have access to the prototype’s properties or functions",
+  "You can check the object’s prototype by using the Object.getPrototypeOf() function on the object, like Object.getPrototypeOf(player1).",
+  "We simply use .prototype; Player.prototype.sayHello = function() {console.log('Hello, I'm a player!');}. Now player1 and player2 have access to the function sayHello",
+  "A deprecated way of doing getPrototype of, don't do it this way",
+  "1. Defining every property and function takes up a lot of memory, especially if you have a lot of common properties and functions, and a lot of created objects! 2. The advantage of Prototypal Inheritance,",
+  "1.All objects in JavaScript have a prototype ,2.The prototype is another object 3. The original object inherits from, and has access to all of its prototype’s methods and properties: ",
+  "We can use the setProperty, essentially Object.setPrototypeOf(Player.prototype, Person.prototype), this will allow us to create new players const player1 = new Player('steve', 'X') if we have already defined a function through the prototype way, flashcard 115",
+  "It takes two arguments - the first is the one which inherits and the second argument is the one which you want the first argument to inherit from. ",
+  "constructor",
+  "You may notice that we’ve only defined properties and not methods in the constructor. It is a common practice in JavaScript to define methods on the prototype for increased efficiency and code readability.",
+  "We will use call, function Healer(name, level, spell) {Hero.call(this, name, level); this.spell = spell}",
+  "No, not yet, we have to now link with setPrototype, Object.setPrototypeOf(Healer.prototype, Hero.prototype);",
+  "this still references obj. So methods always work with the current object even if they are inherited.",
 ];
 
 question = htmlQuestions;
@@ -432,9 +467,18 @@ forward.addEventListener("click", () => {
   questionText.textContent = question[i];
   answerText.textContent = "";
   getDeckPosition(i);
+  rightShake();
 });
 
+function rightShake() {
+  setTimeout(() => {
+    forward.classList.remove("shakeRight");
+  }, 500);
+  forward.classList.add("shakeRight");
+}
+
 // if the array is smaller than 0, which can't happen due to the array index, it is halted, otherwise, shows the previous question and answers
+
 backwards.addEventListener("click", () => {
   i--;
   if (i < 0) {
@@ -444,7 +488,14 @@ backwards.addEventListener("click", () => {
   questionText.textContent = question[i];
   answerText.textContent = "";
   getDeckPosition(i);
+  leftShake();
 });
+function leftShake() {
+  setTimeout(() => {
+    backwards.classList.remove("shakeLeft");
+  }, 500);
+  backwards.classList.add("shakeLeft");
+}
 
 // takes the question from the array and displays it
 // always starts with the first question of the selected deck
@@ -466,6 +517,8 @@ function removeActiveDeck() {
     findActiveDeck.classList.remove("quiz__selection--active");
   }
 }
+
+// enables the shake of the right move card
 
 // controls which 'stack' of cards is being active
 // also controls the toggle of active for css style
@@ -504,7 +557,7 @@ function getDeckPosition(position) {
 }
 // ability to jump the deck based on the user input of number.
 // when the user enters a number, it should correspond to the card in the deck
-// numbers can't be smaller than 1 or larger than the deck length, will change red to show some error
+// numbers can't be smaller than 1 or larger than the deck length, will either go back to 1 if too low, or to the length of the deck if too large
 positionInDeck.addEventListener("change", () => {
   if (Number(positionInDeck.value) <= 0) {
     i = 0;
@@ -524,18 +577,49 @@ positionInDeck.addEventListener("change", () => {
   }
 });
 
-// selectVS.addEventListener("click", () => {
-//   question = vsQuestions;
-//   answer = vsAnswers;
-//   showFirstQuestion();
-// });
-// selectGIT.addEventListener("click", () => {
-//   question = gitQuestions;
-//   answer = gitAnswers;
-//   showFirstQuestion();
-// });
-// selectRegex.addEventListener("click", () => {
-//   question = regexQuestions;
-//   answer = regexAnswers;
-//   showFirstQuestion();
-// })
+// enables the ability to move flashcards forward and backwards and flips the cards with arrow keys
+document.onkeydown = function (event) {
+  switch (event.keyCode) {
+    case 37:
+      i--;
+      if (i < 0) {
+        i++;
+        return;
+      }
+      questionText.textContent = question[i];
+      answerText.textContent = "";
+      getDeckPosition(i);
+      leftShake();
+      break;
+    case 38:
+      if (questionText.textContent != "") {
+        questionText.textContent = "";
+        answerText.textContent = answer[i];
+      } else {
+        answerText.textContent = "";
+        questionText.textContent = question[i];
+      }
+      event.preventDefault();
+      break;
+    case 39:
+      i++;
+      if (i >= question.length) {
+        i--;
+      }
+      questionText.textContent = question[i];
+      answerText.textContent = "";
+      getDeckPosition(i);
+      rightShake();
+      break;
+    case 40:
+      if (questionText.textContent != "") {
+        questionText.textContent = "";
+        answerText.textContent = answer[i];
+      } else {
+        answerText.textContent = "";
+        questionText.textContent = question[i];
+      }
+      event.preventDefault();
+      break;
+  }
+};

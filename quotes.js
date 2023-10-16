@@ -12,6 +12,12 @@ let quotes = [
   "1rem is the font-size of the root element (either :root or html). The math works the same with rem as it did with em, but without the added complexity of keeping track of the parent's font size. ",
   "anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size.",
   "Test Driven Development: The test will fail before you write your code, and you should be able to know that your code works correctly when the test passes.",
+  "JavaScript is a prototype-based language, meaning object properties and methods can be shared through generalized objects that have the ability to be cloned and extended.",
+  "Since each character will share many characteristics, such as having a name, a level, and hit points, it makes sense to create a ___ as a template. ",
+  "Why don't we just create functions inside of objects vs having to use prototype when we want to? ",
+  "Let's say we want to create new constructor functions, but we also want them to be connected to the original Hero, how do we connect this to a constructor of healer",
+  "After we use call, can we now use the functions, if not, what do we need to do?",
+  "If we call obj.method(), and the method is taken from the prototype, what is this referencing? ",
 ];
 
 getQuotesText.textContent = quotes[0];
