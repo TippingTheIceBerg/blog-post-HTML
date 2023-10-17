@@ -525,6 +525,30 @@
         <section id="JS" class="section__JS section">
             <h2>JS</h2>
             <div class="js__container">
+                <h3>What is this?</h3>
+                <p>The key to understanding this keyword is having a clear view of function invocation and how it impacts the context. this is the global object in a function invocation, ie, whenever a function is called, this comes along with it.</p>
+                <h3>Object and Object constructors</h3>
+                <p>One of the simplest ways you can begin to organize your code is by simply grouping things into objects. When you have a specific type of object that you need to duplicate like our player or inventory items, a better way to create them is using an object constructor, which is a function that looks like this:
+                </p>
+                <img src="./Images/constructorJS.png" alt="">
+                <img src="./Images/newConstrucorJS.png" alt="">
+                <img src="./Images/conFinalreusltJS.png" alt="">
+                <h3>Prototypes</h3>
+                <p>All objects in JavaScript have a prototype. Stated simply, the prototype is another object that the original object inherits from, which is to say, the original object has access to all of its prototype’s methods and properties. We can check proto with the example below, where player1 and 2 were made from the Player constructor, should return true. To create a prototype, instead of using a function inside a constructor, they advice to assign it as a prototype as seen below. 
+                </p>
+                <img src="./Images/checkProto.png" alt="">
+                <img src="./Images/createProto.png" alt="">
+                <h3>Legacy Code and Proto</h3>
+                <p> .__proto__ is the same as getProto seen above. However, this is a non-standard way of doing so, and deprecated.In some places, like legacy code, you might also come across [[Prototype]], which is just another way of talking about the .__proto__ property of an object, like player1.[[Prototype]]. All in all, do not use these two.
+                </p>
+                <h3>Why focus on prototypes?</h3>
+                <p>We can define properties and functions common among all objects on the prototype to save memory and the second reason is Prototypal Inheritance</p>
+                <h3>How do we know something is inherited as a proto?</h3>
+                <p>Some simple checks will be the hasOwnProperty method which checks whether or not something has been inherited or not.</p>
+                <img src="./Images/hasOwnPropertyJS.png" alt="">
+                <h3>Prototype Inheritance, SetProto</h3>
+                <p>Every prototype object inherits from Object.prototype by default. Just as we use Object.getPrototypeOf() to ‘get’ or view the prototype of an object, we can use Object.setPrototypeOf() to ‘set’ or mutate it. From the code, we can see that we’ve defined a Person from whom a Player inherits properties and functions, and that the created Player objects are able to access both the .sayName and the .getMarker functions, in spite of them being defined on two separate prototype objects! This is enabled by the use of the Object.setPrototypeOf() function. It takes two arguments - the first is the one which inherits and the second argument is the one which you want the first argument to inherit from. </p>
+                <img src="./Images/setProtoJS.png" alt="">
                 <h3>How to organize your JS code?</h3>
                 <p>JS code can be organized in four different ways
                     <ul class="listMarginLeft__40px">

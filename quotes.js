@@ -18,6 +18,7 @@ let quotes = [
   "Let's say we want to create new constructor functions, but we also want them to be connected to the original Hero, how do we connect this to a constructor of healer",
   "After we use call, can we now use the functions, if not, what do we need to do?",
   "If we call obj.method(), and the method is taken from the prototype, what is this referencing? ",
+  "Every prototype object inherits from Object.prototype by default.",
 ];
 
 getQuotesText.textContent = quotes[0];
