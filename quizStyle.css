@@ -98,7 +98,7 @@ ul{
     justify-content: center;
     align-items: center;
     margin: 50px 0;
-    
+
 }
 .quiz__card{
     border: solid black 10px;
@@ -111,11 +111,37 @@ ul{
     position: relative;
 }
 
+.quiz__correct{
+    border-radius: 10px;
+    background-color: var(--30--lightBG);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    right:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quiz__toReview{
+    border-radius: 10px;
+    background-color: var(--30--lightBG);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    left:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 .quiz__question{
     text-align: center;
     font-size: 2em;
     line-height:1.2;
-    position: absolute;
     justify-content: center;
     align-items: center;
     padding: 4px;
@@ -124,7 +150,6 @@ ul{
 
 
 .quiz__answer{
-    position: absolute;
     text-align: center;
     font-size: 1.6em;
     line-height:1.2;
@@ -244,8 +269,6 @@ input[type="number"]{
     }
   }
   
-
-
 
 
 .shakeRight{
