@@ -1,5 +1,7 @@
 // some issues to work on
 // 1.Modify correct/incorrect with a switch instead of lots of else if, much faster to do switch statement in terms of performance
+// 2. Add key function to add / remove right and wrong answers
+// 3. When changing decks all right and wrong answers must be cleared, there is current carry over, or make a setItem for local storage?
 
 const greenPosition = [];
 const redPosition = [];
@@ -659,17 +661,12 @@ function changeBorder() {
   if (greenPosition.includes(i)) {
     card.classList.add("quiz__card--green", "quiz__card");
     card.classList.remove("quiz__card--red");
-    console.log();
-    ("green");
   } else if (redPosition.includes(i)) {
     card.classList.add("quiz__card--red", "quiz__card");
     card.classList.remove("quiz__card--green");
-    console.log("red");
   } else if (!redPosition.includes(i) || !greenPosition.includes(i)) {
     card.classList.add("quiz__card");
     card.classList.remove("quiz__card--green");
     card.classList.remove("quiz__card--red");
-    console.log("black");
   }
-  console.log(greenPosition, redPosition);
 }
