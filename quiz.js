@@ -1,8 +1,5 @@
 // some issues to work on
-// 1.Add Correct/Wrong cards
-//    a. Should be able to remember which are correct by changing the    border to green
-//    b. wrong answers must be changed to a red border
-//    c. Solution? Retain the i value of the card, check to see if he i value of the card you move onto is in the array of green position, if it is, change to i, if not, leave alone or make it red if in the redPosition
+// 1.Modify correct/incorrect with a switch instead of lots of else if, much faster to do switch statement in terms of performance
 
 const greenPosition = [];
 const redPosition = [];
