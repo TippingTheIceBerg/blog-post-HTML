@@ -1,7 +1,11 @@
 // some issues to work on
-// 1. looks weird on safari
-// 2. For ones correct we can continue as is, if we want to review, we should be able to move it to a new card set called wrong ones to review
-// 3. I want to be able to move through cards with the arrow keys, left is back, right forward, up/down/ and space should flip the cards
+// 1.Add Correct/Wrong cards
+//    a. Should be able to remember which are correct by changing the    border to green
+//    b. wrong answers must be changed to a red border
+//    c. Solution? Retain the i value of the card, check to see if he i value of the card you move onto is in the array of green position, if it is, change to i, if not, leave alone or make it red if in the redPosition
+
+const greenPosition = [];
+const redPosition = [];
 
 let selectHTML = document.querySelector(".quiz__html");
 let selectCSS = document.querySelector(".quiz__css");
@@ -9,6 +13,7 @@ let selectJS = document.querySelector(".quiz__js");
 let selectGIT = document.querySelector(".quiz__git");
 let selectVS = document.querySelector(".quiz__vs");
 let selectRegex = document.querySelector(".quiz__regex");
+let card = document.querySelector(".quiz__card");
 
 let textArea = document.createElement("textarea");
 
@@ -443,6 +448,7 @@ let backwards = document.querySelector(".quiz__backQuestions-toggle");
 let questionText = document.querySelector(".quiz__question");
 let answerText = document.querySelector(".quiz__answer");
 
+// shows the correct answer/question when toggled
 flip.addEventListener("click", () => {
   if (questionText.textContent != "") {
     questionText.textContent = "";
@@ -455,7 +461,6 @@ flip.addEventListener("click", () => {
 
 // number on deck
 let positionInDeck = document.querySelector(".cardNumber__current");
-
 let totalLengthOfDeck = document.querySelector(".cardNumber__total");
 
 // logic that allows it to go forward, if i is larger than the array, i is subtracted by one, which holds it's place in the array.
@@ -468,6 +473,7 @@ forward.addEventListener("click", () => {
   answerText.textContent = "";
   getDeckPosition(i);
   rightShake();
+  changeBorder();
 });
 
 function rightShake() {
@@ -489,6 +495,7 @@ backwards.addEventListener("click", () => {
   answerText.textContent = "";
   getDeckPosition(i);
   leftShake();
+  changeBorder();
 });
 function leftShake() {
   setTimeout(() => {
@@ -517,8 +524,6 @@ function removeActiveDeck() {
     findActiveDeck.classList.remove("quiz__selection--active");
   }
 }
-
-// enables the shake of the right move card
 
 // controls which 'stack' of cards is being active
 // also controls the toggle of active for css style
@@ -590,6 +595,7 @@ document.onkeydown = function (event) {
       answerText.textContent = "";
       getDeckPosition(i);
       leftShake();
+      changeBorder();
       break;
     case 38:
       if (questionText.textContent != "") {
@@ -610,6 +616,7 @@ document.onkeydown = function (event) {
       answerText.textContent = "";
       getDeckPosition(i);
       rightShake();
+      changeBorder();
       break;
     case 40:
       if (questionText.textContent != "") {
@@ -623,3 +630,49 @@ document.onkeydown = function (event) {
       break;
   }
 };
+
+let correct = document.querySelector(".quiz__correct");
+let incorrect = document.querySelector(".quiz__toReview");
+let index;
+
+correct.addEventListener("click", () => {
+  if (!greenPosition.includes(i)) {
+    greenPosition.push(i);
+  }
+  if (redPosition.includes(i)) {
+    index = redPosition.indexOf(i);
+    redPosition.splice(index, 1);
+  }
+  changeBorder();
+});
+
+incorrect.addEventListener("click", () => {
+  if (!redPosition.includes(i)) {
+    redPosition.push(i);
+  }
+  if (greenPosition.includes(i)) {
+    index = greenPosition.indexOf(i);
+    greenPosition.splice(index, 1);
+  }
+  changeBorder();
+});
+
+// change border color depending if marked correct or incorrect
+function changeBorder() {
+  if (greenPosition.includes(i)) {
+    card.classList.add("quiz__card--green", "quiz__card");
+    card.classList.remove("quiz__card--red");
+    console.log();
+    ("green");
+  } else if (redPosition.includes(i)) {
+    card.classList.add("quiz__card--red", "quiz__card");
+    card.classList.remove("quiz__card--green");
+    console.log("red");
+  } else if (!redPosition.includes(i) || !greenPosition.includes(i)) {
+    card.classList.add("quiz__card");
+    card.classList.remove("quiz__card--green");
+    card.classList.remove("quiz__card--red");
+    console.log("black");
+  }
+  console.log(greenPosition, redPosition);
+}

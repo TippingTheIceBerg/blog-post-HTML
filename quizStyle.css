@@ -111,6 +111,27 @@ ul{
     position: relative;
 }
 
+.quiz__card--green{
+    border: solid green 10px;
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.quiz__card--red{
+    border: solid red 10px;
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
 .quiz__correct{
     border-radius: 10px;
     background-color: var(--30--lightBG);
