@@ -1,7 +1,5 @@
 // some issues to work on
-// 1.Modify correct/incorrect with a switch instead of lots of else if, much faster to do switch statement in terms of performance
-// 2. Add key function to add / remove right and wrong answers
-// 3. When changing decks all right and wrong answers must be cleared, there is current carry over, or make a setItem for local storage?
+// 1. When changing decks all right and wrong answers must be cleared, there is current carry over, or make a setItem for local storage?
 
 import { QandA } from "./quizQ&A.js";
 
@@ -11,9 +9,6 @@ let cssQuestions = QandA.cssQuestions;
 let cssAnswers = QandA.cssAnswers;
 let jsQuestions = QandA.jsQuestions;
 let jsAnswers = QandA.jsAnswers;
-
-const greenPosition = [];
-const redPosition = [];
 
 let selectHTML = document.querySelector(".quiz__html");
 let selectCSS = document.querySelector(".quiz__css");
@@ -52,6 +47,10 @@ flip.addEventListener("click", () => {
     answerText.textContent = "";
     questionText.textContent = question[i];
   }
+  flip.classList.toggle("flip--glow");
+  setTimeout(function () {
+    flip.classList.toggle("flip--glow");
+  }, 300);
 });
 
 // number on deck
@@ -59,13 +58,17 @@ let positionInDeck = document.querySelector(".cardNumber__current");
 let totalLengthOfDeck = document.querySelector(".cardNumber__total");
 
 // logic that allows it to go forward, if i is larger than the array, i is subtracted by one, which holds it's place in the array.
-forward.addEventListener("click", () => {
+
+function moveForwards() {
   i++;
   if (i >= question.length) {
     i--;
   }
   questionText.textContent = question[i];
   answerText.textContent = "";
+}
+forward.addEventListener("click", () => {
+  moveForwards();
   getDeckPosition(i);
   rightShake();
   changeBorder();
@@ -79,8 +82,7 @@ function rightShake() {
 }
 
 // if the array is smaller than 0, which can't happen due to the array index, it is halted, otherwise, shows the previous question and answers
-
-backwards.addEventListener("click", () => {
+function moveBackWards() {
   i--;
   if (i < 0) {
     i++;
@@ -88,10 +90,14 @@ backwards.addEventListener("click", () => {
   }
   questionText.textContent = question[i];
   answerText.textContent = "";
+}
+backwards.addEventListener("click", () => {
+  moveBackWards();
   getDeckPosition(i);
   leftShake();
   changeBorder();
 });
+
 function leftShake() {
   setTimeout(() => {
     backwards.classList.remove("shakeLeft");
@@ -177,21 +183,27 @@ positionInDeck.addEventListener("change", () => {
   }
 });
 
+const greenPosition = [];
+const redPosition = [];
+
 // enables the ability to move flashcards forward and backwards and flips the cards with arrow keys
 document.onkeydown = function (event) {
   switch (event.keyCode) {
+    // space key
+    case 32:
+      markCorrect();
+      changeBorder();
+      getDeckPosition(i);
+      event.preventDefault();
+      break;
+    // left arrow
     case 37:
-      i--;
-      if (i < 0) {
-        i++;
-        return;
-      }
-      questionText.textContent = question[i];
-      answerText.textContent = "";
+      moveBackWards();
       getDeckPosition(i);
       leftShake();
       changeBorder();
       break;
+    // up arrow
     case 38:
       if (questionText.textContent != "") {
         questionText.textContent = "";
@@ -200,19 +212,20 @@ document.onkeydown = function (event) {
         answerText.textContent = "";
         questionText.textContent = question[i];
       }
+      flip.classList.toggle("flip--glow");
+      setTimeout(function () {
+        flip.classList.toggle("flip--glow");
+      }, 300);
       event.preventDefault();
       break;
+    // right arrow
     case 39:
-      i++;
-      if (i >= question.length) {
-        i--;
-      }
-      questionText.textContent = question[i];
-      answerText.textContent = "";
+      moveForwards();
       getDeckPosition(i);
       rightShake();
       changeBorder();
       break;
+    //down arrow
     case 40:
       if (questionText.textContent != "") {
         questionText.textContent = "";
@@ -221,6 +234,25 @@ document.onkeydown = function (event) {
         answerText.textContent = "";
         questionText.textContent = question[i];
       }
+      flip.classList.toggle("flip--glow");
+      setTimeout(function () {
+        flip.classList.toggle("flip--glow");
+      }, 300);
+      event.preventDefault();
+      break;
+    // c key
+    case 67:
+      clearAllBorders();
+      clearBorders.classList.toggle("clear--glow");
+      setTimeout(function () {
+        clearBorders.classList.toggle("clear--glow");
+      }, 300);
+      break;
+    // x key
+    case 88:
+      markIncorrect();
+      changeBorder();
+      getDeckPosition(i);
       event.preventDefault();
       break;
   }
@@ -229,8 +261,9 @@ document.onkeydown = function (event) {
 let correct = document.querySelector(".quiz__correct");
 let incorrect = document.querySelector(".quiz__toReview");
 let index;
+let clearBorders = document.querySelector(".quiz__clearBorder");
 
-correct.addEventListener("click", () => {
+function markCorrect() {
   if (greenPosition.includes(i)) {
     index = greenPosition.indexOf(i);
     greenPosition.splice(index, 1);
@@ -242,11 +275,18 @@ correct.addEventListener("click", () => {
     index = redPosition.indexOf(i);
     redPosition.splice(index, 1);
   }
+  correct.classList.toggle("correct--glow");
+  setTimeout(function () {
+    correct.classList.toggle("correct--glow");
+  }, 300);
+}
 
+correct.addEventListener("click", () => {
+  markCorrect();
   changeBorder();
 });
 
-incorrect.addEventListener("click", () => {
+function markIncorrect() {
   if (redPosition.includes(i)) {
     index = redPosition.indexOf(i);
     redPosition.splice(index, 1);
@@ -258,8 +298,34 @@ incorrect.addEventListener("click", () => {
     index = greenPosition.indexOf(i);
     greenPosition.splice(index, 1);
   }
-
+  incorrect.classList.toggle("incorrect--glow");
+  setTimeout(function () {
+    incorrect.classList.toggle("incorrect--glow");
+  }, 300);
+}
+incorrect.addEventListener("click", () => {
+  markIncorrect();
   changeBorder();
+});
+
+function clearAllBorders() {
+  if (greenPosition.includes(i)) {
+    index = greenPosition.indexOf(i);
+    greenPosition.splice(index, 1);
+  }
+  if (redPosition.includes(i)) {
+    index = redPosition.indexOf(i);
+    redPosition.splice(index, 1);
+  }
+  changeBorder();
+}
+
+clearBorders.addEventListener("click", () => {
+  clearAllBorders();
+  clearBorders.classList.toggle("clear--glow");
+  setTimeout(function () {
+    clearBorders.classList.toggle("clear--glow");
+  }, 300);
 });
 
 // change border color depending if marked correct or incorrect

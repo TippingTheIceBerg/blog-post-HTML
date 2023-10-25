@@ -290,7 +290,7 @@ const jsAnswers = [
   "1. We will use querySelectorAll, 2. When we call the observer, we need to perform a forEach before calling the observer to make sure they each get it. IE images.forEach(image => {observer.observe(image)})",
   "TCT, target; classList; toggle",
   "prevents preemptive firing, also when you leave the focus area, it won't fire again. IE if(!entry.isIntersecting){return}",
-  "We can unobserve it as observer.unobserve(entry.target)",
+  "We can unobserve it as observer.unobserve(entry.target), you might have to unobserve the document the element variable, if not, you have failed to do a forEach inside the observer, or failed to use dot target of the variable you chose for the ForEach, IE entry for a entries.forEach(entry)",
   "Most likely due to JS running before the element even exists on the page. Move the JS to the bottom of the webpage.",
   "A ReferenceError is thrown when one refers to a variable that is not declared and/or initialized within the current scope.",
   " a TypeError may be thrown when:an operand or argument passed to a function is incompatible with the type expected by that operator or function;or when attempting to modify a value that cannot be changed;or when attempting to use a value in an inappropriate way",
