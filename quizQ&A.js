@@ -409,6 +409,8 @@ const jsAnswers = [
   "No, not yet, we have to now link with setPrototype, Object.setPrototypeOf(Healer.prototype, Hero.prototype);",
   "this still references obj. So methods always work with the current object even if they are inherited.",
 ];
+const reviewQuestions = [];
+const reviewAnswers = [];
 
 export let QandA = {
   htmlQuestions,
@@ -417,4 +419,6 @@ export let QandA = {
   cssAnswers,
   jsQuestions,
   jsAnswers,
+  reviewAnswers,
+  reviewQuestions,
 };

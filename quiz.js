@@ -1,5 +1,6 @@
 // some issues to work on
-// 1. When changing decks all right and wrong answers must be cleared, there is current carry over, or make a setItem for local storage?
+// 1. Store all wrong ones to be reviewed, more important currently
+// 2. When changing decks all right and wrong answers must be cleared, there is current carry over, or make a setItem for local storage?
 
 import { QandA } from "./quizQ&A.js";
 
@@ -10,12 +11,16 @@ let cssAnswers = QandA.cssAnswers;
 let jsQuestions = QandA.jsQuestions;
 let jsAnswers = QandA.jsAnswers;
 
+let reviewQuestions = QandA.reviewQuestions;
+let reviewAnswers = QandA.reviewAnswers;
+
 let selectHTML = document.querySelector(".quiz__html");
 let selectCSS = document.querySelector(".quiz__css");
 let selectJS = document.querySelector(".quiz__js");
 let selectGIT = document.querySelector(".quiz__git");
 let selectVS = document.querySelector(".quiz__vs");
 let selectRegex = document.querySelector(".quiz__regex");
+let selectReview = document.querySelector(".quiz__review");
 let card = document.querySelector(".quiz__card");
 
 let textArea = document.createElement("textarea");
@@ -133,6 +138,7 @@ selectHTML.addEventListener("click", () => {
   question = htmlQuestions;
   answer = htmlAnswers;
   selectHTML.classList.toggle("quiz__selection--active");
+  changeBorder();
   showFirstQuestion(htmlQuestions);
   getDeckPosition(0);
 });
@@ -143,6 +149,7 @@ selectCSS.addEventListener("click", () => {
   selectCSS.classList.toggle("quiz__selection--active");
   showFirstQuestion(cssQuestions);
   getDeckPosition(0);
+  changeBorder();
 });
 
 selectJS.addEventListener("click", () => {
@@ -151,7 +158,18 @@ selectJS.addEventListener("click", () => {
   answer = jsAnswers;
   selectJS.classList.toggle("quiz__selection--active");
   showFirstQuestion(jsQuestions);
+  changeBorder();
   getDeckPosition(0);
+});
+
+selectReview.addEventListener("click", () => {
+  removeActiveDeck();
+  question = reviewQuestions;
+  answer = reviewAnswers;
+  selectReview.classList.toggle("quiz__selection--active");
+  showFirstQuestion(reviewQuestions);
+  getDeckPosition(0);
+  changeBorder();
 });
 
 function getDeckLength(num) {
@@ -161,9 +179,9 @@ function getDeckLength(num) {
 function getDeckPosition(position) {
   positionInDeck.value = position + 1;
 }
-// ability to jump the deck based on the user input of number.
-// when the user enters a number, it should correspond to the card in the deck
-// numbers can't be smaller than 1 or larger than the deck length, will either go back to 1 if too low, or to the length of the deck if too large
+
+// Controls the number counter at the bottom of the deck, shows deck position and allows manual change of deck position.
+
 positionInDeck.addEventListener("change", () => {
   if (Number(positionInDeck.value) <= 0) {
     i = 0;
@@ -183,10 +201,7 @@ positionInDeck.addEventListener("change", () => {
   }
 });
 
-const greenPosition = [];
-const redPosition = [];
-
-// enables the ability to move flashcards forward and backwards and flips the cards with arrow keys
+// enables the ability to move flashcards forward and backwards and flips the cards with keyboard shortcuts
 document.onkeydown = function (event) {
   switch (event.keyCode) {
     // space key
@@ -258,11 +273,15 @@ document.onkeydown = function (event) {
   }
 };
 
+let index;
+let greenPosition = [];
+let redPosition = [];
+let toBeReviewed = [];
+
 let correct = document.querySelector(".quiz__correct");
 let incorrect = document.querySelector(".quiz__toReview");
-let index;
 let clearBorders = document.querySelector(".quiz__clearBorder");
-
+// moves i into green position
 function markCorrect() {
   if (greenPosition.includes(i)) {
     index = greenPosition.indexOf(i);
@@ -274,6 +293,7 @@ function markCorrect() {
   if (redPosition.includes(i)) {
     index = redPosition.indexOf(i);
     redPosition.splice(index, 1);
+    toBeReviewed.splice(index, 1);
   }
   correct.classList.toggle("correct--glow");
   setTimeout(function () {
@@ -285,14 +305,19 @@ correct.addEventListener("click", () => {
   markCorrect();
   changeBorder();
 });
-
+// moves i into red position
 function markIncorrect() {
   if (redPosition.includes(i)) {
     index = redPosition.indexOf(i);
     redPosition.splice(index, 1);
+    reviewQuestions.splice(index, 1);
+    reviewAnswers.splice(index, 1);
   }
   if (!redPosition.includes(i)) {
     redPosition.push(i);
+    reviewQuestions.push(question[i]);
+    reviewAnswers.push(answer[i]);
+    console.log(reviewQuestions);
   }
   if (greenPosition.includes(i)) {
     index = greenPosition.indexOf(i);
@@ -307,7 +332,7 @@ incorrect.addEventListener("click", () => {
   markIncorrect();
   changeBorder();
 });
-
+// removes the current i from either green or red position
 function clearAllBorders() {
   if (greenPosition.includes(i)) {
     index = greenPosition.indexOf(i);
@@ -316,6 +341,8 @@ function clearAllBorders() {
   if (redPosition.includes(i)) {
     index = redPosition.indexOf(i);
     redPosition.splice(index, 1);
+    reviewQuestions.splice(index, 1);
+    reviewAnswers.splice(index, 1);
   }
   changeBorder();
 }
@@ -328,7 +355,7 @@ clearBorders.addEventListener("click", () => {
   }, 300);
 });
 
-// change border color depending if marked correct or incorrect
+// ONLY HANDLES COLOR CHANGE
 function changeBorder() {
   if (greenPosition.includes(i)) {
     card.classList.add("quiz__card--green", "quiz__card");
