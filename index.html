@@ -49,6 +49,18 @@
         <section id="HTML" class="section__HTML section">
             <h2>HTML</h2>
             <div class="html__container">
+                <h3>Forms and Dialogs</h3>
+                <p>If we we want to include a form and a dialog, we will place the form inside the dialog.</p>
+                <h3>backdrop of dialog boxes</h3>
+                <p>The CSS ::backdrop pseudo-element can be used to style the backdrop of a modal dialog, which is displayed behind the dialog element when the dialog is displayed using the HTMLDialogElement.showModal() method. For example, you can use this pseudo-element to obfuscate (hide) the inert content behind the modal dialog.</p>
+                <h3>method dialog and formmethod='dialog'</h3>
+                <p>HTML form elements can be used to close a dialog box if they have the attribute method="dialog" or if the button used to submit the form has formmethod="dialog" set.The returnValue property gets set to the value of the button that was activated.</p>
+                <h3>Open attribute of dialog boxes</h3>
+                <p>Dialog boxes should not use the open attribute, we should only focus on showModal and modal in javascript. If we do use open, there would be no way to reopen unless we add and remove the open attribute, which is not good practice.</p>
+                <h3>What are Dialog boxes?</h3>
+                <p>A modal or non-modal dialog box, which means modal dialog boxes interrupt interaction with the rest of the page being inert, while non-modal dialog boxes allow interaction with the rest of the page.</p>
+                <h3>If using dialog boxes, how should this be controlled?</h3>
+                <p>javaScript should be used to display the dialog element. Use the .showModal() method to display a modal dialog and the .show() method to display a non-modal dialog. The dialog box can be closed using the .close() method or using the dialog method when submitting a form </p>
                 <h3>Forms</h3>
                 <p>Creating forms we will start with the first image.The action tells us the URL for where to send the data, eventually the backend will be added here. The method tells us which HTTP request we want, POST or GET</p>
                 <img src="./Images/basicFormStart.png" alt="">
