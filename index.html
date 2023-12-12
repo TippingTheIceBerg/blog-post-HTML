@@ -538,7 +538,7 @@
         </section>
         <section id="JS" class="section__JS section">
             <h2>JS</h2>
-            <div class="js__container">
+            <div class="js__container">               
                 <h3>How to add multiple classes, ie, adding font awesome with JS</h3>
                 <p>So, to add multiple classes, we want to store all classes as in array, and then use a spread operator to access them and then add them to whatever we want to add to.</p>
                 <img src="./Images/addMultipleClassesWithJS.png" alt="">
@@ -1071,6 +1071,72 @@
                 <h3>Find The Oldest</h3>
                 <p>In this instance we wanted to first check if a death date were present, if not, we checked it with the simple if it's true statement at the top. Then we just created and age property that is then sorted to find the largest number. We then used the find method to recalculate the ages again but this time compare them to the largest value in sort, and it match, it returns the person even if currently alive.</p>
                 <img src="./Images/findTheOldest.png" alt="">
+                <h3>Functions within functions with both having parameters</h3>
+                <p>If we have a function within a function, we can remedy this by setting the overall function with  variable and then using that variable to call the internal function. </p>
+                <img src="./Images/functionInFunctionPara.png" alt="">
+                <h3>Constructors issues</h3>
+                <p>In regards to constructors, why are they not liked? They are not liked because they look like regular javascript, but if you miss the new keyword, not only does your program fail to work, but it also produces error messages that are hard to track down and understand.</p>
+                <h3>What is a closure?</h3>
+                <p>A closure refers to the combination of a function and the surrounding state within which a function was declared in. This surrounding state, also called its lexical environment, consists of any local variables that were in scope at the time the closure was made. In short, if a function is assigned to a variable and then called upon as the variable, it retains all the variables that were included in the function, in function scope. </p>
+                <h3>What are factory functions?</h3>
+                <p>Similar to constructors but they use the power of closures. Instead of using the new keyword to create an object, factory functions simply set up and return the new object when you call the function. The largest difference I can tell, is that it returns something.</p>
+                <h3>What is a minor issue with factory</h3>
+                <p>They do not use the prototype, which incurs a performance penalty - but as a general rule, this penalty isn't significant unless you're creating thousands of objects.</p>
+                <img src="./Images/consturAndFact.png" alt="">
+                <h3>Destructure</h3>
+                <p>When you have an object or an array, you can extract a property of an object into a variable of the same name, or any named variable for an array. </p>
+                <img src="./Images/destructure .png" alt="">
+                <h3>Object shorthand notation</h3>
+                <p>Object shorthand is when the variable we assign matches with the object's name.  IE if we have a variable called name = "fred" and we want to assign it to an object, called named, instead of writing object = {name:name} we can just do object = {name}</p>
+                <h3>Private variables and functions</h3>
+                <p>With factory functions we can also create private variables, since the return variables do not container the variable itself of reputation. it's defined as a private variable since we cannot access the variable directly in the object instance</p>
+                <img src="./Images/privateVariablesFactory .png" alt="">
+                <h3>Factory Inheritance</h3>
+                <p>We can do something similar to prototype inheritance with factory functions. You can simply create your User, extract what you need from it, and re-return whatever you want to</p>
+                <img src="./Images/factoryInheritance.png" alt="">
+                <h3>immediate Invoked Function expression</h3>
+                <p>Oftentimes, you do not need a factory to produce multiple objects - instead, you are using it to wrap sections of code together, hiding the variables and functions that you do not need elsewhere as private. This is easily achievable by wrapping your factory function in parentheses and immediately calling (invoking) it. This immediate function call is commonly referred to as an Immediately Invoked Function Expression (duh) or IIFE in short. This pattern of wrapping a factory function inside an IIFE is called the module pattern. Take note of the () at the end of the function, and how the whole function is wrapped.</p>
+                <img src="./Images/IIFE.png" alt="">
+                <h3>Benefits of IIFE</h3>
+                <p>IIFE allows us to encapsulate our code (bundle into a single unit) and in turn also leads into the effect of namespacing. Namespacing is a technique that is used to avoid naming collisions in our programs.  </p>
+                <h3>Revist to closures</h3>
+                <p>A closure is the ability to access a parent level scope from a child scope, even after the parent function has been terminated. One way this is seen is when functions are inside another function, and there are two ways we can return it. However, if we do it the second way, we have to create another variable an assign it to the outer function, and this variable will be the new variable to invoke the inner function.</p>
+                <img src="./Images/callingAnInnerFunctinLater.png" 
+                alt="">
+                <img src="./Images/callingInnerFunctionVar.png" alt="">
+                <img src="./Images/closureExaple2.png" alt="">
+                <img src="./Images/callingClosure2.png" alt="">
+                <h3>Private Variables with practical use</h3>
+                <p>Private variables can't be access, in an example of creating games, it will allow us to run multiple different types of games.Even though the score variable is the same variable name, because we have created two separate win() functions by using the createGame() function, they each have their own private variable score. </p>
+                <img src="./Images/creatingHockey.png" alt="">
+                <img src="./Images/creatingSoccer.png" alt="">
+                <h3>What is a module? </h3>
+                <p>Module is created as an IIFE (immediately invoked function expression) with a function inside <code>const SomeModule = (function() {})();
+                </code></p>
+                <h3>Some ground rules of modules</h3>
+                <p>Little (~1) global variables should be present in a code base, global variables will slow a large program down. Also dry code is important, one example of this, we should not be searching the DOM too much, we should be using DOM cache in these cases. No memory leaks, common causes of memory leaks will be most event listeners, to prevent these, they need to be unbound.</p>
+                <h3>What are some common ways to cache your Doms?</h3>
+                <p>Set it into a module, and then reference the DOM once in a Method, and from that Method, we can get the other elements.</p>
+                <img src="./QuizImages/QuizImg1.png" alt="">
+                <img src="./QuizImages/QuizImg1b.png" alt="">
+                
+                <h3>Render in a module</h3>
+                <p>Render is a common phrase on modular JS where lets get the current state of the module and translate it to JS</p>
+                <h3>Organize your code with modules</h3>
+                <p>Modules lets us organize our code by creating object methods and naming the methods as what they do. In this image, we understand that init runs all the methods, cacheDom holds all are DOM selections and render handles all the HTML input</p>
+                <img src="./Images/OrganizeCodeWithMOdulars.png" alt="">
+                <img src="./Images/bindEvents.png" alt="">
+                <h3>Binding events gotcha</h3>
+                <p>When we bind events, the event is set to what the event was bound to. In this example, this.button will be the value to this.people. To correct this, we can bind the event so it's this.addPerson.bind(this) </p>
+                <img src="./QuizImages/QuizImg3.png" alt="">
+                <img src="./QuizImages/QuizImg3b.png" alt="">
+                <h3>IIFE how does it execute?</h3>
+                <p>When we do an IIFE we are placing it within paranthesis, when we do this, it causes JS to evaluate it first and then treat it as the evaluting thing. Such as var people = (function(){})()</p>
+                <h3>Privite coventions</h3>
+                <p>If we are performing IIFE, it is standard convetins to set an underscore before the variable name. IE function _render(){}</p>
+                <h3>Pubsub or Mediator</h3>
+                <p>If something changes, what are the downroad effects of this change, how many other things will change as a result of one change. </p>
+
             </div>
 
         </section>

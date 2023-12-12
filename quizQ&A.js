@@ -161,6 +161,11 @@ const cssAnswers = [
 ];
 
 const jsQuestions = [
+  "Refer to image 2, what is wrong with this code modularly?",
+  "Refer to image 1 of QuizImage1 and explain DOM caching.",
+  "What is IIFE short for and what is an example with factory functions?",
+  "deconstruct this object const obj = {a:1,b:2}",
+  "refactor this into a factory constructor: const User = function (name) {this.name = name; this.discordName = '@' + name;}",
   "How many ways can JS code be organized?",
   "Create a simple intersection observer with options.",
   "if we create an option for intersection observer, what options do we have?",
@@ -281,8 +286,15 @@ const jsQuestions = [
   "What are the three known facts of prototypes?",
   "If we have two different constructors, how do we allow the key:value pairs of one also go to the other without writing more code?",
   "How does set property work?",
+  "___ is created as an IIFE (immediately invoked function expression) with a function inside.",
+  "___ gives you access to an outer function's scope from an inner function. In JavaScript, ___ are created every time a function is created, at function creation time.",
 ];
 const jsAnswers = [
+  "This should only handle bind events, once it click, addPerson should be its own method.",
+  "DOM Caching essentially removes us from calling the DOM each time, it's essentially storing the value into variable.",
+  " This is easily achievable by wrapping your factory function in parentheses and immediately calling (invoking) it. This immediate function call is commonly referred to as an Immediately Invoked Function Expression (duh) or IIFE in short. This pattern of wrapping a factory function inside an IIFE is called the module pattern.",
+  "const {a,b} = obj",
+  "function createUser (name) {const discordName = `@` + name; return { name, discordName }",
   "Plain Old JavaScript Objects and Object Constructors, Factory Functions and the Module Pattern ,Classes,and ES6 Modules",
   " let options = {}; let observer = new IntersectionObserver (function(entries,observer) {entries.forEach(entry => {console.log('test')})},options)",
   "Root, threshold, and rootMargin",
@@ -408,6 +420,8 @@ const jsAnswers = [
   "We will use call, function Healer(name, level, spell) {Hero.call(this, name, level); this.spell = spell}",
   "No, not yet, we have to now link with setPrototype, Object.setPrototypeOf(Healer.prototype, Hero.prototype);",
   "this still references obj. So methods always work with the current object even if they are inherited.",
+  "Module",
+  "Closure",
 ];
 const reviewQuestions = [];
 const reviewAnswers = [];
