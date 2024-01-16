@@ -46,6 +46,14 @@
         <p class="purpose__quotes"></p>
     </section>
     <main id="sections" class="sections">
+        <section>
+            <a href="https://icodethis.com/">I code this</a>
+            <a href="https://www.frontendpractice.com/projects/abstract">frontendpractice</a>
+            <a href="https://devchallenges.io/">dev challenges</a>
+            <a href="https://stylestage.dev/styles/">style stage</a>
+            <a href="https://css-challenges.com/quizzes/">css-challenges</a>
+
+        </section>
         <section id="HTML" class="section__HTML section">
             <h2>HTML</h2>
             <div class="html__container">
@@ -212,7 +220,7 @@
             <h2^>CSS</h2>
             <div class="css__container">
                 <h3>Funky shapes</h3>
-                <p>For interesting shapes we can go to <a href="https://app.haikei.app/">haikei</a>which lets us look at a lot of interesting shapes.</p>
+                <p>For interesting shapes we can go to <a href="https://app.haikei.app/">haikei</a>which lets us look at a lot of interesting shapes. Another funky shape use can be with <a href="https://css-generators.com/">css-generators</a></p>
                 <h3>Center Absolute</h3>
                 <p>To center things absolute we can do the classic left :50%, top: 50%; translate: transform(-50%,-50%)  OR we can do inset:0; margin: auto.</p>
                 <h3>Example frameworks</h3>
@@ -1136,6 +1144,45 @@
                 <p>If we are performing IIFE, it is standard convetins to set an underscore before the variable name. IE function _render(){}</p>
                 <h3>Pubsub or Mediator</h3>
                 <p>If something changes, what are the downroad effects of this change, how many other things will change as a result of one change. </p>
+                <h3>Classes</h3>
+                <p>JS does not have classes like other Object Orientated Languages.Since we’ve already gone fairly in-depth with Constructors, you don’t have too much left to learn here beyond the new syntax. If you choose to use classes in your code (that’s fine!) you can use them much the same way as object constructors.</p>
+                <h3>Object properties</h3>
+                <p>There are two types of object properties. Data and accessor</p>
+                <h3>Accessor properties</h3>
+                <p>They are essentially functions that execute on getting and setting a value, but look like regular properties to an external code. Accessor properties are represented by “getter” and “setter” methods. In an object literal they are denoted by get and set:</p>
+                <h3>Getters</h3>
+                <p>Getters works very similary to calling a function that was created within an object. From the outside, an accessor property (getter in this instance) looks like a regular one. That’s the idea of accessor properties. We don’t call user.fullName as a function, we read it normally: the getter runs behind the scenes.</p>
+                <img src="./Images/getterJS.png" alt="">
+                <h3>Setters</h3>
+                <p>Setters are basically if we want to manually add into the objects, IE overdide something as if it was a normal object. </p>
+                <img src="./Images/settingJS.png" alt="">
+                <h3>Basic classes syntax</h3>
+                <p>The basic flow will be you declare your class, and within that class, you will have a constructor with methods.</p>
+                <img src="./Images/classSyntax.png" alt="">
+                <h3>Calling classes</h3>
+                <p>When we call the class with the new phrase, the constructor is automatically called. And two things happen,A new object is created, and the constructor runs with the given argument and assigns it to this.name. Also to note, unlike factory functions, we don't place commas between the classes, this will cause a syntax issue.</p>
+                <h3>What is a class?</h3>
+                <p>Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are unique to classes. Some people argue that it's mostly “syntactic sugar” (syntax that is designed to make things easier to read, but doesn’t introduce anything new), </p>
+                <h3>Losing this</h3>
+                <p>A term coined to describe when an object method is passed around and called in another context, this won’t be a reference to its object any more.</p>
+                <h3>Solutions to losing this.</h3>
+                <p>1. Pass a wrapper-function, such as setTimeout(() => button.click(), 1000). Or 2. Bind the method to object, e.g. in the constructor</p>
+                <h3>class expression or a class declaration.</h3>
+                <p>Classes can be expressed in two ways, either we set it up similarly to a function, or we can set it up more like assigning a variable and are always executed in strict mode.</p>
+                <img src="./Images/defineClass.png" alt="">
+                <h3>Class constructors</h3>
+                <p>The constructor method is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class. This is the part where we mostly see this being used.</p>
+                <img src="./Images/constructorEx.png" alt="">
+                <h3>What do methods do in classes?</h3>
+                <p>Methods control the actual work, taking in the objects created in the constructor and using these values in meaningful ways.</p>
+                <h3>What are static keywords used for?</h3>
+                <p>They are used on classes for fixed, non altering data.</p>
+                <img src="./Images/staticClasses.png" alt="">
+                <h3>Extends with classes</h3>
+                <p>The extends keyword is used in class declarations or class expressions to create a class as a child of another constructor (either a class or a function).If there is a constructor present in the subclass, it needs to first call super() before using this. The super keyword can also be used to call corresponding methods of super class.</p>
+                <img src="./Images/extendClasses.png" alt="">
+                <h3>Why use classes?</h3>
+                <p>Classes help with static keywords, inheritance, and encapsulation.</p>
 
             </div>
 
@@ -1481,6 +1528,7 @@
             <h3>What a model?</h3>
             <p>Representation for the collection. A model is a wrapper for the schema. The model gives the interface to the data. The model looks for two things, the name and then the schema.After this, we can use it in our controllers.</p>
             <img src="./Images/exportModel.png" alt="">
+
     </div>
 
         </section>

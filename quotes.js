@@ -20,6 +20,7 @@ let quotes = [
   "If we call obj.method(), and the method is taken from the prototype, what is this referencing? ",
   "Every prototype object inherits from Object.prototype by default.",
   "This immediate function call is commonly referred to as an Immediately Invoked Function Expression (duh) or IIFE in short.",
+  "When there is a parent element containing all the queried elements then const parentElement = document.querySelector('#parentElementId'); const childElements = parentElement.querySelectorAll('.selector'); is about ten times faster than to use const childElements = document.querySelectorAll('.selector');",
 ];
 
 getQuotesText.textContent = quotes[0];
