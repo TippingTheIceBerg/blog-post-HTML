@@ -1097,7 +1097,7 @@
                 <h3>Object shorthand notation</h3>
                 <p>Object shorthand is when the variable we assign matches with the object's name.  IE if we have a variable called name = "fred" and we want to assign it to an object, called named, instead of writing object = {name:name} we can just do object = {name}</p>
                 <h3>Private variables and functions</h3>
-                <p>With factory functions we can also create private variables, since the return variables do not container the variable itself of reputation. it's defined as a private variable since we cannot access the variable directly in the object instance</p>
+                <p>With factory functions we can also create private variables, since the return variables do not container the variable itself of reputation. it's defined as a private variable since we cannot access the variable directly in the object instance. </p>
                 <img src="./Images/privateVariablesFactory .png" alt="">
                 <h3>Factory Inheritance</h3>
                 <p>We can do something similar to prototype inheritance with factory functions. You can simply create your User, extract what you need from it, and re-return whatever you want to</p>
@@ -1151,10 +1151,12 @@
                 <h3>Accessor properties</h3>
                 <p>They are essentially functions that execute on getting and setting a value, but look like regular properties to an external code. Accessor properties are represented by “getter” and “setter” methods. In an object literal they are denoted by get and set:</p>
                 <h3>Getters</h3>
-                <p>Getters works very similary to calling a function that was created within an object. From the outside, an accessor property (getter in this instance) looks like a regular one. That’s the idea of accessor properties. We don’t call user.fullName as a function, we read it normally: the getter runs behind the scenes.</p>
+                <p>Makes a method look like a property, we will write it the same as a method function, but simply add get in front of the method, and then call like any normal property.Getters works very similary to calling a function that was created within an object. From the outside, an accessor property (getter in this instance) looks like a regular one. That’s the idea of accessor properties. We don’t call user.fullName as a function, we read it normally: the getter runs behind the scenes. </p>
                 <img src="./Images/getterJS.png" alt="">
+                <h3>Why use getters?</h3>
+                <p>Can be used to run logic anytime we access a property, IE, a counter increase.</p>
                 <h3>Setters</h3>
-                <p>Setters are basically if we want to manually add into the objects, IE overdide something as if it was a normal object. </p>
+                <p>Setters are basically if we want to manually add into the objects, IE overdide something as if it was a normal object. They are also used for throwing errors if lets say a name is short or empty. </p>
                 <img src="./Images/settingJS.png" alt="">
                 <h3>Basic classes syntax</h3>
                 <p>The basic flow will be you declare your class, and within that class, you will have a constructor with methods.</p>
@@ -1176,13 +1178,44 @@
                 <h3>What do methods do in classes?</h3>
                 <p>Methods control the actual work, taking in the objects created in the constructor and using these values in meaningful ways.</p>
                 <h3>What are static keywords used for?</h3>
-                <p>They are used on classes for fixed, non altering data.</p>
+                <p>They are used on classes for fixed, non altering data. Static keywords belong to the class, rather than the objects created from the classes If we wish to call them, we call the class.</p>
                 <img src="./Images/staticClasses.png" alt="">
                 <h3>Extends with classes</h3>
-                <p>The extends keyword is used in class declarations or class expressions to create a class as a child of another constructor (either a class or a function).If there is a constructor present in the subclass, it needs to first call super() before using this. The super keyword can also be used to call corresponding methods of super class.</p>
+                <p>Used when a generic class when we want to make a child class by keeping the same features, and a little extra.The extends keyword is used in class declarations or class expressions to create a class as a child of another constructor (either a class or a function).If there is a constructor present in the subclass, it needs to first call super() before using this. The super keyword can also be used to call corresponding methods of super class. The child has access to the properties, but we still need to call the parent constructor, but we can do it in a more generic way by using super. Calls the logic of the parent class. </p>
                 <img src="./Images/extendClasses.png" alt="">
+                <img src="./Images/extendsJS2.png" alt="">
+                <img src="./Images/extendsCustomMethods.png" alt="">
+                <h3>Use of Classes</h3>
+                <p>Here we can use this to create an arrat of our classes, then create a functin to loop through the array with for in to show who is coding.</p>
+                <img src="./Images/useOfClasses.png" alt="">
+                <img src="./Images/useOfClasses2.png" alt="">
                 <h3>Why use classes?</h3>
                 <p>Classes help with static keywords, inheritance, and encapsulation.</p>
+                <h3>Function inside classes</h3>
+                <p>Within classes, we do not need to use function keywords.</p>
+                <h3>Private properties with classes</h3>
+                <p>Can't be used outside the class, and uses the #symbol. The biggest thing is encapsulation, where we can't call the variable directly, but instead, call a method which uses the variable.</p>
+                <img src="./Images/privateClassesVar.png" alt="">
+                <h3>Static methods with classes, </h3>
+                <p>Other methods are instance methods, each time we invoke the class, ie player1 = new Class, everyime we use the new keyword, all of those properties belongs to that paricular instance. If we want to create a method that belong to the class, we can use static methods. To use, we will use the static keyword before creating a method. The only way to see species, is if we call Person.species(). If we use this, it won't point to the instance, it will point to the class.</p>
+                <img src="./Images/staticMethod.png" alt="">
+                <h3>Static properties</h3>
+                <p>Seen in react, setting as a simple species = "homo sap" does not work, they typically use babel to get around this, a JS compiler.</p>
+                <h3>The good of classes</h3>
+                <p>So making the syntax look better and similar to other OO languages, while still keeping the “prototype” inheritance goodness is a good thing. People can use other ways if they don’t want to use “Class” to create Objects.</p>
+                <h3>What makes classes bad?</h3>
+                <p>Objects are created without Classes, there is no DNA, or blueprint needed.Concept of classes makes things brittle.Further “prototype”-chain based inheritance can wire up any object to any other object that may not be related.It also guides people away from goodness and power of functional programming.</p>
+                <h3>Inheritance and composition</h3>
+                <p>Given this though experiment, if we have a murder robot dog, what would we do if we have a robot and animal class already? It can do some of both, but not all of animal, it doesn't poop.</p>
+                <img src="./Images/murderRobotDog.png" alt="">
+                <h3>Inheritance</h3>
+                <p>We decide what to give based off what they are.</p>
+                <h3>Composition</h3>
+                <p>composition is better since it decides what they do.</p>
+                <img src="./Images/compositionWorkFlow.png" alt="">
+                <img src="./Images/startOfCompo.png" alt="">
+                <h3>Object assign and composition</h3>
+                <p>Object assign does, it takes an object, and assigns the properties of the other objects into it.</p>
 
             </div>
 
