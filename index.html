@@ -1216,6 +1216,64 @@
                 <img src="./Images/startOfCompo.png" alt="">
                 <h3>Object assign and composition</h3>
                 <p>Object assign does, it takes an object, and assigns the properties of the other objects into it.</p>
+                <h3>ES6 Modules History</h3>
+                <p>Making a webpage at first was just to add JS with a script in the index. Then we started to add libraries by downloading them and adding them before the js script. Note that moment.min.js (a library) gets loaded before index.js, which means you can use the moment function in index.js. The bad thing was that it was annoying to find and download new versions of libraries every time they would update. As a result, javaScript package managers emerged to help automate the process of downloading and upgrading libraries from a central repository with npms getting popular.
+                </p>
+                <h3>How to use npm to manually install libraries.</h3>
+                <p>NPM if you have node.js installed, you already have npm installed, which means you can navigate your command line to the folder with your index.html file and enter: <code>npm init</code>after npm init, we get a package.json file. This is a configuration file that npm uses to save all project information. From the library we want, we can now follow their instructions, for this tutorial it will be <code>$ npm install moment --save</code>
+                </p>
+                <h3>What happens when you use npm install?</h3>
+                <p>Two things occur, the library into a folder called node_module, and lastly, it automatically modifies the package.json file to keep track of moment.js as a project dependency. Now if we wish to share the project, we can share the package.json file and other developers can install the required packages automatically with the command npm install.</p>
+                <img src="./Images/nodueModule.png" alt="">
+                <h3>Downside of just npm updates.</h3>
+                <p>The bad thing is right now we’re digging through the node_modules folder to find the location of each package and manually including it in our HTML. To overcome this, we can use webpack, a javascript module bundler. Most programming languages provide a way to import code from one file into another. JavaScript wasn’t originally designed with this feature. For the longest time, organizing JavaScript code in multiple files required you to load each file with variables shared globally.
+                </p>
+                <h3>Common JS</h3>
+                <p>A big part of CommonJS was its specification for modules, which would finally allow JavaScript to import and export code across files like most programming languages, without resorting to global variables. The most well-known of implementation of CommonJS modules is node.js. Node.js is a JavaScript runtime designed to run on the server.</p>
+                <h3>Why does Node Js make handling updates easier?</h3>
+                <p>Instead of loading all of moment.min.js with an HTML script tag, you can load it directly in the JavaScript file as follows: <code>var moment = require('moment');</code>require('./node_modules/moment/min/moment.min.js), you can simply write require('moment') — pretty sweet. Which works great since node.js is a server side language with access to the computer’s file system.</p>
+                <h3>What are some issues with using nodeJs on the browser?</h3>
+                <p> You’d get an error saying require is not defined. The browser doesn’t have access to the file system, which means loading modules in this way is very tricky — loading files has to be done dynamically, either synchronously (which slows down execution) or asynchronously (which can have timing issues).</p>
+                <h3>How do we get around NodeJS issues on the browser?</h3>
+                <p>We will use modular bundlers. We need a module bundler to find all require statements (which is invalid browser JavaScript syntax) and replace them with the actual contents of each required file. The most current popular one will be webpack which was made popular because of react, and stems from an earlier one called Browserify.</p>
+                <h3>How do we use webpack?</h3>
+                <p>Since webpack is a npm package, we will download it with npm, <code>$ npm install webpack webpack-cli --save-dev</code> webpack-cli package allows us to use webpack from the terminal. While the save dev  this saves it as a development dependency, which means it’s a package that you need in your development environment but not on your production server. </p>
+                <h3>How to change one code into another code type?</h3>
+                <p>Transpiling code means converting the code in one language to code in another similar language. This is an important part of frontend development — since browsers are slow to add new features, new languages were created with experimental features that transpile to browser compatible languages.</p>
+                <h3>What is a task runner?</h3>
+                <p>A task runner for frontend tasks includes minifying code, optimizing images, running tests, etc.</p>
+                <h3>Run down of history</h3>
+                <p>So this is modern JavaScript in a nutshell. We went from plain HTML and JS to using a package manager to automatically download 3rd party packages, a module bundler to create a single script file, a transpiler to use future JavaScript features, and a task runner to automate different parts of the build process.</p>
+                <h3>What does NPM do?</h3>
+                <p>The node package manager is a command-line tool that gives you access to a gigantic repository of plugins, libraries and tools. npm is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.</p>
+                <h3>JSON files having dependency and dev dependency</h3>
+                <p>a dependency will be part of the package if someone else uses it, but a dev dependency won't be. In theory, other people shouldn't need the dev dependency to work.</p>
+                <h3>Why should we start using bundlers(ex:webpack)?</h3>
+                <p>A project consisting of a single, long file with lots of code can be made easier to navigate and maintain by being broken down into multiple smaller files (modules). The trade off to this more managelably files is cost and time, the browser would need to make a separate HTTP request for each file and if libraries are involed, it can make it even slower. Webpack essentially: it makes multiple files and/or import multiple third-party libraries but eventually combine them all into fewer files at the end so the browser did not have to make so many requests </p>
+                <h3>How does Webpack work?</h3>
+                <p>Give a bundler a starting file (an entry point) and it will build a dependency graph of the modules and dependencies starting from that file, then combine them into a single output file</p>
+                <h3>Why do we include a src and dist in our structure?</h3>
+                <p>The "source" (src) code is the code that we'll write and edit. The "distribution" code is the minimized and optimized output of our build process that will eventually be loaded in the browser. </p>
+                <h3>NPM how to instal as dev dependency vs depenecy</h3>
+                <p>When installing a package that will be bundled into your production bundle, you should use npm install --save. If you're installing a package for development purposes (e.g. a linter, testing libraries, etc.) then you should use npm install --save-dev.</p>
+                <h3>What is the generic setup for webpack?</h3>
+                <p>
+                    <ol class="listMarginLeft__40px">
+                        <li>Make your project folder</li>
+                        <li>Cd into it</li>
+                        <li>create your packageJason with npm init -y</li>
+                        <li>install your webpack <code>npm install webpack webpack-cli --save-dev
+                        </code></li>
+                        <li>We need to have two folders, a src and dist folders: src - one where we write and edit. The distribution - code is the minimized and optimized</li>
+                        <li>Instead of including the script of a library, we will instal the library locally. <code>npm install --save lodash
+                        </code> with lodash being an example of a libraray.</li>
+                        <li>Once we have downloaded locally, we can import it instead of having it included in a script at index.html. <code>import _ from 'lodash';
+                        </code></li>
+                        <li>In this setup, index.js explicitly requires lodash to be present, and binds it as _ (no global scope pollution)</li>
+                        <li>Webpack can use this information to build a dependency graph. It then uses the graph to generate an optimized bundle where scripts will be executed in the correct order.</li>
+                        <li>run <strong>npx webpack</strong>, which will take our script at src/index.js as the entry point, and will generate dist/main.js as the output. </li>
+                    </ol>
+            </p>
 
             </div>
 
