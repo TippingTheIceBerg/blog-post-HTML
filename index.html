@@ -1275,6 +1275,82 @@
                     </ol>
             </p>
 
+            <h3>Webpack.config file</h3>
+            <p>A JS that is used to make sure we don't have to write configurations over and over. It uses module.exports to define an entry, our src, and an output, which uses an object. The path is the folder we want to output to, the dist folder, the filename is whatever name we want to call it, common names is main.js and bundle.js</p>
+            <h3>How to shortcut the terminal of webpack</h3>
+            <p>After we have done the webpack.config, we can go to the package.json and under scripts, include the word <code>"build": "webpack"</code>now we can just run npm run build.</p>
+            <h3>What is Module Syntax?</h3>
+            <p>Only two components really, import and export.</p>
+            <img src="./Images/es6ExportImport.png" alt="">
+            <h3>Why shouldn't you use IIFE if we have ES6?</h3>
+            <p>With the introduction of ES6 Modules, the module pattern (IIFEs) is not needed anymore, though you might still encounter them in the wild. When using ES6 modules, only what is exported can be accessed in other modules by importing. Additionally, any declarations made in a module are not automatically added to the global scope. By using ES6 modules, you can keep different parts of your code cleanly separated, which makes writing and maintaining your code much easier and less error-prone.</p>
+            <h3>What is the flow with webpack?</h3>
+            <p>Anytime we want to add JS, we will add it to the src folder, then export as needed and import into the index.js what we want. After which, we can see how the "normal" code under the dist folder of main.js</p>
+            <img src="./Images/exportWebpack.png" alt="">
+            <img src="./Images/importWebPack.png" alt="">
+            <img src="./Images/mainJSWebpackLook.png" alt="">
+            <h3>Named Exports</h3>
+            <p>Named exports you will most often use when you have multiple values to export in a module</p>
+            <img src="./Images/namedExportWebpack.png" alt="">
+            <img src="./Images/namedExportImort.png" alt="">
+            <h3>The full power of webpack</h3>
+            <p>The first half of what webpack can do is bundling your modules. Another amazing feature is webpack's ability to process and manipulate your code as it bundles this. So, for example, if you would like to use Sass or PostCSS to write your CSS, webpack can allow you to do that. Webpack can manage your images and compress and optimize them for use on the web. Webpack can minify and uglify your code.</p>
+            <h3>What occurs if you have multiple HTML pages with Webpack?</h3>
+            <p>It will build a dependency graph based on all the imports/exports starting there, before bundling everything into a single .js file in dist. If for whatever reason you needed it to output multiple bundles, then each entry point you give Webpack will produce its own output bundle.
+            </p>
+            <h3>What is the issue with using webpack with css?</h3>
+            <p>Since these sorts of files are not JavaScript, Webpack will not know how to process them unless you tell it how to by including the correct loaders and rules.One of the coolest webpack features is that you can also include any other type of file, besides JavaScript, for which there is a loader or built-in Asset Modules support.</p>
+            <h3>How to allow CSS to be added through JS webpack?</h3>
+            <p>In order to import a CSS file from within a JavaScript module, you need to install and add the style-loader and css-loader to your module configuration. Remember that you must import the css with <code>import './style.css';
+            </code> on the src/index.js file.</p>
+            <img src="./Images/installingTerminalWebPackCSS.png" alt="">
+            <h3>Regular expression and webpack</h3>
+            <p>webpack uses a regular expression to determine which files it should look for and serve to a specific loader. In this case, any file that ends with .css will be served to the style-loader and the css-loader.</p>
+            <img src="./Images/regularExpressionsWebpack.png" alt="">
+            <h3>How to add images and png with webpack</h3>
+            <p>To add we can add another test onto the webpack.config.js file, now we add the tests and type onto the module/rules portion with the appropiate regular expression. Now we add the image we want, in this part we added an image directly into he src folder to be used and then exported it for use.</p>
+            <img src="./Images/webpackImg.png" alt="">
+            <img src="./Images/addingActualImgWeb.png" alt="">
+            <h3>Custom Fonts Webpack addition</h3>
+            <p>Just as images and CSS, we need to add fonts into our webpack for them to work if they are custom. This only works if we have downloaded the fonts as a file similar to css.</p>
+            <img src="./Images/customFontsWebPack.png" alt="">
+            <img src="./Images/customFontsCss.png" alt="">
+            <h3>Custom HTML plugins</h3>
+            <p>There are two ways to add our JS, we can tell it to inject it into the body, where it will place the JS script at the bottom, or we can inject it to the header, where we have a choice do scriptLoading to defer to improve perfomance a bit. Otherwise change inject to body and remove the scriptloading.</p>
+            <img src="./Images/JSScriptDefer.png" alt="">
+            <h3>What is output management</h3>
+            <p>Output manangement so far we've manually included all our assets in our index.html file, but as your application grows and once you start using hashes in filenames and outputting multiple bundles, it will be difficult to keep managing your index.html file manually. However, a few plugins exist that will make this process much easier to manage.</p>
+            <h3>Source maps</h3>
+            <p>Source maps: a handy way to track down which source file (index.js, a.js, b.js) an error is coming from when you use webpack to bundle them together. This is essential to debugging bundled code in your browser’s DevTools. If the error comes from b.js the error will reference that file instead of the bundle. In order to make it easier to track down errors and warnings, JavaScript offers source maps, which map your compiled code back to your original source code. If an error originates from b.js, the source map will tell you exactly that. To allow this, we just have to add a devtool into the webpack.config.js</p>
+            <img src="./Images/sourceMapsWeb.png" alt="">
+            <h3>Choosing dev tools </h3>
+            <p>It quickly becomes a hassle to manually run npm run build every time you want to compile your code.There are a couple of different options available in webpack that help you automatically compile your code whenever it changes.
+                <ol class="listMarginLeft__40px">
+                    <li>webpack's watch mode</li>
+                    <li>webpack-dev-server</li>
+                </ol>
+            Most times we will want to use webpack-dev-server.
+            </p>
+            <h3>Watch mode vs dev server</h3>
+            <p>Watch mode will note changes, you should see that webpack automatically recompiles the changed module!The only downside is that you have to refresh your browser in order to see the changes. For Dev server, we need to install the library, and then tell the conif where to look.This tells webpack-dev-server to serve the files from the dist directory on localhost:8080. In this example we also have an optimization.runtimeChunk: 'single' we have more than one entrypoint on a single HTML page. Lastly, not requrired, but under the package, we add webpack open to run the webpack with just npm start instead of npm run build.
+            </p>
+            <img src="./Images/installWebPackDevServer.png" alt="">
+            <img src="./Images/configDevServer.png" alt="">
+            <img src="./Images/npmStartDevServer.png" alt="">
+            <h3>Webpack dev setting into production</h3>
+            <p>Webpack dev is best suited for development, but when it needs to go into deployment (production), the dedicated production mode optimises this for us. Instead of manually switching between modes in the configuration file as needed, we can use webpack merge. </p>
+            <h3>Why does differeing dev and produciton matter?</h3>
+            <p>In development, we want strong source mapping and a localhost server with live reloading or hot module replacement. In production, our goals shift to a focus on minified bundles, lighter weight source maps, and optimized assets to improve load time. </p>
+            <img src="./Images/installWebPackMerge.png" alt="">
+            <h3>How do we set up an enivronment good for merges?</h3>
+            <p>In webpack.common.js, we now have setup our entry and output configuration and we've included any plugins that are required for both environments. In webpack.dev.js, we've set mode to development. Also, we've added the recommended devtool for that environment (strong source mapping), as well as our devServer configuration. Finally, in webpack.prod.js,mode is set to production which loads TerserPlugin, which was first introduced by the tree shaking guide.</p>
+            <img src="./Images/filesForMerge.png" alt="">
+            <img src="./Images/commonMerge.png" alt="">
+            <img src="./Images/otherMerge.png" alt="">
+            <h3>Running the right environement.</h3>
+            <p>You’ll notice the above tutorial does not have a webpack.config.js file. If you do use webpack-merge, make sure that any webpack commands you run (including in an npm script) follow the tutorial and use the --config option to specify which webpack configuration file to use. If you do not specify one, webpack will try to look for webpack.config.js and if it does not find one, it will not be able to bundle correctly!</p>
+            <img src="./Images/runningTheRightenv.png" alt="">
+    
             </div>
 
         </section>
