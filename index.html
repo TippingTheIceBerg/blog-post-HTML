@@ -577,17 +577,20 @@
                 <h3>How to organize your JS code?</h3>
                 <p>JS code can be organized in four different ways
                     <ul class="listMarginLeft__40px">
-                        <li>Plain Old JavaScript Objects and Object Constructors</li>
-                        <li>Factory Functions and the Module Pattern</li>
-                        <li>Classes</li>
+                        <li>Plain Old JavaScript Objects and Object Constructors  - simple capital letter</li> 
+                        <li>Factory Functions and the Module Pattern - No new keyword, you must return something, no this and no prototype inheritance</li>
+                        
+                        <li>Classes - uses class keyword, uses constructor keyword, uses this.</li>
                         <li>ES6 Modules</li>
                     </ul>
+                    <img src="./Images/waysOfMakingObjects.png" alt="">
                 </p>
                 <h3>What is Intersection Observer</h3>
                 <p>Intersection Observer is a powerful tool that allows on scroll effects without the need for it to be called each time a scroll is done. </p>
                 <h3>How does Intersection work?</h3>
-                <p>Most times, intersection observer can be used with query selector to select all elements or class names, or single elements and a class name. Just note that if you do select multiple elements and classes, the steps are slightly different.</p>
+                <p>Most times, intersection observer can be used with query selector to select all elements or class names, or single elements and a class name. Just note that if you do select multiple elements and classes, the steps are slightly different. The callback and options are base template of the intersection, meaning we don't have to write the function within the observer.  </p>
                 <img class="images" src="./Images/basicSkeletonIntObse.png" alt="">
+                <img src="./Images/observerBareBone.png" alt="">
                 <p>options hold three values; root, threshold, and margin
                     <ul class="listMarginLeft__40px">
                         <li>root - can be left out since most times root will be set to null, or just not written out at all. Both not writing anything for null and setting it to null will both set it to the viewport as seen in the skeleton example.</li>
@@ -653,7 +656,7 @@
                 <p>if you are having issues having numbers concat instead of add, use <kbd>Number()</kbd> <span class="stringNumber"></span> the values should be  30, but it's not since it's adding it on like a string.</p>
                 <img src="./Images/stringNumberJS.png" alt="">
                 <h3>Turning a Number to a string</h3>
-                <p>To turn a number into a string we will use the .toString method. </p>
+                <p>To turn a number into a string we will use the .toString method. However, if we wish to change an object into a string, we will use Jason.stringify since using toString won't work for arrays and objects (key value pairs). </p>
                 <img src="./Images/NumberIntoStringJS.png" alt="">
 
                 <h3>Using + to make strings into Numbers</h3>
@@ -769,8 +772,11 @@
                 </p>
                 <img src="./Images/smoothAnimationsJS.png" alt="">
                 <h3>Local Storage and Changing Document Title</h3>
-                <p>For local storage and retrieval, we use the window local storage of getItem and setItem.Once we have this, we can create an if statement to see if a stored item is present or not. It uses the first value as the key, like a variable, and the second variable will be the value of that variable, technically these are key objects pairs.Note, we didn't use the setItem of 'userName' variable since we didn't want to call the getItem local storage at this point.</p>
+                <p>Local storage can only store strings. For local storage and retrieval, we use the window local storage of getItem and setItem.Once we have this, we can create an if statement to see if a stored item is present or not. It uses the first value as the key, like a variable, and the second variable will be the value of that variable, technically these are key objects pairs.Note, we didn't use the setItem of 'userName' variable since we didn't want to call the getItem local storage at this point.</p>
                 <img src="./Images/localStorangeOnClick.png" alt="">
+                <h3>Local storage and objects</h3>
+                <p>Objects by themselves can't be stored with setItem, you will just get returned Object object. To get around this, we will serialized, convert it to some readable data which we will use Json. stringify the object. Now with getItems, we will change the string back into an object with JSON.parse.</p>
+                <img src="./Images/serliazedObject.png" alt="">
                 <h3>Scroll Height vs offset Height vs Client Height</h3>
                 <p>When wanting on scroll effect outside of intersection observer, we will use both the scroll height: amount seen in window, clientHeight: the height of an element + the vertical padding. offsetHeight: the height of the element + the vertical padding + the top and bottom borders + the horizontal scrollbar (if it's available).</p>
                 <img src="./Images/differentHeightsJS.png" alt="">
@@ -1350,6 +1356,8 @@
             <h3>Running the right environement.</h3>
             <p>You’ll notice the above tutorial does not have a webpack.config.js file. If you do use webpack-merge, make sure that any webpack commands you run (including in an npm script) follow the tutorial and use the --config option to specify which webpack configuration file to use. If you do not specify one, webpack will try to look for webpack.config.js and if it does not find one, it will not be able to bundle correctly!</p>
             <img src="./Images/runningTheRightenv.png" alt="">
+            <h3>Spread operator with arguments</h3>
+            <p>If we have functions, with multiple parameters, we can set a spread to fill in those parameters if it matches the same amount. IE if an array has 3 numbers in it, and the function has 3 parameters, if using a spread, those values will fill in. </p>
     
             </div>
 
